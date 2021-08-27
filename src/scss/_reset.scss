@@ -1,0 +1,88 @@
+
+/*====================
+	reset & default
+====================*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+[class|="i"] {
+	display: inline-block;
+	max-width: 40px;
+	max-height: 40px;
+	user-select: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	user-select: none;
+}
+svg {
+	max-width: 100%;
+	pointer-events: none;
+	user-select: none;
+   pointer-events: none;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 16px
+}
+section {
+	width: 100%;
+	position: relative;
+}
+
+a,a:focus {
+	text-decoration:none;
+	outline:0;
+	cursor: pointer;
+	transition: .3s;
+	user-select: none;
+	box-shadow: none;
+	outline-color: transparent;
+	-webkit-tap-highlight-color: rgba(0,0,0,.05);
+}
+.d-none {display: none;}
+
+select::-ms-expand {display: none;}
+select:focus {
+	outline: 0;
+	box-shadow: none;
+}
+select[name=footer__curency] {
+	display: block;
+	width: 100%;
+	min-width: 82px;
+	height: 35px;
+	border-radius: 3px;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: $headline;
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23616F94' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: 86% 52%;
+	font-size: 1em;
+	padding: 0 20px;
+	border: 1px solid $border;
+}
+select[name=footer__curency] > option {
+	color: $headline;
+	background-color: $bg;
+	border: none;
+}
+
+input::-webkit-input-placeholder {transition: .25s ease;font-family: inherit;}
+input:-moz-placeholder {transition: .25s ease;font-family: inherit;}
+input::-moz-placeholder {transition: .25s ease;font-family: inherit;}
+input:-ms-input-placeholder {transition: .25s ease;font-family: inherit;}
+
+input:focus::-webkit-input-placeholder {opacity: 0; transform: translateY(-11px)}
+input:focus:-moz-placeholder {opacity: 0; transform: translateY(-11px)}
+input:focus::-moz-placeholder {opacity: 0; transform: translateY(-11px)}
+input:focus:-ms-input-placeholder {opacity: 0; transform: translateY(-11px)}
+
+.pl-0 {padding-left: 0!important;}
+.pr-0 {padding-right: 0!important;}

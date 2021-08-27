@@ -1,0 +1,51 @@
+.plan__sidelong {
+   width: 100%;
+   max-width: 1120px;
+   margin-left: auto;
+   margin-right: auto;
+   @media (min-width: 767px){
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(9, 1fr);
+      // grid-template-columns: 200px 1fr 200px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas: "content content content content content content sidebar sidebar sidebar";
+   }
+}
+.plan__sidebar {
+   padding: 26px 26px 26px;
+   grid-area: sidebar;
+   .h1 {
+      text-align: center;
+      padding-bottom: .9em;
+   }
+   .divid-up {
+      padding-top: 21px;
+      padding-bottom: 10px;
+   }
+}
+.plan__columns {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   width: 100%;
+   padding-bottom: 10px;
+   text-shadow: 0 0;
+   color: $headline;
+   &--price {
+      font-size: em(20);
+      font-weight: bold;
+      padding-top: 0.2em;
+      padding-bottom: 1.1em;
+      b {font-size: 1.3em;}
+   }
+}
+.plan__main {
+   grid-area: content;
+}
+.plan__terms {
+   padding: 30px 24px;
+}
+.color-alert {
+   color: $danger;
+}

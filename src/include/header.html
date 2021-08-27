@@ -1,0 +1,73 @@
+<div class="header__top">
+   <div class="container-xl">
+      <div class="logo">
+         <a class="logo__link" href="index.html">
+            <img srcset="img/header/logo.png, img/header/logo-2x.png 2x" src="img/header/logo.png" alt="logo" width="135" height="32">
+         </a>
+      </div>
+      <!-- nav -->
+      <nav class="menu">
+         <div id="dilator" class="menu__dilator">
+            <ul class="menu__list">
+               <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+               <li class="menu__item submenu">
+                  <a class="menu__link submenu__trigger" href="#">Hosting</a>
+                  <ul class="dialog dialog--under">
+                     <li><a class="dialog__link" href="hosting.html">Shared Hosting</a></li>
+                     <li><a class="dialog__link" href="hosting-plans.html">Hosting plans</a></li>
+                     <li><a class="dialog__link" href="hosting-item.html">VPS Hosting</a></li>
+                     <li><a class="dialog__link" href="#">Enterprise Hosting</a></li>
+                  </ul>
+               </li>
+               <li class="menu__item"><a class="menu__link" href="#">Domains</a></li>
+               <li class="menu__item"><a class="menu__link" href="#">Online Store</a></li>
+               <li class="menu__item"><a class="menu__link" href="#">Managed Hosting</a></li>
+               <li class="menu__item"><a class="menu__link" href="#">Help</a></li>
+               <li class="menu__item"><a class="menu__link" href="#">Addons</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="cabinet">
+         <div class="notifications">
+            <i class="notifications__bell"><svg viewBox="0 0 32 32"><use xlink:href="#i-bell"/></svg></i>
+            <i class="notifications__count">2</i>
+         </div>
+         <div class="cabinet__user">
+            <a href="#" class="submenu__trigger"><img src="img/header/user.png" alt="user"></a>
+            <div class="dialog dialog--under dialog--combo">
+               <div class="dialog__divider">
+                  <div class="profile">
+                     <div class="profile__name">John Doe</div>
+                     <div class="profile__mail">jonathan_longMail@gmail.com</div>
+                  </div>
+               </div>
+               <div class="money dialog__divider">
+                  <div class="money__balance">Account Balance<div class="money__sum">$ 100,00</div></div>
+                  <div class="money__refill">
+                     <span>Top up for the amount:</span>
+                     <form class="money__action">
+                        <i class="i-currency">$</i>
+                        <input type="text" required placeholder="10 000" pattern="[0-9]*" inputmode="decimal">
+                        <button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+                     </form>
+                  </div>
+                  <a href="#" class="money__notice">You have 4 unpayed orders</a>
+               </div>
+               <ul>
+                  <li><a class="dialog__link" href="#">Profile settings </a></li>
+                  <li><a class="dialog__link" href="#">Documents</a></li>
+                  <li><a class="dialog__link" href="#">Security</a></li>
+                  <li><a class="dialog__link" href="#">Refferal program</a></li>
+                  <li><a class="dialog__link" href="#">Get Help</a></li>
+               </ul>
+               <div class="dialog__divider dialog__divider--up">
+                  <button type="button" class="btn btn--lg btn--glass">Log out</button>
+               </div>
+            </div>
+         </div>
+         <button type="button" class="btn menu__trigger" aria-label="Menu">
+            <svg viewBox="0 0 32 32"><use xlink:href="#i-dots-three"/></svg>
+         </button>
+      </div>
+   </div>
+</div>
