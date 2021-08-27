@@ -35,8 +35,8 @@
    }
 }
 .btn--lg .i-arrow {
-   width: 25px;
-   height: 25px;
+   width: 24px;
+   height: 24px;
    margin: -4px 0 -4px 10px;
 }
 
@@ -85,5 +85,8 @@
    text-align: center;
    &--danger {
       background-color: $bg-alert;
+   }
+   @media (max-width: 500px){
+      top: 25px
    }
 }

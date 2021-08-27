@@ -1,0 +1,27 @@
+.d-none {display: none;}
+
+.pl-0 {padding-left: 0!important;}
+.pr-0 {padding-right: 0!important;}
+
+.box {
+	background-color: #fff;
+	box-shadow: -1px 1px 10px rgba(30,23,104,.04);
+	border-radius: 3px;
+}
+.divid-up {
+	border-top: 1px solid $border;
+}
+.color-alert {
+   color: $danger!important;
+}
+.fz-14 {
+	font-size: em(14);
+}
+.align-right {
+	text-align: center!important;
+	justify-content: flex-end!important;
+}
+.align-left {
+   text-align: left!important;
+   justify-content: flex-start!important;
+}

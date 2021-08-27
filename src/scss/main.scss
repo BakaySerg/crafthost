@@ -1,5 +1,6 @@
 @import "vars";
 @import "reset";
+@import "helpers";
 
 body {
 	position: relative;
@@ -495,7 +496,6 @@ body {
 		}
 	}
 }
-
 .logo{
 	text-align: center;
 	z-index: 3;
@@ -504,6 +504,7 @@ body {
 .logo__link{
 	padding-top: 0.2em;
 	display: block;
+	max-width: 134px;
 	@media (max-width: 1023px){
 		max-width: 114px;
 	}
@@ -663,17 +664,6 @@ body {
 		}
 	}
 }
-.box {
-	background-color: #fff;
-	box-shadow: -1px 1px 10px rgba(30,23,104,.04);
-	border-radius: 3px;
-}
-.divid-up {
-	border-top: 1px solid $border;
-}
-.fz-14 {
-	font-size: em(14);
-}
 .footer {
 	background-color: $bg;
 	padding: 30px 0;
@@ -688,16 +678,20 @@ body {
 			padding-right: 0;
 		}
 		@media (max-width: 800px){
-			align-items: start;
+			align-items: baseline;
+		}
+		@media (max-width: 360px){
+			align-items: center;
 		}
 	}
 	&__copy{
-		margin-right: auto;
+		margin-right: 25px;
 		font-size: em(14);
 	}
 }
 .footer__curency {
 	flex-grow: .6;
+	flex-shrink: 0;
 	max-width: 110px;
 }
 
@@ -709,7 +703,7 @@ body {
 .checkbox-custom {
 	display: inline-block;
 	cursor: pointer;
-	[type=checkbox] {
+	[type=checkbox],[type=radio] {
 		display: none;
 	}
 	&__icon {
@@ -726,9 +720,9 @@ body {
 		align-items: center;
 		pointer-events: none;
 		@media (max-width: 500px){
-			max-width: 28px;
-			width: 28px;
-			height: 28px;
+			max-width: 26px;
+			width: 26px;
+			height: 26px;
 		}
 		svg {
 			display: inline-block;
