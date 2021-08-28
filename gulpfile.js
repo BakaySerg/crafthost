@@ -74,7 +74,7 @@ gulp.task('code', function() {
 
 
 gulp.task('watch', function() {
-	gulp.watch('src/scss/**/*.scss',{ delay: 500 }, gulp.parallel('styles'));  // 2-й аргумент можно - { delay: 350 }
+	gulp.watch('src/scss/**/*.scss',{ delay: 500 }, gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
 	// gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-separated'));
 	gulp.watch(['libs/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
 	gulp.watch('src/**/*.html', gulp.parallel('layout'))

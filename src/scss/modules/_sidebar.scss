@@ -16,7 +16,7 @@
    }
 }
 .plan__sidebar {
-   padding: 26px 26px 26px;
+   padding: 26px 26px 28px;
    margin-bottom: 20px;
    min-width: 360px;
    grid-area: sidebar;
@@ -28,7 +28,7 @@
       font-size: .92em;
    }
    @media (max-width: 500px){
-      padding: 20px 18px 12px;
+      padding: 20px 22px 12px;
       min-width: 270px;
    }
    .h1 {
@@ -40,18 +40,26 @@
    }
    .divid-up {
       padding-top: 21px;
-      padding-bottom: 10px;
+      padding-bottom: 7px;
    }
 }
 .plan__columns {
-   position: relative;
    display: flex;
    justify-content: space-between;
    align-items: baseline;
    width: 100%;
-   padding-bottom: 10px;
+   padding-bottom: 11px;
    text-shadow: 0 0;
    color: $headline;
+   &--optional {
+      position: relative;
+      padding-right: 15px;
+      flex-wrap: wrap;
+      .full-size {
+         color: $text;
+         padding: 0.5em 0;
+      }
+   }
    &--price {
       font-size: em(20);
       font-weight: bold;
@@ -65,13 +73,15 @@
 }
 .i-cancel {
    position: absolute;
-   top: 2px;
-   right: -18px;
+   top: -6px;
+   right: -16px;
    color: $icons;
-   width: 14px;
-   height: 14px;
+   width: 30px;
+   height: 30px;
+   padding: 6px;
    cursor: pointer;
    pointer-events: auto;
+   z-index: 2;
 }
 .plan__main {
    grid-area: content;
@@ -187,13 +197,13 @@
    }
 }
 .plan__addons {
-   padding: 25px 24px 27px;
+   padding: 27px 24px 6px;
    .message__title,.h1,.h2,.h3,.h4 {
       color: $headline;
       padding-bottom: .4em;
    }
    @media (max-width: 500px){
-      padding: 19px 13px 19px;
+      padding: 19px 13px 6px;
    }
 }
 .addons__title {
@@ -203,12 +213,12 @@
    }
 }
 .addons__cta {
-   padding-top: 20px;
+   padding: 19px 0;
    display: flex;
    align-items: center;
    justify-content: space-between;
    @media (max-width: 500px){
-      padding: 15px 0 0 10px;
+      padding: 13px 0 13px 10px;
    }
 }
 .addons__descr {
@@ -220,10 +230,8 @@
    p {font-size: em(14);}
 }
 .addons__price {
-   min-width: 110px;
-   @media (min-width: 600px){
-      align-self: flex-end;
-   }
+   min-width: 99px;
+   margin-left: auto;
    @media (max-width: 500px){
       margin-top: 6px;
    }

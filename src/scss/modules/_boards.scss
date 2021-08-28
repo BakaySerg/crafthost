@@ -2,13 +2,13 @@
 
 .board{
    background-color: $bg;
-   min-height: calc(100vh - 286px);
+   min-height: calc(100vh - 294px);
    padding: 40px 15px;
    @media (max-width: 900px){
       padding: 25px 15px;
    }
    @media (max-width: 600px){
-      padding: 20px 14px 0;
+      padding: 20px 14px 10px;
    }
 }
 .sort__title {
@@ -259,6 +259,7 @@
 	font-size: 1.5em;
 	padding-bottom: .65em;
 	position: relative;
+   color: $headline;
 	&::before{
 		position: absolute;
 		content: '\2013';
@@ -273,7 +274,7 @@
 	}
 }
 .message__descr {
-	padding-right: 40px;
+	padding-right: 30px;
 	max-width: 617px;
 	@media (max-width: 600px){padding-right: 0;}
 	& > p +.btn {
@@ -290,6 +291,10 @@
 .message__precept {
 	padding-left: 22px;
 	padding-top: .7em;
+   @media (min-width: 991px){
+      padding-top: 1em;
+      font-size: .966em;
+   }
 	li {
 		padding-left: 10px;
 		padding-bottom: 1.3em;
@@ -374,6 +379,9 @@
 	&--alert {
 		background-color: $bg-alert;
 		color: #fff;
+      & h1,& h2,& h3,& p {
+         color: inherit;
+      }
 		.btn--close {
 			color: #fff;
 			&:hover {color: rgba(#fff, .6);}
@@ -419,7 +427,7 @@
 			}
 		}
 		.message__descr {
-			max-width: 450px;
+			max-width: 444px;
 			flex-grow: 1.1;
 			min-width: 49%;
 			@media (max-width: 800px){
@@ -474,4 +482,18 @@
          border-bottom: 1px solid currentColor;
       }
    }
+}
+.argum__box {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+   grid-gap: 20px;
+   width: 100%;
+   max-width: 1120px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 40px;
+}
+.argum__item {
+   @include flex-center;
+   padding: 18px 24px;
 }

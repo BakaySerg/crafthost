@@ -25,3 +25,7 @@
    text-align: left!important;
    justify-content: flex-start!important;
 }
+.full-size {
+	flex-grow: 1;
+	min-width: 100%;
+}

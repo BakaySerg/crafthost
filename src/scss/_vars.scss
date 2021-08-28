@@ -19,3 +19,13 @@ $body-font-size: 16; // body font-size
 @function em($pixels, $context: $body-font-size) {
   @return #{$pixels/$context}em;
 }
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
