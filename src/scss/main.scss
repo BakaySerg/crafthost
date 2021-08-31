@@ -61,7 +61,7 @@ body {
 			padding: 12px 12px 10px;
 		}
 		@media (max-width: 380px){
-			padding: 9px 12px 8px;
+			padding: 10px 12px 9px;
 		}
 	}
 	&--icon {
@@ -229,23 +229,32 @@ body {
 		position: relative;
 		margin-right: 6px;
 		&>img, &>svg, &>i {pointer-events: none;}
-		&:after{
-			content: '';
-			display: inline-block;
-			// pointer-events: none;
-			position: absolute;
-			top: 6px;
-			right: -16px;
-			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%232A3B67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-			width: 20px;
-			height: 20px;
-			transition: .3s;
-		}
-		&:hover:after, &.active:after{
-			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23448ed9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-		}
 	}
 }
+.link--arrow-down {
+	position: relative;
+	display: inline-block;
+}
+.link.link--arrow-down {
+	padding: 5px 9px 5px 0;
+	color: $text;
+}
+.submenu__trigger:after,.link--arrow-down:after {
+	content: '';
+	display: inline-block;
+	// pointer-events: none;
+	position: absolute;
+	top: 6px;
+	right: -16px;
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%232A3B67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	width: 20px;
+	height: 20px;
+	transition: .3s;
+}
+.submenu__trigger:hover:after, .submenu__trigger.active:after, .link--arrow-down:hover:after, .link--arrow-down.active:after{
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23448ed9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
 .dialog{
 	position: absolute;
 	min-width: 218px;

@@ -2,6 +2,8 @@
 
 function setActiveMenuItem() {
 	var current = location.pathname.split('/')[1];
+	current = current.split('-')[0].split('.')[0] + '.html'
+	console.log(current);
 	if (current === "") return;
 	var menuItems = document.querySelectorAll('.menu__list a');
 	for (var i = 0, len = menuItems.length; i < len; i++) {
@@ -13,7 +15,6 @@ function setActiveMenuItem() {
 
 document.addEventListener('DOMContentLoaded', function(){
 	setActiveMenuItem();
-
 	//big menu
 	const menu = document.getElementById("dilator");
 	const menuTrigger = document.querySelector(".menu__trigger");
@@ -89,6 +90,5 @@ document.addEventListener('DOMContentLoaded', function(){
 			} else {checkboxMain.checked = false;}
 		});
 	};
-
 
 });
