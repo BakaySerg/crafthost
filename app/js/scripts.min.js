@@ -2,9 +2,10 @@
 
 function setActiveMenuItem() {
 	var current = location.pathname.split('/')[1];
-	current = current.split('-')[0].split('.')[0] + '.html'
-	console.log(current);
 	if (current === "") return;
+	else {
+		current = current.split('-')[0].split('.')[0] + '.html'
+	}
 	var menuItems = document.querySelectorAll('.menu__list a');
 	for (var i = 0, len = menuItems.length; i < len; i++) {
 		if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
