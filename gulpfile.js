@@ -1,6 +1,7 @@
 var   gulp          = require('gulp'),
 		// gutil         = require('gulp-util' ),
 		sourcemaps 	  = require('gulp-sourcemaps'),
+		wait 			  = require('gulp-wait'),
 		sass          = require('gulp-sass'),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
@@ -35,6 +36,7 @@ gulp.task('layout', function () {
 gulp.task('styles', function() {
 	return gulp.src('src/scss/**/*.scss')
 	// return gulp.src('src/scss/*.scss')
+	.pipe(wait(200))
 	.pipe(sourcemaps.init({loadMaps: true}))  //sourceMap
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
@@ -74,7 +76,7 @@ gulp.task('code', function() {
 
 
 gulp.task('watch', function() {
-	gulp.watch('src/scss/**/*.scss',{ delay: 400 }, gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
+	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
 	// gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-separated'));
 	gulp.watch(['libs/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
 	gulp.watch('src/**/*.html', gulp.parallel('layout'))

@@ -1,6 +1,6 @@
-@import "vars";
-@import "reset";
-@import "helpers";
+@import "abstractions/vars";
+@import "abstractions/reset";
+@import "abstractions/helpers";
 
 body {
 	position: relative;

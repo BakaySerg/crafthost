@@ -1,14 +1,57 @@
 <div class="drawer" id="domain-choise" data-drawer-target>
    <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
    <div class="drawer__wrapper">
-      <div class="drawer__header">
-         <div class="drawer__title">
-            Header Title
+      <button class="drawer__close btn" data-drawer-close aria-label="Close Drawer"></button>
+      <div class="drawer__fieldset">
+         <div class="drawer__body">
+            <div class="drawer__header">
+               <div class="drawer__title">
+                  <h2 class="drawer__headline">Domain Privacy</h2>
+                  <p>Addon for the domain <b>website.tech</b></p>
+               </div>
+            </div>
+            <div class="drawer__content">
+               <div class="privacy__item">
+                  <div class="privacy__title privacy__title--danger">Without Domain Privacy</div>
+                  <div class="privacy__box">
+                     <div class="privacy__address">
+                        <b>website.org</b>
+                        <span>John Smith</span>
+                        <span>Victory Street, 113</span>
+                        <span>12345, New York</span>
+                        <span>USA</span>
+                     </div>
+                     <div class="privacy__card">
+                        <div class="privacy__status privacy__status--warn">
+                           <svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
+                           <div>Unsecured:</div>
+                        </div>
+                        <p>Information about you is exposed</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="privacy__item">
+                  <div class="privacy__title privacy__title--success">With Domain Privacy</div>
+                  <div class="privacy__box">
+                     <div class="privacy__address">
+                        <b>website.org</b>
+                        <span>John Smith</span>
+                        <span>Victory Street, 113</span>
+                        <span>12345, New York</span>
+                        <span>USA</span>
+                     </div>
+                     <div class="privacy__card">
+                        <div class="privacy__status privacy__status--success">
+                           <svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
+                           <div>Unsecured:</div>
+                        </div>
+                        <p>Your personal data is protected</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
-         <button class="drawer__close btn" data-drawer-close aria-label="Close Drawer"></button>
-      </div>
-      <div class="drawer__content">
-
+         <div class="drawer__footer"></div>
       </div>
    </div>
 </div>

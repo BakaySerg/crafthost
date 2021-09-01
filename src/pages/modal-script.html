@@ -1,5 +1,5 @@
 <script>
-	var drawer = function () {
+	const drawer = function () {
 		/**
 		 * Element.closest() polyfill
 		 * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
@@ -54,7 +54,7 @@
 			});
 		}
 
-		var settings = {
+		const settings = {
 			speedOpen: 50,
 			speedClose: 350,
 			activeClass: "is-active",
@@ -67,7 +67,7 @@
 		// Methods
 
 		// Toggle accessibility
-		var toggleAccessibility = function (event) {
+		let toggleAccessibility = function (event) {
 			if (event.getAttribute("aria-expanded") === "true") {
 				event.setAttribute("aria-expanded", false);
 			} else {
@@ -76,7 +76,7 @@
 		};
 
 		// Open Drawer
-		var openDrawer = function (trigger) {
+		let openDrawer = function (trigger) {
 			// Find target
 			var target = document.getElementById(
 				trigger.getAttribute("aria-controls")
@@ -102,7 +102,7 @@
 		};
 
 		// Close Drawer
-		var closeDrawer = function (event) {
+		let closeDrawer = function (event) {
 			// Find target
 			var closestParent = event.closest(settings.selectorTarget),
 				childrenTrigger = document.querySelector(
@@ -113,7 +113,6 @@
 			closestParent.classList.remove(settings.visibleClass);
 
 			// Remove body overflow hidden
-			//   document.body.style.overflow = '';
 			document.body.classList.remove("open-modal");
 
 			// Toggle accessibility
@@ -126,8 +125,7 @@
 		};
 
 		// Click Handler
-		var clickHandler = function (event) {
-			// Find elements
+		let clickHandler = function (event) {
 			var toggle = event.target,
 				open = toggle.closest(settings.selectorTrigger),
 				close = toggle.closest(settings.selectorClose);
@@ -144,7 +142,7 @@
 		};
 
 		// Keydown Handler, handle Escape button
-		var keydownHandler = function (event) {
+		let keydownHandler = function (event) {
 			if (event.key === "Escape" || event.keyCode === 27) {
 				// Find all possible drawers
 				var drawers = document.querySelectorAll(settings.selectorTarget),
