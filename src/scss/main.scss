@@ -15,6 +15,13 @@ body {
 		font-size: 14px;
 	}
 }
+.open-modal {
+	overflow: hidden;
+	min-height: 101vh;
+	@media (min-width: 1025px) and (orientation: landscape){
+		padding-right: 17px;
+	}
+}
 .wrapper {
 	overflow: hidden;
 	position: relative;
@@ -780,3 +787,4 @@ body {
 @import "modules/cards";
 @import "modules/sidebar";
 @import "modules/forms";
+@import "modules/modals";
