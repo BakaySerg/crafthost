@@ -69,9 +69,6 @@
 }
 .drawer__header {
    padding: 20px 0 22px 29px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
    border-bottom: 1px solid $border;
    p {
       letter-spacing: .02em;
@@ -161,6 +158,10 @@
       line-height: 1.2;
    }
 }
+[data-trigger-tab] > *{
+   pointer-events: none;
+   user-select: none;
+}
 .privacy__status {
    display: inline-flex;
    align-items: center;
@@ -173,11 +174,33 @@
       height: 24px;
       margin: 0 .5em 2px -4px;
    }
-
    &--warn {
       color: $danger;
    }
    &--success {
       color: $accessible;
+   }
+}
+.account {
+   padding-top: 2.2em;
+   @include flex-between;
+   &__user {
+      margin-right: auto;
+   }
+   &__name {
+      color: $headline;
+      font-size: em(20);
+      padding-bottom: .1em;
+      font-weight: bold;
+   }
+   &__mail{
+      letter-spacing: .03em;
+   }
+   .i-user {
+      width: 24px;
+      height: 24px;
+      color: $headline;
+      margin-right: 15px;
+      margin-left: -6px;
    }
 }

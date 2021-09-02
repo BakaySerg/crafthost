@@ -1,0 +1,122 @@
+.btn {
+	display: inline-block;
+	border: none;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	outline-color: transparent;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	transition: background-color .3s, color .3s, border-color .3s, opacity .3s;
+	cursor: pointer;
+	user-select: none;
+	&--sm {
+		width: 32px;
+		height: 32px;
+		padding: 4px;
+		background-color: transparent;
+	}
+	&--lg{
+		font-size: 1em;
+		letter-spacing: .03em;
+		padding: 12px 15px 11px;
+		min-width: 132px;
+		border-radius: 3px;
+		font-weight: normal;
+		line-height: 1.2;
+		@media (max-width: 500px){
+			padding: 12px 12px 10px;
+		}
+		@media (max-width: 380px){
+			padding: 10px 12px 9px;
+		}
+	}
+	&--icon {
+		text-align: center;
+		min-width: 190px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 380px){
+			min-width: 160px;
+		}
+	}
+	&--simply {
+		border: 1px solid $border;
+		background-color: #fff;
+		color: $headline;
+		&:hover {
+			background-color:  darken(#fff, 4%);
+			border-color:  darken($border, 10%);
+		}
+	}
+	&--success{
+		color: #fff;
+		border: 1px solid $accessible;
+		background-color: $accessible;
+		font-weight: bold;
+		&:hover {
+			background-color:  darken($accessible, 6%);
+			border-color:  darken($accessible, 12%);
+		}
+	}
+	&--secondary{
+		color: $headline;
+		background-color: $bg2;
+		border: 1px solid $bg2;
+		&:hover {
+			background-color:  darken($bg2, 6%);
+			border-color:  darken($bg2, 10%);
+		}
+	}
+	&--glass {
+		border: 1px solid currentColor;
+		color: #fff;
+		background-color: transparent;
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+}
+.btn--close {
+	position: absolute;
+	right: calc(1vw + 7px);
+	top: calc(50% - 20px);
+	width: 40px;
+	height: 40px;
+	color: $icons;
+	background-color: transparent;
+	padding: 7px;
+	z-index: 2;
+	&:hover {color: darken($icons, 18%);}
+	&>svg{pointer-events: none;}
+	@media (max-width: 1030px){
+		top: 25px;
+	}
+	@media (max-width: 500px){
+		width: 36px;
+		height: 36px;
+		top: 15px;
+	}
+	@media (max-width: 380px){
+		width: 32px;
+		height: 32px;
+		top: 4px;
+		right: 4px;
+	}
+}
+.i-plus {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	transform: rotate(45deg);
+	margin-right: 17px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	@media (max-width: 380px){
+		width: 15px;
+		height: 15px;
+		margin-top: -6px;
+		margin-left: -4px;
+	}
+}
