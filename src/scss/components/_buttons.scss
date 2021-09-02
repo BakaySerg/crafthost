@@ -15,8 +15,12 @@
 		height: 32px;
 		padding: 4px;
 		background-color: transparent;
+		flex-shrink: 0;
+		& svg {
+			max-width: 100%;
+		}
 	}
-	&--lg{
+	&--lg {
 		font-size: 1em;
 		letter-spacing: .03em;
 		padding: 12px 15px 11px;
@@ -77,6 +81,29 @@
 			opacity: 0.7;
 		}
 	}
+	&--outlined {
+		border: 1px solid $border;
+		background-color: transparent;
+		color: $headline;
+		&.btn--icon{
+			padding-right: 24px;
+			padding-left: 19px;
+		}
+		&:hover {
+			background-color: $bg2;
+		}
+		& > svg{
+			pointer-events: none;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&:disabled {
+		color: #fff;
+		background-color: $text;
+		border-color: $text;
+	}
 }
 .btn--close {
 	position: absolute;
@@ -118,5 +145,50 @@
 		height: 15px;
 		margin-top: -6px;
 		margin-left: -4px;
+	}
+}
+.help {
+	color: $text;
+	display: inline-block;
+	font-size: em(14);
+	font-weight: bold;
+	padding: 2px 0;
+	border-bottom: 1px solid currentColor;
+	position: relative;
+	&:before {
+		content: attr(data-help);
+		position: absolute;
+		display: block;
+		padding: 20px;
+		font-size: .92em;
+		font-weight: normal;
+		top: calc(100% + 15px);
+		left: 0;
+		right: 0;
+		color: #fff;
+		background-color: $dialog;
+		border-radius: 3px;
+		pointer-events: none;
+		opacity: 0;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: calc(100% + 10px);
+		right: 33px;
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid #2a3b67;
+		pointer-events: none;
+		opacity: 0;
+	}
+	&:hover {
+		color: $headline;
+		&:before,&:after {
+			opacity: 1;
+			transition: .4s;
+		}
 	}
 }

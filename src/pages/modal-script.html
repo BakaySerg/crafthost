@@ -164,7 +164,6 @@
 		[].forEach.call(document.querySelectorAll('[data-trigger-tab]'), function (el) {
 			el.addEventListener('click', function (e) {
 				let currentTab = document.querySelector('[data-tab="active"]');
-				// let comingTab = currentTab.nextElementSibling.setAttribute('data-tab','active');
 				let id = this.getAttribute('data-trigger-tab');
 				let comingTab = document.getElementById(id);
 				currentTab.setAttribute('data-tab','hidden')
@@ -173,6 +172,23 @@
 		});
 	};
 	tabSwitcher();
+
+	// accordion
+	const accordionOpen = function(){
+		[].forEach.call(document.querySelectorAll('[data-collapse]'), function (el) {
+			el.addEventListener('click', function (e) {
+				e.preventDefault();
+				let currentItem = this.closest('.accordion__item');
+				let siblings = currentItem.parentElement.children;
+				// console.log(siblings);
+				[...siblings].forEach(sibling => {
+					sibling.classList.remove('expanded');
+				});
+				currentItem.classList.toggle('expanded');
+			});
+		});
+	};
+	accordionOpen();
 
 
 </script>

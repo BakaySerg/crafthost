@@ -56,9 +56,43 @@
    flex-shrink: 0;
    margin-left: 1rem;
    opacity: .45;
+   z-index: 1;
    &:hover {opacity: 1;}
    @media (max-width: 500px){
       background-size: 22px;
+   }
+}
+// .btn--plus {
+//    background-color: transparent;
+//    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 4L4.00017 19.9998' stroke='%232A3B67' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.9998 19.9998L4 4' stroke='%232A3B67' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    background-size: 24px;
+//    width: 30px;
+//    height: 30px;
+//    flex-shrink: 0;
+// }
+.accordion__item {
+   padding: 20px;
+   border-bottom: 1px solid $border;
+}
+.accordion__title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   .btn--sm {
+      padding: 5px;
+      margin: -3px -2px -3px 20px;
+   }
+}
+.accordion__hidden {
+   height: 0;
+   overflow: hidden;
+   opacity: 0;
+   transition: height .4s, opacity .45s;
+   .expanded & {
+      height: auto;
+      opacity: 1;
    }
 }
 .drawer__body {
@@ -70,6 +104,9 @@
 .drawer__header {
    padding: 20px 0 22px 29px;
    border-bottom: 1px solid $border;
+   &--form {
+      padding: 20px 0 22px 20px;
+   }
    p {
       letter-spacing: .02em;
       font-stretch: 110%;
@@ -89,10 +126,9 @@
 }
 .drawer__content {
    position: relative;
-   overflow-x: hidden;
-   overflow-y: auto;
    height: 100%;
    flex-grow: 1;
+   flex-shrink: 0;
 }
 .drawer.is-active {
    display: block;
@@ -104,9 +140,10 @@
    opacity: 1;
 }
 .drawer__footer {
-   padding: 18px 15px 42px;
+   padding: 20px 15px 22px;
    border-top: 1px solid $border;
    @include flex-center;
+   .btn:not(:first-child) {margin-left: 40px;}
 }
 [data-tab] {
    display: none;
@@ -202,5 +239,22 @@
       color: $headline;
       margin-right: 15px;
       margin-left: -6px;
+   }
+   &__new {
+      padding: 25px 0;
+      .help {
+         margin-top: 50px;
+         float: right;
+      }
+      &:after {
+         content: '';
+         display: block;
+         clear: both;
+      }
+   }
+}
+.drawer__header--form {
+   .form-aligner {
+      padding-top: 2.5em;
    }
 }

@@ -61,6 +61,17 @@ body {
 	font-size: em(20);
 	color: $headline;
 }
+.h4 {
+	font-size: 1em;
+	color: $headline;
+	font-weight: bold;
+}
+.h5 {
+	font-size: 1em;
+	color: $headline;
+	font-weight: normal;
+}
+
 //components
 @import "components/buttons";
 //layout

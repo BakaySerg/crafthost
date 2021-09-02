@@ -1,14 +1,71 @@
-<div id="domain-choise-registration" class="drawer__item" data-tab="hidden">
+<form id="domain-choise-registration" class="drawer__item" data-tab="hidden">
 	<div class="drawer__body">
-		<div class="drawer__header">
+		<div class="drawer__header drawer__header--form">
 			<div class="drawer__title">
-				<h2 class="drawer__headline">Choose contacts</h2>
-				<p>Fill in the contact details so that we can arrange services</p>
+				<label class="selector">
+					<input type="radio" name="entity" checked>
+					<span class="btn selector__btn">Natural entity / IE</span>
+				</label>
+				<label class="selector">
+					<input type="radio" name="entity">
+					<span class="btn selector__btn">Legal entity</span>
+				</label>
+			</div>
+			<div class="form-aligner">
+				<label class="checkbox-custom checkbox-custom--general">
+					<input id="checkbox-general" class="d-none" type="checkbox" name="choise-all" value="0">
+					<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					<span>Use for all contact types</span>
+				</label>
 			</div>
 		</div>
-		<div class="drawer__content"> </div>
+		<div class="drawer__content">
+			<div class="accordion">
+				<div class="accordion__item acc-1">
+					<div class="accordion__title">
+						<h4 class="h4">Registrant Contact Information</h4>
+						<button class="btn btn--sm" data-collapse><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum culpa enim necessitatibus quo accusamus reiciendis voluptas cumque voluptatum dolore.
+					</div>
+				</div>
+
+				<div class="accordion__item acc-2">
+					<div class="accordion__title">
+						<h4 class="h4">Technical Contact Information</h4>
+						<button class="btn btn--sm" data-collapse><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum culpa enim necessitatibus quo accusamus reiciendis voluptas cumque voluptatum dolore.
+					</div>
+				</div>
+
+				<div class="accordion__item acc-3">
+					<div class="accordion__title">
+						<h4 class="h4">Administrative Contact Information</h4>
+						<button class="btn btn--sm" data-collapse><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum culpa enim necessitatibus quo accusamus reiciendis voluptas cumque voluptatum dolore.
+					</div>
+				</div>
+
+				<div class="accordion__item acc-4">
+					<div class="accordion__title">
+						<h4 class="h4">Billing Contact Information</h4>
+						<button class="btn btn--sm" data-collapse><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum culpa enim necessitatibus quo accusamus reiciendis voluptas cumque voluptatum dolore.
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</div>
 	<div class="drawer__footer">
-		<button class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Close</button>
+		<button type="reset" class="btn btn--lg btn--secondary" data-trigger-tab="domain-choise-account">Close</button>
+		<button type="submit" class="btn btn--lg btn--success" disabled>Continue</button>
 	</div>
-</div>
+</form>
