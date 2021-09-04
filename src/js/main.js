@@ -106,4 +106,51 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	};
 
+	// tabs inside the drawer
+	const tabSwitcher = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-trigger-tab]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					let currentTab = document.querySelector('[data-tab="active"]');
+					let id = this.getAttribute("data-trigger-tab");
+					let comingTab = document.getElementById(id);
+					currentTab.setAttribute("data-tab", "hidden");
+					comingTab.setAttribute("data-tab", "active");
+					if (this.getAttribute('type') === "reset") {
+						let filled = currentTab.querySelectorAll(".form-field");
+						let btn = currentTab.querySelector('[type=submit]');
+						[...filled].forEach((f) => {
+							f.classList.remove("filled");
+						});
+
+						btn.classList.add("btn--disabled");
+					}
+				});
+			}
+		);
+	};
+	tabSwitcher();
+
+	// accordion
+	const accordionOpen = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-collapse]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					let currentItem = this.closest(".accordion__item");
+					let siblings = currentItem.parentElement.children;
+					[...siblings].forEach((sibling) => {
+						if (sibling !== currentItem) {
+							sibling.classList.remove("expanded");
+						}
+					});
+					currentItem.classList.toggle("expanded");
+				});
+			}
+		);
+	};
+	accordionOpen();
+
 });
