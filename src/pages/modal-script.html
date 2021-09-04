@@ -1,27 +1,5 @@
 <script>
 	const drawer = function () {
-		/**
-		 * Element.closest() polyfill
-		 * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
-		 */
-		if (!Element.prototype.closest) {
-			if (!Element.prototype.matches) {
-				Element.prototype.matches =
-					Element.prototype.msMatchesSelector ||
-					Element.prototype.webkitMatchesSelector;
-			}
-			Element.prototype.closest = function (s) {
-				var el = this;
-				var ancestor = this;
-				if (!document.documentElement.contains(el)) return null;
-				do {
-					if (ancestor.matches(s)) return ancestor;
-					ancestor = ancestor.parentElement;
-				} while (ancestor !== null);
-				return null;
-			};
-		}
-
 		// Trap Focus
 		function trapFocus(element) {
 			var focusableEls = element.querySelectorAll(
@@ -38,13 +16,15 @@
 					return;
 				}
 				if (e.shiftKey) {
-					if (  /* shift + tab */
+					if (
+						/* shift + tab */
 						document.activeElement === firstFocusableEl
 					) {
 						lastFocusableEl.focus();
 						e.preventDefault();
 					}
-				} else {  /* tab */
+				} else {
+					/* tab */
 					if (document.activeElement === lastFocusableEl) {
 						firstFocusableEl.focus();
 						e.preventDefault();
@@ -83,8 +63,6 @@
 
 			// Make it active
 			target.classList.add(settings.activeClass);
-;
-
 			document.body.classList.add("open-modal");
 
 			// Toggle accessibility
@@ -160,35 +138,66 @@
 	drawer();
 
 	// tabs inside the drawer
-	const tabSwitcher = function(){
-		[].forEach.call(document.querySelectorAll('[data-trigger-tab]'), function (el) {
-			el.addEventListener('click', function (e) {
-				let currentTab = document.querySelector('[data-tab="active"]');
-				let id = this.getAttribute('data-trigger-tab');
-				let comingTab = document.getElementById(id);
-				currentTab.setAttribute('data-tab','hidden')
-				comingTab.setAttribute('data-tab','active')
-			});
-		});
+	const tabSwitcher = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-trigger-tab]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					let currentTab = document.querySelector('[data-tab="active"]');
+					let id = this.getAttribute("data-trigger-tab");
+					let comingTab = document.getElementById(id);
+					currentTab.setAttribute("data-tab", "hidden");
+					comingTab.setAttribute("data-tab", "active");
+				});
+			}
+		);
 	};
 	tabSwitcher();
 
 	// accordion
-	const accordionOpen = function(){
-		[].forEach.call(document.querySelectorAll('[data-collapse]'), function (el) {
-			el.addEventListener('click', function (e) {
-				e.preventDefault();
-				let currentItem = this.closest('.accordion__item');
-				let siblings = currentItem.parentElement.children;
-				// console.log(siblings);
-				[...siblings].forEach(sibling => {
-					sibling.classList.remove('expanded');
+	const accordionOpen = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-collapse]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					let currentItem = this.closest(".accordion__item");
+					let siblings = currentItem.parentElement.children;
+					[...siblings].forEach((sibling) => {
+						if (sibling !== currentItem) {
+							sibling.classList.remove("expanded");
+						}
+					});
+					currentItem.classList.toggle("expanded");
 				});
-				currentItem.classList.toggle('expanded');
-			});
-		});
+			}
+		);
 	};
 	accordionOpen();
 
+	// custom placeholder
+	(function customPlaceholder() {
+		function getInputFields() {
+			let inputFields = document.getElementsByClassName("form-input");
+			return Array.prototype.slice.call(inputFields);
+		}
 
+		function checkLabel() {
+			let fieldParent = this.parentElement;
+			if (this.value.length !== 0) {
+				fieldParent.classList.add("filled");
+			} else {
+				fieldParent.classList.remove("filled");
+			}
+		};
+
+		function focusLabel(){
+			this.parentElement.classList.add("filled");
+		};
+
+		getInputFields().forEach(function (el) {
+			el.addEventListener("focus", focusLabel);
+			el.addEventListener("blur", checkLabel);
+		});
+	})();
 </script>
