@@ -134,7 +134,7 @@
             <button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
          </form>
 
-         <div class="argum__box plan__arguments" hidden>
+         <div class="argum__box plan__arguments">
             <div class="argum__item box">
                <img srcset="img/domain/argument-1.png, img/domain/argument-1-2x.png 2x" src="img/domain/argument-1.png" alt=".com">
                <div class="argum__text">
@@ -157,7 +157,7 @@
                </div>
             </div>
          </div>
-         <form action="#" class="plan__form plan__sidelong">
+         <form action="#" class="plan__form plan__sidelong" hidden>
 				<!-- choise -->
 				<div class="plan__main">
 					<div class="box plan__options">
@@ -426,7 +426,7 @@
 					</div>
 				</div>
 				<!-- tab registration -->
-				<form id="domain-choise-registration" class="drawer__item" data-tab="hidden">
+				<form id="domain-choise-registration" class="drawer__item drawer__form" data-tab="hidden">
 					<div class="drawer__body">
 						<div class="drawer__header drawer__header--form">
 							<div class="drawer__title">
@@ -460,8 +460,40 @@
 											<span class="form-placeholder">Email</span>
 										</label>
 										<label class="form-field">
-											<input type="tel" name="f-phone" class="form-input" placeholder=" " required>
+											<input type="tel" name="f-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
 											<span class="form-placeholder">Phone</span>
+										</label>
+				
+										<div class="form-subtitle">Company</div>
+										<label class="form-field">
+											<input type="text" name="f-company-name" class="form-input" placeholder=" " required minlength="2">
+											<span class="form-placeholder">Company Name</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-tax-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">Tax code</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-kpp" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">KPP</span>
+										</label>
+				
+										<div class="form-subtitle">Postal Address</div>
+										<label class="form-field">
+											<input type="text" name="f-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">Zip code</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-region" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">Region</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-locality" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">City / Locality</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-address" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">Address</span>
 										</label>
 									</div>
 								</div>
@@ -497,8 +529,8 @@
 						</div>
 					</div>
 					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-tab="domain-choise-account">Close</button>
-						<button type="submit" class="btn btn--lg btn--success" disabled>Continue</button>
+						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-tab="domain-choise-account">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Continue</button>
 					</div>
 				</form>
 
@@ -514,13 +546,13 @@
 
 			if (search) {
 				search.addEventListener('click', function(e) {
-					e.preventDefault();
 					const searchField = e.target.previousElementSibling;
 					const planDetails = document.querySelector('.plan__sidelong');
 					const arguments = document.querySelector('.plan__arguments');
 					if (searchField.value.length >= 4) {
 						planDetails.removeAttribute('hidden');
 						arguments.setAttribute('hidden','');
+						e.preventDefault();
 					}
 				});
 			};
@@ -639,7 +671,7 @@
 					closeDrawer(close);
 				}
 				if (open || close) {
-					event.preventDefault();
+					// event.preventDefault();
 				}
 			};
 	
@@ -676,6 +708,15 @@
 						let comingTab = document.getElementById(id);
 						currentTab.setAttribute("data-tab", "hidden");
 						comingTab.setAttribute("data-tab", "active");
+						if (this.getAttribute('type') === "reset") {
+							let filled = currentTab.querySelectorAll(".form-field");
+							let btn = currentTab.querySelector('[type=submit]');
+							[...filled].forEach((f) => {
+								f.classList.remove("filled");
+							});
+	
+							btn.classList.add("btn--disabled");
+						}
 					});
 				}
 			);
@@ -707,7 +748,7 @@
 		(function customPlaceholder() {
 			function getInputFields() {
 				let inputFields = document.getElementsByClassName("form-input");
-				return Array.prototype.slice.call(inputFields);
+				return [...inputFields];
 			}
 	
 			function checkLabel() {
@@ -717,17 +758,39 @@
 				} else {
 					fieldParent.classList.remove("filled");
 				}
-			};
+			}
 	
-			function focusLabel(){
+			function focusLabel() {
 				this.parentElement.classList.add("filled");
-			};
+			}
 	
 			getInputFields().forEach(function (el) {
 				el.addEventListener("focus", focusLabel);
 				el.addEventListener("blur", checkLabel);
 			});
 		})();
+	
+		let formsChanged = document.querySelector('.drawer__form');
+		if (formsChanged){
+			[...formsChanged].forEach(function(el){
+				el.addEventListener("keyup",function(){
+					let inputs = formsChanged.querySelectorAll('.form-input[required]');
+					let btn = formsChanged.querySelector('[type=submit]');
+	
+					let allValid = true;
+					[...inputs].filter((inp) => {
+						if (inp.value.trim() === ""){
+							allValid = false;
+						}
+					});
+					if (!allValid){
+						btn.classList.add("btn--disabled");
+					} else {
+						btn.classList.remove("btn--disabled");
+					}
+				});
+			});
+		};
 	</script>
 </body>
 </html>

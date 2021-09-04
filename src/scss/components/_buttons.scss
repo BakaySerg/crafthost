@@ -97,9 +97,13 @@
 			display: inline-block;
 			width: 20px;
 			height: 20px;
+			@media (max-width: 380px){
+				width: 17px;
+				height: 17px;
+			}
 		}
 	}
-	&:disabled {
+	&:disabled,&--disabled,&--disabled:hover {
 		color: #fff;
 		background-color: $text;
 		border-color: $text;

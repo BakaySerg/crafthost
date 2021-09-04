@@ -111,7 +111,7 @@
 				closeDrawer(close);
 			}
 			if (open || close) {
-				event.preventDefault();
+				// event.preventDefault();
 			}
 		};
 
@@ -148,6 +148,15 @@
 					let comingTab = document.getElementById(id);
 					currentTab.setAttribute("data-tab", "hidden");
 					comingTab.setAttribute("data-tab", "active");
+					if (this.getAttribute('type') === "reset") {
+						let filled = currentTab.querySelectorAll(".form-field");
+						let btn = currentTab.querySelector('[type=submit]');
+						[...filled].forEach((f) => {
+							f.classList.remove("filled");
+						});
+
+						btn.classList.add("btn--disabled");
+					}
 				});
 			}
 		);
@@ -179,7 +188,7 @@
 	(function customPlaceholder() {
 		function getInputFields() {
 			let inputFields = document.getElementsByClassName("form-input");
-			return Array.prototype.slice.call(inputFields);
+			return [...inputFields];
 		}
 
 		function checkLabel() {
@@ -189,15 +198,37 @@
 			} else {
 				fieldParent.classList.remove("filled");
 			}
-		};
+		}
 
-		function focusLabel(){
+		function focusLabel() {
 			this.parentElement.classList.add("filled");
-		};
+		}
 
 		getInputFields().forEach(function (el) {
 			el.addEventListener("focus", focusLabel);
 			el.addEventListener("blur", checkLabel);
 		});
 	})();
+
+	let formsChanged = document.querySelector('.drawer__form');
+	if (formsChanged){
+		[...formsChanged].forEach(function(el){
+			el.addEventListener("keyup",function(){
+				let inputs = formsChanged.querySelectorAll('.form-input[required]');
+				let btn = formsChanged.querySelector('[type=submit]');
+
+				let allValid = true;
+				[...inputs].filter((inp) => {
+					if (inp.value.trim() === ""){
+						allValid = false;
+					}
+				});
+				if (!allValid){
+					btn.classList.add("btn--disabled");
+				} else {
+					btn.classList.remove("btn--disabled");
+				}
+			});
+		});
+	};
 </script>

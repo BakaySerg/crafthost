@@ -2,7 +2,7 @@
    background-color: $bg;
    min-height: calc(100vh - 294px);
    padding: 40px 15px;
-   @media (max-width: 900px){
+   @media (max-width: 1025px){
       padding: 25px 15px;
    }
    @media (max-width: 600px){
@@ -172,7 +172,7 @@
          }
       }
    }
-   @media (max-width: 991px){
+   @media (max-width: 1025px){
       margin-bottom: 25px;
    }
    @media (max-width: 500px){
@@ -319,7 +319,7 @@
 	}
 	&:not(:last-child) {
 		margin-bottom: 40px;
-		@media (max-width: 991px){
+		@media (max-width: 1025px){
          margin-bottom: 25px;
       }
       @media (max-width: 500px){
@@ -336,7 +336,7 @@
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: var(--bg2x);
 		}
-		@media (max-width: 991px){
+		@media (max-width: 1025px){
 			background-position: 99% -240%;
 			background-size: auto 117%;
 		}
@@ -359,7 +359,7 @@
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: var(--bg2x);
 		}
-		@media (max-width: 991px){
+		@media (max-width: 1025px){
 			background-position: 99% -65%;
 			background-size: auto 117%;
 		}
@@ -434,7 +434,7 @@
 				padding-top: 9px;
 			}
 		}
-		@media (max-width: 991px){
+		@media (max-width: 1025px){
 			padding: 50px;
 		}
 		@media (max-width: 380px){
@@ -452,7 +452,7 @@
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
          background-image: var(--bg2x);
       }
-      @media (max-width: 991px){
+      @media (max-width: 1025px){
          background-position: 66% 44%;
          background-size: auto 152%;
       }

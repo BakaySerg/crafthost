@@ -24,7 +24,7 @@
             <button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
          </form>
 
-         <div class="argum__box plan__arguments" hidden>
+         <div class="argum__box plan__arguments">
             <div class="argum__item box">
                <img srcset="img/domain/argument-1.png, img/domain/argument-1-2x.png 2x" src="img/domain/argument-1.png" alt=".com">
                <div class="argum__text">
@@ -47,7 +47,7 @@
                </div>
             </div>
          </div>
-         <form action="#" class="plan__form plan__sidelong">
+         <form action="#" class="plan__form plan__sidelong" hidden>
 				<!-- choise -->
 				<div class="plan__main">
 					<div class="box plan__options">
@@ -234,13 +234,13 @@
 
 			if (search) {
 				search.addEventListener('click', function(e) {
-					e.preventDefault();
 					const searchField = e.target.previousElementSibling;
 					const planDetails = document.querySelector('.plan__sidelong');
 					const arguments = document.querySelector('.plan__arguments');
 					if (searchField.value.length >= 4) {
 						planDetails.removeAttribute('hidden');
 						arguments.setAttribute('hidden','');
+						e.preventDefault();
 					}
 				});
 			};

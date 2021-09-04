@@ -1,4 +1,4 @@
-<form id="domain-choise-registration" class="drawer__item" data-tab="hidden">
+<form id="domain-choise-registration" class="drawer__item drawer__form" data-tab="hidden">
 	<div class="drawer__body">
 		<div class="drawer__header drawer__header--form">
 			<div class="drawer__title">
@@ -32,8 +32,40 @@
 							<span class="form-placeholder">Email</span>
 						</label>
 						<label class="form-field">
-							<input type="tel" name="f-phone" class="form-input" placeholder=" " required>
+							<input type="tel" name="f-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
 							<span class="form-placeholder">Phone</span>
+						</label>
+
+						<div class="form-subtitle">Company</div>
+						<label class="form-field">
+							<input type="text" name="f-company-name" class="form-input" placeholder=" " required minlength="2">
+							<span class="form-placeholder">Company Name</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="f-tax-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+							<span class="form-placeholder">Tax code</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="f-kpp" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+							<span class="form-placeholder">KPP</span>
+						</label>
+
+						<div class="form-subtitle">Postal Address</div>
+						<label class="form-field">
+							<input type="text" name="f-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+							<span class="form-placeholder">Zip code</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="f-region" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">Region</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="f-locality" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">City / Locality</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="f-address" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">Address</span>
 						</label>
 					</div>
 				</div>
@@ -69,7 +101,7 @@
 		</div>
 	</div>
 	<div class="drawer__footer">
-		<button type="reset" class="btn btn--lg btn--secondary" data-trigger-tab="domain-choise-account">Close</button>
-		<button type="submit" class="btn btn--lg btn--success" disabled>Continue</button>
+		<button type="reset" class="btn btn--lg btn--secondary" data-trigger-tab="domain-choise-account">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Continue</button>
 	</div>
 </form>

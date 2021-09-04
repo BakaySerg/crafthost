@@ -69,14 +69,21 @@
    justify-content: space-between;
    user-select: none;
    cursor: pointer;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .accordion__item {
    padding: 20px;
    border-bottom: 1px solid $border;
+   @media (max-width: 500px){
+      padding: 16px 1px;
+   }
    .btn--sm {
       padding: 5px;
       margin: -3px -2px -3px 20px;
-      transition: .3s ease-in-out;
+      transition: .3s ease;
+      @media (max-width: 500px){
+         margin-right: -6px;
+      }
    }
    &.expanded {
       .btn--sm {
@@ -103,14 +110,17 @@
 .drawer__body {
    padding: 4.6em 5.9em;
    @media (max-width: 500px){
-      padding: 1em 2em;
+      padding: 1em 15px;
    }
 }
 .drawer__header {
-   padding: 20px 0 22px 29px;
+   padding: 20px 30px 22px 29px;
    border-bottom: 1px solid $border;
    &--form {
-      padding: 20px 0 22px 20px;
+      padding: 20px 30px 22px 20px;
+      @media (max-width: 500px){
+         padding: 10px 25px 17px 3px;
+      }
    }
    p {
       letter-spacing: .02em;
@@ -122,6 +132,9 @@
 	padding-bottom: .65em;
 	position: relative;
    color: $headline;
+   @media (max-width: 380px){
+      font-size: 1.4em;
+   }
 	&::before{
 		position: absolute;
 		content: '\2013';
@@ -154,7 +167,15 @@
    padding: 20px 15px 22px;
    border-top: 1px solid $border;
    @include flex-center;
-   .btn:not(:first-child) {margin-left: 40px;}
+   @media (max-width: 380px){
+      padding: 13px 14px 14px;
+   }
+   .btn:not(:first-child) {
+      margin-left: 40px;
+      @media (max-width: 500px){
+         margin-left: 14px;
+      }
+   }
 }
 [data-tab] {
    display: none;
@@ -166,6 +187,9 @@
    padding: 1.9em 15px;
    color: $headline;
    border-bottom: 1px solid $border;
+   @media (max-width: 500px){
+      padding: 1.5em 2px;
+   }
 }
 .privacy__title{
    font-weight: bold;
@@ -181,6 +205,12 @@
 .privacy__address {
    width: 48%;
    letter-spacing: .02em;
+   padding-right: 10px;
+   min-width: 144px;
+   @media (max-width: 360px){
+      width: 100%;
+      padding-bottom: 8px;
+   }
    & > * {
       display: block;
       padding-bottom: .3em;
@@ -188,6 +218,9 @@
 }
 .privacy__box {
    @include flex-between;
+   @media (max-width: 360px){
+      flex-wrap: wrap;
+   }
 }
 .privacy__card {
    background-color: $bg2;
@@ -197,6 +230,9 @@
    user-select: none;
    cursor: pointer;
    transition: .3s;
+   @media (max-width: 500px){
+      padding: 1.3em;
+   }
    &:hover {
       box-shadow: inset 0 0 5px 2px rgba(30, 23, 80, 0.06);
    }
@@ -216,6 +252,9 @@
    font-size: em(20);
    font-weight: bold;
    padding-bottom: .4em;
+   @media (max-width: 500px){
+      font-size: 1.1em;
+   }
    .i-shield {
       display: inline-block;
       width: 24px;
@@ -267,5 +306,8 @@
 .drawer__header--form {
    .form-aligner {
       padding-top: 2.5em;
+      @media (max-width: 380px){
+         padding-top: 1.1em;
+      }
    }
 }
