@@ -92,4 +92,18 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	};
 
+	const search = document.getElementById('searchBtn');
+	if (search) {
+		search.addEventListener('click', function(e) {
+			const searchField = e.target.previousElementSibling;
+			const planDetails = document.querySelector('.plan__sidelong');
+			const argums = document.querySelector('.plan__arguments');
+			if (searchField.value.length >= 4) {
+				planDetails.removeAttribute('hidden');
+				argums.setAttribute('hidden','');
+				e.preventDefault();
+			}
+		});
+	};
+
 });

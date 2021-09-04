@@ -37,7 +37,7 @@ gulp.task('styles', function() {
 	return gulp.src('src/scss/**/*.scss')
 	// return gulp.src('src/scss/*.scss')
 	.pipe(wait(200))
-	.pipe(sourcemaps.init({loadMaps: true}))  //sourceMap
+	.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	// .pipe(autoprefixer(['last 4 versions']))
@@ -61,9 +61,9 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'src/js/main.js', // Always (scripts) at the end
+		'src/js/*.js', // Always (scripts) at the end
 		])
-	.pipe(concat('scripts.min.js'))
+	// .pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Minify js - opt.
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
@@ -78,7 +78,7 @@ gulp.task('code', function() {
 gulp.task('watch', function() {
 	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
 	// gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-separated'));
-	gulp.watch(['libs/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
+	gulp.watch(['src/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
 	gulp.watch('src/**/*.html', gulp.parallel('layout'))
 });
 gulp.task('default', gulp.parallel('layout','styles', 'scripts', 'browser-sync', 'watch'));

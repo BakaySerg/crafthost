@@ -226,26 +226,7 @@
 		</div>
 	</div>
 
-	<script src="js/scripts.min.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function(){
-
-			const search = document.getElementById('searchBtn');
-
-			if (search) {
-				search.addEventListener('click', function(e) {
-					const searchField = e.target.previousElementSibling;
-					const planDetails = document.querySelector('.plan__sidelong');
-					const arguments = document.querySelector('.plan__arguments');
-					if (searchField.value.length >= 4) {
-						planDetails.removeAttribute('hidden');
-						arguments.setAttribute('hidden','');
-						e.preventDefault();
-					}
-				});
-			};
-		});
-	</script>
-	//= ./pages/modal-script.html
+	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
 </body>
 </html>

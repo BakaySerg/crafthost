@@ -1,4 +1,6 @@
-<script>
+"use strict";
+document.addEventListener('DOMContentLoaded', function(){
+
 	const drawer = function () {
 		// Trap Focus
 		function trapFocus(element) {
@@ -111,7 +113,7 @@
 				closeDrawer(close);
 			}
 			if (open || close) {
-				// event.preventDefault();
+				event.preventDefault();
 			}
 		};
 
@@ -231,4 +233,4 @@
 			});
 		});
 	};
-</script>
+});
