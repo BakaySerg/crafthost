@@ -293,7 +293,7 @@
 .message__precept {
 	padding-left: 22px;
 	padding-top: .7em;
-   @media (min-width: 991px){
+   @media (max-width: 991px){
       padding-top: 1em;
       font-size: .966em;
    }
