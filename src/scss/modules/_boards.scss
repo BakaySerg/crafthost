@@ -459,6 +459,9 @@
       @media (max-width: 500px){
          padding: 20px;
       }
+      @media (max-width: 380px){
+         padding: 14px;
+      }
       .btn--icon {
          min-width: auto;
          color: $headline;
@@ -470,6 +473,11 @@
             width: 20px;
             height: 20px;
             margin-right: 12px;
+            @media (max-width: 380px){
+               width: 17px;
+               height: 17px;
+               margin-right: 10px;
+            }
          }
       }
    }
@@ -522,5 +530,50 @@
       p {
          font-size: em(14);
       }
+   }
+}
+.plan__controls {
+   padding: 25px 20px 26px;
+   .message__title {
+      padding-bottom: 0.3em;
+      margin-left: 32px;
+   }
+   @media (max-width: 500px){
+      padding: 15px 14px 16px;
+      .message__title{
+         margin-left: 23px;
+      }
+   }
+}
+.plan__controls ~ .plan__options {
+   margin-top: -25px;
+   @media (max-width: 500px){
+      margin-top: -11px;
+   }
+}
+.plan__tabs {
+   padding-top: 5px;
+   padding-bottom: 22px;
+   @media (max-width: 500px){
+      padding-top: 2px;
+      padding-bottom: 14px;
+   }
+   @media (max-width: 360px){
+      padding-top: 0;
+      padding-bottom: 8px;
+   }
+}
+.plan__search {
+   padding-top: 22px;
+   .search__form {
+      background-color: $bg2;
+      border-radius: 3px;
+      margin-bottom: 0;
+   }
+   @media (max-width: 500px){
+      padding-top: 17px;
+   }
+   @media (max-width: 360px){
+      padding-top: 12px;
    }
 }

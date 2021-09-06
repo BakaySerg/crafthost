@@ -96,26 +96,40 @@
 					</div>
 
 					<div class="box board__message--xs" style="--bg1x: url(../img/hosting/message-xs.png); --bg2x:url(../img/hosting/message-xs-2x.png);">
-						<a href="domains.html" class="btn--icon"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg> Domain</a>
-						<a href="#" class="link link--underline">Сhoose</a>
+						<a href="#" class="btn--icon" data-show="add-domains"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg> Domain</a>
+						<a href="#" class="link link--underline" data-show="add-domains">Сhoose</a>
 					</div>
 
-					<div class="box">
-
+					<div class="box" id="add-domains" hidden>
 						<!-- tab controls -->
+						<div class="plan__controls">
+							<h3 class="message__title">Domains</h3>
+							<div class="plan__tabs">
+								<div class="selector selector--tab checked" data-trigger-tab="first">
+									<div class="selector__btn">New domain</div>
+								</div>
+								<div class="selector selector--tab" data-trigger-tab="second">
+									<div class="selector__btn">Use My Domain</div>
+								</div>
+							</div>
+							<div class="divid-up plan__search">
+								<div class="search__form">
+									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+									<datalist id="choise-in-domain">
+										<option value="website.tech">
+										<option value="interface.io">
+									</datalist>
+									<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Сhoose</button>
+								</div>
+							</div>
+						</div>
 
 						<!-- first tab (active-visible  new domain) -->
-						<div id="first" class="plan__options" data-tab="hidden">
+						<div id="first" class="plan__options" data-tab="active">
 							<div class="plan__option plan__option--unavailable">
 								<div>
 									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
-									<div class="status" data-status="danger">Domain is taken, Not available</div>
-								</div>
-								<a href="https://www.website.com/" class="link--underline">Whois</a>
-							</div>
-							<div class="plan__option plan__option--unavailable">
-								<div>
-									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">tech</span></div>
 									<div class="status" data-status="danger">Domain is taken, Not available</div>
 								</div>
 								<a href="https://www.website.com/" class="link--underline">Whois</a>
@@ -134,7 +148,7 @@
 									<div class="cost__new">$100,00</div>
 								</div>
 								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="plan" value="1" checked>
+									<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
 									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 								</label>
 							</div>
@@ -151,7 +165,7 @@
 									<div class="cost__new">$100,00</div>
 								</div>
 								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="plan" value="1">
+									<input class="d-none checkbox" type="radio" name="domain" value="1">
 									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 								</label>
 							</div>
@@ -168,14 +182,14 @@
 									<div class="cost__new">$300,00</div>
 								</div>
 								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="plan" value="1">
+									<input class="d-none checkbox" type="radio" name="domain" value="1">
 									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 								</label>
 							</div>
 						</div>
 
 						<!-- second tab not visible (choise my domain) -->
-						<div id="sec" class="plan__options" data-tab="active">
+						<div id="second" class="plan__options" data-tab="hidden">
 							<div class="plan__option">
 								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
 								<div class="plan__choise">
@@ -189,7 +203,7 @@
 									<div class="cost__new">$100,00</div>
 								</div>
 								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="plan" value="1">
+									<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
 									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 								</label>
 							</div>

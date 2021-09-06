@@ -106,6 +106,22 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	};
 
+	const showAddWindow = document.querySelectorAll("[data-show]");
+	if (showAddWindow) {
+		[].forEach.call(
+			showAddWindow, function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					const parentBox = this.parentElement;
+					let id = this.getAttribute("data-show");
+					let comingContent = document.getElementById(id);
+					parentBox.setAttribute('hidden','');
+					comingContent.removeAttribute('hidden');
+				});
+			}
+		);
+	}
+
 	// tabs inside the drawer
 	const tabSwitcher = function () {
 		[].forEach.call(
@@ -117,6 +133,13 @@ document.addEventListener('DOMContentLoaded', function(){
 					let comingTab = document.getElementById(id);
 					currentTab.setAttribute("data-tab", "hidden");
 					comingTab.setAttribute("data-tab", "active");
+					if (this.classList.contains('selector--tab')){
+						let othersTabs = document.querySelectorAll('.plan__tabs > .selector');
+						[...othersTabs].forEach(item => {
+							item.classList.remove('checked');
+						})
+						this.classList.add('checked');
+					}
 					if (this.getAttribute('type') === "reset") {
 						let filled = currentTab.querySelectorAll(".form-field");
 						let btn = currentTab.querySelector('[type=submit]');

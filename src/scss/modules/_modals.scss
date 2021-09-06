@@ -183,6 +183,9 @@
 [data-tab=active] {
    display: flex;
 }
+.plan__options[data-tab=active] {
+   display: block;
+}
 .privacy__item {
    padding: 1.9em 15px;
    color: $headline;
