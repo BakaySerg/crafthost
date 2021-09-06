@@ -112,11 +112,14 @@ document.addEventListener('DOMContentLoaded', function(){
 			showAddWindow, function (el) {
 				el.addEventListener("click", function (e) {
 					e.preventDefault();
+					const index = [...el.parentElement.children].indexOf(el)
 					const parentBox = this.parentElement;
 					let id = this.getAttribute("data-show");
 					let comingContent = document.getElementById(id);
 					parentBox.setAttribute('hidden','');
 					comingContent.removeAttribute('hidden');
+					// comingContent
+					console.log(index);
 				});
 			}
 		);
