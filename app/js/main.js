@@ -4,7 +4,7 @@ function setActiveMenuItem() {
 	var current = location.pathname.split('/')[1];
 	if (current === "") return;
 	else {
-		current = current.split('-')[0].split('.')[0] + '.html'
+		current = current.split('-')[0];
 	}
 	var menuItems = document.querySelectorAll('.menu__list a');
 	for (var i = 0, len = menuItems.length; i < len; i++) {
@@ -119,6 +119,11 @@ document.addEventListener('DOMContentLoaded', function(){
 					parentBox.setAttribute('hidden','');
 					comingContent.removeAttribute('hidden');
 					// comingContent
+					// [...inputs].filter((inp) => {
+					// 	if (inp.value.trim() === ""){
+					// 		allValid = false;
+					// 	}
+					// });
 					console.log(index);
 				});
 			}

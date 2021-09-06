@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Web Hosting | Crafthost</title>
+	<title>Online store | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -69,7 +69,7 @@
 			                  </ul>
 			               </li>
 			               <li class="menu__item"><a class="menu__link" href="domain.html">Domains</a></li>
-			               <li class="menu__item"><a class="menu__link" href="store.html">Online Store</a></li>
+			               <li class="menu__item"><a class="menu__link" href="online-store.html">Online Store</a></li>
 			               <li class="menu__item"><a class="menu__link" href="#">Managed Hosting</a></li>
 			               <li class="menu__item"><a class="menu__link" href="#">Help</a></li>
 			               <li class="menu__item"><a class="menu__link" href="#">Addons</a></li>
@@ -121,243 +121,39 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Web Hosting</h1>
-            <div class="header__bureau">
-					<a href="hosting-plans.html" class="bureau__link btn btn--lg btn--icon align-right">Change plan <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+				<h1 class="h1">Online store</h1>
+				<div class="header__bureau">
+               <a href="store-plans.html" class="btn btn--lg btn--icon btn--success"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg>Order hosting</a>
 				</div>
 			</div>
 		</header>
 
 		<!--  board  -->
 		<div class="board">
-         <form class="plan__sidelong">
-				<!-- choise -->
-				<div class="plan__main">
-					<div class="box plan__options">
-						<div class="plan__title">
-							<h2 class="h3">Starter Up</h2>
-							<div class="plan__details">
-								<span>1 Website</span>|<span>1 MySQL Database</span>|<span>Unmetered SSD</span>
-							</div>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">1 month</div>
-							<div class="plan__cost">
-								<div class="cost__new">$10,00</div>
-							</div>
-							<div class="plan__month"></div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1" checked>
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">1 year</div>
-							<div class="plan__cost">
-								<div class="cost__percent">- 10%</div>
-								<div class="cost__old">$150,00</div>
-								<div class="cost__new">$100,00</div>
-							</div>
-							<div class="plan__month">($4,95 /month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">2 years</div>
-							<div class="plan__cost">
-								<div class="cost__percent">- 15%</div>
-								<div class="cost__old">$250,00</div>
-								<div class="cost__new">$200,00</div>
-							</div>
-							<div class="plan__month">($3,00 /month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">3 years</div>
-							<div class="plan__cost">
-								<div class="cost__percent">- 25%</div>
-								<div class="cost__old">$400,00</div>
-								<div class="cost__new">$300,00</div>
-							</div>
-							<div class="plan__month">($2,95 /month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">5 years</div>
-							<div class="plan__cost">
-								<div class="cost__percent">- 45%</div>
-								<div class="cost__old">$600,00</div>
-								<div class="cost__new">$400,00</div>
-							</div>
-							<div class="plan__month">($1,50 /month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-							</label>
-						</div>
-					</div>
-
-					<div class="box board__message--xs" style="--bg1x: url(../img/hosting/message-xs.png); --bg2x:url(../img/hosting/message-xs-2x.png);">
-						<a href="#" class="btn--icon" data-show="add-domains"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg> Domain</a>
-						<a href="#" class="link link--underline" data-show="add-domains">Сhoose</a>
-					</div>
-
-					<div class="box" id="add-domains" hidden>
-						<!-- tab controls -->
-						<div class="plan__controls">
-							<h3 class="message__title">Domains</h3>
-							<div class="plan__tabs">
-								<div class="selector selector--tab checked" data-trigger-tab="first">
-									<div class="selector__btn">New domain</div>
-								</div>
-								<div class="selector selector--tab" data-trigger-tab="second">
-									<div class="selector__btn">Use My Domain</div>
-								</div>
-							</div>
-							<div class="divid-up plan__search">
-								<div class="search__form">
-									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
-									<datalist id="choise-in-domain">
-										<option value="website.tech">
-										<option value="interface.io">
-									</datalist>
-									<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Сhoose</button>
-								</div>
-							</div>
-						</div>
-
-						<!-- first tab (active-visible  new domain) -->
-						<div id="first" class="plan__options" data-tab="active">
-							<div class="plan__option plan__option--unavailable">
-								<div>
-									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
-									<div class="status" data-status="danger">Domain is taken, Not available</div>
-								</div>
-								<a href="https://www.website.com/" class="link--underline">Whois</a>
-							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-1">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__old">$150,00</div>
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-2">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">store</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-3">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$300,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
-
-						<!-- second tab not visible (choise my domain) -->
-						<div id="second" class="plan__options" data-tab="hidden">
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-2">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="box plan__addons">
-						<div class="addons__title">
-							<h3 class="message__title">Addons</h3>
-							<p>Addons services for the hosting</p>
-						</div>
-						<div class="divid-up addons__cta">
-							<div class="addons__descr">
-								<h3 class="h3">Hosting +</h3>
-								<p>Extended support and antivirus protection for a month at a discount</p>
-							</div>
-							<div class="addons__price">
-								<b>$5,00</b>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="checkbox" name="add" value="add">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- sidebar -->
-				<div class="plan__sidebar box">
-					<h2 class="h1">Your order</h2>
-					<div class="divid-up">
-						<div class="plan__columns plan__columns--optional"><b>Hosting</b> <b>$10,00</b> <i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i></div>
-						<div class="plan__columns"><span class="fz-14">1 month</span></div>
-					</div>
-					<div class="divid-up">
-						<div class="plan__columns">Subtotal <b>$110,00</b></div>
-						<div class="plan__columns color-alert">Discount: <b>- $30,00</b></div>
-						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
-						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$8000,00</b></div>
-						<button type="submit" class="btn btn--lg btn--icon btn--success" data-drawer-trigger aria-controls="domain-choise" aria-expanded="false">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
-					</div>
-				</div>
-			</form>
+         <div class="board__message board__message--lg">
+				<figure class="message__picture">
+					<img srcset="img/hosting/message-lg.png, img/hosting/message-lg-2x.png 2x" src="img/hosting/message-lg.png" alt="Hosting">
+				</figure>
+            <div class="message__descr">
+               <h2 class="message__title">Start building your website & online store today!</h2>
+               <ul class="message__precept">
+                  <li><b>Hosting</b> is what makes your site visible on the web</li>
+                  <li><b>We offer fast,</b> reliable plans for every need<br> - from a basic blog to high-powered site</li>
+                  <li><b>Designer? Developer?</b> We've got you covered too!</li>
+               </ul>
+            </div>
          </div>
+		</div>
+		<div class="pseudo-footer">
+			<div class="container">
+				<div class="pseudo__box">
+					<a href="#" class="submenu__trigger link">Transfer to Crafthost</a>
+					<ul class="dialog dialog--above">
+						<li><a class="dialog__link" href="#">Transfer domain</a></li>
+						<li><a class="dialog__link" href="#">Transfer site</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- footer -->
