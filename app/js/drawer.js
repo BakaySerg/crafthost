@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function(){
 	const drawer = function () {
 		// Trap Focus
 		function trapFocus(element) {
-			var focusableEls = element.querySelectorAll(
+			const focusableEls = element.querySelectorAll(
 				'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'
 			);
-			var firstFocusableEl = focusableEls[0];
-			var lastFocusableEl = focusableEls[focusableEls.length - 1];
-			var KEYCODE_TAB = 9;
+			let firstFocusableEl = focusableEls[0];
+			let lastFocusableEl = focusableEls[focusableEls.length - 1];
+			const KEYCODE_TAB = 9;
 
 			element.addEventListener("keydown", function (e) {
 				var isTabPressed = e.key === "Tab" || e.keyCode === KEYCODE_TAB;
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	drawer();
 
 
-// custom placeholder
+	// custom placeholder
 	(function customPlaceholder() {
 		function getInputFields() {
 			let inputFields = document.getElementsByClassName("form-input");

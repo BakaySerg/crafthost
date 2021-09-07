@@ -427,6 +427,10 @@
 			@media (min-width: 767px){
 				order: 2;
 			}
+         @media (max-width: 766px){
+            max-width: 400px;
+            margin: auto;
+         }
 		}
 		.message__descr {
 			max-width: 444px;
@@ -436,6 +440,10 @@
 				min-width: 51%;
 				padding-top: 9px;
 			}
+         @media (max-width: 750px){
+            max-width: none;
+            padding-right: 0;
+         }
 		}
 		@media (max-width: 1025px){
 			padding: 50px;

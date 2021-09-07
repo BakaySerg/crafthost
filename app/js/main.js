@@ -1,13 +1,13 @@
 "use strict";
 
 function setActiveMenuItem() {
-	var current = location.pathname.split('/')[1];
+	let current = location.pathname.split('/')[1];
 	if (current === "") current = 'index.html';
 	else {
 		current = current.split('-')[0];
 	}
-	var menuItems = document.querySelectorAll('.menu__list a');
-	for (var i = 0, len = menuItems.length; i < len; i++) {
+	let menuItems = document.querySelectorAll('.menu__list a');
+	for (let i = 0, len = menuItems.length; i < len; i++) {
 		if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
 			menuItems[i].closest('.menu__item').children[0].className += " active";
 		}
