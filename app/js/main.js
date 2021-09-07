@@ -2,7 +2,7 @@
 
 function setActiveMenuItem() {
 	var current = location.pathname.split('/')[1];
-	if (current === "") return;
+	if (current === "") current = 'index.html';
 	else {
 		current = current.split('-')[0];
 	}
