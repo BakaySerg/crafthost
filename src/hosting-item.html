@@ -102,7 +102,7 @@
 
 					<div class="box" id="add-domains" hidden>
 						<!-- tab controls -->
-						<div class="plan__controls">
+						<div class="plan__controls tab-controls">
 							<h3 class="message__title">Domains</h3>
 							<div class="plan__tabs">
 								<div class="selector selector--tab checked" data-trigger-tab="first">
@@ -125,87 +125,89 @@
 							</div>
 						</div>
 
-						<!-- first tab (active-visible  new domain) -->
-						<div id="first" class="plan__options" data-tab="active">
-							<div class="plan__option plan__option--unavailable">
-								<div>
-									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
-									<div class="status" data-status="danger">Domain is taken, Not available</div>
+						<div class="plan__tabs tabs">
+							<!-- first tab (active-visible  new domain) -->
+							<div id="first" class="plan__options" data-tab="active">
+								<div class="plan__option plan__option--unavailable">
+									<div>
+										<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
+										<div class="status" data-status="danger">Domain is taken, Not available</div>
+									</div>
+									<a href="https://www.website.com/" class="link--underline">Whois</a>
 								</div>
-								<a href="https://www.website.com/" class="link--underline">Whois</a>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-1">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__old">$150,00</div>
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">store</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-3">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$300,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
 							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-1">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__old">$150,00</div>
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-2">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">store</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-3">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
-								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$300,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="radio" name="domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
 
-						<!-- second tab not visible (choise my domain) -->
-						<div id="second" class="plan__options" data-tab="hidden">
-							<div class="plan__option">
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
-								<div class="plan__choise">
-									<select name="plan-choise-2">
-										<option value="1">1 year</option>
-										<option value="2">2 years</option>
-										<option value="5">5 years</option>
-									</select>
+							<!-- second tab not visible (choise my domain) -->
+							<div id="second" class="plan__options" data-tab="hidden">
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
 								</div>
-								<div class="plan__cost">
-									<div class="cost__new">$100,00</div>
-								</div>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
 							</div>
 						</div>
 					</div>
@@ -243,7 +245,7 @@
 						<div class="plan__columns color-alert">Discount: <b>- $30,00</b></div>
 						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
 						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$8000,00</b></div>
-						<button type="submit" class="btn btn--lg btn--icon btn--success" data-drawer-trigger aria-controls="domain-choise" aria-expanded="false">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+						<button type="submit" class="btn btn--lg btn--icon btn--success">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 			</form>

@@ -5,6 +5,7 @@
 	position: relative;
 	background-color: #fff;
 	box-shadow: -1px 1px 10px rgba(30, 23, 104, 0.04);
+	z-index: 11;
 	&__top{
 		border-bottom: 1px solid $border;
 		.container-xl{
@@ -17,7 +18,7 @@
 				padding: 15px;
 			}
 			@media (max-width: 380px){
-				padding: 11px 15px;
+				padding: 6px 15px;
 			}
 		}
 	}

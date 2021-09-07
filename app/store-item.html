@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Domain create | Crafthost</title>
+	<title>Online store | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -25,6 +25,7 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 </head>
+
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -122,125 +123,83 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Register Domain</h1>
+				<h1 class="h1">Online store</h1>
             <div class="header__bureau">
-					<a href="domain.html" class="bureau__link btn btn--lg btn--icon align-right">Transfer to Crafthost <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+					<a href="store-plans.html" class="bureau__link btn btn--lg btn--icon align-right">Change plan <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
 				</div>
 			</div>
 		</header>
+
 		<!--  board  -->
 		<div class="board">
-         <form action="#" class="box search__form">
-            <i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-            <input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
-            <button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
-         </form>
-
-         <div class="argum__box plan__arguments">
-            <div class="argum__item box">
-               <img srcset="img/domain/argument-1.png, img/domain/argument-1-2x.png 2x" src="img/domain/argument-1.png" alt=".com">
-               <div class="argum__text">
-                  <h4>Establish your brand</h4>
-                  <p>A domain name gives your business credibility and tells customers you're here to stay</p>
-               </div>
-            </div>
-            <div class="argum__item box">
-               <img srcset="img/domain/argument-2.png, img/domain/argument-2-2x.png 2x" src="img/domain/argument-2.png" alt=".com">
-               <div class="argum__text">
-                  <h4>Rank higher in search </h4>
-                  <p>Having a domain name related to your industry can help you rank higher for similar keywords</p>
-               </div>
-            </div>
-            <div class="argum__item box">
-               <img srcset="img/domain/argument-3.png, img/domain/argument-3-2x.png 2x" src="img/domain/argument-3.png" alt=".com">
-               <div class="argum__text">
-                  <h4>Stay top of mind</h4>
-                  <p>A unique domain name makes it easier for customers to remember you and find your business later</p>
-               </div>
-            </div>
-         </div>
-         <form action="#" class="plan__form plan__sidelong" hidden>
+         <form class="plan__sidelong">
 				<!-- choise -->
 				<div class="plan__main">
 					<div class="box plan__options">
-						<div class="plan__option plan__option--unavailable">
-							<div>
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
-								<div class="status" data-status="danger">Domain is taken, Not available</div>
+						<div class="plan__title">
+							<h2 class="h3">My site</h2>
+							<div class="plan__details">
+								<span>Personal Website</span>|<span>Blog</span>|<span>Social Media</span>
 							</div>
-							<a href="https://www.website.com/" class="link--underline">Whois</a>
-						</div>
-						<div class="plan__option plan__option--unavailable">
-							<div>
-								<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">tech</span></div>
-								<div class="status" data-status="danger">Domain is taken, Not available</div>
-							</div>
-							<a href="https://www.website.com/" class="link--underline">Whois</a>
 						</div>
 						<div class="plan__option">
-							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
-							<div class="plan__choise">
-								<select name="plan-choise-1">
-									<option value="1">1 year</option>
-									<option value="2">2 years</option>
-									<option value="5">5 years</option>
-								</select>
-							</div>
+							<div class="plan__term">1 month</div>
 							<div class="plan__cost">
-								<div class="cost__old">$150,00</div>
-								<div class="cost__new">$100,00</div>
+								<div class="cost__new">$10,00</div>
 							</div>
+							<div class="plan__month"></div>
 							<label class="checkbox-custom">
 								<input class="d-none checkbox" type="radio" name="plan" value="1" checked>
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 							</label>
 						</div>
 						<div class="plan__option">
-							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
-							<div class="plan__choise">
-								<select name="plan-choise-2">
-									<option value="1">1 year</option>
-									<option value="2">2 years</option>
-									<option value="5">5 years</option>
-								</select>
-							</div>
+							<div class="plan__term">1 year</div>
 							<div class="plan__cost">
+								<div class="cost__percent">- 10%</div>
+								<div class="cost__old">$150,00</div>
 								<div class="cost__new">$100,00</div>
 							</div>
+							<div class="plan__month">($4,95 /month)</div>
 							<label class="checkbox-custom">
 								<input class="d-none checkbox" type="radio" name="plan" value="1">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 							</label>
 						</div>
 						<div class="plan__option">
-							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">store</span></div>
-							<div class="plan__choise">
-								<select name="plan-choise-3">
-									<option value="1">1 year</option>
-									<option value="2">2 years</option>
-									<option value="5">5 years</option>
-								</select>
-							</div>
+							<div class="plan__term">2 years</div>
 							<div class="plan__cost">
+								<div class="cost__percent">- 15%</div>
+								<div class="cost__old">$250,00</div>
+								<div class="cost__new">$200,00</div>
+							</div>
+							<div class="plan__month">($3,00 /month)</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">3 years</div>
+							<div class="plan__cost">
+								<div class="cost__percent">- 25%</div>
+								<div class="cost__old">$400,00</div>
 								<div class="cost__new">$300,00</div>
 							</div>
+							<div class="plan__month">($2,95 /month)</div>
 							<label class="checkbox-custom">
 								<input class="d-none checkbox" type="radio" name="plan" value="1">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 							</label>
 						</div>
 						<div class="plan__option">
-							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">net</span></div>
-							<div class="plan__choise">
-								<select name="plan-choise-4">
-									<option value="1">1 year</option>
-									<option value="2">2 years</option>
-									<option value="5">5 years</option>
-								</select>
-							</div>
+							<div class="plan__term">5 years</div>
 							<div class="plan__cost">
+								<div class="cost__percent">- 45%</div>
+								<div class="cost__old">$600,00</div>
 								<div class="cost__new">$400,00</div>
 							</div>
+							<div class="plan__month">($1,50 /month)</div>
 							<label class="checkbox-custom">
 								<input class="d-none checkbox" type="radio" name="plan" value="1">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
@@ -248,42 +207,120 @@
 						</div>
 					</div>
 
+					<div class="box" id="add-domains">
+						<!-- tab controls -->
+						<div class="plan__controls tab-controls">
+							<h3 class="message__title">Domain for website builder</h3>
+							<div class="plan__tabs">
+								<div class="selector selector--tab" data-trigger-tab="first">
+									<div class="selector__btn">New domain</div>
+								</div>
+								<div class="selector selector--tab checked" data-trigger-tab="second">
+									<div class="selector__btn">Use My Domain</div>
+								</div>
+							</div>
+							<div class="divid-up plan__search">
+								<div class="search__form">
+									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+									<datalist id="choise-in-domain">
+										<option value="website.tech">
+										<option value="interface.io">
+									</datalist>
+									<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Сhoose</button>
+								</div>
+							</div>
+						</div>
+
+                  <div class="plan__tabs tabs">
+                     <!-- first tab (active-visible  new domain) -->
+                     <div id="first" class="plan__options" data-tab="hidden">
+                        <div class="plan__option plan__option--unavailable">
+                           <div>
+                              <div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">com</span></div>
+                              <div class="status" data-status="danger">Domain is taken, Not available</div>
+                           </div>
+                           <a href="https://www.website.com/" class="link--underline">Whois</a>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
+                           <div class="plan__choise">
+                              <select name="plan-choise-1">
+                                 <option value="1">1 year</option>
+                                 <option value="2">2 years</option>
+                                 <option value="5">5 years</option>
+                              </select>
+                           </div>
+                           <div class="plan__cost">
+                              <div class="cost__old">$150,00</div>
+                              <div class="cost__new">$100,00</div>
+                           </div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="domain" value="1" checked>
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+                           <div class="plan__choise">
+                              <select name="plan-choise-2">
+                                 <option value="1">1 year</option>
+                                 <option value="2">2 years</option>
+                                 <option value="5">5 years</option>
+                              </select>
+                           </div>
+                           <div class="plan__cost">
+                              <div class="cost__new">$100,00</div>
+                           </div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="domain" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">store</span></div>
+                           <div class="plan__choise">
+                              <select name="plan-choise-3">
+                                 <option value="1">1 year</option>
+                                 <option value="2">2 years</option>
+                                 <option value="5">5 years</option>
+                              </select>
+                           </div>
+                           <div class="plan__cost">
+                              <div class="cost__new">$300,00</div>
+                           </div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="domain" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                     </div>
+
+                     <!-- second tab not visible (choise my domain) -->
+                     <div id="second" class="plan__options" data-tab="active">
+                        <div class="plan__option">
+                           <div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+                           <div class="plan__choise">
+                              <select name="plan-choise-2">
+                                 <option value="1">1 year</option>
+                                 <option value="2">2 years</option>
+                                 <option value="5">5 years</option>
+                              </select>
+                           </div>
+                           <div class="plan__cost">
+                              <div class="cost__new">$100,00</div>
+                           </div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+					</div>
 					<div class="text-center">
 						<a href="#" class="link--arrow-down link">Show another 6 domains</a>
-					</div>
-
-					<!-- addons -->
-					<div class="box plan__addons">
-						<div class="addons__title">
-							<h3 class="message__title">Addons</h3>
-							<p>Addons services for the domains</p>
-						</div>
-						<div class="divid-up addons__cta">
-							<div class="addons__descr">
-								<h3 class="h3">Domain Privacy</h3>
-								<p>Best domain services in one bundle!</p>
-							</div>
-							<div class="addons__price">
-								<b>$5,00</b>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="checkbox" name="add" value="add">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
-						<div class="divid-up addons__cta">
-							<div class="addons__descr">
-								<h3 class="h3">Domain Protection </h3>
-								<p>Tariff «Host-0» for 7 sites and 13GB SSD</p>
-							</div>
-							<div class="addons__price">
-								<b>$5,00</b>
-								<label class="checkbox-custom">
-									<input class="d-none checkbox" type="checkbox" name="add" value="add">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-								</label>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -292,32 +329,34 @@
 					<h2 class="h1">Your order</h2>
 					<div class="divid-up">
 						<div class="plan__columns plan__columns--optional">
-							<b>website.org</b>
-							<b>$100,00</b>
-							<span class="fz-14 full-size">Registration for 1 year</span>
+							<b>My site</b>
+							<b>$10,00</b>
+							<span class="fz-14 full-size">1 year</span>
 							<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i>
 						</div>
 						<div class="plan__columns plan__columns--optional">
-							Domain Privacy
-							<b>$5,00</b>
+							<b>website.org</b>
+							<b>$100,00</b>
 							<span class="fz-14 full-size">Order for 1 year</span>
 							<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i>
 						</div>
+
 					</div>
 					<div class="divid-up">
 						<div class="plan__columns">Subtotal <b>$110,00</b></div>
-						<div class="plan__columns color-alert">Discount: <b>- $15,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $30,00</b></div>
 						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
-						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$1600,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$80,00</b></div>
 						<div class="inline-form">
 							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
 							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></button>
 						</div>
-						<button type="submit" class="btn btn--lg btn--icon btn--success" data-tab-open="domain-choise-policy" data-drawer-trigger aria-controls="domain-choise" aria-expanded="false">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+						<button type="submit" class="btn btn--lg btn--icon btn--success" data-tab-open="domain-choise-account" data-drawer-trigger aria-controls="store-choise" aria-expanded="false">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 			</form>
-      </div>
+         </div>
+		</div>
 	</div>
 	<!-- footer -->
 	<footer class="footer">
@@ -334,8 +373,8 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup (kinda drawer)-->
-	<div class="drawer" id="domain-choise" data-drawer-target>
+   <!-- popup (kinda drawer)-->
+	<div class="drawer" id="store-choise" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
@@ -561,6 +600,6 @@
 	</div>
 
 	<script src="js/main.js"></script>
-	<script src="js/drawer.js"></script>
+   <script src="js/drawer.js"></script>
 </body>
 </html>

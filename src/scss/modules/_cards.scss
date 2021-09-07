@@ -1,7 +1,7 @@
 .card__box {
    display: grid;
 	grid-template-columns: repeat(auto-fill,minmax(290px,1fr));
-   justify-items: center;
+   justify-items: stretch;
 	grid-gap: 20px;
    max-width: 1150px;
    @media (max-width: 1170px){
@@ -17,8 +17,17 @@
 	display: block;
    position: relative;
    max-width: 380px;
+   @media (max-width: 700px){
+      max-width: 100%;
+   }
    @media (max-width: 500px){
       padding: 25px 27px 22px;
+   }
+   &__descr {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      height: 100%;
    }
    .h3 {
       text-align: center;
@@ -48,6 +57,7 @@
 .card__list {
    padding-left: 20px;
    padding-bottom: .9em;
+   min-width: 80%;
    max-width: 250px;
    margin: auto;
    li {

@@ -59,9 +59,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		// Open Drawer
 		let openDrawer = function (trigger) {
 			// Find target
-			var target = document.getElementById(
-				trigger.getAttribute("aria-controls")
-			);
+			let target = document.getElementById(trigger.getAttribute("aria-controls"));
 
 			// Make it active
 			target.classList.add(settings.activeClass);
@@ -102,12 +100,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		// Click Handler
 		let clickHandler = function (event) {
-			var toggle = event.target,
-				open = toggle.closest(settings.selectorTrigger),
-				close = toggle.closest(settings.selectorClose);
+			let toggle = event.target,
+				 open = toggle.closest(settings.selectorTrigger),
+				 close = toggle.closest(settings.selectorClose),
+				 tabTarget = document.getElementById(toggle.getAttribute("data-tab-open"));
 
 			if (open) {
 				openDrawer(open);
+				if (tabTarget) {
+					tabTarget.setAttribute("data-tab", "active");
+				}
 			}
 			if (close) {
 				closeDrawer(close);

@@ -94,7 +94,7 @@
 }
 .plan__main {
    grid-area: content;
-   & > div {
+   & > div:not(:last-of-type) {
       margin-bottom: 40px;
       @media (max-width: 1025px){
          margin-bottom: 25px;
@@ -115,6 +115,10 @@
    @media (max-width: 500px){
       margin: -10px 0 12px;
    }
+}
+.plan__options ~ .text-center:last-of-type{
+   margin-top: -10px;
+   margin-bottom: 10px;
 }
 .plan__title {
    display: flex;

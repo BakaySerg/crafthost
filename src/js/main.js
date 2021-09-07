@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	 menuTrigger.addEventListener("click", function() {
 		menu.classList.toggle("open");
-		// this.classList.toggle("clicked");
 	 });
 
 	//all dialogs
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			e.target.closest(".dialog").classList.remove("shown");
 		};
 		if (e.target.classList.contains('btn--close')) {
-			e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+			e.target.closest('.board__message').remove();
 		};
 	 });
 
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	if (sorting) {
 		sorting.addEventListener('click', function(e) {
-			const items = document.querySelectorAll('.btn');
+			const items = sorting.querySelectorAll('.btn');
 			const target = e.target;
 			[...items].forEach(item => {
 				item.classList.remove('active');
@@ -59,13 +58,12 @@ document.addEventListener('DOMContentLoaded', function(){
 			target.classList.toggle('active');
 
 			if (target.classList.contains('grid-trigger')) {
-				target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add("board--grid");
+				target.closest('.board--lg').classList.add("board--grid");
 			} else {
-				target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove("board--grid");
+				target.closest('.board--lg').classList.remove("board--grid");
 			}
 		});
 	};
-
 
 	// checkboxes
 	const checkboxMain = document.getElementById('checkbox-general');
@@ -112,43 +110,39 @@ document.addEventListener('DOMContentLoaded', function(){
 			showAddWindow, function (el) {
 				el.addEventListener("click", function (e) {
 					e.preventDefault();
-					const index = [...el.parentElement.children].indexOf(el)
+					// const index = [...el.parentElement.children].indexOf(el)
 					const parentBox = this.parentElement;
 					let id = this.getAttribute("data-show");
 					let comingContent = document.getElementById(id);
 					parentBox.setAttribute('hidden','');
 					comingContent.removeAttribute('hidden');
-					// comingContent
-					// [...inputs].filter((inp) => {
-					// 	if (inp.value.trim() === ""){
-					// 		allValid = false;
-					// 	}
-					// });
-					console.log(index);
+
+					// console.log(index);
 				});
 			}
 		);
 	}
 
-	// tabs inside the drawer
-	const tabSwitcher = function () {
+	// modal(tabs) inside the drawer
+	const modalSwitcher = function () {
 		[].forEach.call(
-			document.querySelectorAll("[data-trigger-tab]"),
+			document.querySelectorAll("[data-trigger-modal]"),
 			function (el) {
 				el.addEventListener("click", function (e) {
-					let currentTab = document.querySelector('[data-tab="active"]');
-					let id = this.getAttribute("data-trigger-tab");
-					let comingTab = document.getElementById(id);
-					currentTab.setAttribute("data-tab", "hidden");
+					let id = this.getAttribute("data-trigger-modal"),
+						 comingTab = document.getElementById(id),
+						 parent = comingTab.parentElement,
+						 siblingsTab = parent.children,
+						 currentTab = parent.querySelector('[data-tab="active"]');
+
+					[...siblingsTab].forEach((sibling) => {
+						if (sibling !== comingTab) {
+							sibling.setAttribute("data-tab", "hidden");
+						}
+					});
 					comingTab.setAttribute("data-tab", "active");
-					if (this.classList.contains('selector--tab')){
-						let othersTabs = document.querySelectorAll('.plan__tabs > .selector');
-						[...othersTabs].forEach(item => {
-							item.classList.remove('checked');
-						})
-						this.classList.add('checked');
-					}
-					if (this.getAttribute('type') === "reset") {
+
+					if (this.getAttribute('type') === "reset" && currentTab) {
 						let filled = currentTab.querySelectorAll(".form-field");
 						let btn = currentTab.querySelector('[type=submit]');
 						[...filled].forEach((f) => {
@@ -156,6 +150,32 @@ document.addEventListener('DOMContentLoaded', function(){
 						});
 
 						btn.classList.add("btn--disabled");
+					}
+				});
+			}
+		);
+	};
+	modalSwitcher();
+
+	// tabs
+	const tabSwitcher = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-trigger-tab]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					let id = this.getAttribute("data-trigger-tab"),
+						 comingTab = document.getElementById(id),
+						 parent = comingTab.closest('.tabs'),
+						 currentTab = parent.querySelector('[data-tab="active"]');
+
+					currentTab.setAttribute("data-tab", "hidden");
+					comingTab.setAttribute("data-tab", "active");
+					if (this.classList.contains('selector--tab')){
+						let othersTabs = this.closest('.plan__tabs').querySelectorAll('.selector');
+						[...othersTabs].forEach(item => {
+							item.classList.remove('checked');
+						});
+						this.classList.add('checked');
 					}
 				});
 			}
@@ -183,5 +203,4 @@ document.addEventListener('DOMContentLoaded', function(){
 		);
 	};
 	accordionOpen();
-
 });

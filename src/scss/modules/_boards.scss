@@ -357,7 +357,7 @@
 	&--md {
 		background-image: var(--bg1x);
 		background-repeat: no-repeat;
-		background-position: 92% 55%;
+		background-position: 92% 50%;
 		background-size: auto 159%;
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: var(--bg2x);
@@ -375,7 +375,7 @@
 			background-position: 101% bottom;
 		}
 		.message__descr p {
-			text-shadow: 1px 1px 2px #fff,-1px 1px 2px #fff, -1px -1px 4px #fff, 0 -1px 3px #fff;
+         text-shadow: 1px 1px 2px #fff, -1px 1px 2px #fff, -1px -1px 4px #fff, 0 -1px 3px #fff, -1px 1px 8px #fff, 1px 1px 18px #fff, -1px -1px 20px #fff;
 		}
 	}
 	&--alert {
@@ -548,7 +548,7 @@
       }
    }
 }
-.plan__controls ~ .plan__options {
+.plan__controls ~ .plan__tabs {
    margin-top: -25px;
    @media (max-width: 500px){
       margin-top: -11px;
