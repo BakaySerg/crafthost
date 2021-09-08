@@ -20,6 +20,9 @@ select[name=footer__curency] {
 	font-size: 1em;
 	padding: 0 20px;
 	border: 1px solid $border;
+	@media (max-width: 380px){
+		height: 33px;
+	}
 }
 select[name=footer__curency] > option {
 	color: $headline;

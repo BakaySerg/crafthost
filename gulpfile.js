@@ -48,7 +48,7 @@ gulp.task('styles', function() {
 	.pipe(browserSync.reload({ stream: true }));
 });
 // gulp.task('styles-separated', function() {
-// 	return gulp.src('src/scss/pages/*.scss')
+// 	return gulp.src('src/scss/pages/*.scss')   	//pages
 // 	.pipe(sourcemaps.init({loadMaps: true}))
 // 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 // 	.pipe(rename({ suffix: '.min', prefix : '' }))

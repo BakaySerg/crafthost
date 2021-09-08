@@ -11,6 +11,9 @@
 	cursor: pointer;
 	user-select: none;
 	font-family: inherit;
+	& > * {
+		pointer-events: none;
+	}
 	&--sm {
 		width: 32px;
 		height: 32px;
@@ -28,7 +31,7 @@
 		min-width: 132px;
 		border-radius: 3px;
 		font-weight: normal;
-		line-height: 1.2;
+		line-height: 1.19;
 		@media (max-width: 500px){
 			padding: 12px 12px 10px;
 		}
@@ -37,7 +40,6 @@
 		}
 	}
 	&--icon {
-		text-align: center;
 		min-width: 190px;
 		display: flex;
 		align-items: center;
@@ -89,6 +91,10 @@
 		&.btn--icon{
 			padding-right: 24px;
 			padding-left: 19px;
+			@media (max-width: 380px){
+				padding-right: 21px;
+				padding-left: 13px;
+			}
 		}
 		&:hover {
 			background-color: $bg2;
@@ -98,6 +104,11 @@
 			display: inline-block;
 			width: 20px;
 			height: 20px;
+			margin-top: -4px;
+			margin-bottom: -4px;
+			&:first-child {
+				margin-right: .9em;
+			}
 			@media (max-width: 380px){
 				width: 17px;
 				height: 17px;

@@ -32,6 +32,17 @@
 [hidden] {
 	display: none!important;
 }
+.hidden-xs {
+	@media (max-width: 361px){
+		display: none;
+	}
+}
 .text-center {
 	text-align: center;
+	margin: auto;
+	max-width: 1120px;
+	& :only-child {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
