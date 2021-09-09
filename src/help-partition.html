@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Help | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Support</h1>
+				<div class="header__bureau">
+               <a href="help.html" class="bureau__link active">Questions</a>
+               <a href="tickets.html" class="bureau__link">My tickets</a>
+					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
+				</div>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+         <ul class="container breadcrumbs">
+            <li><a href="help.html">Help</a></li>
+            <li><a href="#">Domains</a></li>
+         </ul>
+			<form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+				<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Enter a question and find a solution">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Search</button>
+			</form>
+
+
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+</body>
+</html>
