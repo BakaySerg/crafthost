@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Managed Hosting | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Managed Hosting</h1>
+            <div class="header__bureau">
+					<a href="managed-plans.html" class="bureau__link btn btn--lg btn--icon align-right">Change plan <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+         <form class="plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+					<div class="box plan__options">
+						<div class="plan__title">
+							<h2 class="h3">Managed</h2>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">1 month</div>
+							<div class="plan__cost">
+								<div class="cost__new">$10,00</div>
+							</div>
+							<div class="plan__month"></div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1" checked>
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">1 year</div>
+							<div class="plan__cost">
+								<div class="cost__percent">- 10%</div>
+								<div class="cost__old">$150,00</div>
+								<div class="cost__new">$100,00</div>
+							</div>
+							<div class="plan__month">($4,95 /month)</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">2 years</div>
+							<div class="plan__cost">
+								<div class="cost__percent">- 15%</div>
+								<div class="cost__old">$250,00</div>
+								<div class="cost__new">$200,00</div>
+							</div>
+							<div class="plan__month">($3,00 /month)</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">3 years</div>
+							<div class="plan__cost">
+								<div class="cost__percent">- 25%</div>
+								<div class="cost__old">$400,00</div>
+								<div class="cost__new">$300,00</div>
+							</div>
+							<div class="plan__month">($2,95 /month)</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">5 years</div>
+							<div class="plan__cost">
+								<div class="cost__percent">- 45%</div>
+								<div class="cost__old">$600,00</div>
+								<div class="cost__new">$400,00</div>
+							</div>
+							<div class="plan__month">($1,50 /month)</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+					</div>
+
+					<div class="box board__message--xs" style="--bg1x: url(../img/managed-hosting/message-xs.png); --bg2x:url(../img/managed-hosting/message-xs-2x.png);">
+						<a href="#" class="btn--icon" data-show="add-hosting"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg> Hosting</a>
+						<a href="#" class="link link--underline" data-show="add-hosting">Сhoose</a>
+					</div>
+
+					<div class="box" id="add-hosting" hidden>
+						<!-- tab controls -->
+						<div class="plan__controls plan__controls--narrow tab-controls">
+							<h3 class="message__title">Add Hosting</h3>
+							<div class="plan__tabs">
+								<div class="selector selector--tab checked" data-trigger-tab="first">
+									<div class="selector__btn">New Hosting</div>
+								</div>
+								<div class="selector selector--tab" data-trigger-tab="second">
+									<div class="selector__btn">Use My Hosting</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="plan__tabs tabs">
+							<!-- first tab (active-visible  new domain) -->
+							<div id="first" class="plan__options" data-tab="active">
+                        <div class="plan__option divid-up">
+                           <div class="plan__term">1 month</div>
+                           <div class="plan__cost">
+                              <div class="cost__new">$10,00</div>
+                           </div>
+                           <div class="plan__month"></div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-1" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">1 year</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 10%</div>
+                              <div class="cost__old">$150,00</div>
+                              <div class="cost__new">$100,00</div>
+                           </div>
+                           <div class="plan__month">($4,95 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-1" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">2 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 15%</div>
+                              <div class="cost__old">$250,00</div>
+                              <div class="cost__new">$200,00</div>
+                           </div>
+                           <div class="plan__month">($3,00 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-1" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">3 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 25%</div>
+                              <div class="cost__old">$400,00</div>
+                              <div class="cost__new">$300,00</div>
+                           </div>
+                           <div class="plan__month">($2,95 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-1" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">5 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 45%</div>
+                              <div class="cost__old">$600,00</div>
+                              <div class="cost__new">$400,00</div>
+                           </div>
+                           <div class="plan__month">($1,50 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-1" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                     </div>
+
+							<!-- second tab not visible (choise my domain) -->
+							<div id="second" class="plan__options" data-tab="hidden">
+                        <div class="plan__title divid-up">
+                           <h2 class="h3">my Hosting</h2>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">1 month</div>
+                           <div class="plan__cost">
+                              <div class="cost__new">$10,00</div>
+                           </div>
+                           <div class="plan__month"></div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-2" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">1 year</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 10%</div>
+                              <div class="cost__old">$150,00</div>
+                              <div class="cost__new">$100,00</div>
+                           </div>
+                           <div class="plan__month">($4,95 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-2" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">2 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 15%</div>
+                              <div class="cost__old">$250,00</div>
+                              <div class="cost__new">$200,00</div>
+                           </div>
+                           <div class="plan__month">($3,00 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-2" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">3 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 25%</div>
+                              <div class="cost__old">$400,00</div>
+                              <div class="cost__new">$300,00</div>
+                           </div>
+                           <div class="plan__month">($2,95 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-2" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                        <div class="plan__option">
+                           <div class="plan__term">5 years</div>
+                           <div class="plan__cost">
+                              <div class="cost__percent">- 45%</div>
+                              <div class="cost__old">$600,00</div>
+                              <div class="cost__new">$400,00</div>
+                           </div>
+                           <div class="plan__month">($1,50 /month)</div>
+                           <label class="checkbox-custom">
+                              <input class="d-none checkbox" type="radio" name="f-2" value="1">
+                              <i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+                           </label>
+                        </div>
+                     </div>
+						</div>
+					</div>
+
+					<div class="box plan__addons">
+						<div class="addons__title">
+							<h3 class="message__title">Addons</h3>
+							<p>Addons services for the hosting</p>
+						</div>
+						<div class="divid-up addons__cta">
+							<div class="addons__descr">
+								<h3 class="h3">Hosting +</h3>
+								<p>Extended support and antivirus protection for a month at a discount</p>
+							</div>
+							<div class="addons__price">
+								<b>$5,00</b>
+								<label class="checkbox-custom">
+									<input class="d-none checkbox" type="checkbox" name="add" value="add">
+									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Your order</h2>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional"><b>Managed</b> <b>$150,00</b> <i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i></div>
+						<div class="plan__columns plan__columns--optional"><span class="fz-14">2 years</span><b class="color-alert">- 15%</b></div>
+					</div>
+					<div class="divid-up">
+						<div class="plan__columns">Subtotal <b>$150,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $15,00</b></div>
+						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$135,00</b></div>
+						<button type="submit" class="btn btn--lg btn--icon btn--success">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+			</form>
+         </div>
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+</body>
+</html>

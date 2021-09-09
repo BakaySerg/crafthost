@@ -256,13 +256,16 @@
 }
 .message__title {
 	font-size: 1.5em;
-	padding-bottom: .65em;
+	padding-bottom: .56em;
 	position: relative;
    color: $headline;
+   @media (max-width: 380px){
+      padding-bottom: .4em;
+   }
 	&::before{
 		position: absolute;
 		content: '\2013';
-		left: -1.2em;
+		left: -1.1em;
 		top: 0
 	}
    @media (min-width: 1400px){
@@ -273,6 +276,9 @@
 	}
 	@media (max-width: 380px){
 		font-size: 1.3em;
+	}
+	@media (max-width: 360px){
+		font-size: 1.2em;
 	}
 }
 .message__descr {
@@ -506,51 +512,85 @@
 }
 .argum__box {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(301px, 1fr));
    grid-gap: 20px;
    width: 100%;
    max-width: 1120px;
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 40px;
+   @media (max-width: 1025px){
+      margin-bottom: 25px;
+   }
+   @media (max-width: 500px){
+      margin-bottom: 20px;
+   }
 }
 .argum {
    &__item  {
-      @include flex-center;
-      padding: 30px 22px 30px 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 29px 20px 26px 8px;
       overflow: hidden;
       @media (max-width: 500px){
          padding: 15px 19px 15px 0;
       }
       img {
-         max-width: 110px;
-         margin-left: -5px;
+         max-width: 122px;
+         flex-shrink: 0;
+         object-fit: contain;
+         @media (max-width: 380px){
+            max-width: 100px;
+         }
       }
    }
    &__text {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
       @media (min-width: 991px){
          padding-left: 10px;
       }
       h2,h3,h4,h5,h6 {
          font-weight: normal;
-         padding-bottom: 0.6em;
+         padding-bottom: .8em;
          font-size: 1em;
          text-shadow: 0 0;
          color: $headline;
       }
       p {
          font-size: em(14);
+         line-height: 1.7;
+         &:not(:last-child) {
+            @media (min-width: 361px){
+               margin-bottom: 10px;
+            }
+         }
+      }
+      .btn {
+         color: $text;
+         margin-top: auto;
+         [class|=i] {
+            margin-left: 16px;
+         }
+         &:hover{
+            color: $text-active;
+         }
       }
    }
 }
 .plan__controls {
    padding: 25px 20px 26px;
+   &--narrow {
+      padding-bottom: 0;
+   }
    .message__title {
       padding-bottom: 0.3em;
       margin-left: 32px;
    }
    @media (max-width: 500px){
-      padding: 15px 14px 16px;
+      padding: 17px 14px 16px;
       .message__title{
          margin-left: 23px;
       }
@@ -560,6 +600,13 @@
    margin-top: -25px;
    @media (max-width: 500px){
       margin-top: -11px;
+   }
+}
+.plan__controls--narrow ~ .plan__tabs {
+   padding-top: 0;
+   margin-top: -10px;
+   @media (max-width: 500px){
+      margin-bottom: -20px;
    }
 }
 .plan__tabs {

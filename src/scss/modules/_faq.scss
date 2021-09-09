@@ -1,0 +1,80 @@
+.accordion__title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   user-select: none;
+   cursor: pointer;
+   -webkit-tap-highlight-color: rgba(0,0,0,.02);
+}
+.accordion__item {
+   padding: 20px;
+   border-bottom: 1px solid $border;
+   @media (max-width: 500px){
+      padding: 16px 1px;
+   }
+   .btn--sm {
+      padding: 5px;
+      margin: -3px -2px -3px 20px;
+      transition: .3s ease;
+      @media (max-width: 500px){
+         margin-right: -6px;
+      }
+   }
+   &.expanded {
+      .btn--sm {
+         opacity: .3;
+         padding: 2px;
+         transform: rotate(-135deg);
+      }
+   }
+}
+.accordion__hidden {
+   display: block;
+   height: 0;
+   padding: 0;
+   overflow: hidden;
+   opacity: 0;
+   transition: padding .3s, opacity .2s;
+   .expanded & {
+      height: auto;
+      padding: 20px 0;
+      opacity: 1;
+      transition: padding .3s, opacity .3s;
+   }
+}
+.faq {
+   padding: 40px 25px 5px;
+   @media (max-width: 1025px){
+      padding: 25px 20px 5px;
+   }
+   @media (max-width: 380px){
+      padding: 17px 10px 0;
+   }
+   &__title {
+      padding: 5px 25px;
+      @media (max-width: 500px){
+         padding: 0 26px;
+      }
+   }
+   &__list {
+      padding: 20px 0 0;
+      list-style: none;
+      @media (max-width: 500px){
+         padding: 12px 0 0;
+      }
+      &-item {
+         border-top: 1px solid $border;
+         padding: 1.2em 10px 1.2em 23px;
+         @media (max-width: 500px){
+            padding: 0.9em 9px 0.9em 14px;
+         }
+         a {
+            color: $headline;
+            padding: 5px 0;
+            &:hover {
+               color: $text-active;
+            }
+         }
+      }
+   }
+}

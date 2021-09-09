@@ -47,7 +47,6 @@
    position: absolute;
    top: 32px;
    right: 20px;
-   // left: calc(100% - 30px);
    border: none;
    background-color: transparent;
    cursor: pointer;
@@ -59,55 +58,11 @@
    height: 30px;
    flex-shrink: 0;
    margin-left: 1rem;
-   opacity: .45;
+   opacity: .6;
    z-index: 1;
    &:hover {opacity: 1;}
    @media (max-width: 500px){
       background-size: 22px;
-   }
-}
-.accordion__title {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   user-select: none;
-   cursor: pointer;
-   -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.accordion__item {
-   padding: 20px;
-   border-bottom: 1px solid $border;
-   @media (max-width: 500px){
-      padding: 16px 1px;
-   }
-   .btn--sm {
-      padding: 5px;
-      margin: -3px -2px -3px 20px;
-      transition: .3s ease;
-      @media (max-width: 500px){
-         margin-right: -6px;
-      }
-   }
-   &.expanded {
-      .btn--sm {
-         opacity: .3;
-         padding: 2px;
-         transform: rotate(-135deg);
-      }
-   }
-}
-.accordion__hidden {
-   display: block;
-   height: 0;
-   padding: 0;
-   overflow: hidden;
-   opacity: 0;
-   transition: padding .3s, opacity .2s;
-   .expanded & {
-      height: auto;
-      padding: 20px 0;
-      opacity: 1;
-      transition: padding .3s, opacity .3s;
    }
 }
 .drawer__body {
@@ -128,7 +83,7 @@
    }
 }
 .drawer__header {
-   padding: 20px 30px 22px 29px;
+   padding: 20px 45px 22px 29px;
    border-bottom: 1px solid $border;
    &--form {
       padding: 20px 30px 22px 20px;

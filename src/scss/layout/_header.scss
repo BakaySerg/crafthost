@@ -134,10 +134,9 @@
 .submenu__trigger:after,.link--arrow-down:after {
 	content: '';
 	display: inline-block;
-	// pointer-events: none;
 	position: absolute;
 	top: 6px;
-	right: -16px;
+	right: -17px;
 	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%232A3B67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 	width: 20px;
 	height: 20px;
@@ -183,6 +182,9 @@
 		&--up{
 			text-align: center;
 			padding-top: 30px;
+			@media (max-width: 380px){
+				padding-top: 22px;
+			}
 			&:after {
 				top: 0;
 				bottom: auto;
@@ -194,6 +196,9 @@
 		transform-origin: top;
 		right: -28px;
 		top: calc(100% + 13px);
+		@media (max-width: 380px){
+			top: calc(100% + 9px);
+		}
 		&:before{
 			content: '';
 			position: absolute;
@@ -229,6 +234,12 @@
 		width: 95vw;
 		max-width: 312px;
 		padding:29px 28px;
+		@media (max-width: 380px){
+			padding: 23px 22px
+		}
+		@media (max-width: 330px){
+			right: -6px;
+		}
 		&:before {
 			right: 16px;
 			@media (max-width: 1023px){
@@ -240,6 +251,9 @@
 		}
 		.dialog__link {
 			padding: .75em 15px;
+			@media (max-width: 420px){
+				padding: .55em 15px;
+			}
 		}
 	}
 	&__link{
@@ -294,6 +308,10 @@
 .profile {
 	padding-bottom: 27px;
 	margin-bottom: 23px;
+	@media (max-width: 500px){
+		padding-bottom: 16px;
+		margin-bottom: 15px;
+	}
 	&__name {
 		font-size: em(20);
 		font-size: bold;
@@ -312,10 +330,17 @@
 .money{
 	padding-bottom: 25px;
 	margin-bottom: 20px;
+	@media (max-width: 420px){
+		padding-bottom: 20px;
+		margin-bottom: 7px;
+	}
 	&__balance {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 23px;
+		@media (max-width: 420px){
+			margin-bottom: 12px;
+		}
 	}
 	&__sum {
 		font-size: em(15);
@@ -336,6 +361,9 @@
 }
 .money__refill{
 	padding-bottom: 19px;
+	@media (max-width: 420px){
+		padding-bottom: 12px;
+	}
 	&>span:first-child {
 		display: block;
 		font-size: em(14);
@@ -514,7 +542,7 @@
 		flex-wrap: wrap;
 	}
 	@media (max-width: 380px){
-		padding: 12px 15px;
+		padding: 12px 14px;
 	}
 }
 .header__bureau {

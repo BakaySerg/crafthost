@@ -94,7 +94,7 @@
 }
 .plan__main {
    grid-area: content;
-   & > div:not(:last-of-type) {
+   & > div {
       margin-bottom: 40px;
       @media (max-width: 1025px){
          margin-bottom: 25px;

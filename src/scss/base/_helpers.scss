@@ -20,6 +20,9 @@
 .align-right {
 	text-align: center!important;
 	justify-content: flex-end!important;
+	min-width: auto!important;
+	width: min-content;
+	margin-left: auto;
 }
 .align-left {
    text-align: left!important;
@@ -33,7 +36,7 @@
 	display: none!important;
 }
 .hidden-xs {
-	@media (max-width: 361px){
+	@media (max-width: 370px){
 		display: none;
 	}
 }

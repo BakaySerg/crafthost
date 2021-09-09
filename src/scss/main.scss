@@ -55,10 +55,16 @@ body {
 	@media (max-width: 500px){
 		font-size: 1.3em;
 	}
+	@media (max-width: 360px){
+		font-size: 1.2em;
+	}
 }
 .h3 {
 	font-size: em(20);
 	color: $headline;
+	@media (max-width: 360px){
+		font-size: 1.16em;
+	}
 }
 .h4 {
 	font-size: 1em;
@@ -82,4 +88,5 @@ body {
 @import "modules/sidebar";
 @import "modules/forms";
 @import "modules/modals";
+@import "modules/faq";
 @import "modules/tables";
