@@ -259,16 +259,13 @@
 	padding-bottom: .56em;
 	position: relative;
    color: $headline;
-   @media (max-width: 380px){
-      padding-bottom: .4em;
-   }
 	&::before{
 		position: absolute;
 		content: '\2013';
 		left: -1.1em;
 		top: 0
 	}
-   @media (min-width: 1400px){
+   @media (min-width: 1100px) and (min-height: 700px){
       font-size: em(26);
    }
 	@media (max-width: 500px){
@@ -276,10 +273,15 @@
 	}
 	@media (max-width: 380px){
 		font-size: 1.3em;
+      padding-bottom: .4em;
 	}
 	@media (max-width: 360px){
 		font-size: 1.2em;
 	}
+   &--indented {
+      margin-left: 1.1em;
+      margin-bottom: .9em;
+   }
 }
 .message__descr {
 	padding-right: 30px;

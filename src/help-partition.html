@@ -12,25 +12,91 @@
 			<div class="header__bottom container">
 				<h1 class="h1">Support</h1>
 				<div class="header__bureau">
-               <a href="help.html" class="bureau__link active">Questions</a>
-               <a href="tickets.html" class="bureau__link">My tickets</a>
+					<a href="help.html" class="bureau__link active">Questions</a>
+					<a href="tickets.html" class="bureau__link">My tickets</a>
 					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
 				</div>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
-         <ul class="container breadcrumbs">
-            <li><a href="help.html">Help</a></li>
-            <li><a href="#">Domains</a></li>
-         </ul>
+			<ul class="container-lg breadcrumbs">
+				<li><a href="help.html">Help</a></li>
+				<li><a href="#">Domains</a></li>
+			</ul>
+
 			<form action="#" class="box search__form">
 				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-				<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Enter a question and find a solution">
+				<input type="text" required spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Enter a question and find a solution">
 				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Search</button>
 			</form>
 
-
+			<div class="container box">
+				<div class="accordion accordion--lg">
+					<div class="accordion__item expanded">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">General information about domains</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="help-answer.html">What's the difference between a domain and hosting?</a></div>
+							<div class="question"><a href="help-answer.html">How do domain names work?</a></div>
+							<div class="question"><a href="help-answer.html">Should I buy multiple extensions for the same domain?</a></div>
+							<div class="question"><a href="help-answer.html">Why are domain names important?</a></div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">Domain registration</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui quod.</a></div>
+							<div class="question"><a href="#">Ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor.</a></div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">Domain renewal</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui quod.</a></div>
+							<div class="question"><a href="#">Ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor.</a></div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">Domain administrator</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui quod.</a></div>
+							<div class="question"><a href="#">Ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor.</a></div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">Domain transfer</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui quod.</a></div>
+							<div class="question"><a href="#">Ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor.</a></div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__title" data-collapse>
+							<h4 class="h4">Buying and selling a domain</h4>
+							<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+						</div>
+						<div class="accordion__hidden">
+							<div class="question"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui quod.</a></div>
+							<div class="question"><a href="#">Ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor.</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	//= ./include/footer.html

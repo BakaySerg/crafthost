@@ -189,12 +189,12 @@ input:focus:-ms-input-placeholder {opacity: 0; transform: translateY(-11px)}
 		.btn--success {
 			padding: 10px 8px 8px;
 			min-width: 83px;
-			font-size: em(15);
 		}
 	}
 	@media (max-width: 380px){
 		padding-left: 6px;
 		.btn--success {
+			font-size: em(15);
 			min-width: 74px;
 		}
 		input[type] {height: 36px;}
@@ -207,8 +207,12 @@ input:focus:-ms-input-placeholder {opacity: 0; transform: translateY(-11px)}
 			padding-right: 3px;
 		}
 		.btn--success {
-			padding: 9px 2px 7px;
 			min-width: 58px;
+			letter-spacing: .01em;
+			padding: 7px 2px 6px;
+			font-size: .9375em;
+			font-weight: 500;
+			text-shadow: 0 0;
 		}
 	}
 }

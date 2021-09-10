@@ -160,10 +160,14 @@
 	margin-right: 17px;
 	margin-top: -5px;
 	margin-bottom: -5px;
-	@media (max-width: 380px){
+	@media (max-width: 420px){
 		width: 15px;
 		height: 15px;
 		margin: -6px 11px -5px -4px;
+		@media (max-width: 360px){
+			width: 13px;
+			height: 13px;
+		}
 	}
 }
 .help {

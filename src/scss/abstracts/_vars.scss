@@ -29,3 +29,8 @@ $body-font-size: 16; // body font-size
     justify-content: space-between;
     align-items: center;
 }
+@mixin nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

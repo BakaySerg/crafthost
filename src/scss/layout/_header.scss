@@ -538,6 +538,7 @@
 	display: flex;
 	align-items: center;
 	max-width: 1150px;
+	& .h1, & .h2 {	flex-grow: 31;}
 	@media (max-width: 700px){
 		flex-wrap: wrap;
 	}
@@ -557,6 +558,11 @@
 	.btn--lg {
 		margin-top: -6px;
 		margin-bottom: -6px;
+		&:only-child {
+			@media (min-width: 321px){
+				margin-left: auto;
+			}
+		}
 		@media (max-width: 500px){
 			margin-top: -3px;
 			margin-bottom: -3px;
@@ -564,6 +570,9 @@
 	}
 	@media (max-width: 700px){
 		margin-left: 0;
+	}
+	@media (max-width: 500px){
+		justify-content: flex-start;
 	}
 	@media (max-width: 380px){
 		.btn--lg {
@@ -583,18 +592,23 @@
 		color: $active;
 	}
 }
-
 .bureau__link {
 	margin-left: 2.1em;
 	& + .btn--lg {
 		margin-left: 2.1em;
 		@media (max-width: 500px){
 			margin-left: auto;
+			padding: 10px 9px 9px;
+			min-width: auto;
+		}
+		@media (max-width: 380px){
+			font-size: em(15);
 		}
 		@media (max-width: 360px){
 			letter-spacing: .01em;
-			padding: 9px 7px 8px 10px;
-			font-size: .9375em;
+			padding: 7px 7px 6px 10px;
+			font-weight: 500;
+			text-shadow: 0 0;
 			& > svg {
 				margin-right: 6px;
 			}
@@ -607,4 +621,55 @@
 			margin-right: 1em;
 		}
 	}
+	@media (max-width: 500px){
+		padding: .43em .2em;
+		&:not(:only-child) {
+			align-self: flex-end;
+		}
+	}
+	@media (max-width: 359px){
+		margin-right: 0.8em;
+	}
+}
+.breadcrumbs {
+   list-style: none;
+   display: block;
+   font-size: 12px;
+   color: $icons;
+   padding: 0 15px 24px;
+	margin-top: -12px;
+   @include nowrap;
+   @media (max-width: 1025px){
+      padding: 0 2px 18px;
+      margin-top: -6px;
+   }
+   @media (max-width: 600px){
+      padding: 0 1px 13px;
+      margin-top: -3px;
+   }
+	@media (max-width: 360px){
+		padding: 0 0 13px;
+		margin-top: -5px;
+	}
+   li {
+      display: inline;
+   }
+   li + li:before {
+      content: '';
+      display: inline-block;
+      vertical-align: text-top;
+      height: 13px;
+      width: 13px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.83334 9.33301L8.16668 6.99967L5.83334 4.66634' stroke='%23C2C2C4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      margin-left: 4px;
+      margin-right: 9px;
+   }
+   a {
+      color: inherit;
+      padding: 8px 4px 8px 3px;
+      &:hover {
+         color: $text-active;
+      }
+   }
 }
