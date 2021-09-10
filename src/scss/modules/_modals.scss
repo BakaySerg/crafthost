@@ -149,11 +149,8 @@
       }
    }
 }
-[data-tab] {
-   display: none;
-}
-[data-tab=active] {
-   display: flex;
+[data-tab]:not([data-tab=active]) {
+   display: none!important;
 }
 .plan__options[data-tab=active] {
    display: block;

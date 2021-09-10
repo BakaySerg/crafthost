@@ -165,13 +165,13 @@ document.addEventListener('DOMContentLoaded', function(){
 				el.addEventListener("click", function (e) {
 					let id = this.getAttribute("data-trigger-tab"),
 						 comingTab = document.getElementById(id),
-						 parent = comingTab.closest('.tabs'),
+						 parent = comingTab.closest('.tabs-content'),
 						 currentTab = parent.querySelector('[data-tab="active"]');
 
 					currentTab.setAttribute("data-tab", "hidden");
 					comingTab.setAttribute("data-tab", "active");
 					if (this.classList.contains('selector--tab')){
-						let othersTabs = this.closest('.plan__tabs').querySelectorAll('.selector');
+						let othersTabs = this.closest('.tabs').querySelectorAll('.selector');
 						[...othersTabs].forEach(item => {
 							item.classList.remove('checked');
 						});
