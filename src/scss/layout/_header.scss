@@ -18,7 +18,7 @@
 				padding: 15px;
 			}
 			@media (max-width: 380px){
-				padding: 6px 15px;
+				padding: 6px 14px;
 			}
 		}
 	}
@@ -473,6 +473,10 @@
 		padding: 6px;
 		margin-left: 3px;
 	}
+	@media (max-width: 360px){
+		width: 34px;
+		height: 34px;
+	}
 }
 .notifications {
 	display: flex;
@@ -547,6 +551,9 @@
 	}
 	@media (max-width: 500px){
 		padding: 12px 14px;
+		& .h1, & .h2 {
+			width: 100%;
+		}
 	}
 	@media (max-width: 360px){
 		padding: 10px 12px;
@@ -588,6 +595,7 @@
 	}
 	@media (max-width: 500px){
 		justify-content: flex-start;
+		padding-top: 0.3em;
 	}
 	@media (max-width: 380px){
 		.btn--lg {
@@ -611,6 +619,10 @@
 	margin-left: 2.1em;
 	& + .btn--lg {
 		margin-left: 2.1em;
+		flex-shrink: 0;
+		@media (max-width: 900px){
+			margin-left: auto;
+		}
 		@media (max-width: 500px){
 			margin-left: auto;
 			padding: 10px 9px 9px;
@@ -635,10 +647,14 @@
 		padding: .43em .2em;
 		&:not(:only-child) {
 			align-self: flex-end;
+			margin-right: .8em;
 		}
 	}
 	@media (max-width: 359px){
-		margin-right: 0.8em;
+		margin-right: .8em;
+		&:not(:only-child) {
+			margin-right: auto;
+		}
 	}
 }
 .breadcrumbs {

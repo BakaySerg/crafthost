@@ -179,6 +179,7 @@
 	padding: 2px 0;
 	border-bottom: 1px solid currentColor;
 	position: relative;
+	cursor: help;
 	&:before {
 		content: attr(data-help);
 		position: absolute;

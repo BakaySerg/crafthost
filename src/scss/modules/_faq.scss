@@ -101,6 +101,7 @@
          a {
             color: $headline;
             padding: 5px 0;
+            cursor: help;
             &:hover {
                color: $text-active;
             }
@@ -215,4 +216,49 @@
       height: 26px;
       margin-right: 10px;
    }
+}
+.ticket {
+   padding: 28px 24px 27px;
+   margin-bottom: 20px;
+   &__descr {
+      padding-right: 30px;
+      p {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+      }
+   }
+   &__title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: .7em;
+      .h3 {
+         padding-right: 40px;
+         @media (max-width: 500px){
+            flex-grow: 1;
+            width: 100%;
+            padding-bottom: 0.2em;
+         }
+      }
+   }
+}
+.btn--arrow {
+	position: absolute;
+	right: calc(1vw + 7px);
+	top: calc(50% - 15px);
+	background-color: transparent;
+}
+[data-status] ~ .btn--arrow {
+   color: $headline;
+   opacity: .3;
+   cursor: not-allowed;
+   filter: grayscale(1);
+}
+[data-status=active] ~ .btn--arrow {
+   opacity: 1;
+   cursor: pointer;
+   filter: none;
 }
