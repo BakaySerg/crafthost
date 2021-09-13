@@ -20,6 +20,7 @@
 		padding: 4px;
 		background-color: transparent;
 		flex-shrink: 0;
+		z-index: 1;
 		& svg {
 			max-width: 100%;
 		}

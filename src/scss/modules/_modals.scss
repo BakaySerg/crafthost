@@ -85,6 +85,9 @@
 .drawer__header {
    padding: 20px 45px 22px 29px;
    border-bottom: 1px solid $border;
+   &--noborder {
+      border-bottom: none;
+   }
    &--form {
       padding: 20px 30px 22px 20px;
       @media (max-width: 500px){

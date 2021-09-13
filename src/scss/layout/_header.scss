@@ -468,14 +468,14 @@
 		margin-left: 3px;
 	}
 	@media (max-width: 380px){
-		width: 37px;
-		height: 37px;
+		width: 36px;
+		height: 36px;
 		padding: 6px;
 		margin-left: 3px;
 	}
 	@media (max-width: 360px){
-		width: 34px;
-		height: 34px;
+		width: 32px;
+		height: 32px;
 	}
 }
 .notifications {
@@ -546,11 +546,16 @@
 		flex-grow: 31;
 		padding-right: 0.5em;
 	}
-	@media (max-width: 700px){
+	@media (max-width: 801px){
 		flex-wrap: wrap;
 	}
 	@media (max-width: 500px){
 		padding: 12px 14px;
+		& .h1, & .h2 {
+			white-space: nowrap;
+		}
+	}
+	@media (max-width: 370px){
 		& .h1, & .h2 {
 			width: 100%;
 		}
@@ -590,12 +595,17 @@
 			}
 		}
 	}
+	@media (max-width: 801px){
+		padding-top: 0.8em;
+	}
 	@media (max-width: 700px){
 		margin-left: 0;
+		padding-top: .5em;
 	}
 	@media (max-width: 500px){
 		justify-content: flex-start;
-		padding-top: 0.3em;
+		padding-top: .3em;
+		.align-right {padding-left: 0;}
 	}
 	@media (max-width: 380px){
 		.btn--lg {
@@ -617,15 +627,20 @@
 }
 .bureau__link {
 	margin-left: 2.1em;
+	white-space: nowrap;
+
 	& + .btn--lg {
 		margin-left: 2.1em;
 		flex-shrink: 0;
 		@media (max-width: 900px){
+			margin-left: .7em;
+		}
+		@media (max-width: 801px){
 			margin-left: auto;
 		}
 		@media (max-width: 500px){
 			margin-left: auto;
-			padding: 10px 9px 9px;
+			padding: 8px 8px 7px;
 			min-width: auto;
 		}
 		@media (max-width: 380px){
@@ -652,8 +667,10 @@
 	}
 	@media (max-width: 359px){
 		margin-right: .8em;
+		font-size: em(15);
 		&:not(:only-child) {
-			margin-right: auto;
+			margin-right: .4em;
+			padding-left: .1em;
 		}
 	}
 }

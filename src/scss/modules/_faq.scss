@@ -220,8 +220,17 @@
 .ticket {
    padding: 28px 24px 27px;
    margin-bottom: 20px;
+   @media (max-width: 500px){
+      padding: 20px 19px 19px;
+   }
+   @media (max-width: 360px){
+      padding: 17px 14px 16px;
+   }
    &__descr {
       padding-right: 30px;
+      @media (max-width: 500px){
+         padding-right: 19px;
+      }
       p {
          overflow: hidden;
          text-overflow: ellipsis;
