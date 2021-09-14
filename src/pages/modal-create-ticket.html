@@ -1,14 +1,48 @@
-<div id="create-ticket" class="drawer__item" data-tab="hidden">
+<form id="create-ticket" class="drawer__item drawer__form" data-tab="hidden">
 	<div class="drawer__body">
 		<div class="drawer__header drawer__header--noborder">
 			<div class="drawer__title">
 				<h2 class="drawer__headline">Create a Ticket</h2>
-				<p>What service related to?</p>
+				<p>Describe the problem as detailed as possible</p>
 			</div>
-
 		</div>
 		<div class="drawer__content">
-
+			<div class="pb-05">Select ticket theme</div>
+			<select class="select" name="ticket__theme">
+				<option value="domain problems">Problems buying a domain</option>
+				<option value="hostin problems">Problems buying a hosting</option>
+			</select>
+			<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+			<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+			<label class="file__area" for="file">
+				<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+				<span data-text="Attach">Attach</span>
+			</label>
 		</div>
 	</div>
-</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
+	</div>
+</form>
+<script>
+	(function () {
+		const inputs = document.querySelectorAll('[type=file]');
+		Array.prototype.forEach.call( inputs, function( input ) {
+			let label = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+			input.addEventListener('change', function(e) {
+				let fileName = '';
+				if(this.files && this.files.length > 1)
+				fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+				else
+				fileName = e.target.value.split('\\').pop();
+				if( fileName )
+				label.querySelector('span').innerHTML = fileName;
+				else
+				label.innerHTML = labelVal;
+			});
+		});
+	}());
+</script>

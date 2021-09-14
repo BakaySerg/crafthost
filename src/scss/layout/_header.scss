@@ -242,11 +242,11 @@
 		}
 		&:before {
 			right: 16px;
-			@media (max-width: 1023px){
-				right: 62px;
+			@media (max-width: 700px){
+				right: 59px;
 			}
 			@media (max-width: 380px){
-				right: 55px;
+				right: 51px;
 			}
 		}
 		.dialog__link {
@@ -550,18 +550,15 @@
 		flex-wrap: wrap;
 	}
 	@media (max-width: 500px){
-		padding: 12px 14px;
+		padding: 9px 14px 6px;
 		& .h1, & .h2 {
 			white-space: nowrap;
 		}
 	}
-	@media (max-width: 370px){
-		& .h1, & .h2 {
-			width: 100%;
-		}
-	}
 	@media (max-width: 360px){
-		padding: 10px 12px;
+		& .h1, & .h2 {
+			padding-bottom: 5px;
+		}
 	}
 }
 .header__bureau {
@@ -596,15 +593,17 @@
 		}
 	}
 	@media (max-width: 801px){
-		padding-top: 0.8em;
+		padding-top: .5em;
+		padding-bottom: .5em;
 	}
 	@media (max-width: 700px){
 		margin-left: 0;
-		padding-top: .5em;
+		padding-top: .3em;
+		padding-bottom: .3em;
 	}
 	@media (max-width: 500px){
 		justify-content: flex-start;
-		padding-top: .3em;
+		padding-top: .1em;
 		.align-right {padding-left: 0;}
 	}
 	@media (max-width: 380px){
@@ -666,8 +665,11 @@
 		}
 	}
 	@media (max-width: 359px){
-		margin-right: .8em;
+
 		font-size: em(15);
+		&:not(:last-child){
+			margin-right: .8em;
+		}
 		&:not(:only-child) {
 			margin-right: .4em;
 			padding-left: .1em;

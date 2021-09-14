@@ -15,7 +15,7 @@
 					<a href="#" class="bureau__link active">All tickets</a>
 					<a href="#" class="bureau__link">Opened</a>
 					<a href="#" class="bureau__link">Closed</a>
-					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success" data-tab-open="create-ticket" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
+					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
 				</div>
 			</div>
 		</header>
@@ -24,7 +24,7 @@
 			<div class="container box ticket" data-sorted="opened">
 				<div class="ticket__descr">
 					<div class="ticket__title">
-						<h3 class="h3">#99500000000001575743</h3>
+						<h3 class="h3" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false">#99500000000001575743</h3>
 						<div class="status" data-status="active">Opened</div>
 						<a href="#" class="btn btn--sm btn--arrow" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
 					</div>
@@ -61,7 +61,8 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				<!-- tab choise policy -->
+				<!--  -->
+				//= ./pages/modal-login-side.html
 				//= ./pages/modal-create-ticket.html
 	      </div>
 		</div>
@@ -73,7 +74,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				<!-- tab choise policy -->
+				<!-- tab existent-ticket -->
 				//= ./pages/modal-existent-ticket.html
 	      </div>
 		</div>

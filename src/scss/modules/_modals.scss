@@ -30,7 +30,7 @@
    max-width: 720px;
    z-index: 999;
    overflow: auto;
-   transition: transform 0.3s;
+   transition: transform .4s cubic-bezier(.77, 0, .175, 1);
    will-change: transform;
    background-color: #fff;
    box-shadow: -1px 1px 15px rgba(30, 23, 104, 0.08);
@@ -39,6 +39,9 @@
    will-change: transform;
    transform: translate3d(103%, 0, 0);
    -webkit-overflow-scrolling: touch;
+   @media (max-width: 801px){
+      max-width: 100%;
+   }
 }
 .drawer--lg .drawer__wrapper {
    max-width: 1120px;
@@ -64,9 +67,19 @@
    @media (max-width: 500px){
       background-size: 22px;
    }
+   @media (max-width: 380px){
+      top: 27px;
+      right: 10px;
+   }
+   @media (max-width: 360px){
+      top: 20px;
+   }
 }
 .drawer__body {
-   padding: 4.6em 5.9em;
+   padding: calc(4.6vh + 1.7em) calc(1.6vw + 3.8em);
+   @media (max-height: 649px){
+      padding: calc(3.5vh + 0.6em) calc(1.6vw + 3.8em);
+   }
    @media (max-width: 500px){
       padding: 1em 15px;
    }
@@ -83,10 +96,23 @@
    }
 }
 .drawer__header {
-   padding: 20px 45px 22px 29px;
+   padding: 20px 44px 22px 29px;
    border-bottom: 1px solid $border;
+   @media (max-width: 380px){
+      padding: 16px 36px 11px 26px;
+   }
+   @media (max-width: 360px){
+      padding: 9px 29px 11px 22px;
+   }
    &--noborder {
       border-bottom: none;
+      padding-bottom: 40px;
+      @media (max-width: 801px){
+         padding-bottom: 32px;
+      }
+      @media (max-width: 380px){
+         padding-bottom: 24px;
+      }
    }
    &--form {
       padding: 20px 30px 22px 20px;
@@ -122,6 +148,18 @@
    height: 100%;
    flex-grow: 1;
    flex-shrink: 0;
+   .search__form {
+      background-color: $bg2;
+      border-radius: 3px;
+      margin-bottom: 2px;
+      padding: 5px 5px 5px 17px;
+      @media (max-width: 500px){
+         padding: 2px 3px 2px 11px;
+      }
+      @media (max-width: 360px){
+         padding: 4px 4px 4px 8px;
+      }
+   }
 }
 .drawer.is-active {
    display: block;
@@ -142,14 +180,43 @@
    padding: 20px 15px 22px;
    border-top: 1px solid $border;
    @include flex-center;
+   @media (max-height: 649px){
+      padding: 16px 15px 17px;
+   }
    @media (max-width: 380px){
       padding: 13px 14px 14px;
    }
    .btn:not(:first-child) {
-      margin-left: 40px;
+      margin-left: 38px;
+      flex-grow: .07;
       @media (max-width: 500px){
          margin-left: 14px;
       }
+   }
+}
+.drawer__cta {
+   display: flex;
+   align-items: center;
+   padding-top: 30px;
+   padding-bottom: 25px;
+   .btn--lg {
+      flex-grow: .19;
+   }
+   .btn--lg + .btn--lg {
+      margin-left: 1.4em;
+      flex-grow: .76;
+   }
+   @media (max-width: 380px){
+      padding-top: 21px;
+      padding-bottom: 17px;
+   }
+   @media (max-width: 360px){
+      .btn--lg + .btn--lg {
+         margin-left: .8em;
+      }
+   }
+   & ~ p {
+      line-height: 1.44;
    }
 }
 [data-tab]:not([data-tab=active]) {

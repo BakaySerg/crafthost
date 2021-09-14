@@ -313,6 +313,9 @@
 		padding-bottom: 1.3em;
 		line-height: 1.5;
 	}
+   @media (max-width: 360px){
+      padding-left: 15px;
+   }
 }
 .board__message {
 	position: relative;

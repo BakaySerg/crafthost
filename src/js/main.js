@@ -148,8 +148,15 @@ document.addEventListener('DOMContentLoaded', function(){
 						[...filled].forEach((f) => {
 							f.classList.remove("filled");
 						});
-
 						btn.classList.add("btn--disabled");
+
+						let fileInp = currentTab.querySelector('[type=file]');
+						if (fileInp) {
+							let label = fileInp.nextElementSibling,
+								 span = label.querySelector('span'),
+								 defaultText = span.getAttribute('data-text');
+								 span.innerHTML = defaultText;
+						}
 					}
 				});
 			}

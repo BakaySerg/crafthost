@@ -113,6 +113,10 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 			if (close) {
 				closeDrawer(close);
+				let activeTabs = document.querySelectorAll('[data-tab=active]');
+				[...activeTabs].forEach((all) => {
+					all.setAttribute("data-tab", "hidden");
+				});
 			}
 			if (open || close) {
 				event.preventDefault();
