@@ -126,7 +126,7 @@
 				<div class="header__bureau">
 					<a href="help.html" class="bureau__link">Questions</a>
 					<a href="tickets.html" class="bureau__link">My tickets</a>
-					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
+					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
 				</div>
 			</div>
 		</header>
@@ -135,8 +135,8 @@
 			<ul class="container-lg breadcrumbs">
 				<li><a href="help.html">Help</a></li>
 				<li><a href="#">Domains</a></li>
-            <li><a href="">General information about domains</a></li>
-            <li><a href="">What's the difference between a domain and hosting?</a></li>
+            <li><a href="#">General information about domains</a></li>
+            <li><a href="#">What's the difference between a domain and hosting?</a></li>
 			</ul>
 
 			<form action="#" class="box search__form">
@@ -214,6 +214,117 @@
 	   </div>
 	   <div class="widget"></div>
 	</footer>
+	<!-- popup (new ticket)-->
+	<div class="drawer" id="new-ticket" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				<div id="new-user" class="drawer__item" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Welcome to Crafthost support service</h2>
+								<p>If you have an account, log in so that the new application is displayed in your Personal cabinet.</p>
+							</div>
+						</div>
+						<div class="drawer__content">
+				         <div class="drawer__cta">
+				            <a href="#" class="btn btn--lg btn--outlined" data-trigger-modal="create-ticket-unregistered">Continue as a guest</a>
+				            <a href="#" class="btn btn--lg btn--success btn--icon" data-trigger-modal="create-ticket">Log in</a>
+				         </div>
+				         <p>By submitting a request, I give my consent to the processing of personal data and confirm that I have read <a href="#">Privacy Policy</a> and service rules.</p>
+						</div>
+					</div>
+				</div>
+				<!-- when the user is not registered, we show the popup with additional fields -->
+				<form id="create-ticket-unregistered" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Create a Ticket</h2>
+								<p>Describe the problem as detailed as possible</p>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<label class="form-field">
+								<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
+								<span class="form-placeholder">Name</span>
+							</label>
+							<label class="form-field">
+								<input type="email" name="email" class="form-input" placeholder=" " required="">
+								<span class="form-placeholder">Email</span>
+							</label>
+							<div class="pb-05">Select ticket theme</div>
+							<select class="select" name="ticket__theme">
+								<option value="domain problems">Problems buying a domain</option>
+								<option value="hostin problems">Problems buying a hosting</option>
+							</select>
+							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<label class="file__area" for="file">
+								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+								<span data-text="Attach">Attach</span>
+							</label>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
+					</div>
+				</form>
+				<form id="create-ticket" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Create a Ticket</h2>
+								<p>Describe the problem as detailed as possible</p>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<div class="pb-05">Select ticket theme</div>
+							<select class="select" name="ticket__theme">
+								<option value="domain problems">Problems buying a domain</option>
+								<option value="hostin problems">Problems buying a hosting</option>
+							</select>
+							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<label class="file__area" for="file">
+								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+								<span data-text="Attach">Attach</span>
+							</label>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
+					</div>
+				</form>
+	      </div>
+		</div>
+	</div>
+	<script>
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			Array.prototype.forEach.call( inputs, function( input ) {
+				let label = input.nextElementSibling,
+				labelVal = label.innerHTML;
+
+				input.addEventListener('change', function(e) {
+					let fileName = '';
+					if(this.files && this.files.length > 1)
+					fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+					else
+					fileName = e.target.value.split('\\').pop();
+					if( fileName )
+					label.querySelector('span').innerHTML = fileName;
+					else
+					label.innerHTML = labelVal;
+				});
+			});
+		}());
+	</script>
 	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
 </body>
 </html>

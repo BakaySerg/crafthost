@@ -264,3 +264,19 @@
       margin: -3px 0 -4px 3px;
    }
 }
+.btn--lg .i-reverse-arrow {
+	width: 24px;
+   height: 24px;
+   margin: -4px 10px -4px 0;
+	transform: rotate(180deg);
+	@media (max-width: 380px){
+      width: 17px;
+      height: 17px;
+      margin: -4px 7px -4px 0;
+   }
+   @media (max-width: 360px){
+      width: 15px;
+      height: 15px;
+      margin: -3px 3px -4px 0;
+   }
+}

@@ -14,7 +14,7 @@
 				<div class="header__bureau">
 					<a href="help.html" class="bureau__link active">Questions</a>
 					<a href="tickets.html" class="bureau__link">My tickets</a>
-					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
+					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
 				</div>
 			</div>
 		</header>
@@ -100,6 +100,41 @@
 		</div>
 	</div>
 	//= ./include/footer.html
+	<!-- popup (new ticket)-->
+	<div class="drawer" id="new-ticket" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-login-side.html
+				<!-- when the user is not registered, we show the popup with additional fields -->
+				//= ./pages/modal-create-ticket-unregistered.html
+				//= ./pages/modal-create-ticket.html
+	      </div>
+		</div>
+	</div>
+	<script>
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			Array.prototype.forEach.call( inputs, function( input ) {
+				let label = input.nextElementSibling,
+				labelVal = label.innerHTML;
+
+				input.addEventListener('change', function(e) {
+					let fileName = '';
+					if(this.files && this.files.length > 1)
+					fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+					else
+					fileName = e.target.value.split('\\').pop();
+					if( fileName )
+					label.querySelector('span').innerHTML = fileName;
+					else
+					label.innerHTML = labelVal;
+				});
+			});
+		}());
+	</script>
 	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
 </body>
 </html>

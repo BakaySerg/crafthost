@@ -13,9 +13,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			@media (max-width: 1369px){
+				padding: 15px;
+			}
 			@media (max-width: 1023px){
 				flex-wrap: wrap;
-				padding: 15px;
 			}
 			@media (max-width: 380px){
 				padding: 6px 14px;
@@ -546,6 +548,9 @@
 		flex-grow: 31;
 		padding-right: 0.5em;
 	}
+	@media (max-width: 1369px){
+		padding: 15px;
+	}
 	@media (max-width: 801px){
 		flex-wrap: wrap;
 	}
@@ -570,10 +575,14 @@
 	.btn--lg {
 		margin-top: -6px;
 		margin-bottom: -6px;
-		&:only-child {
+		&:only-child:not(.align-left) {
 			@media (min-width: 321px){
 				margin-left: auto;
 			}
+		}
+		&.align-left {
+			margin-left: 0;
+			margin-right: auto;
 		}
 		@media (max-width: 500px){
 			margin-top: -3px;

@@ -76,9 +76,9 @@
    }
 }
 .drawer__body {
-   padding: calc(4.6vh + 1.7em) calc(1.6vw + 3.8em);
+   padding: calc(4.3vh + .7em) calc(1.6vw + 3.8em) calc(3vh + .6em);
    @media (max-height: 649px){
-      padding: calc(3.5vh + 0.6em) calc(1.6vw + 3.8em);
+      padding: calc(3.5vh + .6em) calc(1.6vw + 3.8em) calc(3vh + .5em);
    }
    @media (max-width: 500px){
       padding: 1em 15px;
@@ -106,9 +106,9 @@
    }
    &--noborder {
       border-bottom: none;
-      padding-bottom: 40px;
+      padding-bottom: 34px;
       @media (max-width: 801px){
-         padding-bottom: 32px;
+         padding-bottom: 30px;
       }
       @media (max-width: 380px){
          padding-bottom: 24px;
