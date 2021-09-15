@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Error accessing | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<div class="header__bureau">
+					<a href="javascript:history.back()" class="bureau__link btn btn--lg btn--icon align-left"><svg class="i-reverse-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg>Go back to the main page</a>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+			<div class="board__message board__message--lg board__message--xl">
+				<figure class="message__picture">
+					<img srcset="img/404/oops.png, img/404/oops-2x.png 2x" src="img/404/oops.png" alt="Page not found">
+				</figure>
+				<div class="message__descr message__descr--huge">
+					<h2 class="message__title">Error accessing the service</h2>
+               <p>We are already troubleshooting, try refreshing the page after a while.<br>We apologize for the temporary inconvenience</p>
+               <button type="button" onClick="window.location.reload();" class="btn btn--lg btn--success">Reload</button>
+               <a href="help-answer.html" class="btn btn--lg btn--icon">Services List <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
+			</div>
+		</div>
+	</div>
+   //= ./include/footer.html
+	<script src="js/main.js"></script>
+</body>
+</html>

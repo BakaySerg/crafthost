@@ -42,11 +42,11 @@
 	}
 	&--icon {
 		min-width: 190px;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		@media (max-width: 380px){
-			min-width: 160px;
+			min-width: 148px;
 		}
 		@media (max-width: 360px){
 			min-width: 118px;

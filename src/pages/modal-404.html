@@ -1,0 +1,25 @@
+<form id="support" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Support</h2>
+				<p>Describe your questions</p>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<label class="form-field">
+				<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
+				<span class="form-placeholder">Name</span>
+			</label>
+			<label class="form-field">
+				<input type="email" name="email" class="form-input" placeholder=" " required="">
+				<span class="form-placeholder">Email</span>
+			</label>
+			<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your message</button>
+	</div>
+</form>

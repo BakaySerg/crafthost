@@ -110,16 +110,20 @@ document.addEventListener('DOMContentLoaded', function(){
 				if (tabTarget) {
 					tabTarget.setAttribute("data-tab", "active");
 				}
+				event.preventDefault();
 			}
 			if (close) {
 				closeDrawer(close);
 				let activeTabs = document.querySelectorAll('[data-tab=active]');
+				let fields = document.querySelectorAll('.filled');
 				[...activeTabs].forEach((all) => {
 					all.setAttribute("data-tab", "hidden");
 				});
-			}
-			if (open || close) {
-				event.preventDefault();
+				if (fields)
+				[...fields].forEach((all) => {
+					all.classList.remove("filled");
+				});
+				fields[0].closest(".drawer__form").reset();
 			}
 		};
 
