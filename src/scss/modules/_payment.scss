@@ -1,13 +1,23 @@
 .payment {
-   padding: 25px;
+   padding: 26px 25px 5px;
+   @media (max-width: 500px){
+      padding: 21px 16px 3px;
+   }
    &__controls {
       padding-bottom: 1.3em;
       margin-bottom: 1.1em;
       border-bottom: 1px solid $border;
+      @media (max-width: 500px){
+         padding-bottom: 0.8em;
+         margin-bottom: 0.7em;
+      }
    }
    &__title {
       @include flex-between;
       padding-left: 32px;
+      @media (min-width: 991px){
+         padding-bottom: .3em;
+      }
    }
    &__price {
       font-size: 1.5em;
@@ -31,19 +41,42 @@
    &__item {
       display: flex;
       align-items: flex-start;
+      position: relative;
+      .btn--arrow{
+         position: static;
+         align-self: center;
+         margin-left: auto;
+         color: $border;
+         margin-bottom: 12px;
+      }
+      & + & {
+         border-top: 1px solid $border;
+         padding-top: 1.1em;
+      }
+      @media (max-width: 500px){
+         img {max-width: 38px;}
+      }
    }
    &__text {
       padding-left: 33px;
-      padding-bottom: 20px;
+      padding-bottom: 28px;
       .h3 {
          padding-top: .1em;
          padding-bottom: .2em;
       }
       .h3 ~ p {font-size: em(15);}
+      @media (max-width: 500px){
+         padding-left: 19px;
+         padding-bottom: 16px;
+      }
    }
    &__explain {
       padding-top: 2.2em;
       padding-bottom: 1.1em;
+      @media (max-width: 500px){
+         padding-top: 1.3em;
+         padding-bottom: .7em;
+      }
       .h4 {
          padding-bottom: 1em;
       }
