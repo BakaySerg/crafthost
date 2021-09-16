@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Payment | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<div class="header__bureau">
+					<h1 class="h1">Payment</h1>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="javascript:history.back()" class="btn btn--lg btn--icon align-left link">
+					<svg class="i-reverse-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg>
+					Go to the list of orders
+					</a>
+				</li>
+			</ul>
+			<div class="box container payment">
+				<div class="payment__controls">
+					<div class="payment__title">
+						<h2 class="message__title">Total for payment</h2>
+						<div class="payment__price">$105,00</div>
+					</div>
+					<!-- tab controls -->
+				<div class="tab-controls">
+					<div class="tabs">
+						<div class="selector selector--tab checked" data-trigger-tab="first">
+							<div class="selector__btn">Pay online</div>
+						</div>
+						<div class="selector selector--tab" data-trigger-tab="second">
+							<div class="selector__btn">Wire transfers</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="tabs-content">
+					<div id="first" class="tab" data-tab="active">
+						<div class="payment__item">
+							<img src="img/payment/visa.png" alt="visa" width="56">
+							<div class="payment__text">
+								<h3 class="h3">Visa / Mastercard</h3>
+								<p>Pay by using a bank card</p>
+								<div class="payment__explain">
+									<h4 class="h4">Link a card for payment on next purchases</h4>
+									<p>The card will be used for quick payment, as well as for automatically renewing domains and services.</p>
+									<p>Snapping card makes it easier and easier to work. However, if outsiders gain access to your account, you can lose money on your card. Therefore, after binding the card, we recommend setting up (two-factor authentication)[/user/account/#/settings/] and additionally protecting your account.</p>
+								</div>
+								<div class="payment__cta">
+									<b>$105,00</b>
+									<a href="payment-details.html" class="btn btn--lg btn--icon btn--success">Checkout<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="payment__item">
+							<img src="img/payment/paypal.png" alt="visa" width="56">
+							<div class="payment__text">
+								<h3 class="h3">Paypal</h3>
+								<p>Pay by using personal account of Paypal</p>
+							</div>
+							<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+						</div>
+					</div>
+					<div id="second" class="tab" data-tab="hidden">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, maiores eum? Praesentium et quaerat quibusdam non eveniet quam molestias dolores porro totam saepe nam fugit, iste culpa in voluptatum consequuntur at earum rem libero? Eligendi dolores necessitatibus aperiam harum qui.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+</body>
+</html>

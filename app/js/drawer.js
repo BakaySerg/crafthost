@@ -1,6 +1,5 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', function(){
-
 	const drawer = function () {
 		// Trap Focus
 		function trapFocus(element) {
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					}
 				}
 			});
-		}
+		};
 
 		const settings = {
 			speedOpen: 50,
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 
 		// Methods
-
 		// Toggle accessibility
 		let toggleAccessibility = function (event) {
 			if (event.getAttribute("aria-expanded") === "true") {
@@ -63,7 +61,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			// Make it active
 			target.classList.add(settings.activeClass);
-			document.body.classList.add("open-modal");
+
+			if (document.body.scrollHeight !== window.innerHeight){
+				document.body.classList.add("open-modal");
+			}
 
 			// Toggle accessibility
 			toggleAccessibility(trigger);
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			closestParent.classList.remove(settings.visibleClass);
 
 			// Remove body overflow hidden
+
 			document.body.classList.remove("open-modal");
 
 			// Toggle accessibility
@@ -115,15 +117,19 @@ document.addEventListener('DOMContentLoaded', function(){
 			if (close) {
 				closeDrawer(close);
 				let activeTabs = document.querySelectorAll('[data-tab=active]');
-				let fields = document.querySelectorAll('.filled');
+				let fields = document.querySelectorAll('.drawer__form .filled');
 				[...activeTabs].forEach((all) => {
 					all.setAttribute("data-tab", "hidden");
 				});
-				if (fields)
-				[...fields].forEach((all) => {
-					all.classList.remove("filled");
-				});
-				fields[0].closest(".drawer__form").reset();
+				if (fields) {
+					[...fields].forEach((all) => {
+						all.classList.remove("filled");
+					});
+					let forms = document.querySelectorAll(".drawer__form");
+					[...forms].forEach((form) => {
+						form.reset();
+					});
+				}
 			}
 		};
 
@@ -149,13 +155,12 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 	drawer();
 
-
 	// custom placeholder
 	(function customPlaceholder() {
 		function getInputFields() {
 			let inputFields = document.getElementsByClassName("form-input");
 			return [...inputFields];
-		}
+		};
 
 		function checkLabel() {
 			let fieldParent = this.parentElement;
@@ -164,11 +169,11 @@ document.addEventListener('DOMContentLoaded', function(){
 			} else {
 				fieldParent.classList.remove("filled");
 			}
-		}
+		};
 
 		function focusLabel() {
 			this.parentElement.classList.add("filled");
-		}
+		};
 
 		getInputFields().forEach(function (el) {
 			el.addEventListener("focus", focusLabel);

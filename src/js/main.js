@@ -110,20 +110,17 @@ document.addEventListener('DOMContentLoaded', function(){
 			showAddWindow, function (el) {
 				el.addEventListener("click", function (e) {
 					e.preventDefault();
-					// const index = [...el.parentElement.children].indexOf(el)
 					const parentBox = this.parentElement;
 					let id = this.getAttribute("data-show");
 					let comingContent = document.getElementById(id);
 					parentBox.setAttribute('hidden','');
 					comingContent.removeAttribute('hidden');
-
-					// console.log(index);
 				});
 			}
 		);
-	}
+	};
 
-	// modal(tabs) inside the drawer
+	// tabs inside the drawer (modal)
 	const modalSwitcher = function () {
 		[].forEach.call(
 			document.querySelectorAll("[data-trigger-modal]"),

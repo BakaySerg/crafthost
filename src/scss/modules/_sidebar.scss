@@ -172,6 +172,16 @@
       flex-wrap: wrap;
    }
 }
+.plan__choise {
+   display: flex;
+   align-items: center;
+   padding-top: .3em;
+   padding-bottom: 1.3em;
+   user-select: none;
+   .checkbox-custom {
+      margin-right: 1.1em;
+   }
+}
 .plan__term {
    margin-right: 1em;
    flex-grow: .4;
