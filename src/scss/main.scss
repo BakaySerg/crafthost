@@ -68,6 +68,11 @@ body {
 		font-size: 1.2em;
 	}
 }
+.h2 {
+	color: $headline;
+	font-weight: bold;
+	font-size: em(26);
+}
 .h3 {
 	font-size: em(20);
 	color: $headline;

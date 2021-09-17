@@ -408,6 +408,9 @@ input:not([type=radio]):not([type=checkbox]) {
 		pointer-events: none;
 		transition: .3s;
 		transform-origin: 21px 94%;
+		@media (max-width: 500px){
+			font-size: 1em;
+		}
 		@media (max-width: 380px){
 			left: 17px;
 			top: 16px;
@@ -434,4 +437,15 @@ input[list] {
 }
 input::-webkit-calendar-picker-indicator {
   opacity: 0;
+}
+.form-divider {
+	font-size: 1.1em;
+	margin: 0 10px 11px;
+	color: $border;
+}
+.label-custom {
+	user-select: none;
+	margin-left: 1.3em;
+	line-height: 1.2;
+	cursor: pointer;
 }

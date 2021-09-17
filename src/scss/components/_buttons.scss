@@ -122,8 +122,9 @@
 	}
 	&:disabled,&--disabled,&--disabled:hover {
 		color: #fff;
-		background-color: $text;
-		border-color: $text;
+		background-color: $bg-muted;
+		border-color: $bg-muted;
+		cursor: not-allowed;
 	}
 }
 .btn--close {

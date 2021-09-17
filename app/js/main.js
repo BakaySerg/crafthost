@@ -1,7 +1,10 @@
 "use strict";
 
+/**
+ active menu point
+**/
 function setActiveMenuItem() {
-	let current = location.pathname.split('/')[1];
+	let current = location.pathname.split('/').reverse()[0];
 	if (current === "") current = 'index.html';
 	else {
 		current = current.split('-')[0];
@@ -14,6 +17,9 @@ function setActiveMenuItem() {
 	}
 };
 
+/**
+ dialogs & menu
+**/
 document.addEventListener('DOMContentLoaded', function(){
 	setActiveMenuItem();
 	//big menu
@@ -45,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 	 });
 
-	 //sorting (grid | lines)
+	/**
+		 sorting (grid | lines)
+	**/
 	const sorting = document.querySelector('.sort__grid');
 
 	if (sorting) {
@@ -65,7 +73,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	};
 
-	// checkboxes
+	/**
+		 checkboxes
+	**/
 	const checkboxMain = document.getElementById('checkbox-general');
 	const checkboxes = document.querySelectorAll('.checkbox');
 
@@ -90,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	};
 
+	/**
+		 Search fraction (temp solution)
+	**/
 	const search = document.getElementById('searchBtn');
 	if (search) {
 		search.addEventListener('click', function(e) {
@@ -120,7 +133,10 @@ document.addEventListener('DOMContentLoaded', function(){
 		);
 	};
 
-	// tabs inside the drawer (modal)
+
+	/**
+		tabs inside the drawer (modal)
+	**/
 	const modalSwitcher = function () {
 		[].forEach.call(
 			document.querySelectorAll("[data-trigger-modal]"),
@@ -161,7 +177,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 	modalSwitcher();
 
-	// tabs
+	/**
+		tabs ordinary
+	**/
 	const tabSwitcher = function () {
 		[].forEach.call(
 			document.querySelectorAll("[data-trigger-tab]"),
@@ -187,7 +205,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 	tabSwitcher();
 
-	// accordion
+	/**
+		accordions
+	**/
 	const accordionOpen = function () {
 		[].forEach.call(
 			document.querySelectorAll("[data-collapse]"),
@@ -207,4 +227,54 @@ document.addEventListener('DOMContentLoaded', function(){
 		);
 	};
 	accordionOpen();
+
+	/**
+		custom placeholder
+	**/
+	(function customPlaceholder() {
+		function getInputFields() {
+			let inputFields = document.getElementsByClassName("form-input");
+			return [...inputFields];
+		};
+
+		function checkLabel() {
+			let fieldParent = this.parentElement;
+			if (this.value.length !== 0) {
+				fieldParent.classList.add("filled");
+			} else {
+				fieldParent.classList.remove("filled");
+			}
+		};
+
+		function focusLabel() {
+			this.parentElement.classList.add("filled");
+		};
+
+		getInputFields().forEach(function (el) {
+			el.addEventListener("focus", focusLabel);
+			el.addEventListener("blur", checkLabel);
+		});
+	})();
+
+	let formsChanged = document.querySelector('.drawer__form');
+	if (formsChanged){
+		[...formsChanged].forEach(function(el){
+			el.addEventListener("keyup",function(){
+				let inputs = formsChanged.querySelectorAll('.form-input[required]');
+				let btn = formsChanged.querySelector('[type=submit]');
+
+				let allValid = true;
+				[...inputs].filter((inp) => {
+					if (inp.value.trim() === ""){
+						allValid = false;
+					}
+				});
+				if (!allValid){
+					btn.classList.add("btn--disabled");
+				} else {
+					btn.classList.remove("btn--disabled");
+				}
+			});
+		});
+	};
 });

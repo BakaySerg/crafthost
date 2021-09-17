@@ -7,6 +7,10 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+::selection {
+	background: $active;
+	color: #fff;
+}
 [class|="i"] {
 	display: inline-block;
 	max-width: 40px;

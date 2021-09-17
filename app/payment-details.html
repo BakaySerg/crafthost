@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Payment | Crafthost</title>
+	<title>Payment details | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -126,7 +126,7 @@
 			</div>
 			<div class="header__bottom container">
 				<div class="header__bureau">
-					<h1 class="h1">Payment</h1>
+					<h1 class="h1">Payment details</h1>
 				</div>
 			</div>
 		</header>
@@ -140,58 +140,56 @@
 					</a>
 				</li>
 			</ul>
-			<div class="box container payment">
-				<div class="payment__controls">
-					<div class="payment__title">
-						<h2 class="message__title">Total for payment</h2>
-						<div class="payment__price">$105,00</div>
-					</div>
-					<!-- tab controls -->
-					<div class="tab-controls">
-						<div class="tabs">
-							<div class="selector selector--tab checked" data-trigger-tab="first">
-								<div class="selector__btn">Pay online</div>
-							</div>
-							<div class="selector selector--tab" data-trigger-tab="second">
-								<div class="selector__btn">Wire transfers</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tabs-content">
-					<div id="first" class="tab" data-tab="active">
-						<div class="payment__item">
-							<img src="img/payment/visa.png" alt="visa" width="56">
-							<div class="payment__text">
-								<h3 class="h3">Visa / Mastercard</h3>
-								<p>Pay by using a bank card</p>
-								<div class="payment__explain">
-									<h4 class="h4">Link a card for payment on next purchases</h4>
-									<p>The card will be used for quick payment, as well as for automatically renewing domains and services.</p>
-									<p>Snapping card makes it easier and easier to work. However, if outsiders gain access to your account, you can lose money on your card. Therefore, after binding the card, we recommend setting up (two-factor authentication)[/user/account/#/settings/] and additionally protecting your account.</p>
-								</div>
-								<div class="payment__cta">
-									<b>$105,00</b>
-									<a href="payment-details.html" class="btn btn--lg btn--icon btn--success">Checkout<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
-								</div>
+         <div class="box container">
+            <form class="pay drawer__form">
+               <div class="pay__title">
+                  <img src="img/payment/visa.png" alt="visa" width="56">
+                  <h2 class="h2">Visa / Mastercard</h2>
+               </div>
+					<label class="form-field">
+						<input type="tel" name="pay-card-number" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+						<span class="form-placeholder">Card Number</span>
+					</label>
+					<label class="form-field">
+						<input type="text" name="pay-card-holder" class="form-input" placeholder=" " required="" minlength="3">
+						<span class="form-placeholder">Cardholder name</span>
+					</label>
+					<div class="pay__digits">
+						<div class="pay__digit">
+							<div class="pb-05">Expiration Date:</div>
+							<div class="v-center">
+								<label class="form-field">
+									<input type="tel" name="pay-card-month" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<span class="form-placeholder">Month</span>
+								</label>
+								<span class="form-divider">/</span>
+								<label class="form-field">
+									<input type="tel" name="pay-card-year" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<span class="form-placeholder">Year</span>
+								</label>
 							</div>
 						</div>
-						<div class="payment__item">
-							<img src="img/payment/paypal.png" alt="visa" width="56">
-							<div class="payment__text">
-								<h3 class="h3">Paypal</h3>
-								<p>Pay by using personal account of Paypal</p>
-							</div>
-							<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+						<div class="pay__digit">
+							<div class="pb-05">CVV2/CVC2</div>
+							<label class="form-field">
+								<input type="tel" name="pay-card-cvv" class="form-input" onKeyDown="limitText(this,2)" minlength="3" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+								<span class="form-placeholder">Code</span>
+							</label>
 						</div>
 					</div>
-					<div id="second" class="tab" data-tab="hidden">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, maiores eum? Praesentium et quaerat quibusdam non eveniet quam molestias dolores porro totam saepe nam fugit, iste culpa in voluptatum consequuntur at earum rem libero? Eligendi dolores necessitatibus aperiam harum qui.
-						<br>
-						<br>
+					<div class="v-center">
+						<label class="checkbox-custom">
+							<input id="backup" class="d-none checkbox" type="checkbox" name="backup" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"></use></svg></i>
+						</label>
+						<label class="label-custom" for="backup">Use as backup payment method for this&nbsp;account</label>
 					</div>
-				</div>
-			</div>
+					<div class="pay__action">
+						<span><svg class="i-safe" viewBox="0 0 32 32"><use xlink:href="#i-safe"/></svg> Connection secure </span>
+						<button type="submit" class="btn btn--lg btn--success btn--icon btn--disabled">Pay</button>
+					</div>
+            </form>
+         </div>
 		</div>
 	</div>
 	<!-- footer -->
@@ -209,5 +207,14 @@
 	   <div class="widget"></div>
 	</footer>
 	<script src="js/main.js"></script>
+	<script>
+		// onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
+		function limitText(limitField, limitNum) {
+			if (limitField.value.length > limitNum) {
+				// limitField.value = limitField.value.substring(0, limitNum);
+				// event.target.blur();
+			}
+		}
+	</script>
 </body>
 </html>

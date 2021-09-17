@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Payment details | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<div class="header__bureau">
+					<h1 class="h1">Payment details</h1>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="javascript:history.back()" class="btn btn--lg btn--icon align-left link">
+					<svg class="i-reverse-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg>
+					Go to the list of orders
+					</a>
+				</li>
+			</ul>
+         <div class="box container">
+            <form class="pay drawer__form">
+               <div class="pay__title">
+                  <img src="img/payment/visa.png" alt="visa" width="56">
+                  <h2 class="h2">Visa / Mastercard</h2>
+               </div>
+					<label class="form-field">
+						<input type="tel" name="pay-card-number" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+						<span class="form-placeholder">Card Number</span>
+					</label>
+					<label class="form-field">
+						<input type="text" name="pay-card-holder" class="form-input" placeholder=" " required="" minlength="3">
+						<span class="form-placeholder">Cardholder name</span>
+					</label>
+					<div class="pay__digits">
+						<div class="pay__digit">
+							<div class="pb-05">Expiration Date:</div>
+							<div class="v-center">
+								<label class="form-field">
+									<input type="tel" name="pay-card-month" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<span class="form-placeholder">Month</span>
+								</label>
+								<span class="form-divider">/</span>
+								<label class="form-field">
+									<input type="tel" name="pay-card-year" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<span class="form-placeholder">Year</span>
+								</label>
+							</div>
+						</div>
+						<div class="pay__digit">
+							<div class="pb-05">CVV2/CVC2</div>
+							<label class="form-field">
+								<input type="tel" name="pay-card-cvv" class="form-input" onKeyDown="limitText(this,2)" minlength="3" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+								<span class="form-placeholder">Code</span>
+							</label>
+						</div>
+					</div>
+					<div class="v-center">
+						<label class="checkbox-custom">
+							<input id="backup" class="d-none checkbox" type="checkbox" name="backup" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"></use></svg></i>
+						</label>
+						<label class="label-custom" for="backup">Use as backup payment method for this&nbsp;account</label>
+					</div>
+					<div class="pay__action">
+						<span><svg class="i-safe" viewBox="0 0 32 32"><use xlink:href="#i-safe"/></svg> Connection secure </span>
+						<button type="submit" class="btn btn--lg btn--success btn--icon btn--disabled">Pay</button>
+					</div>
+            </form>
+         </div>
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+	<script>
+		// onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
+		function limitText(limitField, limitNum) {
+			if (limitField.value.length > limitNum) {
+				// limitField.value = limitField.value.substring(0, limitNum);
+				// event.target.blur();
+			}
+		}
+	</script>
+</body>
+</html>
