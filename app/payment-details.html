@@ -67,8 +67,10 @@
 			                  <a class="menu__link submenu__trigger" href="#">Hosting</a>
 			                  <ul class="dialog dialog--under">
 			                     <li><a class="dialog__link" href="hosting.html">Shared Hosting</a></li>
-			                     <li><a class="dialog__link" href="hosting-plans.html">Hosting plans</a></li>
-			                     <li><a class="dialog__link" href="hosting-item.html">VPS Hosting</a></li>
+			                     <li><a class="dialog__link" href="hosting-plans.html">WordPress Hosting</a></li>
+			                     <li><a class="dialog__link" href="hosting-item.html">Business Hosting</a></li>
+			                     <li><a class="dialog__link" href="#">Dedicated Hosting</a></li>
+			                     <li><a class="dialog__link" href="#">Cloud Hosting</a></li>
 			                     <li><a class="dialog__link" href="#">Enterprise Hosting</a></li>
 			                  </ul>
 			               </li>
@@ -147,11 +149,11 @@
                   <h2 class="h2">Visa / Mastercard</h2>
                </div>
 					<label class="form-field">
-						<input type="tel" name="pay-card-number" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+						<input type="text" name="pay-card-number" class="form-input" placeholder=" " minlength="19" data-mask="0000 0000 0000 0000" inputmode="numeric" required>
 						<span class="form-placeholder">Card Number</span>
 					</label>
 					<label class="form-field">
-						<input type="text" name="pay-card-holder" class="form-input" placeholder=" " required="" minlength="3">
+						<input type="text" name="pay-card-holder" class="form-input" placeholder=" " minlength="3">
 						<span class="form-placeholder">Cardholder name</span>
 					</label>
 					<div class="pay__digits">
@@ -159,12 +161,12 @@
 							<div class="pb-05">Expiration Date:</div>
 							<div class="v-center">
 								<label class="form-field">
-									<input type="tel" name="pay-card-month" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<input type="text" name="pay-card-month" class="form-input" minlength="2" data-mask="00" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
 									<span class="form-placeholder">Month</span>
 								</label>
 								<span class="form-divider">/</span>
 								<label class="form-field">
-									<input type="tel" name="pay-card-year" class="form-input" minlength="2" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+									<input type="text" name="pay-card-year" class="form-input" minlength="2" data-mask="00" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
 									<span class="form-placeholder">Year</span>
 								</label>
 							</div>
@@ -172,7 +174,7 @@
 						<div class="pay__digit">
 							<div class="pb-05">CVV2/CVC2</div>
 							<label class="form-field">
-								<input type="tel" name="pay-card-cvv" class="form-input" onKeyDown="limitText(this,2)" minlength="3" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+								<input type="tel" name="pay-card-cvv" class="form-input" minlength="3" data-mask="000" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
 								<span class="form-placeholder">Code</span>
 							</label>
 						</div>
@@ -207,14 +209,33 @@
 	   <div class="widget"></div>
 	</footer>
 	<script src="js/main.js"></script>
+
+	<script src="https://unpkg.com/imask"></script>
 	<script>
-		// onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))"
-		function limitText(limitField, limitNum) {
-			if (limitField.value.length > limitNum) {
-				// limitField.value = limitField.value.substring(0, limitNum);
-				// event.target.blur();
-			}
-		}
+		let elements = document.querySelectorAll("[data-mask]");
+		[...elements].forEach(element => {
+			let pattern = element.getAttribute('data-mask');
+			let maskOptions = {
+				mask: pattern,
+				min: element.getAttribute('minlength')
+			};
+			let mask = IMask(element, maskOptions);
+			mask.on("complete", function () {console.log(mask.value)});
+		});
+		//try autofocus next input
+
+		// mask.on("complete", function () {
+		// 	let next = elements;
+		// 		while (next = next.closest('.form-field')) {
+		// 			if (next == null) {
+		// 				break;
+		// 			}
+		// 			if (next.tagName.toLowerCase() == "input") {
+		// 				next.focus();
+		// 				break;
+		// 			}
+		// 		}
+		// });
 	</script>
 </body>
 </html>
