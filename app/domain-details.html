@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Tickets | Crafthost</title>
+	<title>Domain create | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -127,48 +127,135 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">My tickets to support service</h1>
-				<div class="header__bureau">
-					<a href="#" class="bureau__link active" data-represent>All tickets</a>
-					<a href="#" class="bureau__link" data-represent="opened">Opened</a>
-					<a href="#" class="bureau__link" data-represent="closed">Closed</a>
-					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
+            <div class="header__bureau">
+					<a href="javascript:history.back()" class="bureau__link btn btn--lg btn--icon align-left"><svg class="i-reverse-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg>Return to choise</a>
 				</div>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
-			<div class="container box ticket" data-present="opened">
-				<div class="ticket__descr">
-					<div class="ticket__title">
+
+
+			<form action="#" class="plan__form plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+					<div class="box plan__options">
+						<div class="plan__option plan__option--collapse">
+							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
+							<div class="plan__choise">
+								<select name="plan-choise-1">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$99,00</div>
+							</div>
+							<!-- <label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1" checked>
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label> -->
+						</div>
+					</div>
+               <div class="box plan__options">
+                  <div class="plan__option plan__option--collapse">
+							<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+							<div class="plan__choise">
+								<select name="plan-choise-2">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$100,00</div>
+							</div>
+							<!-- <label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label> -->
+							<!-- addons -->
+							<div class="plan__addons">
+								<p>Addons services for the domains</p>
+                        <br>
+								<div class="divid-up addons__cta">
+									<div class="addons__descr">
+										<h3 class="h3">Domain Privacy</h3>
+										<p>Best domain services in one bundle!</p>
+									</div>
+									<div class="addons__price">
+										<b>$5,00</b>
+										<label class="checkbox-custom">
+											<input class="d-none checkbox" type="checkbox" name="add" value="add">
+											<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+										</label>
+									</div>
+								</div>
+								<div class="divid-up addons__cta">
+									<div class="addons__descr">
+										<h3 class="h3">Domain Protection </h3>
+										<p>Tariff «Host-0» for 7 sites and 13GB SSD</p>
+									</div>
+									<div class="addons__price">
+										<b>$4,00</b>
+										<label class="checkbox-custom">
+											<input class="d-none checkbox" type="checkbox" name="add" value="add">
+											<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+               </div>
+
+				</div>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Your order</h2>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional">
+							<b>website.org</b>
+							<b>$100,00</b>
+							<span class="fz-14 full-size">Registration for 1 year</span>
+							<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i>
+						</div>
+						<div class="plan__columns plan__columns--optional">
+							Domain Privacy
+							<b>$5,00</b>
+							<span class="fz-14 full-size">Order for 1 year</span>
+							<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i>
+						</div>
+					</div>
+					<div class="divid-up">
+						<div class="plan__columns">Subtotal <b>$110,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $15,00</b></div>
+						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$1600,00</b></div>
+						<div class="inline-form">
+							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
+							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></button>
+						</div>
 						<!-- Attention, the "aria-controls" one opens the popup, and the "data-tab-open" one opens a specific tab in the popup -->
-						<h3 class="h3" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false">#99500000000001575741</h3>
-						<div class="status" data-status="active">Opened</div>
-						<a href="#" class="btn btn--sm btn--arrow" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<button type="submit" class="btn btn--lg btn--icon btn--success" data-tab-open="domain-choise-policy" data-drawer-trigger aria-controls="domain-choise" aria-expanded="false">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
 					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
 				</div>
-			</div>
-			<div class="container box ticket" data-present="closed">
-				<div class="ticket__descr">
-					<div class="ticket__title">
-						<h3 class="h3">#89500000000001575742</h3>
-						<div class="status" data-status="danger">Closed</div>
-						<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
-					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
-				</div>
-			</div>
-			<div class="container box ticket" data-present="closed">
-				<div class="ticket__descr">
-					<div class="ticket__title">
-						<h3 class="h3">#99500000000001575743</h3>
-						<div class="status" data-status="danger">Closed</div>
-						<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
-					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
-				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 	<!-- footer -->
@@ -186,188 +273,233 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup (new ticket)-->
-	<div class="drawer" id="new-ticket" data-drawer-target>
+	<!-- popup (kinda drawer)-->
+	<div class="drawer" id="domain-choise" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				<div id="new-user" class="drawer__item" data-tab="hidden">
+				<!-- tab choise policy -->
+				<div id="domain-choise-policy" class="drawer__item" data-tab="hidden">
 					<div class="drawer__body">
 						<div class="drawer__header">
 							<div class="drawer__title">
-								<h2 class="drawer__headline">Welcome to Crafthost support service</h2>
-								<p>If you have an account, log in so that the new application is displayed in your Personal cabinet.</p>
+								<h2 class="drawer__headline">Domain Privacy</h2>
+								<p>Addon for the domain <b>website.tech</b></p>
 							</div>
 						</div>
 						<div class="drawer__content">
-				         <div class="drawer__cta">
-				            <a href="#" class="btn btn--lg btn--outlined" data-trigger-modal="create-ticket-unregistered">Continue as a guest</a>
-				            <a href="#" class="btn btn--lg btn--success btn--icon" data-trigger-modal="create-ticket">Log in</a>
-				         </div>
-				         <p>By submitting a request, I give my consent to the processing of personal data and confirm that I have read <a href="#">Privacy Policy</a> and service rules.</p>
+							<div class="privacy__item">
+								<div class="privacy__title privacy__title--danger">
+									Without Domain Privacy
+								</div>
+								<div class="privacy__box">
+									<div class="privacy__address">
+										<b>website.org</b>
+										<span>John Smith</span>
+										<span>Victory Street, 113</span>
+										<span>12345, New York</span>
+										<span>USA</span>
+									</div>
+									<div class="privacy__card" data-trigger-modal="domain-choise-account">
+										<div class="privacy__status privacy__status--warn">
+											<svg class="i-shield" viewBox="0 0 32 32">
+												<use xlink:href="#i-shield-warn" />
+											</svg>
+											<div>Unsecured:</div>
+										</div>
+										<p>Information about you is exposed</p>
+									</div>
+								</div>
+							</div>
+							<div class="privacy__item">
+								<div class="privacy__title privacy__title--success">
+									With Domain Privacy
+								</div>
+								<div class="privacy__box">
+									<div class="privacy__address">
+										<b>website.org</b>
+										<span>John Smith</span>
+										<span>Victory Street, 113</span>
+										<span>12345, New York</span>
+										<span>USA</span>
+									</div>
+									<div class="privacy__card" data-trigger-tab="domain-choise-account">
+										<div class="privacy__status privacy__status--success">
+											<svg class="i-shield" viewBox="0 0 32 32">
+												<use xlink:href="#i-shield-check" />
+											</svg>
+											<div>Unsecured:</div>
+										</div>
+										<p>Your personal data is protected</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Close</button>
+					</div>
+				</div>
+				<!-- tab filling out an acc -->
+				<div id="domain-choise-account" class="drawer__item" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Choose contacts</h2>
+								<p>Fill in the contact details so that we can arrange services</p>
+							</div>
+							<div class="account">
+								<i class="i-user"><svg viewBox="0 0 32 32"><use xlink:href="#i-user"/></svg></i>
+								<div class="account__user">
+									<div class="account__name">John Doe</div>
+									<div class="account__mail">johndoe@mail.com</div>
+								</div>
+								<button class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-dots"/></svg></button>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<div class="account__new">
+								<button class="btn btn--lg btn--icon btn--outlined" data-trigger-modal="domain-choise-registration"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg> Enter new profile</button>
+								<a href="#" class="help" data-help="Some kind of explanatory text on how to proceed with all these things">Why do we need these details?</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- when the user is not registered, we show the popup with additional fields -->
-				<form id="create-ticket-unregistered" class="drawer__item drawer__form" data-tab="hidden">
+				<!-- tab registration -->
+				<form id="domain-choise-registration" class="drawer__item drawer__form" data-tab="hidden">
 					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
+						<div class="drawer__header drawer__header--form">
 							<div class="drawer__title">
-								<h2 class="drawer__headline">Create a Ticket</h2>
-								<p>Describe the problem as detailed as possible</p>
+								<label class="selector">
+									<input type="radio" name="entity" checked>
+									<span class="btn selector__btn">Natural entity / IE</span>
+								</label>
+								<label class="selector">
+									<input type="radio" name="entity">
+									<span class="btn selector__btn">Legal entity</span>
+								</label>
+							</div>
+							<div class="form-aligner">
+								<label class="checkbox-custom">
+									<input class="d-none" type="checkbox" name="use" value="0">
+									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									<span>Use for all contact types</span>
+								</label>
 							</div>
 						</div>
 						<div class="drawer__content">
-							<label class="form-field">
-								<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
-								<span class="form-placeholder">Name</span>
-							</label>
-							<label class="form-field">
-								<input type="email" name="email" class="form-input" placeholder=" " required="">
-								<span class="form-placeholder">Email</span>
-							</label>
-							<div class="pb-05">Select ticket theme</div>
-							<select class="select" name="ticket__theme">
-								<option value="domain problems">Problems buying a domain</option>
-								<option value="hostin problems">Problems buying a hosting</option>
-							</select>
-							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
-							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
-							<label class="file__area" for="file">
-								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
-								<span data-text="Attach">Attach</span>
-							</label>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
-					</div>
-				</form>
-				<form id="create-ticket" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Create a Ticket</h2>
-								<p>Describe the problem as detailed as possible</p>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<div class="pb-05">Select ticket theme</div>
-							<select class="select" name="ticket__theme">
-								<option value="domain problems">Problems buying a domain</option>
-								<option value="hostin problems">Problems buying a hosting</option>
-							</select>
-							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
-							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
-							<label class="file__area" for="file">
-								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
-								<span data-text="Attach">Attach</span>
-							</label>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
-					</div>
-				</form>
-	      </div>
-		</div>
-	</div>
-
-	<!-- popup (open existent ticket )-->
-	<div class="drawer" id="existent-ticket" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<!-- tab existent-ticket -->
-				<form id="open-ticket" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Ticket to the Support</h2>
-								<p>What service related to?</p>
-							</div>
+							<div class="accordion">
+								<div class="accordion__item">
+									<div class="accordion__title" data-collapse>
+										<h4 class="h4">Registrant Contact Information</h4>
+										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+									</div>
+									<div class="accordion__hidden">
+										<label class="form-field">
+											<input type="email" name="f-mail" class="form-input" placeholder=" " required>
+											<span class="form-placeholder">Email</span>
+										</label>
+										<label class="form-field">
+											<input type="tel" name="f-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+											<span class="form-placeholder">Phone</span>
+										</label>
 				
-						</div>
-						<div class="drawer__content">
-							<div class="search__form">
-								<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"></use></svg></i>
-								<input type="text" required="" minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Input question...">
-								<button class="btn btn--lg btn--success" type="submit">Search</button>
+										<div class="form-subtitle">Company</div>
+										<label class="form-field">
+											<input type="text" name="f-company-name" class="form-input" placeholder=" " required minlength="2">
+											<span class="form-placeholder">Company Name</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-tax-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">Tax code</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-kpp" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">KPP</span>
+										</label>
+				
+										<div class="form-subtitle">Postal Address</div>
+										<label class="form-field">
+											<input type="text" name="f-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+											<span class="form-placeholder">Zip code</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-region" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">Region</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-locality" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">City / Locality</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="f-address" class="form-input" placeholder=" " required minlength="3">
+											<span class="form-placeholder">Address</span>
+										</label>
+									</div>
+								</div>
+				
+								<div class="accordion__item">
+									<div class="accordion__title" data-collapse>
+										<h4 class="h4">Technical Contact Information</h4>
+										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+									</div>
+									<div class="accordion__hidden">
+									</div>
+								</div>
+				
+								<div class="accordion__item">
+									<div class="accordion__title" data-collapse>
+										<h4 class="h4">Administrative Contact Information</h4>
+										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+									</div>
+									<div class="accordion__hidden">
+										<label class="form-field">
+											<input type="email" name="c-mail" class="form-input" placeholder=" ">
+											<span class="form-placeholder">Email</span>
+										</label>
+										<label class="form-field">
+											<input type="tel" name="c-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+											<span class="form-placeholder">Phone</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="c-first-name" class="form-input" placeholder=" " minlength="2">
+											<span class="form-placeholder">First Name</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="c-last-name" class="form-input" placeholder=" " minlength="2">
+											<span class="form-placeholder">Last Name</span>
+										</label>
+										<label class="form-field">
+											<input type="text" name="c-address" class="form-input" placeholder=" " minlength="3">
+											<span class="form-placeholder">Address</span>
+										</label>
+									</div>
+								</div>
+				
+								<div class="accordion__item">
+									<div class="accordion__title" data-collapse>
+										<h4 class="h4">Billing Contact Information</h4>
+										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+									</div>
+									<div class="accordion__hidden">
+									</div>
+								</div>
+				
 							</div>
-							<ul class="faq__list">
-								<li class="faq__list-item"><a href="help-answer.html">Unrelated to a specific service</a></li>
-								<li class="faq__list-item"><a href="help-answer.html">Premium DNS</a></li>
-								<li class="faq__list-item"><a href="help-answer.html">Free DomainSSL certificate</a></li>
-								<li class="faq__list-item"><a href="help-answer.html">Hosting Host-0 u1414036</a></li>
-							</ul>
 						</div>
 					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="domain-choise-account">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Continue</button>
+					</div>
 				</form>
-	      </div>
+
+			</div>
 		</div>
 	</div>
 
-	<script>
-		(function () {
-			const inputs = document.querySelectorAll('[type=file]');
-			Array.prototype.forEach.call( inputs, function( input ) {
-				let label = input.nextElementSibling,
-				labelVal = label.innerHTML;
-
-				input.addEventListener('change', function(e) {
-					let fileName = '';
-					if(this.files && this.files.length > 1)
-					fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
-					else
-					fileName = e.target.value.split('\\').pop();
-					if( fileName )
-					label.querySelector('span').innerHTML = fileName;
-					else
-					label.innerHTML = labelVal;
-				});
-			});
-		}());
-	</script>
-	<script>
-	// hide and show tickets
-	const sortTickets = function () {
-		[].forEach.call(
-			document.querySelectorAll("[data-represent]"),
-			function (el) {
-				el.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = e.target,
-							criterion = target.getAttribute("data-represent"),
-							parent = this.closest(".header__bureau"),
-							siblings = parent.querySelectorAll('[data-represent]');
-					[...siblings].forEach(item => {
-						item.classList.remove('active');
-					})
-					target.classList.toggle('active');
-
-					function hideAndShow(cri) {
-						tickets = document.querySelectorAll('[data-present]');
-						[...tickets].forEach(ticket => {
-							if (cri === "" || cri == ticket.getAttribute("data-present")) {
-								ticket.removeAttribute("hidden");
-							} else {
-							ticket.setAttribute('hidden','');
-							}
-						});
-					};
-					hideAndShow(criterion);
-				});
-			}
-		);
-	};
-	sortTickets();
-
-	</script>
 	<script src="js/main.js"></script>
-   <script defer src="js/drawer.js"></script>
+	<script defer src="js/drawer.js"></script>
 </body>
 </html>

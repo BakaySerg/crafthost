@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Account balance | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Account balance</h1>
+				<div class="header__bureau">
+               <a href="hosting-item.html" class="btn btn--lg btn--icon btn--success">Top up <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<div class="container box">
+            <h3 class="h3" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false">#99500000000001575741</h3>
+            <a href="#" class="btn btn--sm btn--arrow" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+
+         </div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup (open existent ticket )-->
+	<div class="drawer" id="existent-ticket" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				<!-- tab existent-ticket -->
+				//= ./pages/modal-top-up-balance.html
+	      </div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
+</body>
+</html>

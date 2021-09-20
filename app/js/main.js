@@ -74,6 +74,17 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 
 	/**
+		 temp link
+	**/
+	const changeLocation = document.querySelector('[data-link]');
+	if (changeLocation) {
+		changeLocation.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.location.href = this.getAttribute('data-link');
+		})
+	};
+
+	/**
 		 checkboxes
 	**/
 	const checkboxMain = document.getElementById('checkbox-general');

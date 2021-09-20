@@ -167,6 +167,14 @@
    &:not(:first-child) {
       border-top: 1px solid $border;
    }
+   &--collapse {
+      flex-wrap: wrap;
+      .plan__addons {
+         width: 100%;
+         min-width: 100%;
+         padding: 20px 0 0 10px;
+      }
+   }
    @media (max-width: 500px){
       padding: 13px 0;
       flex-wrap: wrap;
@@ -220,10 +228,20 @@
       & + .checkbox-custom {margin-left: 5px;}
    }
 }
+.plan__dummy {
+   max-width: 308px;
+   line-height: 1.5;
+   @media (max-width: 801px){
+      max-width: none;
+   }
+}
 .cost {
    &__percent {
       font-size: em(14);
       color: $danger;
+   }
+   &__new {
+      color: $headline;
    }
    &__old {
       text-decoration: line-through;

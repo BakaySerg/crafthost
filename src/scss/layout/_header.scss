@@ -340,6 +340,10 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 23px;
+		a{
+			color: inherit;
+			user-select: none;
+		}
 		@media (max-width: 420px){
 			margin-bottom: 12px;
 		}
