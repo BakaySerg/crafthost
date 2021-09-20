@@ -274,7 +274,12 @@
       padding-bottom: .3em;
    }
    @media (max-width: 360px){
-      font-size: 1em;
+      font-size: 1.1em;
+   }
+}
+.plan__option--collapse {
+   .plan__name {
+      color: $active;
    }
 }
 .plan__name ~ .plan__cost {
