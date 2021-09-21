@@ -10,6 +10,15 @@
 	box-shadow: -1px 1px 10px rgba(30,23,104,.04);
 	border-radius: 3px;
 }
+.icon {
+	display: inline-block;
+	height: 1.5em;
+	width: 1.5em;
+	margin-right: calc(2px + .2em);
+	margin-bottom: -1px;
+	color: inherit;
+	vertical-align: bottom;
+}
 .divid-up {
 	border-top: 1px solid $border;
 }

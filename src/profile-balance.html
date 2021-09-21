@@ -12,25 +12,33 @@
 			<div class="header__bottom container">
 				<h1 class="h1">Account balance</h1>
 				<div class="header__bureau">
-               <a href="hosting-item.html" class="btn btn--lg btn--icon btn--success">Top up <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+               <a href="hosting-item.html" class="btn btn--lg btn--icon btn--success" data-tab-open="balance-action" data-drawer-trigger aria-controls="top-up" aria-expanded="false">Top up <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
 				</div>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
 			<div class="container box setting__balance">
-
+				<div class="balance">
+					<div class="balance__sign">Balance</div>
+					<b class="balance__sum">$ 100,00</b>
+				</div>
+				<div class="btn-box">
+					<button type="button" class="btn btn--lg btn--icon btn--secondary" data-tab-open="promo-action" data-drawer-trigger aria-controls="promocode" aria-expanded="false">
+						<svg class="i-promo" viewBox="0 0 32 32"><use xlink:href="#i-promo"/></svg> Activate promocode</button>
+					<button class="btn btn--lg btn--icon btn--outlined"><svg class="i-balance" viewBox="0 0 32 32"><use xlink:href="#i-balance"></use></svg> Withdraw funds</button>
+				</div>
 			</div>
 			<div class="container box setting__item">
-				<div class="setting__picture"><img src="img/profile/orders.png" alt="*"></div>
+				<div class="setting__picture"><img srcset="img/profile/orders.png, img/profile/orders-2x.png 2x" src="img/profile/orders.png" alt="*"></div>
 				<div class="setting__descr">
 					<h3 class="h3">Orders</h3>
-					<div class="setting__alert">3 unpayed orders in the amount of $ 100,00 </div>
+					<div class="setting__alert">3 unpayed orders in the amount of $100,00 </div>
 					<a href="#" class="btn btn--sm btn--arrow" data-tab-open="tab-history" data-drawer-trigger aria-controls="history" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
 				</div>
          </div>
 			<div class="container box setting__item">
-				<div class="setting__picture"><img src="img/profile/history.png" alt="*"></div>
+				<div class="setting__picture"><img srcset="img/profile/history.png, img/profile/history-2x.png 2x" src="img/profile/history.png" alt="*"></div>
 				<div class="setting__descr">
 					<h3 class="h3">Balance history</h3>
 					<a href="#" class="btn btn--sm btn--arrow" data-tab-open="tab-history" data-drawer-trigger aria-controls="history" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
@@ -40,17 +48,28 @@
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup (open existent ticket )-->
-	<div class="drawer" id="existent-ticket" data-drawer-target>
+	<!-- popup -->
+	<div class="drawer" id="top-up" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				<!-- tab existent-ticket -->
 				//= ./pages/modal-top-up-balance.html
 	      </div>
 		</div>
 	</div>
+
+	<!-- popup -->
+	<div class="drawer" id="promocode" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-promocode.html
+	      </div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
    <script defer src="js/drawer.js"></script>
 </body>

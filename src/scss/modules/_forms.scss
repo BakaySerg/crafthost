@@ -450,3 +450,57 @@ input::-webkit-calendar-picker-indicator {
 	line-height: 1.2;
 	cursor: pointer;
 }
+.form-combo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	input[type] {
+		display: block;
+		width: 100%;
+		height: 54px;
+		padding: 12px 10px 12px 76px;
+		line-height: 1;
+		color: $headline;
+		border: 1px solid $border;
+		border-radius: 3px;
+		font-size: 1em;
+		text-shadow: 0 0;
+		@media (max-width: 380px){
+			padding: 8px 8px 8px 66px;
+			height: 44px;
+		}
+	}
+}
+.form-usual {
+	input[type] {
+		display: block;
+		width: 100%;
+		height: 54px;
+		padding: 12px 20px;
+		line-height: 1;
+		color: $headline;
+		border: 1px solid $border;
+		border-radius: 3px;
+		font-size: 1em;
+		text-shadow: 0 0;
+		@media (max-width: 380px){
+			padding: 8px 16px;
+			height: 44px;
+		}
+	}
+}
+.form-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 54px;
+	border-right: 1px solid $border;
+	display: grid;
+	place-items: center;
+	font-style: normal;
+	color: $active;
+	@media (max-width: 380px){
+		width: 44px;
+	}
+}

@@ -30,6 +30,7 @@
 	padding: 3px 15px 0;
 	@media (max-width: 1200px){
 		padding-top: 5px;
+		flex-grow: .7;
 	}
 	@media (max-width: 1023px){
 		padding: 0;
@@ -38,14 +39,13 @@
 		flex-grow: 1;
 		width: 100%;
 		order: 99;
-		flex-grow: .7;
 	}
 	@media (max-width: 500px){
 		font-size: 1.1em;
 	}
 	&__dilator {
 		@media (max-width: 1023px){
-			padding: 12px 0 0;
+			padding: 17px 0 0;
 		}
 		@media (max-width: 700px){
 			padding: 12px 0 0;

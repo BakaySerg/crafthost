@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					let forms = document.querySelectorAll(".drawer__form");
 					[...forms].forEach((form) => {
 						form.reset();
+						form.querySelector('[type=submit]').classList.add('btn--disabled');
 					});
 				}
 			}

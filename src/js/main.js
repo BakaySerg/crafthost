@@ -267,12 +267,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	})();
 
-	let formsChanged = document.querySelector('.drawer__form');
+	let formsChanged = document.querySelectorAll('.drawer__form');
 	if (formsChanged){
 		[...formsChanged].forEach(function(el){
 			el.addEventListener("keyup",function(){
-				let inputs = formsChanged.querySelectorAll('.form-input[required]');
-				let btn = formsChanged.querySelector('[type=submit]');
+				let inputs = el.querySelectorAll('[required]');
+				let btn = el.querySelector('[type=submit]');
 
 				let allValid = true;
 				[...inputs].filter((inp) => {
