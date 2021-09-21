@@ -268,13 +268,14 @@
 	top: calc(50% - 15px);
 	background-color: transparent;
 }
-[data-status] ~ .btn--arrow {
+.ticket [data-status=danger] ~ .btn--arrow {
    color: $headline;
    opacity: .3;
    cursor: not-allowed;
    filter: grayscale(1);
 }
-[data-status=active] ~ .btn--arrow {
+.ticket [data-status=active] ~ .btn--arrow {
+   color: $headline;
    opacity: 1;
    cursor: pointer;
    filter: none;
