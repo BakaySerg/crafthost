@@ -1,0 +1,26 @@
+.setting {
+   &__item {
+      display: flex;
+      align-items: center;
+      padding: 6px 15px 6px 5px;
+      margin-bottom: 20px;
+      .btn--arrow {
+         color: $icons;
+         &:hover {
+            color: $headline;
+         }
+      }
+   }
+   &__picture {
+      flex-shrink: 0;
+   }
+   &__descr {
+      padding: 10px 15px;
+   }
+   &__alert {
+      color: $danger;
+      text-shadow: 0 0;
+      font-size: em(14);
+      padding-top: .8em;
+   }
+}
