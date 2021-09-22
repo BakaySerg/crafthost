@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Security settings | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Security settings</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="profile-settings.html">Profile settings</a></li>
+				<li><a href="#">Security settings</a></li>
+			</ul>
+
+			<div class="container box setting__list">
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Support PIN</h3>
+						<button type="button" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Change Password</h3>
+					</div>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--secondary">Edit</button>
+					</div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<a href="profile-owner.html" class="h3">Two-Factor Authentication</a>
+						<div class="status" data-status="danger">Not filled</div>
+					</div>
+					<div class="setting__cta"></div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Delete Account</h3>
+					</div>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--simply">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Account owner | Crafthost</title>
+	<title>Security settings | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -127,36 +127,49 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Account owner</h1>
-				<div class="header__bureau">
-					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="domain-choise-registration" data-drawer-trigger aria-controls="add-profile" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Add profile</a>
-				</div>
+				<h1 class="h1">Security settings</h1>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
 			<ul class="container-lg breadcrumbs">
 				<li><a href="profile-settings.html">Profile settings</a></li>
-				<li><a href="#">Account owner</a></li>
+				<li><a href="#">Security settings</a></li>
 			</ul>
 
-			<div class="container box editor">
-				<div class="editor__title">
-					<h2 class="message__title">Domain Profiles</h2>
-				</div>
-				<div class="editor__item">
-					<div class="editor__profile">
-						<h3 class="h3">John Doe</h3>
-						<div class="editor__short">johndoe@mail.com</div>
+			<div class="container box setting__list">
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Support PIN</h3>
+						<button type="button" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
 					</div>
-					<button type="button" class="btn btn--lg btn--simply" data-tab-open="tab-edition" data-drawer-trigger aria-controls="edit-profile" aria-expanded="false">Edit</button>
 				</div>
-				<div class="editor__item">
-					<div class="editor__profile">
-						<h3 class="h3">Jonathan Donovan</h3>
-						<div class="editor__short">jonathandoe338@mail.com</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Change Password</h3>
 					</div>
-					<button type="button" class="btn btn--lg btn--simply">Edit</button>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--secondary">Edit</button>
+					</div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<a href="profile-owner.html" class="h3">Two-Factor Authentication</a>
+						<div class="status" data-status="danger">Not filled</div>
+					</div>
+					<div class="setting__cta"></div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Delete Account</h3>
+					</div>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--simply">Delete</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -176,274 +189,9 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup -->
-	<div class="drawer" id="add-profile" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<form id="domain-choise-registration" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--form">
-							<div class="drawer__title">
-								<label class="selector">
-									<input type="radio" name="entity" checked>
-									<span class="btn selector__btn">Natural entity / IE</span>
-								</label>
-								<label class="selector">
-									<input type="radio" name="entity">
-									<span class="btn selector__btn">Legal entity</span>
-								</label>
-							</div>
-							<div class="form-aligner">
-								<label class="checkbox-custom">
-									<input class="d-none" type="checkbox" name="use" value="0">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-									<span>Use for all contact types</span>
-								</label>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<div class="accordion">
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Registrant Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-										<label class="form-field">
-											<input type="email" name="f-mail" class="form-input" placeholder=" " required>
-											<span class="form-placeholder">Email</span>
-										</label>
-										<label class="form-field">
-											<input type="tel" name="f-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
-											<span class="form-placeholder">Phone</span>
-										</label>
-				
-										<div class="form-subtitle">Company</div>
-										<label class="form-field">
-											<input type="text" name="f-company-name" class="form-input" placeholder=" " required minlength="2">
-											<span class="form-placeholder">Company Name</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="f-tax-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
-											<span class="form-placeholder">Tax code</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="f-kpp" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
-											<span class="form-placeholder">KPP</span>
-										</label>
-				
-										<div class="form-subtitle">Postal Address</div>
-										<label class="form-field">
-											<input type="text" name="f-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
-											<span class="form-placeholder">Zip code</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="f-region" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">Region</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="f-locality" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">City / Locality</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="f-address" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">Address</span>
-										</label>
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Technical Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Administrative Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-										<label class="form-field">
-											<input type="email" name="c-mail" class="form-input" placeholder=" ">
-											<span class="form-placeholder">Email</span>
-										</label>
-										<label class="form-field">
-											<input type="tel" name="c-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
-											<span class="form-placeholder">Phone</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-first-name" class="form-input" placeholder=" " minlength="2">
-											<span class="form-placeholder">First Name</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-last-name" class="form-input" placeholder=" " minlength="2">
-											<span class="form-placeholder">Last Name</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-address" class="form-input" placeholder=" " minlength="3">
-											<span class="form-placeholder">Address</span>
-										</label>
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Billing Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-									</div>
-								</div>
-				
-							</div>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="domain-choise-account">Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success btn--disabled">Continue</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 
-	<!-- popup -->
-	<div class="drawer" id="edit-profile" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<form id="tab-edition" class="drawer__item drawer__form--filled" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--form">
-							<div class="drawer__title">
-								<label class="selector">
-									<input type="radio" name="entity" checked>
-									<span class="btn selector__btn">Natural entity / IE</span>
-								</label>
-								<label class="selector">
-									<input type="radio" name="entity">
-									<span class="btn selector__btn">Legal entity</span>
-								</label>
-							</div>
-							<div class="form-aligner">
-								<label class="checkbox-custom">
-									<input class="d-none" type="checkbox" name="use" value="all" checked>
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
-									<span>Use for all contact types</span>
-								</label>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<div class="accordion">
-								<div class="accordion__item expanded">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Registrant Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-										<label class="form-field filled">
-											<input type="email" name="z-mail" class="form-input" placeholder=" " required value="johndoe@mail.com">
-											<span class="form-placeholder">Email</span>
-										</label>
-										<label class="form-field filled">
-											<input type="tel" name="z-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric" value="7 800 000 00 00">
-											<span class="form-placeholder">Phone</span>
-										</label>
-										<label class="form-field filled">
-											<input type="text" name="z-name" class="form-input" placeholder=" " required minlength="2" value="John">
-											<span class="form-placeholder">First Name</span>
-										</label>
-										<label class="form-field filled">
-											<input type="text" name="z-last-name" class="form-input" placeholder=" " required value="Doe">
-											<span class="form-placeholder">Last Name</span>
-										</label>
-										<div class="form-subtitle">Postal Address</div>
-										<label class="form-field">
-											<input type="text" name="z-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
-											<span class="form-placeholder">Zip code</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="z-region" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">Region</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="z-locality" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">City / Locality</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="z-address" class="form-input" placeholder=" " required minlength="3">
-											<span class="form-placeholder">Address</span>
-										</label>
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Technical Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Administrative Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-										<label class="form-field">
-											<input type="email" name="c-mail" class="form-input" placeholder=" ">
-											<span class="form-placeholder">Email</span>
-										</label>
-										<label class="form-field">
-											<input type="tel" name="c-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
-											<span class="form-placeholder">Phone</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-first-name" class="form-input" placeholder=" " minlength="2">
-											<span class="form-placeholder">First Name</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-last-name" class="form-input" placeholder=" " minlength="2">
-											<span class="form-placeholder">Last Name</span>
-										</label>
-										<label class="form-field">
-											<input type="text" name="c-address" class="form-input" placeholder=" " minlength="3">
-											<span class="form-placeholder">Address</span>
-										</label>
-									</div>
-								</div>
-				
-								<div class="accordion__item">
-									<div class="accordion__title" data-collapse>
-										<h4 class="h4">Billing Contact Information</h4>
-										<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
-									</div>
-									<div class="accordion__hidden">
-									</div>
-								</div>
-				
-							</div>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="button" class="btn btn--lg btn--secondary" data-drawer-close>Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success">Continue</button>
-					</div>
-				</form>
-			</div>
-		</div>
 	</div>
 
 	<script src="js/main.js"></script>
-	<script defer src="js/drawer.js"></script>
 </body>
 </html>

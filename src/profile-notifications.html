@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Notifications | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Notifications</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="profile-settings.html">Profile settings</a></li>
+				<li><a href="#">Notifications</a></li>
+			</ul>
+
+			<form class="container box notifications__box">
+
+				<div class="notifications__item">
+					<div class="notifications__descr">
+						<h3 class="h5">Service notifications</h3>
+					</div>
+					<div class="setting__cta setting__cta--nowrap">
+						<label class="selector">
+							<input type="radio" name="notif" checked>
+							<span class="btn selector__btn">Only important</span>
+						</label>
+						<label class="selector">
+							<input type="radio" name="notif">
+							<span class="btn selector__btn">All</span>
+						</label>
+					</div>
+				</div>
+				<div class="notifications__item">
+					<div class="notifications__descr">
+						<h3 class="h5">SMS</h3>
+					</div>
+					<div class="setting__cta">
+						<label class="checkbox-custom">
+							<input class="d-none checkbox" type="checkbox" name="n-2" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+						</label>
+					</div>
+				</div>
+				<div class="notifications__item">
+					<div class="notifications__descr">
+						<h3 class="h5">News and discounts</h3>
+						<div class="notifications__short">Services updates, discounts, IT events and other company news</div>
+					</div>
+					<div class="setting__cta">
+						<label class="checkbox-custom">
+							<input class="d-none checkbox" type="checkbox" name="n-3" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+						</label>
+					</div>
+				</div>
+				<div class="notifications__item">
+					<div class="notifications__descr">
+						<h3 class="h5">The most interesting thing from the&nbsp;blog</h3>
+						<div class="notifications__short">It industry and business trends, tips and life hacks</div>
+					</div>
+					<div class="setting__cta">
+						<label class="checkbox-custom">
+							<input class="d-none checkbox" type="checkbox" name="n-4" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+						</label>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -77,6 +77,9 @@ body {
 	font-size: em(20);
 	font-weight: bold;
 	color: $headline;
+	@media (max-width: 380px){
+		font-size: 1.2em;
+	}
 	@media (max-width: 360px){
 		font-size: 1.16em;
 	}
@@ -90,6 +93,7 @@ body {
 	font-size: 1em;
 	color: $headline;
 	font-weight: normal;
+	text-shadow: 0 0;
 }
 
 //components

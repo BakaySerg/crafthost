@@ -646,7 +646,7 @@
          line-height: 1.7;
          &:not(:last-child) {
             @media (min-width: 361px){
-               margin-bottom: 10px;
+               margin-bottom: 4px;
             }
          }
       }
@@ -706,6 +706,12 @@
    @media (max-width: 500px){
       padding-top: 2px;
       padding-bottom: 14px;
+   }
+   @media (max-width: 380px){
+      .selector{
+         vertical-align: middle;
+         max-width: 49%;
+      }
    }
    @media (max-width: 360px){
       padding-top: 0;

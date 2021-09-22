@@ -345,10 +345,6 @@ input:not([type=radio]):not([type=checkbox]) {
 			margin-left: 0;
 		}
 	}
-	@media (max-width: 380px){
-		vertical-align: middle;
-		max-width: 49%;
-	}
 	& [type=checkbox],& [type=radio] {
 		display: none;
 	}
@@ -374,6 +370,7 @@ input:not([type=radio]):not([type=checkbox]) {
 	& [type=checkbox]:checked + .selector__btn,& [type=radio]:checked + .selector__btn,&.checked .selector__btn {
 		border: 1px solid $border;
 		color: $active;
+		text-shadow: 0 0;
 		transition: .3s;
 	}
 }
@@ -406,7 +403,7 @@ input:not([type=radio]):not([type=checkbox]) {
 		top: 19px;
 		font-size: em(15);
 		line-height: 1;
-		letter-spacing: .05em;
+		letter-spacing: .04em;
 		color: $icons;
 		user-select: none;
 		pointer-events: none;
