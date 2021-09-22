@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Account owner | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Account owner</h1>
+				<div class="header__bureau">
+					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="domain-choise-registration" data-drawer-trigger aria-controls="add-profile" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Add profile</a>
+				</div>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="profile-settings.html">Profile settings</a></li>
+				<li><a href="#">Account owner</a></li>
+			</ul>
+
+
+			<div class="container box editor">
+            <div class="editor__title">
+               <h2 class="message__title">Domain Profiles</h2>
+            </div>
+            <div class="editor__item">
+               <div class="editor__profile">
+                  <h3 class="h3">John Doe</h3>
+                  <div class="editor__short">johndoe@mail.com</div>
+               </div>
+               <button type="button" class="btn btn--lg btn--simply" data-tab-open="tab-edition" data-drawer-trigger aria-controls="edit-profile" aria-expanded="false">Edit</button>
+            </div>
+            <div class="editor__item">
+               <div class="editor__profile">
+                  <h3 class="h3">Jonathan Donovan</h3>
+                  <div class="editor__short">jonathandoe338@mail.com</div>
+               </div>
+               <button type="button" class="btn btn--lg btn--simply">Edit</button>
+            </div>
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup -->
+	<div class="drawer" id="add-profile" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-registration.html
+	      </div>
+		</div>
+	</div>
+
+	<!-- popup -->
+	<div class="drawer" id="edit-profile" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-edit.html
+	      </div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
+</body>
+</html>

@@ -367,6 +367,9 @@ input:not([type=radio]):not([type=checkbox]) {
 			padding: 9px 9px 8px;
 			text-align: left;
 		}
+		@media (max-width: 359px){
+			padding: 9px 5px 8px;
+		}
 	}
 	& [type=checkbox]:checked + .selector__btn,& [type=radio]:checked + .selector__btn,&.checked .selector__btn {
 		border: 1px solid $border;
@@ -421,7 +424,7 @@ input:not([type=radio]):not([type=checkbox]) {
 		.form-placeholder{
 			transform: scale(.8) translateY(-16px);
 			@media (max-width: 380px){
-				transform: scale(.82) translateY(-13px);
+				transform: scale(.82) translateY(-15px);
 			}
 		}
 	}

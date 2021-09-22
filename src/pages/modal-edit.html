@@ -1,0 +1,120 @@
+<form id="tab-edition" class="drawer__item drawer__form--filled" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--form">
+			<div class="drawer__title">
+				<label class="selector">
+					<input type="radio" name="entity" checked>
+					<span class="btn selector__btn">Natural entity / IE</span>
+				</label>
+				<label class="selector">
+					<input type="radio" name="entity">
+					<span class="btn selector__btn">Legal entity</span>
+				</label>
+			</div>
+			<div class="form-aligner">
+				<label class="checkbox-custom">
+					<input class="d-none" type="checkbox" name="use" value="all" checked>
+					<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					<span>Use for all contact types</span>
+				</label>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="accordion">
+				<div class="accordion__item expanded">
+					<div class="accordion__title" data-collapse>
+						<h4 class="h4">Registrant Contact Information</h4>
+						<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						<label class="form-field filled">
+							<input type="email" name="z-mail" class="form-input" placeholder=" " required value="johndoe@mail.com">
+							<span class="form-placeholder">Email</span>
+						</label>
+						<label class="form-field filled">
+							<input type="tel" name="z-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric" value="7 800 000 00 00">
+							<span class="form-placeholder">Phone</span>
+						</label>
+						<label class="form-field filled">
+							<input type="text" name="z-name" class="form-input" placeholder=" " required minlength="2" value="John">
+							<span class="form-placeholder">First Name</span>
+						</label>
+						<label class="form-field filled">
+							<input type="text" name="z-last-name" class="form-input" placeholder=" " required value="Doe">
+							<span class="form-placeholder">Last Name</span>
+						</label>
+						<div class="form-subtitle">Postal Address</div>
+						<label class="form-field">
+							<input type="text" name="z-zip-code" class="form-input" placeholder=" " required pattern="[0-9]*" inputmode="decimal">
+							<span class="form-placeholder">Zip code</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="z-region" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">Region</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="z-locality" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">City / Locality</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="z-address" class="form-input" placeholder=" " required minlength="3">
+							<span class="form-placeholder">Address</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="accordion__item">
+					<div class="accordion__title" data-collapse>
+						<h4 class="h4">Technical Contact Information</h4>
+						<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+					</div>
+				</div>
+
+				<div class="accordion__item">
+					<div class="accordion__title" data-collapse>
+						<h4 class="h4">Administrative Contact Information</h4>
+						<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+						<label class="form-field">
+							<input type="email" name="c-mail" class="form-input" placeholder=" ">
+							<span class="form-placeholder">Email</span>
+						</label>
+						<label class="form-field">
+							<input type="tel" name="c-phone" class="form-input" placeholder=" " pattern="[0-9]*" inputmode="numeric">
+							<span class="form-placeholder">Phone</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="c-first-name" class="form-input" placeholder=" " minlength="2">
+							<span class="form-placeholder">First Name</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="c-last-name" class="form-input" placeholder=" " minlength="2">
+							<span class="form-placeholder">Last Name</span>
+						</label>
+						<label class="form-field">
+							<input type="text" name="c-address" class="form-input" placeholder=" " minlength="3">
+							<span class="form-placeholder">Address</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="accordion__item">
+					<div class="accordion__title" data-collapse>
+						<h4 class="h4">Billing Contact Information</h4>
+						<button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus"/></svg></button>
+					</div>
+					<div class="accordion__hidden">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="button" class="btn btn--lg btn--secondary" data-drawer-close>Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Continue</button>
+	</div>
+</form>
