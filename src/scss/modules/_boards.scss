@@ -102,6 +102,7 @@
 [data-status="active"]:before{background-color: $active;}
 [data-status="warning"]:before{background-color: $warning;}
 [data-status="danger"]:before{background-color: $danger;}
+[data-status="success"]:before{background-color: $accessible;}
 
 
 .board--lg {

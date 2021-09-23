@@ -120,11 +120,13 @@
          }
       }
       .h3 {
-         user-select: none;
-         cursor: pointer;
          @media (max-width: 380px){
             line-height: 1.2;
          }
+      }
+      a.h3 {
+         user-select: none;
+         cursor: pointer;
       }
       .h3 + div {
          margin-top: .4em;

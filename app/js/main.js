@@ -275,8 +275,8 @@ document.addEventListener('DOMContentLoaded', function(){
 				let btn = el.querySelector('[type=submit]');
 
 				let allValid = true;
-				[...inputs].filter((inp) => {
-					if (inp.value.trim() === ""){
+				[...inputs].forEach((inp) => {
+					if (inp.value.length < 3){  // && inp.value.trim() !== ""
 						allValid = false;
 					}
 				});

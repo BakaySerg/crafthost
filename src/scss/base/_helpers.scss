@@ -65,3 +65,10 @@
 	display: flex;
 	align-items: center;
 }
+.is-action {
+	display: inline-block;
+	color: $active;
+	cursor: pointer;
+	user-select: none;
+	padding: 2px;
+}

@@ -25,7 +25,7 @@
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Support PIN</h3>
-						<button type="button" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="pin-tab" data-drawer-trigger aria-controls="pin-modal" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
@@ -34,16 +34,21 @@
 						<h3 class="h3">Change Password</h3>
 					</div>
 					<div class="setting__cta">
-						<button type="button" class="btn btn--lg btn--secondary">Edit</button>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="password-tab" data-drawer-trigger aria-controls="password-modal" aria-expanded="false">Edit</button>
 					</div>
 				</div>
 
-				<div class="setting__list-item">
+				<div class="setting__list-item" data-fill>
 					<div class="setting__descr">
-						<a href="profile-owner.html" class="h3">Two-Factor Authentication</a>
+						<h3 class="h3">Two-Factor Authentication <span class="is-action">(set)</span></h3>
 						<div class="status" data-status="danger">Not filled</div>
 					</div>
-					<div class="setting__cta"></div>
+					<div class="setting__cta">
+						<label class="switch__label">
+							<input type="checkbox" name="two-factor" disabled> <!---disabled once -->
+							<span class="switch__circle"></span>
+						</label>
+					</div>
 				</div>
 
 				<div class="setting__list-item">
@@ -59,9 +64,32 @@
 	</div>
 	//= ./include/footer.html
 
+	<!-- popup -->
+	<div class="drawer" id="pin-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-pin.html
+	      </div>
+		</div>
+	</div>
 
+	<!-- popup -->
+	<div class="drawer" id="password-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				//= ./pages/modal-password.html
+	      </div>
+		</div>
 	</div>
 
 	<script src="js/main.js"></script>
+   <script src="js/drawer.js"></script>
+	<script>
+
+	</script>
 </body>
 </html>
