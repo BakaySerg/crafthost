@@ -306,7 +306,10 @@
 }
 .message__descr {
 	padding-right: 30px;
-	max-width: 617px;
+	max-width: 644px;
+   background-color: rgba(255,255,255,.3);
+	backdrop-filter: blur(1px);
+	border-radius: 5px;
 	@media (max-width: 600px){padding-right: 0;}
 	& > p +.btn {
 		margin-top: 2.1em;

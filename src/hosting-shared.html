@@ -11,7 +11,7 @@
 		<header class="header">
 			//= ./include/header.html
 			<div class="header__bottom container">
-				<h1 class="h1">Hosting plans</h1>
+				<h1 class="h1">Shared hosting plans</h1>
 			</div>
 		</header>
 
@@ -20,7 +20,7 @@
 			<div class="board__message board__message--md" style="--bg1x: url(../img/hosting/message-lg.png); --bg2x:url(../img/hosting/message-lg-2x.png);">
 				<div class="message__descr">
 					<h2 class="message__title">Powerful web hosting plans to meet every need!</h2>
-					<p>We've combined for you the best of our existing hosting and created a completely new The Hosting. Enjoy the freest and fairest approach to hosting!</p>
+               <p>Don't like limitations? Neither do we! That's why we've combined for you the best of our existing hosting and created a completely new The Hosting. It is just up to you how much space you choose and how many mailboxes, databases or websites will use it. Enjoy the freest and fairest approach to hosting</p>
 				</div>
 			</div>
 			<div class="card__box container">
@@ -74,9 +74,30 @@
 					</div>
 				</div>
 			</div>
+         <div class="text-center">
+				<button type="button" class="btn btn--icon btn--lg btn--outlined" data-tab-open="plans-tab" data-drawer-trigger aria-controls="plans-modal" aria-expanded="false">
+					<svg viewBox="0 0 32 32"><use xlink:href="#i-compare"/></svg>
+					Compare hosting plans
+				</button>
+			</div>
 		</div>
 	</div>
 	//= ./include/footer.html
+
+
+	<!-- popup (Compare levels of management (table))-->
+	<div class="drawer drawer--lg" id="plans-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				<!-- tab -->
+				//= ./pages/modal-compare-hostings.html
+	      </div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
 </body>
 </html>

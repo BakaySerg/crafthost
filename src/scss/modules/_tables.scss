@@ -77,3 +77,43 @@ td {
 		opacity: 0.6;
 	}
 }
+.table--narrow {
+	min-width: 500px;
+	font-size: 1em;
+	th {
+		padding: 16px 15px;
+		letter-spacing: .03em;
+		&:first-child {
+			color: inherit;
+			font-weight: normal;
+			padding-left: 20px;
+		}
+	}
+	td {
+		padding: 11px 15px;
+		max-width: 280px;
+		min-width: 210px;
+		vertical-align: middle;
+		&:first-child {
+			white-space: initial;
+			background-color: $bg;
+			font-weight: bold;
+			min-width: 220px;
+			color: $headline;
+			padding-left: 20px;
+		}
+		@media (max-width: 900px){
+			min-width: 160px;
+			&:first-child {
+				min-width: 210px;
+			}
+		}
+		@media (max-width: 600px){
+			min-width: 105px;
+			&:first-child {
+				min-width: 189px;
+				padding-left: 16px;
+			}
+		}
+	}
+}

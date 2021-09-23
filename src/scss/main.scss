@@ -19,7 +19,7 @@ body {
 .open-modal {
 	overflow: hidden;
 	min-height: 100.1vh;
-	@media (min-width: 1025px) and (orientation: landscape){
+	@media screen and (min-width: 1025px) and (orientation: landscape){
 		padding-right: 17px;
 	}
 }
