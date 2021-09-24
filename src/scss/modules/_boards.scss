@@ -307,9 +307,6 @@
 .message__descr {
 	padding-right: 30px;
 	max-width: 644px;
-   background-color: rgba(255,255,255,.3);
-	backdrop-filter: blur(1px);
-	border-radius: 5px;
 	@media (max-width: 600px){padding-right: 0;}
 	& > p +.btn {
 		margin-top: 2.1em;
@@ -317,6 +314,13 @@
 			margin-top: 1.5em;
 		}
 	}
+}
+.board__message--sm .message__descr,.board__message--md .message__descr{
+   @media (max-width: 1200px){
+      background-color: rgba(255,255,255,.3);
+      backdrop-filter: blur(1px);
+      border-radius: 5px;
+   }
 }
 .message__precept,.card__list,.check-list {
    list-style-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.08569 6.51279L4.73341 10.3714L4.69974 10.3358L12.9143 1.62854' stroke='%23448ED9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -392,8 +396,8 @@
 	&--md {
 		background-image: var(--bg1x);
 		background-repeat: no-repeat;
-		background-position: 92% 50%;
-		background-size: auto 159%;
+		background-position: 94% 50%;
+		background-size: auto 150%;
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: var(--bg2x);
 		}

@@ -5,12 +5,17 @@
 	&::-webkit-scrollbar-thumb {background: #bbb; cursor: pointer; border-radius: 3px}
 	&::-webkit-scrollbar-track-piece{background: #f6f6f5;cursor: pointer}
 	&::-webkit-scrollbar-corner{background: transparent;border: none}
+	@media (max-width: 460px){
+		margin-left: -10px;
+		&::-webkit-scrollbar{width: 3px; height: 3px}
+	}
 }
 .table {
 	display: block;
 	border-collapse: collapse;
 	font-size: em(15.6);
 	min-width: 900px;
+	margin-bottom: 20px;
 	tr:not(:first-child):not(:last-child) td {
 		border-bottom: 1px solid $border;
 	}
@@ -51,7 +56,7 @@ td {
 	[class|="i"] {
 		width: 18px;
 		height: 18px;
-		margin-left: 1px;
+		margin-left: 2px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -72,9 +77,10 @@ td {
 	cursor: pointer;
 	transition: .3s;
 	padding: .6em .1em;
-	margin-top: 0.4em;
+	margin-top: .4em;
+	margin-bottom: .4em;
 	&:hover{
-		opacity: 0.6;
+		opacity: .7;
 	}
 }
 .table--narrow {
@@ -98,7 +104,7 @@ td {
 			white-space: initial;
 			background-color: $bg;
 			font-weight: bold;
-			min-width: 220px;
+			min-width: 260px;
 			color: $headline;
 			padding-left: 20px;
 		}
@@ -109,11 +115,32 @@ td {
 			}
 		}
 		@media (max-width: 600px){
-			min-width: 105px;
+			padding: 9px 10px;
+			min-width: 118px;
 			&:first-child {
-				min-width: 189px;
-				padding-left: 16px;
+				min-width: 170px;
+				padding-left: 10px;
 			}
 		}
 	}
+}
+.table__rebate {
+	display: inline-flex;
+	align-items: center;
+	border-radius: 3px;
+	font-weight: bold;
+	color: #fff;
+	background-color: $danger;
+	padding: .14em .4em .1em;
+	margin-bottom: .8em;
+}
+.table__old-price {
+	display: inline-block;
+	text-decoration: line-through;
+	margin-bottom: 0.4em;
+}
+.table__new-price {
+	color: $active;
+	font-weight: bold;
+	letter-spacing: .03em;
 }
