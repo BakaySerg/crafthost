@@ -16,7 +16,7 @@
    }
 }
 .card {
-   padding: 30px 39px 32px;
+   padding: 30px 29px 32px;
    background-color: #fff;
 	box-shadow: -1px 1px 10px rgba(30, 23, 104, 0.04);
 	border-radius: 3px;
@@ -32,6 +32,9 @@
    @media (max-width: 500px){
       padding: 25px 27px 22px;
    }
+   @media (max-width: 359px){
+      padding: 24px 18px 20px;
+   }
    &__descr {
       display: flex;
       flex-direction: column;
@@ -40,7 +43,7 @@
    }
    .h3 {
       text-align: center;
-      padding-bottom: .5em;
+      padding-bottom: .6em;
       flex-grow: .07;
    }
    p {
@@ -69,8 +72,11 @@
       padding-left: 10px;
       padding-bottom: .4em;
       line-height: 1.4;
+      b {color: $headline;}
    }
 }
+.h3 +.card__list {margin-top: .6em;}
+
 .card__cta {
    border-top: 1px solid $border;
    padding-top: 12px;
@@ -106,6 +112,10 @@
    text-align: center;
    &--danger {
       background-color: $bg-alert;
+   }
+   @media (max-width: 1100px){
+      top: 7px;
+      padding: 4px 12px;
    }
    @media (max-width: 500px){
       top: 25px

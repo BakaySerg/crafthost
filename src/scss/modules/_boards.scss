@@ -306,7 +306,7 @@
 }
 .message__descr {
 	padding-right: 30px;
-	max-width: 644px;
+	max-width: 656px;
 	@media (max-width: 600px){padding-right: 0;}
 	& > p +.btn {
 		margin-top: 2.1em;
@@ -319,7 +319,8 @@
    @media (max-width: 1200px){
       background-color: rgba(255,255,255,.3);
       backdrop-filter: blur(1px);
-      border-radius: 5px;
+      border-radius: 8%;
+      background-clip: content-box;
    }
 }
 .message__precept,.card__list,.check-list {
@@ -396,7 +397,7 @@
 	&--md {
 		background-image: var(--bg1x);
 		background-repeat: no-repeat;
-		background-position: 94% 50%;
+		background-position: 97% 50%;
 		background-size: auto 150%;
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			background-image: var(--bg2x);
@@ -410,8 +411,8 @@
 			background-size: auto 97%;
 		}
 		@media (max-width: 380px){
-			background-size: auto 56%;
-			background-position: 101% bottom;
+			background-size: auto 54%;
+			background-position: 104% bottom;
 		}
 		.message__descr p {
          text-shadow: 1px 1px 2px #fff, -1px 1px 2px #fff, -1px -1px 4px #fff, 0 -1px 3px #fff, -1px 1px 8px #fff, 1px 1px 18px #fff, -1px -1px 20px #fff;
