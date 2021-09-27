@@ -1,0 +1,45 @@
+.enterprise {
+   &__box {
+      padding: 33px 61px;
+      @media (max-width: 900px) {
+      	padding: 29px 52px;
+      }
+      @media (max-width: 500px) {
+      	padding: 28px 37px;
+      }
+      @media (max-width: 359px) {
+      	padding: 19px 28px;
+      }
+      p {
+         line-height: 1.5;
+      }
+   }
+   &__form {
+      padding-top: 2em;
+      .textarea {
+      	height: calc(7vh + 75px);
+      }
+   }
+   &__cta {
+      @media (min-width: 600px) {
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-end;
+         .catpcha {
+            margin-right: 27px;
+         }
+      }
+      button {margin-top: 14px;}
+   }
+}
+.form-dual-lg {
+   @media (min-width: 600px){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      label {
+         width: calc(50% - 11px);
+      }
+   }
+   .select {margin-bottom: 0;}
+}

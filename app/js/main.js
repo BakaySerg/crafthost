@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 				let allValid = true;
 				[...inputs].forEach((inp) => {
-					if (inp.value.length < 3){  // && inp.value.trim() !== ""
+					if (inp.value.length < 2){  // && inp.value.trim() !== ""
 						allValid = false;
 					}
 				});
