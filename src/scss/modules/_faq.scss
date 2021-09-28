@@ -177,6 +177,13 @@
    &-title--lg {
       font-weight: bold;
       letter-spacing: .03em;
+      padding-right: .3em;
+      margin-bottom: .7em;
+      & + a {margin-left: 1.4em;}
+      @media (max-width: 600px){
+         width: 100%;
+         & + a { margin-left: 0;}
+      }
       &:before {
       	content: counter(item, decimal-leading-zero);
       	counter-increment: item;

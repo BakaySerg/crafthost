@@ -53,9 +53,9 @@
    flex-wrap: wrap;
    border-top: 1px solid $border;
    padding: 21px 0;
-   &:nth-last-child(){
-      padding-bottom: 0;
-   }
+   // &:last-child{
+   //    padding-bottom: 0;
+   // }
 }
 .sort__info {
    overflow: hidden;

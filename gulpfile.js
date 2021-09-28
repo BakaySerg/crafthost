@@ -1,8 +1,8 @@
-var   gulp          = require('gulp'),
+const   gulp        = require('gulp'),
 		// gutil         = require('gulp-util' ),
 		sourcemaps 	  = require('gulp-sourcemaps'),
 		wait 			  = require('gulp-wait'),
-		sass          = require('gulp-sass'),
+		sass          = require('gulp-sass')(require('sass')),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
 		uglify        = require('gulp-uglify'),
@@ -10,9 +10,9 @@ var   gulp          = require('gulp'),
 		rename        = require('gulp-rename'),
 		// autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require('gulp-notify'),
-		rigger        = require('gulp-rigger'),
+		rigger        = require('gulp-rigger');
 		// rsync         = require('gulp-rsync'),
-		imagemin      = require('gulp-imagemin');
+		// imagemin      = require('gulp-imagemin');
 
 gulp.task('browser-sync', function() {
 	browserSync({

@@ -16,9 +16,11 @@ $bg-muted: #98A0AF;
 $border: #d7d7d7;
 
 //px -> em
-$body-font-size: 16; // body font-size
-@function em($pixels, $context: $body-font-size) {
-  @return #{$pixels/$context}em;
+@use "sass:math";
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+	@return math.div($pixels,$context) * 1em;
 }
 @mixin flex-center {
     display: flex;

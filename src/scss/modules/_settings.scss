@@ -267,3 +267,16 @@
       flex-shrink: 0;
    }
 }
+.f-center {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.factor {
+   &__block {
+      padding: 32px 27px;
+   }
+   &__app {
+      margin: 0 10px;
+   }
+}
