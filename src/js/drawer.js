@@ -128,7 +128,8 @@ document.addEventListener('DOMContentLoaded', function(){
 					let forms = document.querySelectorAll(".drawer__form");
 					[...forms].forEach((form) => {
 						form.reset();
-						form.querySelector('.drawer__footer [type=submit]').classList.add('btn--disabled');
+						let btn = form.querySelector('.drawer__footer [type=submit]');
+						btn?.classList.add('btn--disabled');
 					});
 				}
 			}

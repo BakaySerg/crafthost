@@ -40,7 +40,7 @@
 
 				<div class="setting__list-item" data-fill>
 					<div class="setting__descr">
-						<h3 class="h3">Two-Factor Authentication <span class="is-action">(set)</span></h3>
+						<h3 class="h3">Two-Factor Authentication <span class="is-action" data-tab-open="two-factor-tab" data-drawer-trigger aria-controls="two-factor-modal" aria-expanded="false">(set)</span></h3>
 						<div class="status" data-status="danger">Not filled</div>
 					</div>
 					<div class="setting__cta">
@@ -56,7 +56,7 @@
 						<h3 class="h3">Delete Account</h3>
 					</div>
 					<div class="setting__cta">
-						<button type="button" class="btn btn--lg btn--simply">Delete</button>
+						<button type="button" class="btn btn--lg btn--simply" data-drawer-trigger aria-controls="delete-account-modal" aria-expanded="false">Delete</button>
 					</div>
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup -->
+	<!-- popup (set pin)-->
 	<div class="drawer" id="pin-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 
-	<!-- popup -->
+	<!-- popup (change password)-->
 	<div class="drawer" id="password-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
@@ -86,10 +86,49 @@
 		</div>
 	</div>
 
+	<!-- popup (two-factor Authentication)-->
+	<div class="drawer drawer--lg" id="two-factor-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<!-- tab -->
+				//= ./pages/modal-two-factor.html
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (remove account)-->
+	<div class="drawer drawer--alert" id="delete-account-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__alert">
+				<div class="drawer__fieldset">
+				//= ./pages/modal-delete-account.html
+	      </div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
    <script src="js/drawer.js"></script>
 	<script>
-
+		const passPickers = document.querySelectorAll('.password-picker');
+			if (passPickers) {
+				[...passPickers].forEach(function (el) {
+						el.addEventListener("click", function (e) {
+							e.preventDefault();
+							const target = e.target;
+							const parent = target.closest('.form-field');
+							const pass = parent.querySelector('.form-input');
+							parent.classList.toggle('password-show');
+							if (parent.classList.contains('password-show')) {
+								pass.setAttribute('type','text');
+							} else {
+								pass.setAttribute('type', 'password');
+							}
+						});
+					}
+				);
+			};
 	</script>
 </body>
 </html>

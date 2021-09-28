@@ -6,6 +6,9 @@
    flex-direction: column;
    justify-content: space-between;
 }
+.drawer__alert .drawer__item {
+   min-height: auto;
+}
 .drawer__overlay {
    position: fixed;
    top: 0;
@@ -43,6 +46,36 @@
    @media (max-width: 801px){
       max-width: 100%;
    }
+}
+.drawer__alert {
+   padding: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   pointer-events: none;
+   position: absolute;
+   z-index: 999;
+   .drawer__fieldset{
+      width: 100%;
+      max-width: 600px;
+      transition: all .4s cubic-bezier(.77,0,.175,1);
+      opacity: 0;
+      transform: scale3d(.8,.8, 1);
+      will-change: transform;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: -1px 1px 15px rgba(30, 23,104,.08);
+      position: relative;
+      pointer-events: auto;
+   }
+}
+.drawer.is-visible .drawer__alert .drawer__fieldset {
+   opacity: 1;
+   transform: scale3d(1, 1, 1);
 }
 .drawer--lg .drawer__wrapper {
    max-width: 1120px;
@@ -96,6 +129,11 @@
       padding: 14px 0 20px 14px;
    }
 }
+.drawer--alert .drawer__body {
+   @media (max-width: 500px){
+      padding: 1.6em 23px;
+   }
+}
 .drawer__header {
    padding: 20px 49px 20px 29px;
    border-bottom: 1px solid $border;
@@ -104,6 +142,13 @@
    }
    @media (max-width: 360px){
       padding: 9px 36px 11px 22px;
+   }
+   &--alert {
+      padding: 0;
+      border-bottom: none;
+      .h1 {
+      	padding-bottom: .7em;
+      }
    }
    &--noborder {
       border-bottom: none;
@@ -126,8 +171,13 @@
       font-stretch: 110%;
    }
 }
-.drawer--lg .drawer__header{
-   border-bottom: none;
+.drawer--lg {
+   color: $headline;
+   .drawer__header{
+      border-bottom: none;
+      p {margin-top: .3em;}
+      p + p {margin-top: 1.1em;}
+   }
 }
 .drawer__headline {
    font-size: em(26);
@@ -195,7 +245,7 @@
       }
    }
    .btn--success {
-      flex-grow: .2;
+      flex-grow: .15;
       @media (max-width: 380px){
          flex-grow: .6;
       }
@@ -225,6 +275,17 @@
    & ~ p {
       line-height: 1.44;
    }
+}
+.drawer__header--alert .drawer__cta {
+   padding-top: 25px;
+   padding-bottom: 0;
+	.btn--lg {
+		flex-grow: .49;
+	}
+	.btn--lg+.btn--lg {
+		margin-left: 1.4em;
+		flex-grow: .6;
+	}
 }
 [data-tab]:not([data-tab=active]) {
    display: none!important;

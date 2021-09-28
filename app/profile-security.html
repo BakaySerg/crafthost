@@ -79,9 +79,9 @@
 			                     <li><a class="dialog__link" href="hosting-reseller.html">Reseller Hosting</a></li>
 			                  </ul>
 			               </li>
-			               <li class="menu__item"><a class="menu__link" href="domain.html">Domains</a></li>
-			               <li class="menu__item"><a class="menu__link" href="store.html">Online Store</a></li>
-			               <li class="menu__item"><a class="menu__link" href="managed.html">Managed Hosting</a></li>
+			               <li class="menu__item"><a class="menu__link" href="domain-create.html">Domains</a></li>
+			               <li class="menu__item"><a class="menu__link" href="store-plans.html">Online Store</a></li>
+			               <li class="menu__item"><a class="menu__link" href="managed-plans.html">Managed Hosting</a></li>
 			               <li class="menu__item"><a class="menu__link" href="help.html">Help</a></li>
 			               <li class="menu__item"><a class="menu__link" href="addons.html">Addons</a></li>
 			            </ul>
@@ -162,7 +162,7 @@
 
 				<div class="setting__list-item" data-fill>
 					<div class="setting__descr">
-						<h3 class="h3">Two-Factor Authentication <span class="is-action">(set)</span></h3>
+						<h3 class="h3">Two-Factor Authentication <span class="is-action" data-tab-open="two-factor-tab" data-drawer-trigger aria-controls="two-factor-modal" aria-expanded="false">(set)</span></h3>
 						<div class="status" data-status="danger">Not filled</div>
 					</div>
 					<div class="setting__cta">
@@ -178,7 +178,7 @@
 						<h3 class="h3">Delete Account</h3>
 					</div>
 					<div class="setting__cta">
-						<button type="button" class="btn btn--lg btn--simply">Delete</button>
+						<button type="button" class="btn btn--lg btn--simply" data-drawer-trigger aria-controls="delete-account-modal" aria-expanded="false">Delete</button>
 					</div>
 				</div>
 			</div>
@@ -199,7 +199,7 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup -->
+	<!-- popup (set pin)-->
 	<div class="drawer" id="pin-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
@@ -227,7 +227,7 @@
 		</div>
 	</div>
 
-	<!-- popup -->
+	<!-- popup (change password)-->
 	<div class="drawer" id="password-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
@@ -244,20 +244,29 @@
 							<label class="form-field">
 								<input type="password" name="old-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
 								<span class="form-placeholder">Old password</span>
-								<i class="form-picker"></i>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
 							</label>
-							<div class="aling-right"><a href="#">Forgot password?</a></div>
+							<div class="align-right forgot"><a class="link" href="#">Forgot password?</a></div>
 							<label class="form-field">
 								<input type="password" name="new-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
 								<span class="form-placeholder">New password</span>
-								<i class="form-picker"></i>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
 							</label>
 							<label class="form-field">
 								<input type="password" name="confirm-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
 								<span class="form-placeholder">Confirm password</span>
-								<i class="form-picker"></i>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
 							</label>
-							<p>Password must be at least 6 characters of medium or strong strength. To increase password strength, use numbers and special characters.</p>
+							<p class="form-remark">Password must be at least 6 characters of medium or strong strength. To&nbsp;increase password strength, use numbers and special characters.</p>
 						</div>
 					</div>
 					<div class="drawer__footer">
@@ -269,10 +278,82 @@
 		</div>
 	</div>
 
+	<!-- popup (two-factor Authentication)-->
+	<div class="drawer drawer--lg" id="two-factor-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<!-- tab -->
+				<form id="two-factor-tab" class="drawer__item drawer__form" data-tab="hidden">
+				   <div class="drawer__body">
+				      <div class="drawer__header drawer__header--noborder">
+				         <div class="drawer__title">
+				            <h2 class="drawer__headline">Two-Factor Authentication</h2>
+				            <p>Enabling two-factor authentication will give you an additional layer of security on your Online Control Panel. You will need to enter a variable code each time you log in, therefore please be aware you will need access to an authenticator app each time you log in.</p>
+				            <p>Please follow these 3 steps to enable:</p>
+				         </div>
+				      </div>
+				      <div class="drawer__content counter-list">
+				         <div class="divid-up f-center factor-block">
+				            <h4 class="counter-title--lg">Download an app</h4>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="drawer__footer">
+				      <button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="domain-choise-account">Cancel</button>
+				      <button type="submit" class="btn btn--lg btn--success btn--disabled">Save</button>
+				   </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (remove account)-->
+	<div class="drawer drawer--alert" id="delete-account-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__alert">
+				<div class="drawer__fieldset">
+				<div class="drawer__item">
+					<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--alert">
+							<div class="drawer__title">
+								<h2 class="h1">Are you sure?</h2>
+								<p>Do you really want delete these&nbsp;account?<br>This process connot be undone.</p>
+								<div class="drawer__cta">
+									<button type="button" class="btn btn--lg btn--outlined" data-drawer-close>Cancel</button>
+									<button type="button" class="btn btn--lg btn--danger">Delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	      </div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
    <script src="js/drawer.js"></script>
 	<script>
-
+		const passPickers = document.querySelectorAll('.password-picker');
+			if (passPickers) {
+				[...passPickers].forEach(function (el) {
+						el.addEventListener("click", function (e) {
+							e.preventDefault();
+							const target = e.target;
+							const parent = target.closest('.form-field');
+							const pass = parent.querySelector('.form-input');
+							parent.classList.toggle('password-show');
+							if (parent.classList.contains('password-show')) {
+								pass.setAttribute('type','text');
+							} else {
+								pass.setAttribute('type', 'password');
+							}
+						});
+					}
+				);
+			};
 	</script>
 </body>
 </html>

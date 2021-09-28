@@ -84,6 +84,15 @@
 			border-color:  darken($bg2, 10%);
 		}
 	}
+	&--danger{
+		color: #fff;
+		background-color: $danger;
+		border: 1px solid $danger;
+		&:hover {
+			background-color: darken($danger, 6%);
+			border-color: darken($danger, 10%);
+		}
+	}
 	&--glass {
 		border: 1px solid currentColor;
 		color: #fff;

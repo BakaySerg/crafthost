@@ -96,19 +96,18 @@ body {
 	text-shadow: 0 0;
 }
 
-//components
 @import "components/buttons";
 //layout
 @import "layout/header";
 @import "layout/footer";
 //modules
 @import "modules/boards";
-@import "modules/cards";
+@import "components/cards";
 @import "modules/sidebar";
-@import "modules/forms";
+@import "components/forms";
 @import "modules/modals";
 @import "modules/faq";
-@import "modules/tables";
+@import "components/tables";
 @import "modules/payment";
 @import "modules/settings";
 @import "modules/extra";

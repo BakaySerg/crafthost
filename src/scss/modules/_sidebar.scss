@@ -55,6 +55,7 @@
 .plan__columns {
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
    align-items: baseline;
    width: 100%;
    padding-bottom: 11px;
@@ -64,10 +65,10 @@
       position: relative;
       padding-right: 15px;
       flex-wrap: wrap;
-      .full-size {
-         color: $text;
-         padding: 0.5em 0;
-      }
+   }
+   .full-size {
+      color: $text;
+      padding: 0.5em 0;
    }
    &--price {
       font-size: em(20);
@@ -91,6 +92,7 @@
    cursor: pointer;
    pointer-events: auto;
    z-index: 2;
+   background-color: transparent;
 }
 .plan__main {
    grid-area: content;

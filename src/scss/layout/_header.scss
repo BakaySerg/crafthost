@@ -631,7 +631,6 @@
 	color: $headline;
 	transition: .3s;
 	padding: .4em;
-	text-shadow: 0 0;
 	user-select: none;
 	&:hover, &.active {
 		color: $active;

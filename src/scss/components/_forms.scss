@@ -87,7 +87,7 @@ input:not([type=radio]):not([type=checkbox]) {
 	-webkit-appearance: none;
 	appearance: none;
 	color: inherit;
-	letter-spacing: .02em;
+	letter-spacing: .03em;
 	outline: 0;
 }
 [type=file] {
@@ -377,6 +377,10 @@ input:not([type=radio]):not([type=checkbox]) {
 .form-aligner {
 	user-select: none;
 }
+.form-remark {
+	font-size: em(14);
+	padding: .3em 0;
+}
 .form-field {
 	display: block;
 	position: relative;
@@ -391,7 +395,6 @@ input:not([type=radio]):not([type=checkbox]) {
 		border: 1px solid $border;
 		border-radius: 3px;
 		font-size: 1em;
-		text-shadow: 0 0;
 		@media (max-width: 380px){
 			padding: 18px 19px 8px;
 			height: 44px;
@@ -552,7 +555,7 @@ input::-webkit-calendar-picker-indicator {
 		background-color: $accessible;
 		border-color: $accessible;
 		&:after {
-			left: 31px;
+			left: 30px;
 			background-color: #fff;
 			@media (max-width: 500px){
 				left: 26px;
@@ -562,4 +565,42 @@ input::-webkit-calendar-picker-indicator {
 	[type=checkbox]:disabled ~ .switch__circle {
 		cursor: not-allowed;
 	}
+}
+.forgot {
+	white-space: nowrap;
+	padding-top: .1em;
+	margin-bottom: 1.8em;
+	font-size: em(14);
+	a {padding-right: 0;}
+}
+.password-picker {
+	background-color: transparent;
+	position: absolute;
+	border-radius: 3px;
+	top: calc(50% - 14px);
+	right: calc(2% + 4px);
+	z-index: 2;
+	width: 28px;
+	height: 28px;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	[class|="i"] {
+		width: 19px;
+		height: 19px;
+	}
+	.i-eye-cross {
+		display: none;
+	}
+}
+.password-show {
+	.i-eye{
+		display: none;
+	}
+	.i-eye-cross{
+		display: inline-block;
+	}
+}
+.form-field input[type=password] {
+	font-size: 1.4em;
 }
