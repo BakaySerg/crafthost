@@ -33,35 +33,24 @@
                   <img src="img/payment/visa.png" alt="visa" width="56">
                   <h2 class="h2">Visa / Mastercard</h2>
                </div>
-					<label class="form-field">
-						<input type="text" name="pay-card-number" class="form-input" placeholder=" " minlength="19" data-mask="0000 0000 0000 0000" inputmode="numeric" required>
-						<span class="form-placeholder">Card Number</span>
-					</label>
-					<label class="form-field">
-						<input type="text" name="pay-card-holder" class="form-input" placeholder=" " minlength="3">
-						<span class="form-placeholder">Cardholder name</span>
-					</label>
+					<!-- Card Number -->
+					<label class="form-pay" id="card_number"></label>
+
+					<div class="form-usual">
+						<input type="text" placeholder="Cardholder name" minlength="3" required>
+					</div>
 					<div class="pay__digits">
 						<div class="pay__digit">
 							<div class="pb-05">Expiration Date:</div>
 							<div class="v-center">
-								<label class="form-field">
-									<input type="text" name="pay-card-month" class="form-input" minlength="2" data-mask="00" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
-									<span class="form-placeholder">Month</span>
-								</label>
-								<span class="form-divider">/</span>
-								<label class="form-field">
-									<input type="text" name="pay-card-year" class="form-input" minlength="2" data-mask="00" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
-									<span class="form-placeholder">Year</span>
-								</label>
+								<!-- Exp mounth/Year -->
+								<label class="form-pay" id="card-exp"></label>
 							</div>
 						</div>
 						<div class="pay__digit">
 							<div class="pb-05">CVV2/CVC2</div>
-							<label class="form-field">
-								<input type="tel" name="pay-card-cvv" class="form-input" minlength="3" data-mask="000" placeholder=" " pattern="[0-9]*" inputmode="numeric" required>
-								<span class="form-placeholder">Code</span>
-							</label>
+							<!-- CVC -->
+							<label class="form-pay" id="cvc"></label>
 						</div>
 					</div>
 					<div class="v-center">
@@ -75,6 +64,9 @@
 						<span><svg class="i-safe" viewBox="0 0 32 32"><use xlink:href="#i-safe"/></svg> Connection secure </span>
 						<button type="submit" class="btn btn--lg btn--success btn--icon">Pay</button>
 					</div>
+					<div class="error" role="alert">
+						<span class="message"></span>
+					</div>
             </form>
          </div>
 		</div>
@@ -82,18 +74,59 @@
 	//= ./include/footer.html
 	<script src="js/main.js"></script>
 
-	<script src="https://unpkg.com/imask"></script>
+	<script src="https://js.stripe.com/v3/"></script>
 	<script>
-		let elements = document.querySelectorAll("[data-mask]");
-		[...elements].forEach(element => {
-			let pattern = element.getAttribute('data-mask');
-			let maskOptions = {
-				mask: pattern,
-				min: element.getAttribute('minlength')
-			};
-			let mask = IMask(element, maskOptions);
-			mask.on("complete", function () {console.log(mask.value)});
+		const stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+		let elements = stripe.elements();
+
+		const elementClasses = {
+			base: 'field',
+			focus: 'filled',
+			empty: 'empty',
+			invalid: 'invalid',
+		};
+
+		const style = {
+			base: {
+				'fontSize': '15px',
+				'fontFamily': 'Arial, sans-serif',
+				'color': '#2a3b67',
+				'::placeholder': {
+					color: '#C2C2C3'
+				},
+				':focus::placeholder': {
+					color: 'transparent'
+				},
+			},
+			invalid: {
+				color: '#FF5D47'
+			}
+		};
+		// Card number
+		let card_number = elements.create('cardNumber', {
+			classes: elementClasses,
+			'placeholder': 'Card Number',
+			'style': style
 		});
+		card_number.mount('#card_number');
+
+		// CVC
+		let cvc = elements.create('cardCvc', {
+			classes: elementClasses,
+			'placeholder': 'Code',
+			'style': style
+		});
+		cvc.mount('#cvc');
+
+		// exp
+		var exp = elements.create('cardExpiry', {
+			classes: elementClasses,
+			'placeholder': '00 / 00',
+			'style': style
+		});
+		exp.mount('#card-exp');
+
 	</script>
 </body>
 </html>

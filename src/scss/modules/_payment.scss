@@ -146,6 +146,12 @@
             flex-grow: 1;
          }
       }
+      .form-pay {
+         padding: 18px 30px;
+         @media (max-width: 380px){
+            padding: 13px 28px;
+         }
+      }
    }
    &__digit:first-child {
       @media (min-width: 414px){
@@ -153,8 +159,9 @@
       }
    }
    &__digit {
+      min-width: 114px;
       @media (max-width: 413px){
-         min-width: 100%;
+         min-width: calc(50% - 20px);
          .form-field {
             max-width: calc(50% - 10px);
          }

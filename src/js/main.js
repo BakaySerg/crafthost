@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 		if (e.target.classList.contains('btn--close')) {
 			e.target.closest('.board__message').remove();
+			window.navigator.vibrate(70);
 		};
 	 });
 
