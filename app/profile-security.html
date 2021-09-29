@@ -162,7 +162,7 @@
 
 				<div class="setting__list-item" data-fill>
 					<div class="setting__descr">
-						<h3 class="h3">Two-Factor Authentication <span class="is-action" data-tab-open="two-factor-tab" data-drawer-trigger aria-controls="two-factor-modal" aria-expanded="false">(set)</span></h3>
+						<h3 class="h3">Two-Factor Authentication<span class="is-action" data-tab-open="two-factor-tab" data-drawer-trigger aria-controls="two-factor-modal" aria-expanded="false">(set)</span></h3>
 						<div class="status" data-status="danger">Not filled</div>
 					</div>
 					<div class="setting__cta">
@@ -279,7 +279,7 @@
 	</div>
 
 	<!-- popup (two-factor Authentication)-->
-	<div class="drawer drawer--lg" id="two-factor-modal" data-drawer-target>
+	<div class="drawer drawer--lg drawer--notable" id="two-factor-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
@@ -297,28 +297,82 @@
 				      <div class="drawer__content counter-list">
 				         <div class="divid-up f-center factor__block">
 				            <h4 class="counter-title--lg">Download an app</h4>
-				            <a href="#" class="factor__app"><img src="img/profile/security/google-play.png" alt="google-play"></a>
-				            <a href="#" class="factor__app"><img src="img/profile/security/app-store.png" alt="app-store"></a>
+				            <a href="#" class="factor__app" target="_blank"><img src="img/profile/security/google-play.png" alt="google-play"></a>
+				            <a href="#" class="factor__app" target="_blank"><img src="img/profile/security/app-store.png" alt="app-store"></a>
 				         </div>
 				         <div class="divid-up f-end factor__block">
-				            <div class="factor-text">
+				            <div class="factor__text">
 				               <h4 class="counter-title--lg">Get verification code</h4>
 				               <p>Use your authenticator app to scan the QR code if using a smartphone or tablet, or enter the secret key if using a desktop or laptop, to get a verification code.</p>
 				               <p>We strongly recommend saving your secret key in a secure password manager - it will not be visible to you once the process iscomplete.</p>
+				               <div class="factor__key f-center">
+				                  <h4 class="h4">Secret Key</h4>
+				                  <div class="big-link">
+				                     <svg class="i-key" viewBox="0 0 32 32"><use xlink:href="#i-key"/></svg>
+				                     <span>WNAP 4QLX 1EAF ANZQ IYVK 82AS 131W X4AA</span>
+				                  </div>
+				                  <button type="button" class="btn btn--sm btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+				               </div>
 				            </div>
-				            <div class="factor__qr"></div>
+				            <div class="factor__qr"><img src="img/profile/security/qr.png" alt="qr"></div>
 				         </div>
 				         <div class="divid-up factor__block">
 				            <h4 class="counter-title--lg">Enter verification code</h4>
 				            <p>Enter the verification code presented in your authentication&nbsp;app</p>
+				            <div class="form-usual">
+				               <input type="text" placeholder=" " pattern="[0-9]{4,}" inputmode="numeric" required="">
+				            </div>
 				         </div>
 				      </div>
 				   </div>
 				   <div class="drawer__footer">
-				      <button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="domain-choise-account">Cancel</button>
+				      <button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
 				      <button type="submit" class="btn btn--lg btn--success btn--disabled">Save</button>
 				   </div>
 				</form>
+				<script>
+				   // copy key to clipboard
+				   const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+				   const copyBtn = document.querySelector(".btn--copy");
+				   copyBtn?.addEventListener('click', function (e) {
+				      e.preventDefault();
+				      const key = e.target.previousElementSibling.querySelector('span').innerText;
+				      copyToClipboard(key);
+				      e.target.classList.add('copied');
+				      setTimeout(function () {e.target.classList.remove('copied');},1100);
+				   });
+				
+				   // filling two-factor authentication data
+				   const formFactor = document.getElementById('two-factor-tab');
+				   formFactor?.addEventListener('submit', function (e) {
+				      e.preventDefault();
+				      const pane = document.querySelector('[data-fill]'),
+				            status = pane.querySelector('.status'),
+				            input = pane.querySelector('[type="checkbox"]'),
+				            btn = e.target.querySelector('[type=submit]');
+				      status.setAttribute('data-status','success');
+				      status.innerText = "Enabled";
+				      input.removeAttribute('disabled');
+				      input.setAttribute('checked','');
+				      e.target.closest('.drawer').classList.remove('is-active','is-visible');
+				      btn.classList.add("btn--disabled");
+				      e.target.reset();
+				   });
+				
+				   // switching two-factor authentication
+				   const switchInp = document.querySelector('[data-fill] [type="checkbox"]');
+				   switchInp?.addEventListener('change', function (e) {
+				      const parent = e.target.closest('[data-fill]'),
+				            status = parent.querySelector('.status');
+				      if (e.target.checked) {
+				         status.setAttribute('data-status', 'success');
+				         status.innerText = "Enabled";
+				      } else {
+				         status.setAttribute('data-status', 'warning');
+				         status.innerText = "Disabled";
+				      }
+				   });
+				</script>
 			</div>
 		</div>
 	</div>

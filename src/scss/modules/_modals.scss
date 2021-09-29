@@ -102,11 +102,11 @@
       background-size: 22px;
    }
    @media (max-width: 380px){
-      top: 27px;
+      top: 25px;
       right: 10px;
    }
    @media (max-width: 360px){
-      top: 20px;
+      top: 19px;
    }
 }
 .drawer__body {
@@ -115,18 +115,29 @@
       padding: calc(3.5vh + .6em) calc(1.6vw + 3.8em) calc(3vh + .5em);
    }
    @media (max-width: 500px){
-      padding: 1em 15px;
+      padding: 1em 20px;
    }
 }
 .drawer--lg .drawer__body {
    @media (min-width: 1100px){
       padding: calc(5.1vh + 3.3em) calc(2.4vw + 2.9em) 40px;
    }
-   @media (max-width: 991px){
-      padding: calc(5vh + 1em) 0 30px 30px;
+}
+.drawer--lg:not(.drawer--notable) .drawer__body {
+   @media (max-width: 991px) {
+   	padding: calc(1vh + 1em) 0 30px 30px;
    }
-   @media (max-width: 500px){
-      padding: 14px 0 20px 14px;
+   @media (max-width: 500px) {
+   	padding: 14px 0 20px 14px;
+   }
+}
+.drawer--notable .drawer__body {
+   @media (max-width: 991px) {
+   	padding: calc(1vh + 1em) 30px 30px;
+   }
+
+   @media (max-width: 500px) {
+   	padding: 14px 14px 20px;
    }
 }
 .drawer--alert .drawer__body {
@@ -141,7 +152,7 @@
       padding: 16px 37px 11px 26px;
    }
    @media (max-width: 360px){
-      padding: 9px 36px 11px 22px;
+      padding: 9px 36px 11px 16px;
    }
    &--alert {
       padding: 0;
@@ -184,14 +195,20 @@
 	padding-bottom: .65em;
 	position: relative;
    color: $headline;
-   @media (max-width: 380px){
-      font-size: 1.4em;
+   @media (max-width: 500px) {
+   	font-size: 1.4em;
+   }
+   @media (max-width: 380px) {
+   	font-size: 1.3em;
    }
 	&::before{
 		position: absolute;
 		content: '\2013';
 		left: -1.2em;
-		top: 0
+		top: 0;
+      @media (max-width: 500px){
+         left: -0.9em;
+      }
 	}
 }
 .drawer__content {
@@ -236,18 +253,24 @@
       padding: 16px 15px 17px;
    }
    @media (max-width: 380px){
-      padding: 13px 14px 14px;
+      padding: 14px 12px 15px;
+   }
+   @media (max-width: 359px){
+      padding: 12px 10px 13px;
    }
    .btn:not(:first-child) {
       margin-left: 38px;
       @media (max-width: 500px){
-         margin-left: 14px;
+         margin-left: 18px;
       }
    }
    .btn--success {
       flex-grow: .15;
       @media (max-width: 380px){
          flex-grow: .6;
+      }
+      @media (max-width: 359px){
+         flex-grow: .68;
       }
    }
 }
@@ -268,6 +291,9 @@
       padding-bottom: 17px;
    }
    @media (max-width: 360px){
+      .btn--icon {
+      	min-width: 108px;
+      }
       .btn--lg + .btn--lg {
          margin-left: .8em;
       }

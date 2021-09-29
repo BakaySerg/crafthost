@@ -124,6 +124,9 @@
    padding: 30px;
    color: $headline;
    @media (max-width: 500px){
+      padding: 21px 20px;
+   }
+   @media (max-width: 359px){
       padding: 21px 16px;
    }
    .h3 {
@@ -192,6 +195,9 @@
       	margin-right: .3em;
          font-size: 2em;
       	color: $active;
+         @media (max-width: 380px){
+            font-size: 1.8em;
+         }
       }
    }
 }
@@ -229,6 +235,10 @@
    }
    @media (max-width: 380px){
       padding: 12px 11px;
+      font-size: .92em;
+   }
+   @media (max-width: 359px){
+      padding: 10px 9px;
    }
    [class|=i] {
       align-self: flex-start;
