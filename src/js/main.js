@@ -275,15 +275,17 @@ document.addEventListener('DOMContentLoaded', function(){
 				let btn = el.querySelector('[type=submit]');
 
 				let allValid = true;
-				[...inputs].forEach((inp) => {
-					if (inp.value.length < 2){  // && inp.value.trim() !== ""
-						allValid = false;
+				if (!el.classList.contains('pay')) {
+					[...inputs].forEach((inp) => {
+						if (inp.value.length < 2){  // && inp.value.trim() !== ""
+							allValid = false;
+						}
+					});
+					if (!allValid){
+						btn.classList.add("btn--disabled");
+					} else {
+						btn.classList.remove("btn--disabled");
 					}
-				});
-				if (!allValid){
-					btn.classList.add("btn--disabled");
-				} else {
-					btn.classList.remove("btn--disabled");
 				}
 			});
 		});
