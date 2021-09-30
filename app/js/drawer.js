@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded', function(){
 					[...fields].forEach((all) => {
 						all.classList.remove("filled");
 					});
-					let forms = document.querySelectorAll(".drawer__form");
+				}
+				let forms = document.querySelectorAll(".drawer__form");
+				if (forms) {
 					[...forms].forEach((form) => {
 						form.reset();
 						let btn = form.querySelector('.drawer__footer [type=submit]');

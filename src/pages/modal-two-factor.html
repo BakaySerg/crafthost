@@ -22,7 +22,8 @@
                   <h4 class="h4">Secret Key</h4>
                   <div class="big-link">
                      <svg class="i-key" viewBox="0 0 32 32"><use xlink:href="#i-key"/></svg>
-                     <span>WNAP 4QLX 1EAF ANZQ IYVK 82AS 131W X4AA</span>
+                     <span>WNAP 4QLX 1EAF ANZQ IYVK 82AS 131W X4AD</span>
+                     <input class="copy-key" type="text" value="WNAP 4QLX 1EAF ANZQ IYVK 82AS 131W X4AD">
                   </div>
                   <button type="button" class="btn btn--sm btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
                </div>
@@ -45,13 +46,23 @@
 </form>
 <script>
    // copy key to clipboard
-   const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+   function copyText(el) {
+      let x = el.value;
+      if (el.setSelectionRange) {
+         el.select();
+         el.setSelectionRange(0, 9999);
+         document.execCommand("copy");
+         el.blur();
+      };
+      if (navigator.clipboard) {navigator.clipboard.writeText(x);};
+   };
+
    const copyBtn = document.querySelector(".btn--copy");
    copyBtn?.addEventListener('click', function (e) {
       e.preventDefault();
-      const key = e.target.previousElementSibling.querySelector('span').innerText;
-      copyToClipboard(key);
-      e.target.classList.add('copied');
+      const key = this.previousElementSibling.querySelector('input');
+      copyText(key);
+      this.classList.add('copied');
       setTimeout(function () {e.target.classList.remove('copied');},1100);
    });
 

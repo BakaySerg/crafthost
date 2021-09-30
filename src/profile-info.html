@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>X | Crafthost</title>
+	<title>Account information | Crafthost</title>
 	//= ./include/head.html
 </head>
 <body>
@@ -10,24 +10,102 @@
 		<header class="header">
 			//= ./include/header.html
 			<div class="header__bottom container">
-				<h1 class="h1">Refferal Program</h1>
+				<h1 class="h1">Account information</h1>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
 			<ul class="container-lg breadcrumbs">
 				<li><a href="profile-settings.html">Profile settings</a></li>
-				<li><a href="#">Refferal Program</a></li>
+				<li><a href="#">Account information</a></li>
 			</ul>
 
-			<div class="container box notifications">
-
+			<div class="container box info">
+				<div class="info__header">
+					<div class="info__user">
+						<svg class="i-user-2" viewBox="0 0 32 32"><use xlink:href="#i-user-2"/></svg>
+						<div class="info__mail">johndoe@mail.com</div>
+					</div>
+					<div class="info__presence">
+						<div class="info__text">Account registration date:</div>
+						<div class="info__date">21.06.2021</div>
+					</div>
+				</div>
+				<div class="info__status" data-user-verify="no">
+					<svg data-verify="no" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
+					<svg data-verify="yes" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
+					<h2 data-verify="no" class="info__status-title">Your account is not verified</h2>
+					<h2 data-verify="yes" class="info__status-title">Your Account Verified</h2>
+					<p data-verify="yes">Your account provide all the requirements</p>
+				</div>
+				<div class="info__footer">Last login to your account: 12.07.2021 at 10:24:36 from IP 46.33.33.103, Chrome 91.0.4472.124</div>
 			</div>
+			<form class="upload container" action="#">
+				<div class="box upload__item">
+					<div class="upload__descr">
+						<figure class="upload__picture">
+							<img srcset="img/profile/info/info-1.png, img/profile/info/info-1-2x.png 2x" src="img/profile/info/info-1.png" alt="user">
+						</figure>
+						<div class="upload__text">
+							<h3 class="h4">Upload government ID</h3>
+							<p>Take a picture of or scan your ID or passport. Make sure the next is cleanly visible</p>
+						</div>
+					</div>
+					<div class="upload__cta">
+						<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+						<label class="file__area" for="file">
+							<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+							<span data-text="Upload image">Upload image</span>
+						</label>
+					</div>
+				</div>
+				<div class="box upload__item">
+					<div class="upload__descr">
+						<figure class="upload__picture">
+							<img srcset="img/profile/info/info-2.png, img/profile/info/info-2-2x.png 2x" src="img/profile/info/info-2.png" alt="app">
+						</figure>
+						<div class="upload__text">
+							<h3 class="h4">Upload selfie with ID</h3>
+							<p>Take a picture or yourself holding your ID or passport. The ID or passport should be the same that you are using for ID verification</p>
+						</div>
+					</div>
+					<div class="upload__cta">
+						<input type="file" name="file2" id="file2" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+						<label class="file__area" for="file2">
+							<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+							<span data-text="Upload image">Upload image</span>
+						</label>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn--lg btn--success btn--icon">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	//= ./include/footer.html
 
 
 	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			[...inputs].forEach( function (input) {
+				input.addEventListener('change', function (e) {
+					let label = e.target.nextElementSibling,
+						 labelVal = label.innerHTML,
+						 fileName = '';
+					if (this.files && this.files.length > 1)
+						fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+					else
+						fileName = e.target.value.split('\\').pop();
+					if (fileName)
+						label.querySelector('span').innerHTML = fileName;
+					else
+						label.innerHTML = labelVal;
+				});
+			});
+		}());
+	</script>
 </body>
 </html>
