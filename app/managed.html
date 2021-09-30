@@ -92,8 +92,20 @@
 			      </nav>
 			      <div class="cabinet">
 			         <div class="notifications">
-			            <i class="notifications__bell"><svg viewBox="0 0 32 32"><use xlink:href="#i-bell"/></svg></i>
-			            <i class="notifications__count">2</i>
+			            <a href="notifications.html" class="submenu__trigger notifications__link">
+			               <svg class="notifications__bell" viewBox="0 0 32 32"><use xlink:href="#i-bell"/></svg>
+			               <i class="notifications__count">2</i>
+			            </a>
+			            <div class="dialog dialog--under dialog--notifications">
+			               <ul>
+			                  <li><a class="dialog__notify" href="notifications.html" data-point>Complete invoices payment on the service purchase</a></li>
+			                  <li><a class="dialog__notify" href="notifications.html">Powerful web hosting plans to meet every need</a></li>
+			                  <li><a class="dialog__notify" href="notifications.html">Everything you need to get your dream website online</a></li>
+			               </ul>
+			               <div class="dialog__divider dialog__divider--up">
+			                  <a href="notifications.html" class="btn btn--lg btn--glass">All notifications</a>
+			               </div>
+			            </div>
 			         </div>
 			         <div class="cabinet__user">
 			            <a href="#" class="submenu__trigger"><img src="img/header/user.png" alt="user" width="38" height="38"></a>

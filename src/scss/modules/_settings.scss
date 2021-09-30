@@ -403,8 +403,9 @@
       align-items: center;
       padding: 18px 1px 20px;
       @media (max-width: 500px){
-         padding: 14px 0 17px;
+         padding: 14px 0 13px;
          display: block;
+         text-align: center;
       }
    }
    &__user {
@@ -426,7 +427,7 @@
    &__presence {
       text-align: right;
       @media (max-width: 500px){
-         text-align: left;
+         text-align: center;
          padding-top: .2em;
       }
    }
@@ -465,6 +466,10 @@
       &-title {
          font-size: em(20);
          padding: .2em 0;
+         &+[data-verify] {
+            padding-top: .4em;
+            margin-bottom: -.2em;
+         }
          @media (max-width: 359px){
             font-size: 1.2em;
          }

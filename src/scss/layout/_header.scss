@@ -133,7 +133,7 @@
 	padding: 5px 9px 5px 0;
 	color: $text;
 }
-.submenu__trigger:after,.link--arrow-down:after {
+.submenu__trigger:not(.notifications__link):after, .link--arrow-down:after {
 	content: '';
 	display: inline-block;
 	position: absolute;
@@ -257,6 +257,10 @@
 				padding: .55em 15px;
 			}
 		}
+	}
+	&--notifications{
+		width: 95vw;
+		max-width: 374px;
 	}
 	&__link{
 		color: currentColor;
@@ -485,6 +489,7 @@
 	}
 }
 .notifications {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -493,7 +498,10 @@
 	&__bell {
 		width: 23px;
 		height: 23px;
-		pointer-events: none;
+		order: -1;
+		svg {
+			pointer-events: none;
+		}
 	}
 	&__count {
 		font-style: normal;

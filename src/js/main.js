@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	 window.addEventListener('click', function(e) {
 		if (e.target.classList.contains('submenu__trigger')) {
 			e.preventDefault();
+			// document.querySelector(".dialog.shown").classList.remove('shown');
 			e.target.nextElementSibling.classList.toggle("shown");
 		}
 		else if (!e.target.closest('.shown')){

@@ -40,7 +40,7 @@
 				</div>
 				<div class="info__footer">Last login to your account: 12.07.2021 at 10:24:36 from IP 46.33.33.103, Chrome 91.0.4472.124</div>
 			</div>
-			<form class="upload container" action="#">
+			<form id="verify-form" class="upload container" action="#">
 				<div class="box upload__item">
 					<div class="upload__descr">
 						<figure class="upload__picture">
@@ -88,6 +88,7 @@
 
 	<script src="js/main.js"></script>
 	<script>
+		// files select
 		(function () {
 			const inputs = document.querySelectorAll('[type=file]');
 			[...inputs].forEach( function (input) {
@@ -106,6 +107,21 @@
 				});
 			});
 		}());
+
+		// send files & chacge verify status
+		const formFactor = document.getElementById('verify-form');
+		formFactor?.addEventListener('submit', function (e) {
+			e.preventDefault();
+			const inputs = document.querySelectorAll('[type=file]'),
+					status = document.querySelector('[data-user-verify]');
+			[...inputs].forEach((inp) => {
+				if (inp.value.length) {
+					status.setAttribute('data-user-verify', 'yes');
+				e.target.reset();
+				e.target.remove();
+				}
+			});
+		});
 	</script>
 </body>
 </html>
