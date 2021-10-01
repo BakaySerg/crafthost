@@ -209,34 +209,13 @@
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup (kinda drawer)-->
-	<div class="drawer" id="domain-choise" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<!-- tab choise policy -->
-				//= ./pages/modal-policy.html
-				<!-- tab filling out an acc -->
-				//= ./pages/modal-account.html
-				<!-- tab registration -->
-				//= ./pages/modal-registration.html
-
-			</div>
-		</div>
-	</div>
-
 	<script src="js/main.js"></script>
-	<script defer src="js/drawer.js"></script>
 	<script>
 		const form = document.querySelector('.plan__sidelong');
 		form.addEventListener('change', function(e) {
 			const sidebar = document.querySelector('.plan__sidebar');
 			const hiddens = sidebar.querySelectorAll('[hidden]');
 			const dummy = sidebar.querySelector('.plan__dummy');
-			// planDetails.removeAttribute('hidden');
-			// argums.setAttribute('hidden','');
-
 			[...hiddens].forEach((el) => {
 				el.removeAttribute('hidden');
 			});

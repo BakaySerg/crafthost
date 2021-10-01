@@ -392,3 +392,14 @@
       margin: 0 15px;
    }
 }
+.progress {
+   height: 4px;
+   width: 100%;
+   border-radius: 2px;
+}
+.builder {
+   padding: 20px 0;
+   &__title {
+      padding: 0 24px 0 60px;
+   }
+}
