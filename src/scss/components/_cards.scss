@@ -9,11 +9,18 @@
       padding-right: 0;
    }
 }
-.card__box + .text-center {
+.card__box + .text-center{
    padding-top: 23px;
    @media (max-width: 380px){
       padding-top: 16px;
    }
+}
+.enterprise__box+.text-center {
+	padding-top: 33px;
+
+	@media (max-width: 500px) {
+		padding-top: 20px;
+	}
 }
 .card {
    padding: 30px 29px 32px;

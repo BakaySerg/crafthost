@@ -6,7 +6,6 @@
    @media (min-width: 890px){
       display: grid;
       grid-gap: 15px;
-      // grid-template-columns: repeat(3, 1fr);
       align-items: start;
       grid-template-columns: 1fr minmax(min-content, min-content);
       grid-template-areas: "content content sidebar";
@@ -20,6 +19,11 @@
    margin-bottom: 20px;
    min-width: 360px;
    grid-area: sidebar;
+   @media (min-width: 890px){
+      position: sticky;
+      top: 20px;
+      margin-bottom: 40px;
+   }
    @media (max-width: 991px){
       min-width: 300px;
    }

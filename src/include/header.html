@@ -12,7 +12,7 @@
                <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
                <li class="menu__item submenu">
                   <a class="menu__link submenu__trigger" href="#">Hosting</a>
-                  <ul class="dialog dialog--under">
+                  <ul class="dialog dialog--under" aria-label="submenu">
                      <li><a class="dialog__link" href="hosting-shared.html">Shared Hosting</a></li>
                      <li><a class="dialog__link" href="hosting-wordpress.html">WordPress Hosting</a></li>
                      <li><a class="dialog__link" href="hosting-business.html">Business Hosting</a></li>
@@ -36,12 +36,14 @@
                <svg class="notifications__bell" viewBox="0 0 32 32"><use xlink:href="#i-bell"/></svg>
                <i class="notifications__count">2</i>
             </a>
-            <div class="dialog dialog--under dialog--notifications">
-               <ul>
-                  <li><a class="dialog__notify" href="notifications.html" data-point>Complete invoices payment on the service purchase</a></li>
+            <div class="dialog dialog--under dialog--notifications" aria-label="submenu">
+               <ul class="dialog__notify-list">
+                  <li><a class="dialog__notify" href="notifications.html" data-important>Complete invoices payment on the service purchase</a></li>
                   <li><a class="dialog__notify" href="notifications.html">Powerful web hosting plans to meet every need</a></li>
                   <li><a class="dialog__notify" href="notifications.html">Everything you need to get your dream website online</a></li>
                </ul>
+               <!-- if the list ⇑ is completely empty (including no tags), then we show this -->
+               <div class="dialog__dummy">no new messages...</div>
                <div class="dialog__divider dialog__divider--up">
                   <a href="notifications.html" class="btn btn--lg btn--glass">All notifications</a>
                </div>
@@ -49,7 +51,7 @@
          </div>
          <div class="cabinet__user">
             <a href="#" class="submenu__trigger"><img src="img/header/user.png" alt="user" width="38" height="38"></a>
-            <div class="dialog dialog--under dialog--combo">
+            <div class="dialog dialog--under dialog--combo" aria-label="submenu">
                <div class="dialog__divider">
                   <div class="profile">
                      <div class="profile__name">John Doe</div>

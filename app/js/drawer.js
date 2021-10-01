@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					tabTarget.setAttribute("data-tab", "active");
 				}
 				event.preventDefault();
+				window.navigator.vibrate(70);
 			}
 			if (close) {
 				closeDrawer(close);
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function(){
 						btn?.classList.add('btn--disabled');
 					});
 				}
+				window.navigator.vibrate(70);
 			}
 		};
 

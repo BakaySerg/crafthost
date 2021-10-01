@@ -34,8 +34,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	 window.addEventListener('click', function(e) {
 		if (e.target.classList.contains('submenu__trigger')) {
 			e.preventDefault();
-			// document.querySelector(".dialog.shown").classList.remove('shown');
-			e.target.nextElementSibling.classList.toggle("shown");
+			const allDialogs = document.querySelectorAll('.shown');
+			const needDialog = e.target.nextElementSibling;
+			const showns = [...allDialogs].filter(item => item !== needDialog);
+			[...showns].forEach(item => {
+				item.classList.remove('shown');
+			});
+			needDialog.classList.toggle("shown")
+			window.navigator.vibrate(70);
 		}
 		else if (!e.target.closest('.shown')){
 			const dialogs = document.querySelectorAll(".dialog");

@@ -100,6 +100,10 @@
 		border: 1px solid currentColor;
 		color: #fff;
 		background-color: transparent;
+		padding: 11px 18px 10px;
+		@media (min-width: 991px){
+			padding: 14px 29px 13px;
+		}
 		&:hover{
 			opacity: 0.7;
 		}

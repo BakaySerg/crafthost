@@ -276,7 +276,7 @@
 		position: absolute;
 		content: '\2013';
 		left: -1.1em;
-		top: 0
+		top: -2px;
 	}
    @media (min-width: 1100px) and (min-height: 700px){
       font-size: em(26);
@@ -544,6 +544,46 @@
                height: 17px;
                margin-right: 10px;
             }
+         }
+      }
+   }
+   &--clear{
+      &:not(:last-child) {
+         margin-bottom: 20px;
+         .btn--icon {
+            color: $headline;
+            &:hover {
+               color: $active;
+            }
+         }
+         @media (min-width: 768px){
+            display: flex;
+            align-items: center;
+            .btn--icon {
+               margin-left: auto;
+               padding-right: 0;
+               text-align: right;
+            }
+         }
+         @media (max-width: 767px){
+            .btn--icon {
+               padding-left: 0;
+               text-align: left;
+               justify-content: flex-start;
+            }
+         }
+         @media (max-width: 500px){
+            margin-bottom: 14px;
+         }
+      }
+      .message__descr {
+         max-width: 700px;
+      }
+      .message__title {
+         line-height: 1.3;
+         padding-bottom: 0;
+         & + p {
+            padding-top: .6em;
          }
       }
    }
