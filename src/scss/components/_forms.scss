@@ -455,6 +455,9 @@ input::-webkit-calendar-picker-indicator {
 	margin-left: 1.3em;
 	line-height: 1.2;
 	cursor: pointer;
+	@media (max-width: 500px){
+		margin-left: 1.1em;
+	}
 }
 .form-combo {
 	position: relative;

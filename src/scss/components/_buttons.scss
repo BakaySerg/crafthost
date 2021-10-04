@@ -243,6 +243,9 @@
 		padding: 1px;
 		margin: -4px 0 -4px 4px;
 		top: 3px;
+		@media (max-width: 359px){
+			margin-left: 1px;
+		}
 		&:before {
 			top: auto;
 			bottom: calc(100% + 10px);
@@ -280,7 +283,7 @@
       height: 17px;
       margin: -4px 0 -4px 7px;
    }
-   @media (max-width: 360px){
+   @media (max-width: 359px){
       width: 15px;
       height: 15px;
       margin: -3px 0 -4px 3px;

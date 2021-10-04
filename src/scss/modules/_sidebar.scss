@@ -400,6 +400,9 @@
       flex-wrap: wrap;
       padding: .3em 0 2.2em;
       &:last-of-type {margin-bottom: .9em;}
+      @media (max-width: 380px){
+         padding: 0 0 2em;
+      }
    }
    &__title{
       color: $headline;
@@ -407,29 +410,56 @@
    }
    &__percent{
       margin-left: auto;
-      font-size: em(15);
+      font-size: 1em;
       font-weight: bold;
    }
    &__bar {
       width: 100%;
       background-color: $border;
+      background-clip: border-box;
       height: 3px;
       border-radius: 3px;
       margin-top: 1.2em;
    }
    &__scale {
-      height: 4px;
-      width: 100%;
-      border-radius: 2px;
+      height: 5px;
+      width: 50%;
+      border-radius: 4px;
+      margin-top: -1px;
+      margin-bottom: -1px;
    }
 }
 [data-color=green] .progress__percent {
    color: $accessible;
 }
+[data-color=blue] .progress__percent {
+   color: $active;
+}
+[data-color=orange] .progress__percent {
+   color: $warning;
+}
+[data-color=green] .progress__scale {
+   background-color: $accessible;
+}
+[data-color=blue] .progress__scale {
+   background-color: $active;
+}
+[data-color=orange] .progress__scale {
+   background-color: $warning;
+}
 .builder {
-   padding: 24px;
+   padding: 24px 24px 28px;
+   @media (max-width: 500px){
+      padding: 19px 18px 21px;
+   }
+   @media (max-width: 359px){
+      padding: 17px 14px 20px;
+   }
    &__title {
       padding: 0 0 23px 30px;
+      @media (max-width: 500px){
+         padding: 0 0 15px 16px;
+      }
    }
    &__steps {
       margin-left: auto;
@@ -437,6 +467,10 @@
       letter-spacing: .28em;
       color: $headline;
       align-self: flex-start;
+      @media (max-width: 380px){
+         font-size: 1em;
+         line-height: 1;
+      }
       .step__current {
          font-size: 1.4em;
          font-weight: bold;
@@ -445,6 +479,39 @@
    &__remark {
       border-bottom: 1px solid $border;
       border-top: 1px solid $border;
-      padding: 1.2em 2px;
+      padding: 1em 2px;
+      .h3 {
+         padding-bottom: .3em;
+      }
+      @media (max-width: 359px){
+         padding: .7em 0
+      }
    }
+   &__item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 622px;
+      padding: 20px 2px 5px;
+      @media (max-width: 500px){
+         .label-custom {
+            padding-right: .5em;
+            margin-left: .8em;
+         }
+      }
+      @media (max-width: 359px){
+         grid-template-columns: 1fr;
+         padding: 12px 0 0;
+      }
+      .h4 {
+         grid-column: 1 / -1;
+         padding-bottom: .8em;
+      }
+      .v-center {
+         padding-bottom: .8em;
+         @media (max-width: 360px){
+            padding-bottom: .6em;
+         }
+      }
+   }
+   .text-center {padding-top: 5px;}
 }
