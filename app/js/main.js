@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				item.classList.remove('shown');
 			});
 			needDialog.classList.toggle("shown")
-			window.navigator.vibrate(70);
+			window.navigator.vibrate(30);
 		}
 		else if (!e.target.closest('.shown')){
 			const dialogs = document.querySelectorAll(".dialog");
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 		if (e.target.classList.contains('btn--close')) {
 			e.target.closest('.board__message').remove();
-			window.navigator.vibrate(70);
+			window.navigator.vibrate(30);
 		};
 	 });
 

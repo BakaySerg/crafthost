@@ -393,13 +393,58 @@
    }
 }
 .progress {
-   height: 4px;
-   width: 100%;
-   border-radius: 2px;
+   &__item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: .3em 0 2.2em;
+      &:last-of-type {margin-bottom: .9em;}
+   }
+   &__title{
+      color: $headline;
+      font-weight: bold;
+   }
+   &__percent{
+      margin-left: auto;
+      font-size: em(15);
+      font-weight: bold;
+   }
+   &__bar {
+      width: 100%;
+      background-color: $border;
+      height: 3px;
+      border-radius: 3px;
+      margin-top: 1.2em;
+   }
+   &__scale {
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+   }
+}
+[data-color=green] .progress__percent {
+   color: $accessible;
 }
 .builder {
-   padding: 20px 0;
+   padding: 24px;
    &__title {
-      padding: 0 24px 0 60px;
+      padding: 0 0 23px 30px;
+   }
+   &__steps {
+      margin-left: auto;
+      font-size: em(19);
+      letter-spacing: .28em;
+      color: $headline;
+      align-self: flex-start;
+      .step__current {
+         font-size: 1.4em;
+         font-weight: bold;
+      }
+   }
+   &__remark {
+      border-bottom: 1px solid $border;
+      border-top: 1px solid $border;
+      padding: 1.2em 2px;
    }
 }
