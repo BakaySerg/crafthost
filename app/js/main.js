@@ -218,6 +218,11 @@ document.addEventListener('DOMContentLoaded', function(){
 						});
 						this.classList.add('checked');
 					}
+					if (this.getAttribute('data-counter')) {
+						let step = document.querySelector('.step__current');
+						let val = this.getAttribute('data-counter');
+						step.innerHTML = val;
+					}
 				});
 			}
 		);

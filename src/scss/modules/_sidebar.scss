@@ -423,10 +423,11 @@
    }
    &__scale {
       height: 5px;
-      width: 50%;
+      width: 0%;
       border-radius: 4px;
       margin-top: -1px;
       margin-bottom: -1px;
+      transition: .2s ease;
    }
 }
 [data-color=green] .progress__percent {
