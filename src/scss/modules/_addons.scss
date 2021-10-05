@@ -1,0 +1,59 @@
+.addons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(301px, 1fr));
+	grid-gap: 20px;
+	width: 100%;
+	max-width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	@media (max-width: 1025px) {
+		margin-bottom: 25px;
+	}
+	@media (max-width: 500px) {
+		margin-bottom: 20px;
+		grid-gap: 14px;
+		grid-template-columns: repeat(auto-fill, minmax(284px, 1fr))
+	}
+   &__card {
+      padding: 24px 25px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1.6em;
+      font-size: em(14);
+      .color-alert {font-weight: bold;}
+   }
+   &__category {
+      padding-right: 1em;
+      padding: .3em .8em;
+      margin-right: auto;
+   }
+   .i-addons {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+   }
+   &__text {
+      text-align: center;
+      max-width: 282px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 5px;
+      .h3 {
+         padding-bottom: .6em;
+      }
+      p {
+         font-size: em(15.4);
+         line-height: 1.44;
+      }
+   }
+   .addons__cta {
+      margin-top: auto;
+      justify-content: center;
+   }
+}

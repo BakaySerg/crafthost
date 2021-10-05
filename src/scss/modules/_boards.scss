@@ -9,6 +9,9 @@
       padding: 20px 14px 10px;
       min-height: calc(100vh - 232px);
    }
+   @media (max-width: 360px){
+      padding: 14px 14px 10px;
+   }
 }
 .sort__title {
    display: flex;
@@ -368,6 +371,9 @@
          margin-bottom: 20px;
 			padding: 26px 37px;
       }
+      @media (max-width: 360px){
+         margin-bottom: 14px;
+      }
 	}
 	p {line-height: 1.5;}
 	&--sm {
@@ -651,6 +657,7 @@
    @media (max-width: 500px){
       margin-bottom: 20px;
       grid-gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(284px, 1fr))
    }
 }
 .argum {

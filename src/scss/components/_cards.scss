@@ -8,6 +8,9 @@
       padding-left: 0;
       padding-right: 0;
    }
+   @media (max-width: 360px){
+      grid-gap: 14px;
+   }
 }
 .card__box + .text-center{
    padding-top: 23px;

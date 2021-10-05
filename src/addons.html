@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Addons | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Addons</h1>
+				<div class="header__filter">
+					<select class="select" name="ticket__theme">
+						<option value="*">All addons</option>
+						<option value="1">Website Protection</option>
+						<option value="2">Website Backup Pro</option>
+					</select>
+				</div>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+
+			<form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+				<input type="text" required spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find the necessary addons">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
+			</form>
+
+			<div class="addons">
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-support"/></svg>
+						<div class="addons__category">Premium Support</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Premium Support</h3>
+						<p>One Time Escalated Tech Priority Support Service-Related Specific Technical&nbsp;Issue</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-cloud"/></svg>
+						<div class="addons__category">Managed Hosting</div>
+						<div class="addons__discount">Save up <span class="color-alert">to 25%</span></div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Managed Hosting</h3>
+						<p>Safe and trustworthy, our cloud hosting is the ideal place to host your applications, services, and data</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">SSL Certificates</h3>
+						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-build"/></svg>
+						<div class="addons__category"></div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3"></h3>
+						<p></p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-build"/></svg>
+						<div class="addons__category"></div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3"></h3>
+						<p></p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-build"/></svg>
+						<div class="addons__category"></div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3"></h3>
+						<p></p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-build"/></svg>
+						<div class="addons__category"></div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3"></h3>
+						<p></p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup ()-->
+	<div class="drawer" id="new-ticket" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<!-- //= ./pages/modal-create-ticket.html -->
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
+</body>
+
+</html>
