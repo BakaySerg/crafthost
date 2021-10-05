@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 			if (close) {
 				closeDrawer(close);
-				let activeTabs = document.querySelectorAll('[data-tab=active]');
+				let activeTabs = document.querySelectorAll('.drawer__fieldset [data-tab=active]');
 				let fields = document.querySelectorAll('.drawer__form .filled');
 				[...activeTabs].forEach((all) => {
 					all.setAttribute("data-tab", "hidden");

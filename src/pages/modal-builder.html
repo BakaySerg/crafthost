@@ -1,0 +1,34 @@
+<form id="builder-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Build your solution</h2>
+				<p>Get in touch with us</p>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<label class="form-field">
+				<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
+				<span class="form-placeholder">Name</span>
+			</label>
+			<label class="form-field">
+				<input type="email" name="email" class="form-input" placeholder=" " required="">
+				<span class="form-placeholder">Email</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
+				<span class="form-placeholder">Company name</span>
+			</label>
+			<label class="form-field">
+				<input type="tel" name="name" class="form-input" placeholder=" " required="" pattern="[0-9]{6,}" inputmode="numeric">
+				<span class="form-placeholder">Phone number</span>
+			</label>
+			<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+			<div class="catpcha"><img src="img/captcha.png" alt="captcha"></div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Send</button>
+	</div>
+</form>

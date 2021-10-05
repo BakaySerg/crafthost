@@ -661,7 +661,7 @@
 							<div class="progress__percent">0%</div>
 							<div class="progress__bar"><div class="progress__scale"></div></div>
 						</div>
-						<button type="submit" class="btn btn--lg btn--success">Build your solution</button>
+						<button type="submit" class="btn btn--lg btn--success" data-tab-open="builder-tab" data-drawer-trigger aria-controls="builder-modal" aria-expanded="false">Build your solution</button>
 					</div>
 				</div>
 			</form>
@@ -669,10 +669,22 @@
 	</div>
 	//= ./include/footer.html
 
+	<!-- popup (Build your solution)-->
+	<div class="drawer" id="builder-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/modal-builder.html
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
 	<script>
 		const form = document.querySelector('.builder__form');
-		let inputsAll = form.querySelectorAll('input[type]');
+		const inputsAll = form.querySelectorAll('input[type]');
 		if (form) {
 			const webOutputValue = document.querySelector('[data-web-output] .progress__scale'),
 					cloudOutputValue = document.querySelector('[data-cloud-output] .progress__scale'),
@@ -685,6 +697,7 @@
 				let totalWebData = 0,
 						totalCloudData = 0,
 						totalCustomData = 0;
+
 				[...inputsAll].forEach((input) => {
 					totalWebData += Number(input.getAttribute("data-web-value"));
 					totalCloudData += Number(input.getAttribute("data-cloud-value"));
@@ -694,6 +707,7 @@
 					cloudData = 0,
 					customData = 0,
 					inputsChecked = form.querySelectorAll('input[type]:checked');
+
 				[...inputsChecked].forEach((input) => {
 					webData += Number(input.getAttribute("data-web-value"));
 					cloudData += Number(input.getAttribute("data-cloud-value"));
@@ -709,8 +723,7 @@
 				cloudOutputValue.style.width = `${resultCloudData}%`;
 				customOutputValue.style.width = `${resultCustomData}%`;
 			});
-		}
-
+		};
 	</script>
 </body>
 </html>
