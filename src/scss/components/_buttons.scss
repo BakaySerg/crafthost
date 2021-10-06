@@ -207,13 +207,14 @@
 		content: attr(data-help);
 		position: absolute;
 		display: block;
-		padding: 20px;
+		padding: 18px 14px;
 		font-size: .92em;
 		font-weight: normal;
+		line-height: 1.5;
 		top: calc(100% + 15px);
 		right: 0;
-		min-width: 220px;
-		max-width: 230px;
+		min-width: 234px;
+		max-width: 242px;
 		color: #fff;
 		background-color: $dialog;
 		border-radius: 3px;
@@ -248,8 +249,9 @@
 		}
 		&:before {
 			top: auto;
-			bottom: calc(100% + 10px);
+			bottom: calc(100% + 5px);
 			right: -20px;
+			text-align: left;
 			@media (max-width: 360px){
 				width: 190px;
 				max-width: 190px;
@@ -258,7 +260,7 @@
 		&:after {
 			transform: rotate(180deg);
 			top: auto;
-			bottom: calc(100% + 5px);
+			bottom: 100%;
 			right: 5px;
 		}
 	}

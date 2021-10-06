@@ -1,6 +1,6 @@
 .addons {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(301px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
 	grid-gap: 20px;
 	width: 100%;
 	max-width: 1120px;
@@ -16,10 +16,16 @@
 		grid-template-columns: repeat(auto-fill, minmax(284px, 1fr))
 	}
    &__card {
-      padding: 24px 25px 12px;
+      padding: 24px 23px 12px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      @media (min-width: 991px){
+         min-height: 244px;
+      }
+      @media (max-width: 380px){
+         padding: 16px 12px 8px;
+      }
    }
    &__header {
       display: flex;
@@ -40,12 +46,17 @@
    }
    &__text {
       text-align: center;
-      max-width: 282px;
+      max-width: 314px;
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 5px;
+      flex-grow: .3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       .h3 {
          padding-bottom: .6em;
+         line-height: 1.16;
       }
       p {
          font-size: em(15.4);
@@ -55,5 +66,81 @@
    .addons__cta {
       margin-top: auto;
       justify-content: center;
+   }
+}
+.order {
+   &__card {
+      border: 1px solid $border;
+      padding: 25px 24px 26px;
+      display: flex;
+      margin-bottom: 20px;
+      @media (max-width: 380px){
+         margin-bottom: 14px;
+      }
+      @media (max-width: 360px){
+         flex-wrap: wrap;
+         padding: 17px 18px 19px;
+      }
+   }
+   &__text {
+      max-width: 290px;
+      margin-right: auto;
+      padding-right: 8px;
+      @media (max-width: 360px) {
+         width: 100%;
+         max-width: 100%;
+         padding-right: 0;
+         padding-bottom: .6em;
+      }
+      .h5 {
+         text-shadow: none;
+         font-weight: normal;
+         color: $headline;
+         padding-bottom: .5em;
+      }
+      p{
+         font-size: em(14);
+         color: $text;
+         line-height: 1.6;
+      }
+      .help:before {
+         min-width: 214px;
+         max-width: 220px;
+         right: auto;
+         left: -20px;
+      }
+      @media (max-width: 500px){
+         .help--icon {padding: 3px;}
+      }
+      .check-list li {
+         font-size: em(14);
+         color: $text;
+      	padding: 0 0 .6em .5em;
+         &:last-child {padding-bottom: 0;}
+         @media (max-width: 500px){
+            font-size: .92em;
+         }
+         @media (max-width: 359px){
+            padding: 0 0 .5em .2em;
+         }
+      }
+   }
+   &__cta {
+      padding: 0 3px;
+      align-self: flex-end;
+      .card__price {
+         text-align: left;
+         max-width: 136px;
+         b {font-size: 1.8em;}
+      }
+      @media (max-width: 359px) {
+         padding: 0;
+         .card__price {
+            max-width: 100%;
+         }
+         .btn--lg {
+         	min-width: 138px;
+         }
+      }
    }
 }
