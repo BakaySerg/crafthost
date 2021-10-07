@@ -69,6 +69,34 @@
    }
 }
 .order {
+   &__roll {
+      border: 1px solid $border;
+      padding: 26px 24px 0;
+      &-header {
+         padding-bottom: 1.9em;
+         .h5 {
+         	text-shadow: none;
+         	font-weight: normal;
+         	color: $headline;
+         	padding-bottom: .5em;
+         }
+         p {
+         	font-size: em(14);
+         	color: $text;
+         	line-height: 1.6;
+         }
+      }
+      .privacy__item {
+         border-bottom: none;
+         border-top: 1px solid $border;
+         padding-left: 0;
+         padding-right: 0;
+      }
+      & + .v-center {
+         padding: 23px 0;
+         font-size: em(14);
+      }
+   }
    &__card {
       border: 1px solid $border;
       padding: 25px 24px 26px;
