@@ -72,7 +72,7 @@
 						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<a href="addons-ssl-certificates.html" class="btn btn--lg btn--success">Get</a>
 					</div>
 				</div>
 
@@ -98,7 +98,7 @@
 					<div class="addons__text">
 						<h3 class="h3">Website Backup Pro</h3>
 						<p>Advanced Daily backups <br>One-click restore
-							<a href="help.html" class="help help--icon" target="_blank" data-help="We can never be careful enough and that's why we offer you a possibility to backup data to another data centre than the one where the server is physically located. The backup runs in regular intervals on our dedicated optical lines between data centres.">
+							<a href="javascript:;" class="help help--icon" data-help="We can never be careful enough and that's why we offer you a possibility to backup data to another data centre than the one where the server is physically located. The backup runs in regular intervals on our dedicated optical lines between data centres.">
 								<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
 							</a>
 						</p>
@@ -118,7 +118,7 @@
 						<p>We will immediately contact you regarding your website or server operation incidents via e-mail</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="monitoring-tab" data-drawer-trigger aria-controls="monitoring-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -132,7 +132,7 @@
 						<p>Crafthost DDoS protection quickly mitigates any size attack without getting in the way of legitimate traffic or increasing latency </p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="ddos-tab" data-drawer-trigger aria-controls="ddos-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -146,7 +146,7 @@
 						<p>Is a full analysis of all the <br>factors that affect websites</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="audit-tab" data-drawer-trigger aria-controls="audit-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -160,7 +160,7 @@
 						<p>Application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="app-penetration-tab" data-drawer-trigger aria-controls="app-penetration-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -318,6 +318,46 @@
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
 				//= ./pages//addons/modal-backup-pro.html
+			</div>
+		</div>
+	</div>
+	<!-- Website Monitoring-->
+	<div class="drawer" id="monitoring-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-website-monitoring.html
+			</div>
+		</div>
+	</div>
+	<!-- DDoS Protection -->
+	<div class="drawer" id="ddos-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-ddos-protection.html
+			</div>
+		</div>
+	</div>
+	<!-- website-audit -->
+	<div class="drawer" id="audit-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-website-audit.html
+			</div>
+		</div>
+	</div>
+	<!-- website-audit -->
+	<div class="drawer" id="app-penetration-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-app-penetration-test.html
 			</div>
 		</div>
 	</div>

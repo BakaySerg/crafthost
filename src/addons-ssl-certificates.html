@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SSL Certificates | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">SSL Certificates</h1>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+			<div class="card__box container">
+				<div class="text__card box">
+					<div class="text__descr">
+						<h3 class="h3">Domain Verification (DV)
+							<a href="javascript:;" class="help help--icon" data-help="Protect one website">
+								<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+							</a>
+						</h3>
+						<p class="text__card-remark">Single Certificates <span class="cart__ribbon cart__ribbon--danger">Free</span></p>
+						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site. Domain Validation (DV) SSL certificates are the reliable way to add industry-standard encryption to web sites</p>
+						<ul class="card__list">
+							<li>Easy to activate</li>
+							<li>Available in 15 minutes or less</li>
+							<li>No paperwork needed</li>
+						</ul>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
+					</div>
+				</div>
+				<div class="text__card box">
+					<div class="text__descr">
+						<h3 class="h3">Organization Verification (OV)
+							<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a>
+						</h3>
+						<p class="text__card-remark">Multi-Domain SSL & SAN<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a></p>
+						<p>Validate your organization’s digital identity and secure sensitive customer data. Organizational Validation (OV) certificates will authenticate your organization’s connections, enable encryption, and turn on web browser trust indicators</p>
+						<ul class="card__list">
+							<li>Company information inside SSL details</li>
+							<li>Visitors can check company / organizational information, ensuring greater user trust</li>
+							<li>Paperwork needed</li>
+						</ul>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
+					</div>
+				</div>
+				<div class="text__card box">
+					<div class="text__descr">
+						<h3 class="h3">Extended Certificate (EV)
+							<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg> </a>
+						</h3>
+						<p class="text__card-remark">Wildcard SSL<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a></p>
+						<p>Increase your end user’s confidence and transaction rates by showing your true identity online. An Extended Validation (EV) SSL will enable your company name to be added to the browser interface in a branded address bar</p>
+						<ul class="card__list">
+							<li>Company information inside SSL details</li>
+							<li>Highest Trustworthy feature available
+								<a href="javascript:;" class="help help--icon" data-help="Within 1-5 day/s after all documentation is received"> <svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg> </a>
+							</li>
+							<li>Paperwork needed</li>
+						</ul>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="button" class="btn btn--icon btn--lg btn--outlined" data-tab-open="plans-tab" data-drawer-trigger aria-controls="plans-modal" aria-expanded="false">
+					<svg viewBox="0 0 32 32"><use xlink:href="#i-compare"/></svg>
+					Compare SSL Certificates
+				</button>
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup (Compare certificates)-->
+	<div class="drawer drawer--lg" id="plans-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/modal-compare-hostings-dd.html
+			</div>
+		</div>
+	</div>
+	<!-- SSL Certificates  -->
+	<div class="drawer" id="ssl-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-ssl-certificates.html
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
+</body>
+</html>

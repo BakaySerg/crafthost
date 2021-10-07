@@ -203,24 +203,30 @@
 	border-bottom: 1px solid currentColor;
 	position: relative;
 	cursor: help;
+	&:focus {
+		cursor: help;
+	}
 	&:before {
 		content: attr(data-help);
 		position: absolute;
 		display: block;
-		padding: 18px 14px;
-		font-size: .92em;
+		padding: 14px;
+		font-size: 13px;
 		font-weight: normal;
 		line-height: 1.5;
 		top: calc(100% + 15px);
 		right: 0;
-		min-width: 234px;
+		min-width: 220px;
 		max-width: 242px;
 		color: #fff;
 		background-color: $dialog;
 		border-radius: 3px;
 		pointer-events: none;
 		opacity: 0;
-		z-index: 1;
+		z-index: 11;
+		@media (max-width: 500px){
+			font-size: 12px;
+		}
 	}
 	&:after {
 		content: '';
@@ -242,7 +248,7 @@
 		width: 20px;
 		height: 20px;
 		padding: 1px;
-		margin: -4px 0 -4px 4px;
+		margin: -4px 0 -4px 2px;
 		top: 3px;
 		@media (max-width: 359px){
 			margin-left: 1px;
@@ -271,6 +277,12 @@
 			transition: .4s;
 		}
 	}
+}
+.h3 > .help--icon:before {
+	font-size: 13px;
+	min-width: 170px;
+	text-align: center;
+	padding: 12px;
 }
 .i-question {
 	display: inline-block;

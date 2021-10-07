@@ -83,7 +83,7 @@
       }
    }
    &__text {
-      max-width: 290px;
+      max-width: 310px;
       margin-right: auto;
       padding-right: 8px;
       @media (max-width: 360px) {
@@ -91,6 +91,15 @@
          max-width: 100%;
          padding-right: 0;
          padding-bottom: .6em;
+      }
+      .help:before {
+         min-width: 214px;
+         max-width: 220px;
+         right: auto;
+         left: -20px;
+      }
+      @media (max-width: 500px){
+         .help--icon {padding: 3px;}
       }
       .h5 {
          text-shadow: none;
@@ -103,14 +112,8 @@
          color: $text;
          line-height: 1.6;
       }
-      .help:before {
-         min-width: 214px;
-         max-width: 220px;
-         right: auto;
-         left: -20px;
-      }
-      @media (max-width: 500px){
-         .help--icon {padding: 3px;}
+      p +.check-list {
+         padding-top: .5em;
       }
       .check-list li {
          font-size: em(14);
@@ -140,6 +143,54 @@
          }
          .btn--lg {
          	min-width: 138px;
+         }
+      }
+   }
+}
+.text {
+   &__card {
+      padding: 34px 22px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      @media (min-width: 991px) {
+      	min-height: 244px;
+      }
+      @media (max-width: 380px) {
+      	padding: 18px 12px 8px;
+      }
+      .addons__cta {
+         margin-top: auto;
+         justify-content: center;
+      }
+   }
+   &__card-remark {
+      position: relative;
+      padding-bottom: 1.4em;
+      .cart__ribbon {
+         position: static;
+         display: inline-block;
+         padding: 5px 17px;
+      }
+   }
+   &__descr {
+      text-align: center;
+      color: $text;
+      .h3 {
+         font-size: em(19);
+         padding-bottom: 1em;
+      }
+      p {
+         font-size: em(14);
+         line-height: 1.5;
+      }
+      .card__list {
+         padding-top: 1.8em;
+         text-align: left;
+         font-size: em(15);
+         color: $headline;
+         @media (max-width: 500px){
+            max-width: 290px;
          }
       }
    }
