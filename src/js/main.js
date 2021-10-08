@@ -84,13 +84,17 @@ document.addEventListener('DOMContentLoaded', function(){
 	/**
 		 temp link
 	**/
-	const changeLocation = document.querySelector('[data-link]');
-	if (changeLocation) {
-		changeLocation.addEventListener('click', function(e) {
-			e.preventDefault();
-			window.location.href = this.getAttribute('data-link');
-		})
-	};
+	const tempLink = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-link]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					window.location.href = this.getAttribute('data-link');
+				});
+			});
+		};
+	tempLink();
 
 	/**
 		 checkboxes

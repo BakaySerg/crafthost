@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Profile settings | Crafthost</title>
+	<title>Domain settings | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -24,6 +25,7 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 </head>
+
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -157,49 +159,118 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Profile settings</h1>
+				<h1 class="h1">Domain settings</h1>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
+			<form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+				<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Search</button>
+			</form>
+
+			<div class="container box info">
+				<div class="info__header info__header--pic">
+					<div class="info__domain">
+						<div class="info__img"><img srcset="img/domain/argument-1.png, img/domain/argument-1-2x.png 2x" src="img/domain/argument-1.png" alt=".com"></div>
+						<div class="info__text-lg">website.tech</div>
+					</div>
+					<div class="info__presence">
+						<div class="info__text">Account registration date:</div>
+						<div class="info__date">21.06.2021</div>
+					</div>
+				</div>
+				<div class="info__footer align-left">
+					Domain Protection Plan: Basic Privacy
+					<button type="button" class="btn btn--lg btn--simply">Upgrade</button>
+				</div>
+			</div>
+
+			<div class="board__message board__message--compressed">
+				<figure class="message__picture">
+					<img srcset="img/profile/domain/protection.png, img/profile/domain/protection-2x.png 2x" src="img/profile/domain/protection.png" alt="online-store">
+				</figure>
+				<div class="message__descr">
+					<h2 class="message__title">Full Domain Privacy & Protection</h2>
+					<ul class="message__precept">
+						<li>Notifies you instantly if any suspicious activity occurs</li>
+						<li>Makes domain phishing and hijacking virtually impossible</li>
+						<li>Holds on to your domain even if your credit card expires</li>
+					</ul>
+					<p>That`s how often criminals attempt to steal domains. Your domain name is your most valuable online asset and needs protection</p>
+					<a href="#" class="btn btn--lg btn--icon btn--success">Upgrade now<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
+			</div>
+
 			<div class="container box setting__list">
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Domain Auto renew</h3>
+					</div>
+					<div class="setting__cta">
+						<label class="switch__label">
+							<input type="checkbox" name="auto-renew" checked>
+							<span class="switch__circle"></span>
+						</label>
+					</div>
+				</div>
 
 				<div class="setting__list-item">
-					<div class="setting__picture"><img srcset="img/profile/profile-1.png, img/profile/profile-1-2x.png 2x" src="img/profile/profile-1.png" alt="*"></div>
 					<div class="setting__descr">
-						<a href="profile-owner.html" class="h3">Account owner</a>
-						<div class="status" data-status="danger">Not filled</div>
-						<a href="profile-owner.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<h3 class="h3">Contact Information</h3>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
+
 				<div class="setting__list-item">
-					<div class="setting__picture"><img srcset="img/profile/profile-2.png, img/profile/profile-2-2x.png 2x" src="img/profile/profile-2.png" alt="*"></div>
 					<div class="setting__descr">
-						<a href="profile-info.html" class="h3">Account information</a>
-						<div class="setting__short">johndoe@mail.com</div>
-						<a href="profile-info.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<h3 class="h3">Domain Privacy</h3>
+					</div>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="domain-privacy-tab" data-drawer-trigger aria-controls="domain-privacy-modal" aria-expanded="false" aria-label="Open">Settings</button>
 					</div>
 				</div>
+
 				<div class="setting__list-item">
-					<div class="setting__picture"><img srcset="img/profile/profile-3.png, img/profile/profile-3-2x.png 2x" src="img/profile/profile-3.png" alt="*"></div>
 					<div class="setting__descr">
-						<a href="profile-security.html" class="h3">Security settings</a>
-						<div class="status" data-status="danger">Add a mobile phone</div>
-						<a href="profile-security.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<h3 class="h3">Domain Lock</h3>
+					</div>
+					<div class="setting__cta">
+						<label class="switch__label">
+							<input type="checkbox" name="lock">
+							<span class="switch__circle"></span>
+						</label>
 					</div>
 				</div>
+
 				<div class="setting__list-item">
-					<div class="setting__picture"><img srcset="img/profile/profile-4.png, img/profile/profile-4-2x.png 2x" src="img/profile/profile-4.png" alt="*"></div>
 					<div class="setting__descr">
-						<a href="profile-refferal.html" class="h3">Refferal Program</a>
-						<a href="profile-refferal.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<h3 class="h3">Manage DNS</h3>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
+
 				<div class="setting__list-item">
-					<div class="setting__picture"><img srcset="img/profile/profile-5.png, img/profile/profile-5-2x.png 2x" src="img/profile/profile-5.png" alt="*"></div>
 					<div class="setting__descr">
-						<a href="profile-notifications.html" class="h3">Notifications</a>
-						<a href="profile-notifications.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+						<h3 class="h3">Transfer Domain In/Out</h3>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Transfer Domain to another Crafthost Account</h3>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="setting__list-item">
+					<div class="setting__descr">
+						<h3 class="h3">Delete Domain</h3>
+					</div>
+					<div class="setting__cta">
+						<button type="button" class="btn btn--lg btn--simply" data-drawer-trigger aria-controls="delete-domain-modal" aria-expanded="false" aria-label="Alert">Delete</button>
 					</div>
 				</div>
 			</div>
@@ -220,6 +291,110 @@
 	   <div class="widget"></div>
 	</footer>
 
+	<!-- popup (set pin)-->
+	<div class="drawer" id="pin-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="pin-tab" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Support PIN</h2>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<div class="form-usual">
+								<input name="pin" type="text" placeholder="0000" pattern="[0-9]*" inputmode="numeric" required>
+							</div>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Done</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (change password)-->
+	<div class="drawer" id="password-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="password-tab" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Change password</h2>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<label class="form-field">
+								<input type="password" name="old-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+								<span class="form-placeholder">Old password</span>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
+							</label>
+							<div class="align-right forgot"><a class="link" href="#">Forgot password?</a></div>
+							<label class="form-field">
+								<input type="password" name="new-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+								<span class="form-placeholder">New password</span>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
+							</label>
+							<label class="form-field">
+								<input type="password" name="confirm-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
+								<span class="form-placeholder">Confirm password</span>
+								<button type="button" class="btn password-picker">
+									<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+									<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+								</button>
+							</label>
+							<p class="form-remark">Password must be at least 6 characters of medium or strong strength. To&nbsp;increase password strength, use numbers and special characters.</p>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Done</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (remove account)-->
+	<div class="drawer drawer--alert" id="delete-domain-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				<div class="drawer__item">
+					<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--alert">
+							<div class="drawer__title">
+								<h2 class="h1">Are you sure?</h2>
+								<p>Do you really want delete these&nbsp;domain?<br>This process connot be undone.</p>
+								<div class="drawer__cta">
+									<button type="button" class="btn btn--lg btn--outlined" data-drawer-close>Cancel</button>
+									<button type="button" class="btn btn--lg btn--danger">Delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
 </body>
 </html>
