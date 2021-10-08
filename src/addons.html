@@ -4,7 +4,6 @@
 	<title>Addons | Crafthost</title>
 	//= ./include/head.html
 </head>
-
 <body>
 	<div class="wrapper">
 		//= ./include/icon-sprite.html
@@ -230,7 +229,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="enterprise-tab" data-drawer-trigger aria-controls="enterprise-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -244,7 +243,7 @@
 						<p>MS Office 365 Mail, G Suite (E-mail only), G Suite (All services), Yandex Mail (Free)</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -258,7 +257,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="custom-order-tab" data-drawer-trigger aria-controls="custom-order-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -272,7 +271,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="account-addons-tab" data-drawer-trigger aria-controls="account-addons-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -371,7 +370,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- domains -->
+	<!-- Domains -->
 	<div class="drawer" id="domains-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
@@ -381,9 +380,48 @@
 			</div>
 		</div>
 	</div>
+	<!-- Enterprise-solution -->
+	<div class="drawer" id="enterprise-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-enterprise-solution.html
+			</div>
+		</div>
+	</div>
+	<!-- Email-spam-protection -->
+	<div class="drawer" id="email-spam-protection-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-email-spam-protection.html
+			</div>
+		</div>
+	</div>
+	<!-- Custom-order -->
+	<div class="drawer" id="custom-order-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-custom-order.html
+			</div>
+		</div>
+	</div>
+	<!-- Account-addons -->
+	<div class="drawer" id="account-addons-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages//addons/modal-account-addons.html
+			</div>
+		</div>
+	</div>
 
 	<script src="js/main.js"></script>
 	<script defer src="js/drawer.js"></script>
 </body>
-
 </html>

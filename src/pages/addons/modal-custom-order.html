@@ -1,0 +1,52 @@
+<form id="custom-order-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Custom Order</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="order__card">
+				<div class="order__text">
+					<ul class="check-list">
+						<li>SSL installation</li>
+						<li>Software Installation</li>
+						<li>Account Restore</li>
+						<li>Migration Request</li>
+					</ul>
+				</div>
+			</div>
+			<b class="pb-1">Upgrade Your Web Hosting</b>
+			<label class="form-field">
+				<input type="email" name="c-email" class="form-input" placeholder=" " required>
+				<span class="form-placeholder">Your Email</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="c-dom-name" class="form-input" placeholder=" " required minlength="2">
+				<span class="form-placeholder">Domain Name</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="c-site-name" class="form-input" placeholder=" " minlength="2">
+				<span class="form-placeholder">Your sites username</span>
+			</label>
+			<label class="form-field">
+				<input type="password" name="c-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+				<span class="form-placeholder">Your sites password</span>
+			</label>
+			<div class="pb-05">What is your current plan?</div>
+			<select class="select" name="curr">
+				<option value="0">Select</option>
+				<option value="1">Option 2</option>
+			</select>
+			<div class="pb-05">What is the new plan you want to be upgraded to?</div>
+			<select class="select" name="upgrate">
+				<option value="0">Select</option>
+				<option value="1">Option 2</option>
+			</select>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Get a Quote</button>
+	</div>
+</form>

@@ -24,7 +24,6 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 </head>
-
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -376,7 +375,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="enterprise-tab" data-drawer-trigger aria-controls="enterprise-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -390,7 +389,7 @@
 						<p>MS Office 365 Mail, G Suite (E-mail only), G Suite (All services), Yandex Mail (Free)</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -404,7 +403,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="custom-order-tab" data-drawer-trigger aria-controls="custom-order-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -418,7 +417,7 @@
 						<p>Text Text Text</p>
 					</div>
 					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="account-addons-tab" data-drawer-trigger aria-controls="account-addons-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
@@ -927,7 +926,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- domains -->
+	<!-- Domains -->
 	<div class="drawer" id="domains-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
@@ -961,7 +960,7 @@
 											<span>12345, New York</span>
 											<span>USA</span>
 										</div>
-										<div class="privacy__card" data-trigger-modal="domain-choise-account">
+										<div class="privacy__card">
 											<div class="privacy__status privacy__status--warn">
 												<svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
 												<div>Unsecured:</div>
@@ -982,7 +981,7 @@
 											<span>12345, New York</span>
 											<span>USA</span>
 										</div>
-										<div class="privacy__card" data-trigger-tab="domain-choise-account">
+										<div class="privacy__card">
 											<div class="privacy__status privacy__status--success">
 												<svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
 												<div>Secure:</div>
@@ -1008,9 +1007,250 @@
 			</div>
 		</div>
 	</div>
+	<!-- Enterprise-solution -->
+	<div class="drawer" id="enterprise-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="enterprise-tab" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Enterprise Solutions</h2>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<div class="order__card">
+								<div class="order__text">
+									<ul class="check-list">
+										<li>Private Cloud</li>
+										<li>Load Balancer</li>
+										<li>CDNs</li>
+										<li>Solution Builder</li>
+									</ul>
+								</div>
+							</div>
+							<b class="pb-1">Form</b>
+							<label class="form-field">
+								<input type="email" name="email" class="form-input" placeholder=" " required>
+								<span class="form-placeholder">Your Email</span>
+							</label>
+							<label class="form-field">
+								<input type="text" name="dom-name" class="form-input" placeholder=" " required minlength="2">
+								<span class="form-placeholder">Domain Name</span>
+							</label>
+							<label class="form-field">
+								<input type="text" name="site-name" class="form-input" placeholder=" " minlength="2">
+								<span class="form-placeholder">Your sites username</span>
+							</label>
+							<label class="form-field">
+								<input type="password" name="psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+								<span class="form-placeholder">Your sites password</span>
+							</label>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Get a Quote</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Email-spam-protection -->
+	<div class="drawer" id="email-spam-protection-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="email-spam-protection-tab" class="drawer__item" data-tab="hidden">
+				   <div class="drawer__body">
+				      <div class="drawer__header drawer__header--noborder">
+				         <div class="drawer__title">
+				            <h2 class="drawer__headline">Email Spam Protection</h2>
+				         </div>
+				      </div>
+				      <div class="drawer__content">
+				
+				         <div class="order__card order__card--inline">
+				            <div class="order__text">
+				               <h5 class="h5">For 1 Website</h5>
+				            </div>
+				            <div class="order__cta">
+				               <div class="card__price"><b>$2</b> /month</div>
+				               <button type="button" class="btn btn--lg btn--success">Order now</button>
+				            </div>
+				         </div>
+				         <!-- 2 -->
+				         <div class="order__card order__card--inline">
+				            <div class="order__text">
+				               <h5 class="h5">For 2 Websites</h5>
+				            </div>
+				            <div class="order__cta">
+				               <div class="card__price"><b>$4</b> /month</div>
+				               <button type="button" class="btn btn--lg btn--success">Order now</button>
+				            </div>
+				         </div>
+				         <!-- 3 -->
+				         <div class="order__card order__card--inline">
+				            <div class="order__text">
+				               <h5 class="h5">For 3+ Websites</h5>
+				            </div>
+				            <div class="order__cta">
+				               <div class="card__price"><b>$5</b> /month</div>
+				               <button type="button" class="btn btn--lg btn--success">Order now</button>
+				            </div>
+				         </div>
+				      </div>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Custom-order -->
+	<div class="drawer" id="custom-order-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="custom-order-tab" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Custom Order</h2>
+							</div>
+						</div>
+						<div class="drawer__content">
+							<div class="order__card">
+								<div class="order__text">
+									<ul class="check-list">
+										<li>SSL installation</li>
+										<li>Software Installation</li>
+										<li>Account Restore</li>
+										<li>Migration Request</li>
+									</ul>
+								</div>
+							</div>
+							<b class="pb-1">Upgrade Your Web Hosting</b>
+							<label class="form-field">
+								<input type="email" name="c-email" class="form-input" placeholder=" " required>
+								<span class="form-placeholder">Your Email</span>
+							</label>
+							<label class="form-field">
+								<input type="text" name="c-dom-name" class="form-input" placeholder=" " required minlength="2">
+								<span class="form-placeholder">Domain Name</span>
+							</label>
+							<label class="form-field">
+								<input type="text" name="c-site-name" class="form-input" placeholder=" " minlength="2">
+								<span class="form-placeholder">Your sites username</span>
+							</label>
+							<label class="form-field">
+								<input type="password" name="c-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+								<span class="form-placeholder">Your sites password</span>
+							</label>
+							<div class="pb-05">What is your current plan?</div>
+							<select class="select" name="curr">
+								<option value="0">Select</option>
+								<option value="1">Option 2</option>
+							</select>
+							<div class="pb-05">What is the new plan you want to be upgraded to?</div>
+							<select class="select" name="upgrate">
+								<option value="0">Select</option>
+								<option value="1">Option 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success btn--disabled">Get a Quote</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Account-addons -->
+	<div class="drawer" id="account-addons-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="account-addons-tab" class="drawer__item" data-tab="hidden">
+				   <div class="drawer__body">
+				      <div class="drawer__header">
+				         <div class="drawer__title">
+				            <h2 class="drawer__headline">Email Spam Protection</h2>
+				         </div>
+				      </div>
+				      <div class="drawer__content">
+				         <div class="accordion">
+				            <div class="accordion__item expanded">
+				               <div class="accordion__title" data-collapse>
+				                  <h4 class="h4">General Account Functions</h4>
+				                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+				               </div>
+				               <div class="accordion__hidden">
+				                  <div class="sked">
+				                     <a href="#" class="sked__link">Upgrade Account</a><span>Free, Upgrade your hosting package</span>
+				                     <a href="#" class="sked__link">Downgrade Account</a><span>$10, Downgrade your hosting package</span>
+				                     <a href="#" class="sked__link">Update Billing Information</a><span>Login to Billing</span>
+				                     <a href="#" class="sked__link">Register / Transfer Domains</a><span>Register or transfer a domain's registration us </span>
+				                     <a href="#" class="sked__link">Domain Name Transfer</a><span>Transfer registration of your domain to us </span>
+				                     <a href="#" class="sked__link">Build A Website Quote</a><span>Contact us for a web-design quote</span>
+				                     <a href="#" class="sked__link">Restore Account</a><span>$25, Restore your account from one of our backups</span>
+				                     <a href="#" class="sked__link">Terminate Account</a><span>Cancel your account</span>
+				                  </div>
+				               </div>
+				            </div>
+				            <div class="accordion__item">
+				               <div class="accordion__title" data-collapse>
+				                  <h4 class="h4">Shared Account Addons</h4>
+				                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+				               </div>
+				               <div class="accordion__hidden">
+				               </div>
+				            </div>
+				
+				            <div class="accordion__item">
+				               <div class="accordion__title" data-collapse>
+				                  <h4 class="h4">Reseller Account Addons</h4>
+				                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+				               </div>
+				               <div class="accordion__hidden">
+				
+				               </div>
+				            </div>
+				
+				            <div class="accordion__item">
+				               <div class="accordion__title" data-collapse>
+				                  <h4 class="h4">VPS Account Addons</h4>
+				                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+				               </div>
+				               <div class="accordion__hidden">
+				               </div>
+				            </div>
+				
+				            <div class="accordion__item">
+				               <div class="accordion__title" data-collapse>
+				                  <h4 class="h4">Dedicated Server Addons</h4>
+				                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+				               </div>
+				               <div class="accordion__hidden">
+				               </div>
+				            </div>
+				
+				         </div>
+				      </div>
+				   </div>
+				   <div class="drawer__footer">
+				      <button class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Close</button>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/main.js"></script>
 	<script defer src="js/drawer.js"></script>
 </body>
-
 </html>

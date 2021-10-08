@@ -3,8 +3,19 @@
 .pl-0 {padding-left: 0!important;}
 .pr-0 {padding-right: 0!important;}
 
-.pb-05 {padding-bottom: .6em;}
-
+.pb-05 {
+	padding-bottom: .6em;
+	display: block;
+	padding-left: 1px;
+	@media (max-width: 500px){
+		line-height: 1.2;
+	}
+}
+.pb-1 {
+	padding-bottom: 1em;
+	display: block;
+	padding-left: 1px;
+}
 .box {
 	background-color: #fff;
 	box-shadow: -1px 1px 10px rgba(30,23,104,.04);

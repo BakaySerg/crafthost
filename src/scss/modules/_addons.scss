@@ -102,6 +102,20 @@
       padding: 25px 24px 26px;
       display: flex;
       margin-bottom: 20px;
+      &--inline {
+      	@media (min-width: 359px) {
+            align-items: center;
+            .order__text .h5 {padding-bottom: 0;}
+            .order__cta {
+               display: flex;
+               align-items: center;
+               .card__price {
+               	margin-bottom: .2em;
+                  margin-right: 1.4em;
+               }
+            }
+         }
+      }
       @media (max-width: 380px){
          margin-bottom: 14px;
       }
@@ -220,6 +234,25 @@
          @media (max-width: 500px){
             max-width: 290px;
          }
+      }
+   }
+}
+.sked {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: .9em;
+   font-size: em(14);
+   &__link {
+      text-decoration: underline;
+      color: $headline;
+      padding-right: .6em;
+      &:hover {color: $active;}
+   }
+   span {color: $text;}
+   @media (max-width: 380px){
+      gap: .5em;
+      &__link {
+         max-width: 150px;
       }
    }
 }
