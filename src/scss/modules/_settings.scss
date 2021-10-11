@@ -602,3 +602,29 @@
       font-weight: bold;
    }
 }
+.dns {
+   padding: 28px 24px;
+   .message__title {
+      margin-left: 1.2em;
+      margin-bottom: .6em;
+   }
+   &__table {
+      border-collapse: collapse;
+      min-width: 100%;
+      margin-bottom: 40px;
+      th {
+         border-bottom: 1px solid $border;
+         text-align: left;
+         font-weight: normal;
+         font-size: em(14);
+         padding-bottom: 1.3em;
+      }
+      tr:not(:last-of-type) td{
+         border-bottom: 1px solid $border;
+      }
+      td {
+         color: $headline;
+         padding: 1.2em .3em 1.2em 0;
+      }
+   }
+}

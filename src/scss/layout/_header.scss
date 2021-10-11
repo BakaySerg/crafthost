@@ -783,7 +783,8 @@
    li + li:before {
       content: '';
       display: inline-block;
-      vertical-align: text-top;
+      vertical-align: middle;
+      // vertical-align: text-top;
       height: 13px;
       width: 13px;
       background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.83334 9.33301L8.16668 6.99967L5.83334 4.66634' stroke='%23C2C2C4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
