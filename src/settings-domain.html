@@ -40,10 +40,7 @@
 				</div>
 			</div>
 
-			<div class="board__message board__message--compressed">
-				<figure class="message__picture">
-					<img srcset="img/profile/domain/protection.png, img/profile/domain/protection-2x.png 2x" src="img/profile/domain/protection.png" alt="online-store">
-				</figure>
+			<div class="board__message board__message--compressed" style="--bg1x: url(../img/profile/domain/protection.png); --bg2x:url(../img/profile/domain/protection-2x.png);">
 				<div class="message__descr">
 					<h2 class="message__title">Full Domain Privacy & Protection</h2>
 					<ul class="message__precept">
@@ -100,21 +97,21 @@
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Manage DNS</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<a href="settings-dns-manage.html" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></a>
 					</div>
 				</div>
 
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Transfer Domain In/Out</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="-tab" data-drawer-trigger aria-controls="-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Transfer Domain to another Crafthost Account</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="contact-info-tab" data-drawer-trigger aria-controls="contact-info-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="-tab" data-drawer-trigger aria-controls="-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
@@ -131,29 +128,18 @@
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup (set pin)-->
-	<div class="drawer" id="pin-modal" data-drawer-target>
+	<!-- popup (Contact Information)-->
+	<div class="drawer" id="contact-info-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/modal-pin.html
+				//= ./pages/settings/modal-contact-info.html
 			</div>
 		</div>
 	</div>
 
-	<!-- popup (change password)-->
-	<div class="drawer" id="password-modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__wrapper">
-			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-			<div class="drawer__fieldset">
-				//= ./pages/modal-password.html
-			</div>
-		</div>
-	</div>
-
-	<!-- popup (remove account)-->
+	<!-- popup (remove domain)-->
 	<div class="drawer drawer--alert" id="delete-domain-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__alert">

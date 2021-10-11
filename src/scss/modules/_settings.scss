@@ -28,7 +28,7 @@
       padding: 10px 37px 10px 1px;
       flex-grow: .9;
       @media (max-width: 380px){
-         padding: 5px 20px 5px 0;
+         padding: 5px 26px 5px 0;
       }
    }
    &__picture + &__descr {
@@ -410,7 +410,7 @@
       &--pic {
          padding: 1px;
          @media (max-width: 500px){
-            padding: 14px 10px;
+            padding: 14px 0;
          }
       }
    }
@@ -586,5 +586,19 @@
          grid-column: 1 / 2;
          padding-top: 0;
       }
+   }
+}
+.couple {
+   &__item {
+      display: flex;
+      padding-bottom: 1.4em;
+      line-height: 1.44;
+   }
+   &__key {
+      min-width: 170px;
+      padding-right: 10px;
+   }
+   &__value {
+      font-weight: bold;
    }
 }

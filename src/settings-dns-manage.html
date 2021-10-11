@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>DNS Management | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">DNS Management</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="settings-domain.html">Domain settings</a></li>
+				<li><a href="#">Manage DNS</a></li>
+			</ul>
+
+			<form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"> <use xlink:href="#i-search"/></svg></i>
+				<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Search</button>
+			</form>
+
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup (Contact Information)-->
+	<div class="drawer" id="contact-info-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/settings/modal-contact-info.html
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (remove domain)-->
+	<div class="drawer drawer--alert" id="delete-domain-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				//= ./pages/modal-delete-domain.html
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
+</body>
+
+</html>
