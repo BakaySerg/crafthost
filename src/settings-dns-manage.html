@@ -30,7 +30,7 @@
 
 			<div class="box container dns">
 				<h2 class="message__title">Name Servers</h2>
-				<table class="dns__table">
+				<table class="dns__table dns__table--first">
 					<tr class="dns__title">
 						<th>Name</th>
 						<th>IP address</th>
@@ -50,7 +50,58 @@
 
 				</table>
 				<div class="text-center">
-					<button type="button" class="btn btn--lg btn--simply"data-tab-open="dns-servers-tab"  data-drawer-trigger aria-controls="dns-servers-modal" aria-expanded="false" aria-label="Alert">Change</button>
+					<button type="button" class="btn btn--lg btn--simply" data-tab-open="dns-servers-tab"  data-drawer-trigger aria-controls="dns-servers-modal" aria-expanded="false" aria-label="Alert">Change</button>
+				</div>
+			</div>
+
+			<div class="box container dns">
+				<h2 class="message__title">Manage DNS Records</h2>
+				<table class="dns__table dns__table--second">
+					<tr class="dns__title">
+						<th>Type</th>
+						<th>Name</th>
+						<th>Value</th>
+						<th>TTL</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.22</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.22</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.22</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.22</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.22</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+				</table>
+				<div class="text-center">
+					<button type="button" class="btn btn--lg btn--simply" data-tab-open="dns-records-tab"  data-drawer-trigger aria-controls="dns-records-modal" aria-expanded="false" aria-label="Alert">Add</button>
 				</div>
 			</div>
 
@@ -58,23 +109,13 @@
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup (Contact Information)-->
-	<div class="drawer" id="contact-info-modal" data-drawer-target>
+	<!-- popup (name-servers)-->
+	<div class="drawer" id="dns-servers-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/settings/modal-contact-info.html
-			</div>
-		</div>
-	</div>
-
-	<!-- popup (remove domain)-->
-	<div class="drawer drawer--alert" id="delete-domain-modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__alert">
-			<div class="drawer__fieldset">
-				//= ./pages/modal-delete-domain.html
+				//= ./pages/settings/modal-name-servers.html
 			</div>
 		</div>
 	</div>

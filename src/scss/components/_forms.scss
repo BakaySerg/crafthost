@@ -629,3 +629,19 @@ input::-webkit-calendar-picker-indicator {
 .form-field input[type=password] {
 	font-size: 1.4em;
 }
+.form-removable {
+	padding-bottom: 14px;
+	display: flex;
+	align-items: center;
+	.btn--sm {
+		color: $danger;
+		width: 34px;
+		height: 34px;
+		padding: 5px;
+		border-radius: 50%;
+		margin-left: .9em;
+		@media (max-width: 500px){
+			margin-left: .2em;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<form id="dns-servers-tab" class="drawer__item drawer__form" data-tab="hidden">
+   <div class="drawer__body">
+      <div class="drawer__header drawer__header--noborder">
+         <div class="drawer__title">
+            <h2 class="drawer__headline">Change Name servers</h2>
+         </div>
+      </div>
+      <div class="drawer__content">
+         <div class="form-usual form-removable">
+            <input name="s1" type="text" placeholder="Name server" required value="ns1.website.tech">
+            <button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-del"/></svg></button>
+         </div>
+         <div class="form-usual form-removable">
+            <input name="s2" type="text" placeholder="Name server" required value="ns2.website.tech">
+            <button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-del"/></svg></button>
+         </div>
+         <div class="form-usual form-removable">
+            <input name="s3" type="text" placeholder="Name server" required value="ns3.website.tech">
+            <button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-del"/></svg></button>
+         </div>
+         <div class="text-center pt-15">
+            <button type="button" class="btn btn--lg btn--simply btn--icon">Add Name server</button>
+         </div>
+      </div>
+   </div>
+   <div class="drawer__footer">
+      <button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+      <button type="submit" class="btn btn--lg btn--success">Save</button>
+   </div>
+</form>
