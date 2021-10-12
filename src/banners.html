@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Web banners | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Web banners</h1>
+				<div class="header__bureau">
+					<a href="#" class="bureau__link active" data-represent="web">Web Hosting</a>
+					<a href="#" class="bureau__link" data-represent="managed">Managed Hosting</a>
+					<a href="#" class="bureau__link" data-represent="enterprise">Enterprise Hosting</a>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+
+		</div>
+	</div>
+	//= ./include/footer.html
+
+
+	<script>
+		// hide and show tickets
+		const sortTickets = function () {
+			[].forEach.call(
+				document.querySelectorAll("[data-represent]"),
+				function (el) {
+					el.addEventListener("click", function (e) {
+						e.preventDefault();
+						const target = e.target,
+							criterion = target.getAttribute("data-represent"),
+							parent = this.closest(".header__bureau"),
+							siblings = parent.querySelectorAll('[data-represent]');
+						[...siblings].forEach(item => {
+							item.classList.remove('active');
+						})
+						target.classList.toggle('active');
+
+						function hideAndShow(cri) {
+							tickets = document.querySelectorAll('[data-present]');
+							[...tickets].forEach(ticket => {
+								if (cri === "" || cri == ticket.getAttribute("data-present")) {
+									ticket.removeAttribute("hidden");
+								} else {
+									ticket.setAttribute('hidden', '');
+								}
+							});
+						};
+						hideAndShow(criterion);
+					});
+				}
+			);
+		};
+		sortTickets();
+
+	</script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

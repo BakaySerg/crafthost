@@ -246,12 +246,15 @@
    max-width: 600px;
    font-weight: bold;
    line-height: 1.4;
+   flex-grow: .1;
    @media (max-width: 801px){
       padding: 14px 15px;
+      flex-grow: .3;
    }
    @media (max-width: 380px){
       padding: 12px 11px;
       font-size: .92em;
+      flex-grow: 1;
    }
    @media (max-width: 359px){
       padding: 10px 9px;

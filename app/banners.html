@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Refferal Program | Crafthost</title>
+	<title>Web banners | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -24,6 +25,7 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 </head>
+
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -158,34 +160,18 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Refferal Program</h1>
+				<h1 class="h1">Web banners</h1>
 				<div class="header__bureau">
-					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="refferal-tab" data-drawer-trigger aria-controls="refferal-modal" aria-expanded="false">Start<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+					<a href="#" class="bureau__link active" data-represent="web">Web Hosting</a>
+					<a href="#" class="bureau__link" data-represent="managed">Managed Hosting</a>
+					<a href="#" class="bureau__link" data-represent="enterprise">Enterprise Hosting</a>
 				</div>
 			</div>
 		</header>
+
 		<!--  board  -->
 		<div class="board">
-			<ul class="container-lg breadcrumbs">
-				<li><a href="profile-settings.html">Profile settings</a></li>
-				<li><a href="#">Refferal Program</a></li>
-			</ul>
 
-			<div class="container box faq__answer">
-				<h2 class="message__title message__title--indented">Activate Your Referral Program</h2>
-				<ul class="counter-list counter-list--extended">
-					<li class="counter-title">Commission is paid through PayPal, one month after the referred customer makes a payment. The transfer fee is deducted from&nbsp;commission.</li>
-					<li class="counter-title">You may not receive credit for referring yourself to Crafthost.</li>
-					<li class="counter-title">Minimum withdrawal amount is 100 euro.</li>
-					<li class="counter-title">The commission % can only be increased manually after you submit a request.</li>
-					<li class="counter-title">Commission is paid only for shared Web Hosting, Addons, Dedicated Hosting, and Enterprise Hosting. This does not include domain names.</li>
-					<li class="counter-title">It's prohibited to use any kind of email marketing to advertise Crafthost services.</li>
-					<li class="counter-title">It's prohibited to set partner cookies without clicking a link to our website.</li>
-				</ul>
-				<div class="text-center pt-15">
-					<a href="#" class="btn btn--lg btn--icon btn--simply" data-tab-open="refferal-tab" data-drawer-trigger aria-controls="refferal-modal" aria-expanded="false">Start<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- footer -->
@@ -203,88 +189,43 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup (refferal)-->
-	<div class="drawer drawer--lg drawer--notable" id="refferal-modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__wrapper">
-			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-			<div class="drawer__fieldset">
-				<!-- tab -->
-				<form id="refferal-tab" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Refferal Program</h2>
-								<div class="factor__key f-center">
-										<div class="h4">Your Unique Referral Link:</div>
-										<div class="big-link">
-											<svg class="i-key" viewBox="0 0 32 32"><use xlink:href="#i-key"/></svg>
-											<span>website.tech/aff.123</span>
-											<input class="copy-key" type="text" value="website.tech/aff.123">
-										</div>
-										<button type="button" class="btn btn--sm btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
-									</div>
-							</div>
-						</div>
-						<div class="drawer__content refferal__content">
-							<h3 class="h3">Statistics</h3>
-							<div class="refferal__grid">
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Number <br>of Visitors Referred / Number of Signups</span>
-									<span class="refferal__digit">2 / 0</span>
-								</a>
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Conversion Rate</span>
-									<span class="refferal__digit">10%</span>
-								</a>
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Total Amount Withdrawn</span>
-									<span class="refferal__digit">$0.00</span>
-								</a>
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Available Commissions Balance</span>
-									<span class="refferal__digit">$50.00</span>
-								</a>
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Commissions <br>Pending Maturation</span>
-									<span class="refferal__digit">$0.00</span>
-								</a>
-								<a href="banners.html" class="refferal__route">
-									<span class="refferal__category">Commissions <br>Pending Manual</span>
-									<span class="refferal__digit">$0.00</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 
-
-	<script src="js/main.js"></script>
-	<script src="js/drawer.js"></script>
 	<script>
-		// copy key to clipboard
-		function copyText(el) {
-			let x = el.value;
-			if (el.setSelectionRange) {
-				el.select();
-				el.setSelectionRange(0, 9999);
-				document.execCommand("copy");
-				el.blur();
-			};
-			if (navigator.clipboard) { navigator.clipboard.writeText(x); };
-		};
+		// hide and show tickets
+		const sortTickets = function () {
+			[].forEach.call(
+				document.querySelectorAll("[data-represent]"),
+				function (el) {
+					el.addEventListener("click", function (e) {
+						e.preventDefault();
+						const target = e.target,
+							criterion = target.getAttribute("data-represent"),
+							parent = this.closest(".header__bureau"),
+							siblings = parent.querySelectorAll('[data-represent]');
+						[...siblings].forEach(item => {
+							item.classList.remove('active');
+						})
+						target.classList.toggle('active');
 
-		const copyBtn = document.querySelector(".btn--copy");
-		copyBtn?.addEventListener('click', function (e) {
-			e.preventDefault();
-			const key = this.previousElementSibling.querySelector('input');
-			copyText(key);
-			this.classList.add('copied');
-			setTimeout(function () { e.target.classList.remove('copied'); }, 1100);
-		});
+						function hideAndShow(cri) {
+							tickets = document.querySelectorAll('[data-present]');
+							[...tickets].forEach(ticket => {
+								if (cri === "" || cri == ticket.getAttribute("data-present")) {
+									ticket.removeAttribute("hidden");
+								} else {
+									ticket.setAttribute('hidden', '');
+								}
+							});
+						};
+						hideAndShow(criterion);
+					});
+				}
+			);
+		};
+		sortTickets();
+
 	</script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>
