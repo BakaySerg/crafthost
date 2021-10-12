@@ -327,6 +327,7 @@
          max-width: calc(100% - 51px);
          @media (min-width: 700px){
             min-height: 57px;
+            min-width: 310px;
             padding-left: 32px;
             padding-right: 40px;
          }
@@ -604,7 +605,7 @@
 }
 .dns {
    margin-bottom: 40px;
-   padding: 28px 24px;
+   padding: 31px 24px 28px;
    @media (max-width: 500px){
       margin-bottom: 20px;
       padding: 21px 15px;
@@ -671,4 +672,10 @@
          text-align: center;
       }
    }
+}
+.removable-content {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   .text-center {order: 150;}
 }

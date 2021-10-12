@@ -67,41 +67,41 @@
 					<tr>
 						<td>A</td>
 						<td>@</td>
-						<td>177.77.33.22</td>
+						<td>177.77.33.20</td>
 						<td>1 hour</td>
-						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+						<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>@</td>
+						<td>177.77.33.21</td>
+						<td>1 hour</td>
+						<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
 					</tr>
 					<tr>
 						<td>A</td>
 						<td>@</td>
 						<td>177.77.33.22</td>
 						<td>1 hour</td>
-						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+						<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
 					</tr>
 					<tr>
 						<td>A</td>
 						<td>@</td>
-						<td>177.77.33.22</td>
+						<td>177.77.33.23</td>
 						<td>1 hour</td>
-						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+						<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
 					</tr>
 					<tr>
 						<td>A</td>
 						<td>@</td>
-						<td>177.77.33.22</td>
+						<td>177.77.33.24</td>
 						<td>1 hour</td>
-						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
-					</tr>
-					<tr>
-						<td>A</td>
-						<td>@</td>
-						<td>177.77.33.22</td>
-						<td>1 hour</td>
-						<td class="right"><button type="button" class="btn btn--sm"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
+						<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>
 					</tr>
 				</table>
 				<div class="text-center">
-					<button type="button" class="btn btn--lg btn--simply" data-tab-open="dns-records-tab"  data-drawer-trigger aria-controls="dns-records-modal" aria-expanded="false" aria-label="Alert">Add</button>
+					<button type="button" class="btn btn--lg btn--simply" data-tab-open="dns-records-add-tab"  data-drawer-trigger aria-controls="dns-records-add-modal" aria-expanded="false" aria-label="Open">Add</button>
 				</div>
 			</div>
 
@@ -116,6 +116,16 @@
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
 				//= ./pages/settings/modal-name-servers.html
+			</div>
+		</div>
+	</div>
+	<!-- popup (add record)-->
+	<div class="drawer" id="dns-records-add-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/settings/modal-dns-records-add.html
 			</div>
 		</div>
 	</div>

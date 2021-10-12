@@ -162,6 +162,16 @@
       display: block;
       counter-reset: item;
       list-style-type: decimal-leading-zero;
+      &--extended {
+         max-width: 948px;
+         @media (min-width: 767px){
+            .counter-title {
+               padding-top: .2em;
+               padding-bottom: 1.2em;
+               line-height: 1.7;
+            }
+         }
+      }
    }
    &-title {
       display: block;
@@ -175,6 +185,12 @@
          display: inline-block;
          margin-right: 1.1em;
          color: $active;
+      }
+      @media (max-width: 500px){
+         line-height: 1.4;
+         &:before {
+         	margin-right: .6em;
+         }
       }
    }
    &-title--lg {
@@ -247,7 +263,7 @@
       display: inline-block;
       width: 26px;
       height: 26px;
-      margin-right: 10px;
+      margin-right: 15px;
    }
 }
 .ticket {

@@ -11,6 +11,9 @@
 			//= ./include/header.html
 			<div class="header__bottom container">
 				<h1 class="h1">Refferal Program</h1>
+				<div class="header__bureau">
+					<a href="#" class="btn btn--lg btn--icon btn--success" data-tab-open="refferal-tab" data-drawer-trigger aria-controls="refferal-modal" aria-expanded="false">Start<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
 			</div>
 		</header>
 		<!--  board  -->
@@ -20,14 +23,61 @@
 				<li><a href="#">Refferal Program</a></li>
 			</ul>
 
-			<div class="container box notifications">
-
+			<div class="container box faq__answer">
+				<h2 class="message__title message__title--indented">Activate Your Referral Program</h2>
+				<ul class="counter-list counter-list--extended">
+					<li class="counter-title">Commission is paid through PayPal, one month after the referred customer makes a payment. The transfer fee is deducted from&nbsp;commission.</li>
+					<li class="counter-title">You may not receive credit for referring yourself to Crafthost.</li>
+					<li class="counter-title">Minimum withdrawal amount is 100 euro.</li>
+					<li class="counter-title">The commission % can only be increased manually after you submit a request.</li>
+					<li class="counter-title">Commission is paid only for shared Web Hosting, Addons, Dedicated Hosting, and Enterprise Hosting. This does not include domain names.</li>
+					<li class="counter-title">It's prohibited to use any kind of email marketing to advertise Crafthost services.</li>
+					<li class="counter-title">It's prohibited to set partner cookies without clicking a link to our website.</li>
+				</ul>
+				<div class="text-center pt-15">
+					<a href="#" class="btn btn--lg btn--icon btn--simply" data-tab-open="refferal-tab" data-drawer-trigger aria-controls="refferal-modal" aria-expanded="false">Start<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
 			</div>
 		</div>
 	</div>
 	//= ./include/footer.html
 
+	<!-- popup (refferal)-->
+	<div class="drawer drawer--lg drawer--notable" id="refferal-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<!-- tab -->
+				//= ./pages/settings/modal-refferal.html
+			</div>
+		</div>
+	</div>
+
 
 	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
+	<script>
+		// copy key to clipboard
+		function copyText(el) {
+			let x = el.value;
+			if (el.setSelectionRange) {
+				el.select();
+				el.setSelectionRange(0, 9999);
+				document.execCommand("copy");
+				el.blur();
+			};
+			if (navigator.clipboard) { navigator.clipboard.writeText(x); };
+		};
+
+		const copyBtn = document.querySelector(".btn--copy");
+		copyBtn?.addEventListener('click', function (e) {
+			e.preventDefault();
+			const key = this.previousElementSibling.querySelector('input');
+			copyText(key);
+			this.classList.add('copied');
+			setTimeout(function () { e.target.classList.remove('copied'); }, 1100);
+		});
+	</script>
 </body>
 </html>

@@ -269,10 +269,13 @@
       padding: 12px 10px 13px;
    }
    .btn:not(:first-child) {
-      margin-left: 38px;
+      margin-left: 36px;
       @media (max-width: 500px){
          margin-left: 18px;
       }
+   }
+   .btn--danger {
+      flex-grow: .1;
    }
    .btn--success {
       flex-grow: .15;

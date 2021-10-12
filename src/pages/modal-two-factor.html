@@ -81,6 +81,7 @@
       e.target.closest('.drawer').classList.remove('is-active','is-visible');
       btn.classList.add("btn--disabled");
       e.target.reset();
+      document.body.classList.remove("open-modal");
    });
 
    // switching two-factor authentication

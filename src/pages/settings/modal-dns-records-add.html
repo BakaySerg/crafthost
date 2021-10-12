@@ -1,0 +1,55 @@
+<form id="dns-records-add-tab" class="drawer__item form-add-record" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Add Record</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="form-usual form-labled">
+				<label for="record1">Host *</label>
+				<input name="record1" type="text" placeholder="@" required value="@">
+			</div>
+			<div class="form-usual form-labled">
+				<label for="record2">Points to *</label>
+				<input name="record2" type="text" placeholder="177.77.33.22" required value="177.77.33.22">
+			</div>
+			<div class="form-usual form-labled">
+				<label for="ttl">TTL *</label>
+				<select class="select" name="ttl">
+					<option value="1" selected="selected">1 hour</option>
+					<option value="2">2 hour</option>
+					<option value="3">3 hour</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--danger" data-drawer-close aria-label="Close">Delete Record</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+<script>
+	const formAddrecord = document.getElementById('dns-records-add-tab');
+	formAddrecord?.addEventListener('submit', function (e) {
+		const table = document.querySelector('.dns__table--second');
+		e.preventDefault();
+		let record1 = formAddrecord.querySelector('[name=record1]').value,
+			record2 = formAddrecord.querySelector('[name=record2]').value,
+			ttl = formAddrecord.querySelector('[name=ttl]'),
+			ttlValue = ttl.options[ttl.selectedIndex].text;
+
+		let tr = document.createElement('tr');
+		tr.innerHTML = `
+			<td>A</td>
+			<td>${record1}</td>
+			<td>${record2}</td>
+			<td>${ttlValue}</td>
+			<td class="right"><button type="button" class="btn btn--sm" data-tab-open="dns-records-edit-tab"  data-drawer-trigger aria-controls="dns-records-edit-modal" aria-expanded="false" aria-label="Open"><svg viewBox="0 0 32 32"><use xlink:href="#i-edit"/></svg></button></td>`;
+		table.appendChild(tr);
+
+		e.target.closest('.drawer').classList.remove('is-active', 'is-visible');
+		e.target.reset();
+		document.body.classList.remove("open-modal");
+	});
+</script>
