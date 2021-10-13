@@ -13,16 +13,364 @@
 			//= ./include/header.html
 			<div class="header__bottom container">
 				<h1 class="h1">Web banners</h1>
-				<div class="header__bureau">
-					<a href="#" class="bureau__link active" data-represent="web">Web Hosting</a>
-					<a href="#" class="bureau__link" data-represent="managed">Managed Hosting</a>
-					<a href="#" class="bureau__link" data-represent="enterprise">Enterprise Hosting</a>
+				<!-- tabs -->
+				<div class="header__bureau header__tabs">
+					<a href="#" class="bureau__link active" aria-label="switch tab" data-trigger-tab="banners-web">Web Hosting</a>
+					<a href="#" class="bureau__link" aria-label="switch tab" data-trigger-tab="banners-managed">Managed Hosting</a>
+					<a href="#" class="bureau__link" aria-label="switch tab" data-trigger-tab="banners-enterprise">Enterprise Hosting</a>
 				</div>
 			</div>
 		</header>
 
 		<!--  board  -->
-		<div class="board">
+		<div class="board tabs-content">
+			<!-- tab-1 -->
+			<div id="banners-web" class="container box banner" data-tab="active">
+				<div class="banner__header">
+					<a class="link active" data-represent>All formats</a>
+					<a class="link" data-represent="125x125">125x125</a>
+					<a class="link" data-represent="160x600">160x600</a>
+					<a class="link" data-represent="300x250">300x250</a>
+					<a class="link" data-represent="320x500">320x50</a>
+					<a class="link" data-represent="728x90">728x90</a>
+					<a class="link" data-represent="300x600">300x600</a>
+				</div>
+				<h2 class="message__title">Web Hosting</h2>
+				<div class="banner__item" data-present="125x125">
+					<div class="banner__remark">125x125</div>
+					<div class="banner__grid banner__grid--row banner__grid--sm">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/125-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/125-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/125-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="160x600">
+					<div class="banner__remark">160x600</div>
+					<div class="banner__grid banner__grid--row banner__grid--md">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/160-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/160-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/160-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x250">
+					<div class="banner__remark">300x250</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="320x500">
+					<div class="banner__remark">320x500</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/320-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/320-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/320-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="728x90">
+					<div class="banner__remark">728x90</div>
+					<div class="banner__grid banner__grid--column">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/728-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/728-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/728-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x600">
+					<div class="banner__remark">300x600</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+			</div>
+
+			<!-- tab-2 -->
+			<div id="banners-managed" class="container box banner" data-tab="hidden">
+				<div class="banner__header">
+					<a class="link active" data-represent>All formats</a>
+					<a class="link" data-represent="125x125">125x125</a>
+					<a class="link" data-represent="160x600">160x600</a>
+					<a class="link" data-represent="300x250">300x250</a>
+					<a class="link" data-represent="320x500">320x50</a>
+					<a class="link" data-represent="728x90">728x90</a>
+					<a class="link" data-represent="300x600">300x600</a>
+				</div>
+				<h2 class="message__title">Managed Hosting</h2>
+				<div class="banner__item" data-present="125x125">
+					<div class="banner__remark">125x125</div>
+					<div class="banner__grid banner__grid--row banner__grid--sm">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/125-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/125-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/125-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="160x600">
+					<div class="banner__remark">160x600</div>
+					<div class="banner__grid banner__grid--row banner__grid--md">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/160-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/160-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/160-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x250">
+					<div class="banner__remark">300x250</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/300-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/300-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/300-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="320x500">
+					<div class="banner__remark">320x500</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/320-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/320-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/320-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="728x90">
+					<div class="banner__remark">728x90</div>
+					<div class="banner__grid banner__grid--column">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/728-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/728-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/managed/728-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x600">
+					<div class="banner__remark">300x600</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/web/300-600-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+			</div>
+
+			<!-- tab-3 -->
+			<div id="banners-enterprise" class="container box banner" data-tab="hidden">
+				<div class="banner__header">
+					<a class="link active" data-represent>All formats</a>
+					<a class="link" data-represent="125x125">125x125</a>
+					<a class="link" data-represent="160x600">160x600</a>
+					<a class="link" data-represent="300x250">300x250</a>
+					<a class="link" data-represent="320x500">320x50</a>
+					<a class="link" data-represent="728x90">728x90</a>
+					<a class="link" data-represent="300x600">300x600</a>
+				</div>
+				<h2 class="message__title">Enterprise Hosting</h2>
+				<div class="banner__item" data-present="125x125">
+					<div class="banner__remark">125x125</div>
+					<div class="banner__grid banner__grid--row banner__grid--sm">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/125-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/125-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/125-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="160x600">
+					<div class="banner__remark">160x600</div>
+					<div class="banner__grid banner__grid--row banner__grid--md">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/160-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/160-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/160-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x250">
+					<div class="banner__remark">300x250</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="320x500">
+					<div class="banner__remark">320x500</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/320-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/320-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/320-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="728x90">
+					<div class="banner__remark">728x90</div>
+					<div class="banner__grid banner__grid--column">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/728-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/728-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/728-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+				<div class="banner__item" data-present="300x600">
+					<div class="banner__remark">300x600</div>
+					<div class="banner__grid banner__grid--row">
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-600-w.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-600-b.png" alt="banner-craffthost">
+						</figure>
+						<figure class="banner__picture">
+							<button type="button" class="btn btn--copy-url btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg>Copy</button>
+							<img src="img/banners/enterprise/300-600-g.png" alt="banner-craffthost">
+						</figure>
+					</div>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -30,8 +378,29 @@
 
 
 	<script>
-		// hide and show tickets
-		const sortTickets = function () {
+		// hide & show necessary tabs (web,managed,enterprise)
+		const swicherHeaderTab = function () {
+			[].forEach.call(
+				document.querySelectorAll(".header__tabs .bureau__link"),
+				function (el) {
+					el.addEventListener("click", function (e) {
+						e.preventDefault();
+						const target = e.target,
+							parent = this.closest(".header__bureau"),
+							siblings = parent.querySelectorAll('.bureau__link');
+						[...siblings].forEach(item => {
+							item.classList.remove('active');
+						})
+						target.classList.toggle('active');
+
+					});
+				}
+			);
+		};
+		swicherHeaderTab();
+
+		// hide & show necessary format
+		const sortBanners = function () {
 			[].forEach.call(
 				document.querySelectorAll("[data-represent]"),
 				function (el) {
@@ -39,29 +408,47 @@
 						e.preventDefault();
 						const target = e.target,
 							criterion = target.getAttribute("data-represent"),
-							parent = this.closest(".header__bureau"),
+							parent = this.closest(".banner__header"),
 							siblings = parent.querySelectorAll('[data-represent]');
 						[...siblings].forEach(item => {
 							item.classList.remove('active');
 						})
 						target.classList.toggle('active');
 
-						function hideAndShow(cri) {
-							tickets = document.querySelectorAll('[data-present]');
-							[...tickets].forEach(ticket => {
-								if (cri === "" || cri == ticket.getAttribute("data-present")) {
-									ticket.removeAttribute("hidden");
-								} else {
-									ticket.setAttribute('hidden', '');
-								}
-							});
-						};
-						hideAndShow(criterion);
+						let closest = this.closest('.banner');
+						let banners = closest.querySelectorAll('[data-present]');
+						[...banners].forEach(banner => {
+							if (criterion === "" || criterion == banner.getAttribute("data-present")) {
+								banner.removeAttribute("hidden");
+							} else {
+								banner.setAttribute('hidden', '');
+							}
+						});
 					});
 				}
 			);
 		};
-		sortTickets();
+		sortBanners();
+
+		// copy url-banner to clipboard
+		function copyText(el) {
+			let currentUrl = location.pathname.split('/')[0];
+			let imgUrl = el.getAttribute('src');
+			let readyLink = `${currentUrl}${imgUrl}`;
+			console.log(readyLink);
+			if (navigator.clipboard) { navigator.clipboard.writeText(readyLink); };
+		};
+
+		const copyBtns = document.querySelectorAll(".btn--copy");
+			[...copyBtns].forEach(function (el) {
+					el.addEventListener("click", function (e) {
+				e.preventDefault();
+				let target = this.nextElementSibling;
+				copyText(target);
+				this.classList.add('copied');
+				setTimeout(function () { e.target.classList.remove('copied'); }, 1100);
+			});
+		});
 
 	</script>
 	<script src="js/main.js"></script>

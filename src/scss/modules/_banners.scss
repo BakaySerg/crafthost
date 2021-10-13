@@ -1,0 +1,99 @@
+.banner {
+   padding: 34px 24px 23px;
+   &__header {
+      padding: 0 0 2.6em;
+      border-bottom: 1px solid $border;
+      @include flex-center;
+      font-size: em(15);
+      .link:not(:last-child){
+         margin-right: 1.8em;
+      }
+   }
+   .message__title {
+      margin-top: 1.1em;
+      margin-left: 1.1em;
+      padding-bottom: 0;
+   }
+   &__item {
+      padding: 2em 0 1.7em;
+      @media (min-width: 767px){
+         padding: 2.5em 28px 2.1em;
+      }
+      &:first-child {
+         padding-top: 1.1em;
+      }
+      &:not(:first-child) {
+         border-top: 1px solid $border;
+      }
+      [hidden] + &, .message__title + & {
+         border-top: none;
+      }
+   }
+   &__remark {
+      @media (min-width: 767px){
+         padding-bottom: .8em;
+         font-size: em(15);
+      }
+   }
+   &__grid {
+      &--row {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         column-gap: 30px;
+         @media (max-width: 767px){
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+         }
+         .banner__picture {
+         	.btn {
+               margin-left: auto;
+               margin-right: auto;
+            }
+         }
+      }
+      &--column {
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         align-items: center;
+         row-gap: 30px;
+         .banner__picture {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+         	.btn {
+         		margin-right: .7em;
+         	}
+         }
+      }
+   }
+}
+.banner__grid--sm {
+   max-width: 510px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.banner__grid--md {
+   max-width: 580px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.btn--copy-url {
+   color: $text;
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+   padding: 5px 3px;
+   svg {
+      width: 24px;
+      height: 24px;
+      color: $active;
+      margin-right: 5px;
+      margin-bottom: 1px;
+   }
+   &:after {
+      left: auto;
+      right: 0;
+   }
+}

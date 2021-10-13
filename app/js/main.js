@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function(){
 						 parent = comingTab.closest('.tabs-content'),
 						 currentTab = parent.querySelector('[data-tab="active"]');
 
-					currentTab.setAttribute("data-tab", "hidden");
+					currentTab?.setAttribute("data-tab", "hidden");
 					comingTab.setAttribute("data-tab", "active");
 					if (this.classList.contains('selector--tab')){
 						let othersTabs = this.closest('.tabs').querySelectorAll('.selector');
