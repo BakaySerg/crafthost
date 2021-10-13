@@ -593,9 +593,9 @@
 
 		// copy url-banner to clipboard
 		function copyText(el) {
-			let currentUrl = location.pathname.split('/')[0];
+			let currentUrl = location.host;
 			let imgUrl = el.getAttribute('src');
-			let readyLink = `${currentUrl}${imgUrl}`;
+			let readyLink = `${currentUrl}/${imgUrl}`;
 			console.log(readyLink);
 			if (navigator.clipboard) { navigator.clipboard.writeText(readyLink); };
 		};
@@ -614,5 +614,4 @@
 	</script>
 	<script src="js/main.js"></script>
 </body>
-
 </html>
