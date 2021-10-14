@@ -252,14 +252,14 @@
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Transfer Domain In/Out</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="transfer-domain-to--tab" data-drawer-trigger aria-controls="transfer-domain-to---modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="transfer-domain-to--tab" data-drawer-trigger aria-controls="transfer-domain-to--modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Transfer Domain to another Crafthost Account</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="-tab" data-drawer-trigger aria-controls="-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="transfer-domain-from--tab" data-drawer-trigger aria-controls="transfer-domain-from--modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
@@ -332,7 +332,7 @@
 		</div>
 	</div>
 	<!-- popup (transfer-domain-to---modal)-->
-	<div class="drawer" id="transfer-domain-to---modal" data-drawer-target>
+	<div class="drawer" id="transfer-domain-to--modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
@@ -386,6 +386,42 @@
 				      });
 				   };
 				</script>
+			</div>
+		</div>
+	</div>
+	<!-- popup (transfer-domain-from--modal)-->
+	<div class="drawer" id="transfer-domain-from--modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="transfer-domain-from--tab" class="drawer__item drawer__form" data-tab="hidden">
+					<div class="drawer__body">
+						<div class="drawer__header drawer__header--noborder">
+							<div class="drawer__title">
+								<h2 class="drawer__headline">Transfer domain from Crafthost</h2>
+								<p>Authinfo-code application form</p>
+							</div>
+						</div>
+						<div class="drawer__content addable-content">
+							<div class="pb-05">Domain list:</div>
+							<div class="order__card">
+								website.tech <br>
+								design.io
+							</div>
+							<div class="pb-05">How to get the key:</div>
+							<label class="form-field">
+								<input type="email" name="email" class="form-input" placeholder=" " required>
+								<span class="form-placeholder">Email</span>
+							</label>
+							<div class="catpcha"><img src="img/captcha.png" alt="captcha"></div>
+						</div>
+					</div>
+					<div class="drawer__footer">
+						<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+						<button type="submit" class="btn btn--lg btn--success">Continue</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
