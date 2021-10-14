@@ -104,7 +104,7 @@
 				<div class="setting__list-item">
 					<div class="setting__descr">
 						<h3 class="h3">Transfer Domain In/Out</h3>
-						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="-tab" data-drawer-trigger aria-controls="-modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
+						<button type="button" class="btn btn--sm btn--arrow" data-tab-open="transfer-domain-to--tab" data-drawer-trigger aria-controls="transfer-domain-to---modal" aria-expanded="false" aria-label="Open"><svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow"/></svg></button>
 					</div>
 				</div>
 
@@ -135,6 +135,16 @@
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
 				//= ./pages/settings/modal-contact-info.html
+			</div>
+		</div>
+	</div>
+	<!-- popup (transfer-domain-to---modal)-->
+	<div class="drawer" id="transfer-domain-to---modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/settings/modal-transfer-domain-to.html
 			</div>
 		</div>
 	</div>

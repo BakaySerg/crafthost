@@ -673,11 +673,19 @@
       }
    }
 }
-.removable-content {
+.removable-content,.addable-content {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
-   .text-center {order: 150;}
+   .text-center,.align-right {order: 150;}
+}
+.addable-content {
+   @media (min-width: 500px){
+      padding-left: 28px;
+   }
+   .form-usual {
+      padding-bottom: 14px;
+   }
 }
 .refferal {
    &__content {

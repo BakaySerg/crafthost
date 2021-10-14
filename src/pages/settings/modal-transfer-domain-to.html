@@ -1,0 +1,49 @@
+<form id="transfer-domain-to--tab" class="drawer__item" data-tab="hidden">
+   <div class="drawer__body">
+      <div class="drawer__header drawer__header--noborder">
+         <div class="drawer__title">
+            <h2 class="drawer__headline">Transfer domain to Crafthost</h2>
+            <p>You can transfer domains for service to Crafthost using the automatic domain transfer system</p>
+         </div>
+      </div>
+      <div class="drawer__content addable-content">
+         <div class="pb-1">Enter the domains you want to transfer in the field</div>
+         <div class="form-usual">
+            <input name="d1" type="text" placeholder="Name server" required value="sity.com:1234567890">
+         </div>
+         <div class="form-usual">
+            <input name="d2" type="text" placeholder="Name server" required value="design.io:1234567890">
+         </div>
+         <div class="align-right pt-05">
+            <button type="button" class="btn btn--underline btn--add">Add another input field</button>
+         </div>
+      </div>
+   </div>
+   <div class="drawer__footer">
+      <button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+      <button type="button" class="btn btn--lg btn--success" data-link="transfer-domain-to.html">Apply for transfer</button>
+   </div>
+</form>
+<script>
+   const block = document.querySelector('.addable-content');
+
+   if (block) {
+      let i = 2;
+      function renderItem(insertion) {
+         i++;
+         let formElem = document.createElement('div');
+         formElem.classList.add('form-usual');
+         formElem.innerHTML = `
+				<input name="d${i}" type="text" placeholder="Enter domain" required> `;
+         insertion.appendChild(formElem);
+      };
+
+      block.addEventListener('click', function (e) {
+         const target = e.target;
+
+         if (target.classList.contains('btn--add')) {
+            renderItem(block);
+         }
+      });
+   };
+</script>

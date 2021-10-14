@@ -247,6 +247,14 @@
    font-weight: bold;
    line-height: 1.4;
    flex-grow: .1;
+   &--short {
+      max-width: 430px;
+      align-items: center;
+      margin-bottom: 0;
+      & + & {
+         margin-top: 14px;
+      }
+   }
    @media (max-width: 801px){
       padding: 14px 15px;
       flex-grow: .3;

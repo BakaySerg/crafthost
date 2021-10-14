@@ -11,21 +11,36 @@
 		line-height: 1.2;
 	}
 }
+.pb-1 {
+	padding-bottom: 1em;
+	display: block;
+	padding-left: 1px;
+}
+.pt-15 {
+	padding-top: 1.5em;
+}
+.pt-1 {
+	padding-top: 1em;
+}
+.pt-05 {
+	padding-top: .5em;
+}
 .pt-15 {
 	padding-top: 1.5em;
 	@media (max-width: 500px){
 		padding-top: 1em;
 	}
 }
-.pb-1 {
-	padding-bottom: 1em;
-	display: block;
-	padding-left: 1px;
-}
 .box {
 	background-color: #fff;
 	box-shadow: -1px 1px 10px rgba(30,23,104,.04);
 	border-radius: 3px;
+	&--pad {
+		padding: 30px;
+		@media (max-width: 500px){
+			padding: 17px;
+		}
+	}
 }
 .icon {
 	display: inline-block;

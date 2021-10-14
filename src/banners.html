@@ -435,8 +435,22 @@
 			let currentUrl = location.host;
 			let imgUrl = el.getAttribute('src');
 			let readyLink = `${currentUrl}/${imgUrl}`;
-			console.log(readyLink);
-			if (navigator.clipboard) { navigator.clipboard.writeText(readyLink); };
+
+			if (navigator.clipboard) {
+				navigator.clipboard.writeText(readyLink);
+			}
+			else {
+				let tempInp = document.createElement('input');
+				tempInp.classList.add('copy-input');
+				tempInp.setAttribute('type','text');
+				let box = el.closest('.banner__picture');
+				box.appendChild(tempInp);
+				tempInp.value = readyLink;
+				box.querySelector('[type=text]').select();
+				box.querySelector('[type=text]').setSelectionRange(0, 9999);
+				document.execCommand("copy");
+				setTimeout(function () { box.querySelector('[type=text]').remove(); }, 200);
+			};
 		};
 
 		const copyBtns = document.querySelectorAll(".btn--copy");

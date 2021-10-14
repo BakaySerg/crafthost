@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Transfer domain to Crafthost | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Transfer domain to Crafthost</h1>
+				<div class="header__bureau">
+					<button type="button" class="bureau__link btn btn--lg btn--icon align-right" data-tab-open="transfer-domain-to--tab" data-drawer-trigger aria-controls="transfer-domain-to---modal" aria-expanded="false" aria-label="Open">
+						Change domains
+						<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></button>
+				</div>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+
+
+			<form action="#" class="plan__form plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+
+					<div class="box box--pad">
+						<h2 class="message__title message__title--indented">Domains</h2>
+						<div class="divid-up pt-15">
+							<div class="big-link big-link--short">
+								<svg class="i-link" viewBox="0 0 32 32"><use xlink:href="#i-globe"></use></svg>
+								<span>city.com</span>
+							</div>
+							<div class="big-link big-link--short">
+								<svg class="i-link" viewBox="0 0 32 32"><use xlink:href="#i-globe"></use></svg>
+								<span>design.io</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Your order</h2>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional">
+							<b>Transfer domains</b>
+							<b>Free</b>
+							<span class="fz-14 full-size">3 domains</span>
+							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
+						</div>
+
+					</div>
+					<div class="divid-up">
+						<div class="plan__columns">Subtotal <b>$0,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
+						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$0,00</b></div>
+						<div class="inline-form">
+							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
+							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs" /></svg></button>
+						</div>
+						<button type="submit" class="btn btn--lg btn--icon btn--success"> Buy
+							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<!-- popup (transfer-domain-to---modal)-->
+	<div class="drawer" id="transfer-domain-to---modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/settings/modal-transfer-domain-to.html
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
+</body>
+
+</html>
