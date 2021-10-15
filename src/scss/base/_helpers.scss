@@ -47,6 +47,12 @@
 			padding: 17px;
 		}
 	}
+	&--option {
+		padding: 30px 24px 3px;
+		@media (max-width: 500px){
+			padding: 17px 17px 0;
+		}
+	}
 }
 .icon {
 	display: inline-block;

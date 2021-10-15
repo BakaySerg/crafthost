@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SSL Certificate | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">SSL Certificate</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+
+			<form action="#" class="plan__form plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+
+					<div class="box box--option">
+						<h2 class="message__title message__title--indented">Protection option</h2>
+						<div class="plan__option">
+							<div class="plan__term">Protect one domain</div>
+							<div class="plan__choise">
+								<select name="plan-choise-1">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$10,00</div>
+							</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">Protect domaon or subdomains</div>
+							<div class="plan__choise">
+								<select name="plan-choise-2">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$10,00</div>
+							</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+					</div>
+
+					<div class="box">
+						<!-- tab controls -->
+						<div class="plan__controls tab-controls">
+							<h3 class="message__title">SSL for domain</h3>
+							<div class="plan__tabs tabs">
+								<div class="selector selector--tab checked" data-trigger-tab="first">
+									<div class="selector__btn">New domain</div>
+								</div>
+								<div class="selector selector--tab" data-trigger-tab="second">
+									<div class="selector__btn">Use My Domain</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tabs-content divid-up">
+							<!-- first tab (new domain) -->
+							<div id="first" class="plan__options" data-tab="active">
+								<div class="plan__search">
+									<div class="search__form">
+										<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+										<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+										<button class="btn btn--lg btn--success" type="submit">Сhoose</button>
+									</div>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-1">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+											<option value="5">6 years</option>
+											<option value="5">7 years</option>
+											<option value="5">8 years</option>
+											<option value="5">9 years</option>
+											<option value="5">10 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+											<option value="5">6 years</option>
+											<option value="5">7 years</option>
+											<option value="5">8 years</option>
+											<option value="5">9 years</option>
+											<option value="5">10 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+							</div>
+
+							<!-- second tab  -->
+							<div id="second" class="plan__options" data-tab="hidden">
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Your order</h2>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional">
+							<b>Protect one domain</b>
+							<b>$10,00</b>
+							<span class="fz-14 full-size">1 year</span>
+							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
+						</div>
+					</div>
+					<div class="divid-up">
+						<div class="plan__columns">Subtotal <b>$10,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
+						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$10,00</b></div>
+						<button type="submit" class="btn btn--lg btn--icon btn--success"> Buy
+							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
+						</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+	<script src="js/main.js"></script>
+</body>
+</html>

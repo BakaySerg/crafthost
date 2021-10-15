@@ -205,23 +205,24 @@
 }
 .plan__term {
    margin-right: 1em;
-   flex-grow: .4;
-   max-width: 273px;
+   flex-grow: .5;
+   max-width: 234px;
    @media (max-width: 500px){
-      width: 100%;
-      text-align: center;
-      padding-bottom: .1em;
+      width: calc(100% - 40px);
+      padding-bottom: .4em;
       text-decoration: underline;
+      text-decoration-color: $border;
       font-weight: bold;
       max-width: none;
    }
 }
+.plan__term+.checkbox-custom {margin-left: auto;}
 .plan__cost {
    display: flex;
    justify-content: flex-end;
    align-items: baseline;
    font-weight: bold;
-   min-width: 9%;
+   min-width: 16%;
    & > div:not(:first-child) {
       margin-left: calc(.8vw + 15px);
       @media (max-width: 380px){
@@ -295,6 +296,11 @@
       min-width: 146px;
    }
 }
+.plan__choise +.plan__cost {
+   @media (max-width: 500px){
+      justify-content: center;
+   }
+}
 .plan__choise {
    select {
       width: 80px;
@@ -308,7 +314,7 @@
       color: $headline;
       font-size: em(15);
       text-shadow: 0 0;
-      padding-right: 6px;
+      padding-right: 8px;
       background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23616F94' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: 100% 56%;
@@ -321,10 +327,29 @@
       @media (max-width: 500px){
          margin: 0;
          width: 66px;
+         padding-right: 5px;
          height: 30px;
          font-size: em(15);
          background-size: 17px;
       }
+   }
+}
+.plan__choise--right {
+   text-align: right;
+   min-width: 46%;
+   flex-grow: 0.2;
+   select {
+      width: auto;
+      padding-right: 22px;
+      text-align: right;
+   }
+   @media (min-width: 600px){
+      margin-right: 25%;
+   }
+   @media (max-width: 500px){
+      min-width: 20%;
+      text-align: left;
+      select {text-align: left;}
    }
 }
 .plan__month {

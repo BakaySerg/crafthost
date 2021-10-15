@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>SSL Certificates | Crafthost</title>
+	<title>SSL Certificate | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -160,75 +160,185 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">SSL Certificates</h1>
+				<h1 class="h1">SSL Certificate</h1>
 			</div>
 		</header>
-
 		<!--  board  -->
 		<div class="board">
-			<div class="card__box container">
-				<div class="text__card box">
-					<div class="text__descr">
-						<h3 class="h3">Domain Verification (DV)
-							<a href="javascript:;" class="help help--icon" data-help="Protect one website">
-								<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
-							</a>
-						</h3>
-						<p class="text__card-remark">Single Certificates <span class="cart__ribbon cart__ribbon--danger">Free</span></p>
-						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site. Domain Validation (DV) SSL certificates are the reliable way to add industry-standard encryption to web sites</p>
-						<ul class="card__list">
-							<li>Easy to activate</li>
-							<li>Available in 15 minutes or less</li>
-							<li>No paperwork needed</li>
-						</ul>
+
+			<form action="#" class="plan__form plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+
+					<div class="box box--option">
+						<h2 class="message__title message__title--indented">Protection option</h2>
+						<div class="plan__option">
+							<div class="plan__term">Protect one domain</div>
+							<div class="plan__choise">
+								<select name="plan-choise-1">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$10,00</div>
+							</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
+						<div class="plan__option">
+							<div class="plan__term">Protect domaon or subdomains</div>
+							<div class="plan__choise">
+								<select name="plan-choise-2">
+									<option value="1">1 year</option>
+									<option value="2">2 years</option>
+									<option value="3">3 years</option>
+									<option value="4">4 years</option>
+									<option value="5">5 years</option>
+									<option value="6">6 years</option>
+									<option value="7">7 years</option>
+									<option value="8">8 years</option>
+									<option value="9">9 years</option>
+									<option value="10">10 years</option>
+								</select>
+							</div>
+							<div class="plan__cost">
+								<div class="cost__new">$10,00</div>
+							</div>
+							<label class="checkbox-custom">
+								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+							</label>
+						</div>
 					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
+
+					<div class="box">
+						<!-- tab controls -->
+						<div class="plan__controls tab-controls">
+							<h3 class="message__title">SSL for domain</h3>
+							<div class="plan__tabs tabs">
+								<div class="selector selector--tab checked" data-trigger-tab="first">
+									<div class="selector__btn">New domain</div>
+								</div>
+								<div class="selector selector--tab" data-trigger-tab="second">
+									<div class="selector__btn">Use My Domain</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tabs-content divid-up">
+							<!-- first tab (new domain) -->
+							<div id="first" class="plan__options" data-tab="active">
+								<div class="plan__search">
+									<div class="search__form">
+										<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+										<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+										<button class="btn btn--lg btn--success" type="submit">Сhoose</button>
+									</div>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">org</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-1">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+											<option value="5">6 years</option>
+											<option value="5">7 years</option>
+											<option value="5">8 years</option>
+											<option value="5">9 years</option>
+											<option value="5">10 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1" checked>
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+											<option value="5">6 years</option>
+											<option value="5">7 years</option>
+											<option value="5">8 years</option>
+											<option value="5">9 years</option>
+											<option value="5">10 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+							</div>
+
+							<!-- second tab  -->
+							<div id="second" class="plan__options" data-tab="hidden">
+								<div class="plan__option">
+									<div class="plan__name"><span class="domain">website</span>.<span class="domain-extension">io</span></div>
+									<div class="plan__choise">
+										<select name="plan-choise-2">
+											<option value="1">1 year</option>
+											<option value="2">2 years</option>
+											<option value="5">5 years</option>
+										</select>
+									</div>
+									<div class="plan__cost">
+										<div class="cost__new">$100,00</div>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="checkbox" name="owner-domain" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="text__card box">
-					<div class="text__descr">
-						<h3 class="h3">Organization Verification (OV)
-							<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a>
-						</h3>
-						<p class="text__card-remark">Multi-Domain SSL & SAN<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a></p>
-						<p>Validate your organization’s digital identity and secure sensitive customer data. Organizational Validation (OV) certificates will authenticate your organization’s connections, enable encryption, and turn on web browser trust indicators</p>
-						<ul class="card__list">
-							<li>Company information inside SSL details</li>
-							<li>Visitors can check company / organizational information, ensuring greater user trust</li>
-							<li>Paperwork needed</li>
-						</ul>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Your order</h2>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional">
+							<b>Protect one domain</b>
+							<b>$10,00</b>
+							<span class="fz-14 full-size">1 year</span>
+							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
+						</div>
 					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
-					</div>
-				</div>
-				<div class="text__card box">
-					<div class="text__descr">
-						<h3 class="h3">Extended Certificate (EV)
-							<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg> </a>
-						</h3>
-						<p class="text__card-remark">Wildcard SSL<a href="javascript:;" class="help help--icon" data-help="Protect one website"><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></a></p>
-						<p>Increase your end user’s confidence and transaction rates by showing your true identity online. An Extended Validation (EV) SSL will enable your company name to be added to the browser interface in a branded address bar</p>
-						<ul class="card__list">
-							<li>Company information inside SSL details</li>
-							<li>Highest Trustworthy feature available
-								<a href="javascript:;" class="help help--icon" data-help="Within 1-5 day/s after all documentation is received"> <svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg> </a>
-							</li>
-							<li>Paperwork needed</li>
-						</ul>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="ssl-tab" data-drawer-trigger aria-controls="ssl-modal" aria-expanded="false">Choose</button>
+					<div class="divid-up">
+						<div class="plan__columns">Subtotal <b>$10,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
+						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$10,00</b></div>
+						<button type="submit" class="btn btn--lg btn--icon btn--success"> Buy
+							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
+						</button>
 					</div>
 				</div>
-			</div>
-			<div class="text-center">
-				<button type="button" class="btn btn--icon btn--lg btn--outlined" data-tab-open="plans-tab" data-drawer-trigger aria-controls="plans-modal" aria-expanded="false">
-					<svg viewBox="0 0 32 32"><use xlink:href="#i-compare"/></svg>
-					Compare SSL Certificates
-				</button>
-			</div>
+
+			</form>
 		</div>
 	</div>
 	<!-- footer -->
@@ -246,199 +356,6 @@
 	   <div class="widget"></div>
 	</footer>
 
-	<!-- popup (Compare certificates)-->
-	<div class="drawer drawer--lg" id="plans-modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__wrapper">
-			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-			<div class="drawer__fieldset">
-				<div id="plans-tab" class="drawer__item" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Compare cloud hosting plans</h2>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<div class="table-box">
-								<table class="table table--narrow">
-									<tr class="table__headline">
-										<th>Features</th>
-										<th>Startup</th>
-										<th>Economy</th>
-										<th>Ultimate</th>
-									</tr>
-									<tr>
-										<td>CPU</td>
-										<td>Intel Xeon</td>
-										<td>Intel Xeon</td>
-										<td>Intel Xeon</td>
-									</tr>
-									<tr>
-										<td>CPU Cores</td>
-										<td>2 Core</td>
-										<td>4 Core</td>
-										<td>2 Core</td>
-									</tr>
-									<tr>
-										<td>CPU Speed</td>
-										<td>2.3 GHz</td>
-										<td>2.5 GHz</td>
-										<td>2.5 GHz</td>
-									</tr>
-									<tr>
-										<td>DDoS protection</td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-									</tr>
-									<tr>
-										<td>RAM</td>
-										<td>4 GB</td>
-										<td>4 GB</td>
-										<td>8 GB</td>
-									</tr>
-									<tr>
-										<td>RAID-1 Drives</td>
-										<td>500 GB</td>
-										<td>1000 GB</td>
-										<td>1000 GB</td>
-									</tr>
-									<tr>
-										<td>Bandwidth</td>
-										<td>10 TB</td>
-										<td>15 TB</td>
-										<td>20 TB</td>
-									</tr>
-									<tr>
-										<td>IP Addresses</td>
-										<td>1 IPs</td>
-										<td>2 IPs</td>
-										<td>3 IPs</td>
-									</tr>
-									<tr>
-										<td>Uptime</td>
-										<td>99.9%</td>
-										<td>100%</td>
-										<td>100%</td>
-									</tr>
-									<tr>
-										<td>Datacenter</td>
-										<td>East Cost/<br>West Coast USA, EU</td>
-										<td>East Cost/<br>West Coast USA, EU</td>
-										<td>East Cost/<br>West Coast USA, EU</td>
-									</tr>
-									<tr>
-										<td>Full root access</td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-									</tr>
-									<tr>
-										<td>Fully Redundant network</td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-									</tr>
-									<tr>
-										<td>24/7/365 Live Support</td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-										<td><i class="i-on"></i></td>
-									</tr>
-									<tr>
-										<td>First Term</td>
-										<td><span class="table__new-price">$79.00/mo*</span></td>
-										<td><span class="table__new-price">$89.00/mo*</span></td>
-										<td><span class="table__new-price">$109.00/mo*</span></td>
-									</tr>
-									<tr>
-										<td>Recurring</td>
-										<td><span class="table__new-price">$174.00/mo</span></td>
-										<td><span class="table__new-price">$219.00/mo</span></td>
-										<td><span class="table__new-price">$279.00/mo</span></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><a href="hosting-item.html" class="table__btn">Buy now <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow" /></svg></a></td>
-										<td><a href="hosting-item.html" class="table__btn">Buy now <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow" /></svg></a></td>
-										<td><a href="hosting-item.html" class="table__btn">Buy now <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow" /></svg></a></td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- SSL Certificates  -->
-	<div class="drawer" id="ssl-modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__wrapper">
-			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-			<div class="drawer__fieldset">
-				<div id="ssl-tab" class="drawer__item" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">SSL Certificates</h2>
-							</div>
-						</div>
-						<div class="drawer__content">
-				
-							<div class="order__card">
-								<div class="order__text">
-									<h5 class="h5">Plan 1</h5>
-									<ul class="check-list">
-										<li>Easy to activate</li>
-										<li>Available in 15 minutes or less</li>
-										<li>No paperwork needed</li>
-									</ul>
-								</div>
-								<div class="order__cta">
-									<div class="card__price"><b>$00,00</b> /month</div>
-									<button type="button" class="btn btn--lg btn--success" data-link="addons-ssl-certificates-pay.html">Order now</button>
-								</div>
-							</div>
-							<!-- 2 -->
-							<div class="order__card">
-								<div class="order__text">
-									<h5 class="h5">Plan 2</h5>
-									<ul class="check-list">
-										<li>Easy to activate</li>
-										<li>Available in 15 minutes or less</li>
-										<li>No paperwork needed</li>
-									</ul>
-								</div>
-								<div class="order__cta">
-									<div class="card__price"><b>$00,00</b> /month</div>
-									<button type="button" class="btn btn--lg btn--success" data-link="addons-ssl-certificates-pay.html">Order now</button>
-								</div>
-							</div>
-							<!-- 3 -->
-							<div class="order__card">
-								<div class="order__text">
-									<h5 class="h5">Plan 3</h5>
-									<ul class="check-list">
-										<li>Easy to activate</li>
-										<li>Available in 15 minutes or less</li>
-										<li>No paperwork needed</li>
-									</ul>
-								</div>
-								<div class="order__cta">
-									<div class="card__price"><b>$00,00</b> /month</div>
-									<button type="button" class="btn btn--lg btn--success" data-link="addons-ssl-certificates-pay.html">Order now</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<script src="js/main.js"></script>
-	<script defer src="js/drawer.js"></script>
 </body>
 </html>
