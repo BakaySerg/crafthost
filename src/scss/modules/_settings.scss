@@ -686,6 +686,12 @@
    .form-usual {
       padding-bottom: 14px;
    }
+   .selector .selector__btn {
+      @media (max-width: 500px){
+         text-align: center;
+         min-width: 84px;
+      }
+   }
 }
 .refferal {
    &__content {

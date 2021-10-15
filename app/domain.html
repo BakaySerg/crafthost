@@ -187,8 +187,8 @@
 				<div class="pseudo__box">
 					<a href="#" class="submenu__trigger link">Transfer to Crafthost</a>
 					<ul class="dialog dialog--above">
-						<li><a class="dialog__link" href="#">Transfer domain</a></li>
-						<li><a class="dialog__link" href="#">Transfer site</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="transfer-domain-to-another-tab" data-drawer-trigger aria-controls="transfer-domain-to-another-modal" aria-expanded="false" aria-label="Open">Transfer domain</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="transfer-site-to-another-tab" data-drawer-trigger aria-controls="transfer-site-to-another-modal" aria-expanded="false" aria-label="Open">Transfer site</a></li>
 					</ul>
 				</div>
 			</div>
@@ -208,6 +208,72 @@
 	   </div>
 	   <div class="widget"></div>
 	</footer>
+
+	<!-- popup (transfer-domain-to another account)-->
+	<div class="drawer" id="transfer-domain-to-another-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="transfer-domain-to-another-tab" class="drawer__item" data-tab="hidden">
+				   <div class="drawer__body">
+				      <div class="drawer__header drawer__header--noborder">
+				         <div class="drawer__title">
+				            <h2 class="drawer__headline">Transfer domain to another Crafthost account</h2>
+				         </div>
+				      </div>
+				      <div class="drawer__content addable-content pt-1">
+				         <div class="pb-05">Transfer domain:</div>
+				         <div class="big-link big-link--short">
+				            <svg class="i-link" viewBox="0 0 32 32"><use xlink:href="#i-globe"></use></svg>
+				            <span>city.com</span>
+				         </div>
+				         <div class="form-remark mt-1">* Deletion of domains occurs after the receiving account confirms the domain&nbsp;transfer</div>
+				      </div>
+				   </div>
+				   <div class="drawer__footer">
+				      <button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+				      <button type="submit" class="btn btn--lg btn--success">Continue</button>
+				   </div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- popup (transfer-site-to another account)-->
+	<div class="drawer" id="transfer-site-to-another-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="transfer-site-to-another-tab" class="drawer__item" data-tab="hidden">
+				   <div class="drawer__body">
+				      <div class="drawer__header drawer__header--noborder">
+				         <div class="drawer__title">
+				            <h2 class="drawer__headline">Transfer domain to another Crafthost account</h2>
+				         </div>
+				      </div>
+				      <div class="drawer__content addable-content">
+				         <div class="form-remark">Transfer domain: website.tech</div>
+				         <div class="pb-1 pt-1">Transfer to account:</div>
+				         <div class="form-usual">
+				            <input name="d1" type="text" placeholder="Site name" required value="olivia-smith@mail.com">
+				         </div>
+				         <div class="form-usual">
+				            <input name="d2" type="text" placeholder="Client's number" required>
+				         </div>
+				         <div class="form-remark">* Deletion of domains occurs after the receiving account confirms the domain&nbsp;transfer</div>
+				      </div>
+				   </div>
+				   <div class="drawer__footer">
+				      <button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Back</button>
+				      <button type="button" class="btn btn--lg btn--success" data-link="transfer-domain-to.html">Transfer</button>
+				   </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
 </body>
 </html>

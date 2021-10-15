@@ -349,7 +349,10 @@
 		pointer-events: auto;
 		transform: translateY(0);
 		height: auto;
-		& .dialog__link {opacity: 1;}
+		& .dialog__link {
+			opacity: 1;
+			transition: .25s ease .1s;
+		}
 	}
 }
 .submenu .dialog {

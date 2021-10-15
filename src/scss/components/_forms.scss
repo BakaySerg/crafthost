@@ -387,6 +387,7 @@ input:not([type=radio]):not([type=checkbox]) {
 .form-remark {
 	font-size: em(14);
 	padding: .3em 0;
+	max-width: 525px;
 }
 .form-field {
 	display: block;

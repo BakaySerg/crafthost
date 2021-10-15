@@ -39,14 +39,37 @@
 				<div class="pseudo__box">
 					<a href="#" class="submenu__trigger link">Transfer to Crafthost</a>
 					<ul class="dialog dialog--above">
-						<li><a class="dialog__link" href="#">Transfer domain</a></li>
-						<li><a class="dialog__link" href="#">Transfer site</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="transfer-domain-to-another-tab" data-drawer-trigger aria-controls="transfer-domain-to-another-modal" aria-expanded="false" aria-label="Open">Transfer domain</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="transfer-site-to-another-tab" data-drawer-trigger aria-controls="transfer-site-to-another-modal" aria-expanded="false" aria-label="Open">Transfer site</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	//= ./include/footer.html
+
+	<!-- popup (transfer-domain-to another account)-->
+	<div class="drawer" id="transfer-domain-to-another-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/domains/modal-transfer-domain-to-another-account.html
+			</div>
+		</div>
+	</div>
+	<!-- popup (transfer-site-to another account)-->
+	<div class="drawer" id="transfer-site-to-another-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				//= ./pages/domains/modal-transfer-site-to-another-account.html
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script src="js/drawer.js"></script>
 </body>
 </html>

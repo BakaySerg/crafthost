@@ -403,17 +403,32 @@
 								<p>Authinfo-code application form</p>
 							</div>
 						</div>
-						<div class="drawer__content addable-content">
+						<div class="drawer__content addable-content pt-1">
 							<div class="pb-05">Domain list:</div>
 							<div class="order__card">
 								website.tech <br>
 								design.io
 							</div>
 							<div class="pb-05">How to get the key:</div>
-							<label class="form-field">
-								<input type="email" name="email" class="form-input" placeholder=" " required>
-								<span class="form-placeholder">Email</span>
-							</label>
+							<div class="plan__tabs tabs">
+								<div class="selector selector--tab checked" data-trigger-tab="first">
+									<div class="selector__btn">Email</div>
+								</div>
+								<div class="selector selector--tab" data-trigger-tab="second">
+									<div class="selector__btn">Generate</div>
+								</div>
+							</div>
+							<div class="tabs-content pt-05 pb-05">
+								<div id="first" class="tab" data-tab="active">
+									<label class="form-field">
+										<input type="email" name="email" class="form-input" placeholder=" ">
+										<span class="form-placeholder">Email</span>
+									</label>
+								</div>
+								<div id="second" class="tab" data-tab="hidden">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								</div>
+							</div>
 							<div class="catpcha"><img src="img/captcha.png" alt="captcha"></div>
 						</div>
 					</div>
