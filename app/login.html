@@ -27,7 +27,7 @@
 
 <body class="login__body">
    <div class="wrapper">
-      <header class="login__header header__top">
+      <header class="header__top">
          <div class="container-xl">
             <div class="login__logo">
                <img srcset="img/login/logo-inverted.png, img/login/logo-inverted-2x.png 2x" src="img/login/logo-inverted.png" alt="logo" width="135" height="32">
@@ -35,7 +35,37 @@
             <button type="button" class="btn btn--lg btn--glass" data-link="login.html">Log in</button>
          </div>
       </header>
-
+      <main class="login__main container">
+         <div class="login__header">
+            <h1 class="login__title">You are now logged out</h1>
+            <div class="text-muted">While you're away, why not check out:</div>
+         </div>
+         <div class="login__grid">
+            <div class="login__card">
+               <div class="login__card-icon"><img src="img/login/tw.svg" alt="soc"></div>
+               <h2 class="login__card-title">Follow Us on Twitter</h2>
+               <div class="login__card-text">We post quick updates on what's happening on the site on Twitter, follow our Tweets to keep up to&nbsp;date. </div>
+            </div>
+            <div class="login__card">
+               <div class="login__card-icon"><img src="img/login/fb.svg" alt="soc"></div>
+               <h2 class="login__card-title">Become a Facebook Fan</h2>
+               <div class="login__card-text">If you're a Facebook type you should definitely fan us up, there's lot of useful things on the Crafthost Facebook&nbsp;page.</div>
+            </div>
+            <div class="login__card">
+               <div class="login__card-icon"><img src="img/login/blog.svg" alt="soc"></div>
+               <h2 class="login__card-title">Subscribe to Our Blog</h2>
+               <div class="login__card-text">The Crafthost Blog has in-depth updates on new features and activity on the site, and is a great channel for giving us feedback. Add the feed to your feed reader and you'll always know what's going on. </div>
+            </div>
+         </div>
+         <div class="subscribe">
+            <h2 class="login__card-title">Receive discounts and promo codes for&nbsp;free!</h2>
+            <div class="text-muted">Subscribe to Crafthost News Letters and Receive Discounts for you with your friends and collogues button</div>
+            <form class="subscribe__form search__form">
+               <input type="email"  required minlength="4" spellcheck="false" placeholder="Your email">
+               <button class="btn btn--lg btn--success" type="submit">Subscribe</button>
+            </form>
+         </div>
+      </main>
    </div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Basket | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+            <h1 class="h1">Purchase</h1>
+				<div class="header__bureau">
+               <a href="help.html" class="bureau__link btn btn--lg btn--icon align-right">Support <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></a>
+				</div>
+			</div>
+		</header>
+
+		<div class="board">
+			<div class="board__message board__message--lg board__message--xl">
+				<figure class="message__picture">
+					<img srcset="img/payment/empty-basket.png, img/payment/empty-basket-2x.png 2x" src="img/payment/empty-basket.png" alt="basket">
+				</figure>
+				<div class="message__descr message__descr--huge">
+					<h2 class="message__title">The are no items in your basket</h2>
+					<button type="button" class="btn btn--lg btn--success mt-1">Keep Shopping</button>
+				</div>
+			</div>
+         <form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"></use></svg></i>
+				<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Add domain">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+</body>
+</html>
