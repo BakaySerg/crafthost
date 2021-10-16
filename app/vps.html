@@ -149,7 +149,7 @@
 			                  <li><a class="dialog__link" href="help.html">Get Help</a></li>
 			               </ul>
 			               <div class="dialog__divider dialog__divider--up">
-			                  <button type="button" class="btn btn--lg btn--glass">Log out</button>
+			                  <button type="button" class="btn btn--lg btn--glass" data-link="login.html">Log out</button>
 			               </div>
 			            </div>
 			         </div>
@@ -171,67 +171,110 @@
 				<div class="plan__main">
 
 					<div class="box box--option">
-						<h2 class="message__title message__title--indented">Imagery</h2>
+						<h2 class="message__title message__title--indented mb-0">Imagery</h2>
+						<div class="plan__tabs tabs pb-1">
+							<div class="selector selector--tab checked" data-trigger-tab="first">
+								<div class="selector__btn">OS</div>
+							</div>
+							<div class="selector selector--tab" data-trigger-tab="second">
+								<div class="selector__btn">Apps and control panels</div>
+							</div>
+						</div>
+						<div class="tabs-content">
+							<div id="first" data-tab="active">
+								<div class="plan__option divid-up">
+									<div class="plan__term">Cent OC
+										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
+											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+										</a>
+									</div>
+									<div class="plan__choise plan__choise--right">
+										<select name="os-choise-1">
+											<option value="1">Cent OS 7</option>
+											<option value="2">Cent OS 11</option>
+											<option value="3">Cent OS 7</option>
+										</select>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="os" value="2">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__term">Ubuntu
+										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
+											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+										</a>
+									</div>
+									<div class="plan__choise plan__choise--right">
+										<select name="os-choise-2">
+											<option value="1">Ubuntu 20.04 LTS</option>
+											<option value="2">Ubuntu 20.04 LTS</option>
+											<option value="3">Ubuntu 20.04 LTS</option>
+										</select>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="os" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+									</label>
+								</div>
+								<div class="plan__option">
+									<div class="plan__term">Debian
+										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
+											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+										</a>
+									</div>
+									<div class="plan__choise plan__choise--right">
+										<select name="os-choise-3">
+											<option value="1">Debian 10</option>
+											<option value="2">Debian 10</option>
+											<option value="3">Debian 10</option>
+										</select>
+									</div>
+									<label class="checkbox-custom">
+										<input class="d-none checkbox" type="radio" name="os" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+									</label>
+								</div>
+							</div>
+							<div id="second" data-tab="hidden">
+								<div class="pt-1 pb-1 plan__option divid-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam distinctio veniam vero facilis dignissimos, unde debitis corporis. Tenetur aspernatur delectus! Earum neque ratione consequuntur, quos hic, quasi corporis voluptate distinctio amet provident. Cum praesentium quae facere quibusdam harum nostrum, ipsum perferendis impedit explicabo aliquid, quaerat maxime ullam optio error libero, aperiam et tempore. Repudiandae impedit dolore animi, error id veniam voluptatum cupiditate, porro sit voluptates quisquam ducimus blanditiis, iusto nihil atque consequatur. Nobis sed ipsa numquam saepe. Accusamus molestias ducimus facilis quae praesentium quidem labore dolorem repudiandae expedita amet aut, obcaecati, animi incidunt, maxime soluta doloribus minima veniam. A accusamus voluptates doloremque numquam ducimus sed excepturi eius officia ex?</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box box--option">
+						<h2 class="message__title message__title--indented">Plans</h2>
 						<div class="plan__option">
-							<div class="plan__term">Cent OC
-								<a href="javascript:;" class="help help--icon"
-									data-help="Some kind of explanatory text on how to proceed with all these things">
-									<svg class="i-question" viewBox="0 0 32 32">
-										<use xlink:href="#i-question"></use>
-									</svg>
-								</a>
+							<div class="plan__term">Plan 1</div>
+							<div class="plan__cost">
+								<div class="cost__new">$2,00</div>
 							</div>
-							<div class="plan__choise plan__choise--right">
-								<select name="os-choise-1">
-									<option value="1">Cent OS 7</option>
-									<option value="2">Cent OS 11</option>
-									<option value="3">Cent OS 7</option>
-								</select>
-							</div>
+							<div class="plan__month">(1 month)</div>
 							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="os" value="2">
+								<input class="d-none checkbox" type="radio" name="plan" value="2">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
 							</label>
 						</div>
 						<div class="plan__option">
-							<div class="plan__term">Ubuntu
-								<a href="javascript:;" class="help help--icon"
-									data-help="Some kind of explanatory text on how to proceed with all these things">
-									<svg class="i-question" viewBox="0 0 32 32">
-										<use xlink:href="#i-question"></use>
-									</svg>
-								</a>
+							<div class="plan__term">Plan 2</div>
+							<div class="plan__cost">
+								<div class="cost__new">$4,00</div>
 							</div>
-							<div class="plan__choise plan__choise--right">
-								<select name="os-choise-2">
-									<option value="1">Ubuntu 20.04 LTS</option>
-									<option value="2">Ubuntu 20.04 LTS</option>
-									<option value="3">Ubuntu 20.04 LTS</option>
-								</select>
-							</div>
+							<div class="plan__month">(2 month)</div>
 							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
 							</label>
 						</div>
 						<div class="plan__option">
-							<div class="plan__term">Debian
-								<a href="javascript:;" class="help help--icon"
-									data-help="Some kind of explanatory text on how to proceed with all these things">
-									<svg class="i-question" viewBox="0 0 32 32">
-										<use xlink:href="#i-question"></use>
-									</svg>
-								</a>
+							<div class="plan__term">Plan 3</div>
+							<div class="plan__cost">
+								<div class="cost__new">$6,00</div>
 							</div>
-							<div class="plan__choise plan__choise--right">
-								<select name="os-choise-3">
-									<option value="1">Debian 10</option>
-									<option value="2">Debian 10</option>
-									<option value="3">Debian 10</option>
-								</select>
-							</div>
+							<div class="plan__month">(3 month)</div>
 							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+								<input class="d-none checkbox" type="radio" name="plan" value="1">
 								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
 							</label>
 						</div>
@@ -244,14 +287,14 @@
 						</div>
 						<div class="divid-up addons__cta">
 							<div class="addons__descr">
-								<h3 class="h3">Hosting +</h3>
-								<p>Extended support and antivirus protection for a month at a discount</p>
+								<h3 class="h3">Backups</h3>
+								<p>Backup creation once a week</p>
 							</div>
 							<div class="addons__price">
-								<b>$5,00</b>
+								<b>$1,00</b>
 								<label class="checkbox-custom">
 									<input class="d-none checkbox" type="checkbox" name="add" value="add">
-									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
 								</label>
 							</div>
 						</div>
@@ -263,17 +306,20 @@
 				<div class="plan__sidebar box">
 					<h2 class="h1">Your order</h2>
 					<div class="divid-up">
-						<div class="plan__columns plan__columns--optional"><b>Server</b> <b>$10,00</b> <i
-								class="i-cancel"><svg viewBox="0 0 32 32">
-									<use xlink:href="#i-close-xs" />
-								</svg></i></div>
+						<div class="plan__columns plan__columns--optional"><b>Cent OS 10</b>
+						<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i></div>
+						<div class="plan__columns"><span class="fz-14">OS</span></div>
+					</div>
+					<div class="divid-up">
+						<div class="plan__columns plan__columns--optional"><b>Plan 1</b> <b>$2,00</b>
+						<i class="i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"/></svg></i></div>
 						<div class="plan__columns"><span class="fz-14">1 month</span></div>
 					</div>
 					<div class="divid-up">
-						<div class="plan__columns">Subtotal <b>$110,00</b></div>
-						<div class="plan__columns color-alert">Discount: <b>- $30,00</b></div>
+						<div class="plan__columns">Subtotal <b>$2,00</b></div>
+						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
 						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
-						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$8000,00</b></div>
+						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$2,00</b></div>
 						<a href="payment.html" class="btn btn--lg btn--icon btn--success">Buy<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
 					</div>
 				</div>

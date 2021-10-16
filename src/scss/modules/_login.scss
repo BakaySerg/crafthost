@@ -1,0 +1,10 @@
+.login {
+   &__body {
+      background-color: $headline;
+      background-image: url(../img/login/bg-1.png), url(../img/login/bg-2.png);
+      background-repeat: no-repeat;
+      background-position: left 40%, right bottom;
+      color: #fff;
+      .header__top {border-bottom-color: $border-muted;}
+   }
+}
