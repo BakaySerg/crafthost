@@ -463,6 +463,9 @@ input::-webkit-calendar-picker-indicator {
 	@media (max-width: 500px){
 		margin-left: 1.1em;
 	}
+	@media (max-width: 359px){
+		margin-left: .7em;
+	}
 }
 .form-combo {
 	position: relative;
@@ -652,11 +655,13 @@ input::-webkit-calendar-picker-indicator {
 	align-items: center;
 	label {
 		width: 102px;
-		padding-right: 10px;
+		margin-right: auto;
+		padding-right: 14px;
 		line-height: 1.1;
 		font-size: em(15);
 		color: $headline;
 		@media (max-width: 500px){
+			padding-right: 10px;
 			width: 95px;
 		}
 	}

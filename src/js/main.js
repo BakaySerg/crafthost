@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	const menu = document.getElementById("dilator");
 	const menuTrigger = document.querySelector(".menu__trigger");
 
-	 menuTrigger.addEventListener("click", function() {
+	 menuTrigger?.addEventListener("click", function() {
 		menu.classList.toggle("open");
 	 });
 

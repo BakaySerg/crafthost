@@ -5,6 +5,11 @@
 	z-index: 11;
 	&__top{
 		border-bottom: 1px solid $border;
+		&--white {
+			background-color: #fff;
+			border-bottom: none;
+			box-shadow: -1px 1px 10px rgba(30,23,104,.04);
+		}
 		.container-xl{
 			padding: 20px 15px;
 			display: flex;
@@ -19,6 +24,13 @@
 			@media (max-width: 380px){
 				padding: 6px 14px;
 			}
+		}
+	}
+	&__remark {
+		margin-right: 15px;
+		margin-left: auto;
+		@media (max-width: 700px){
+			display: none;
 		}
 	}
 }

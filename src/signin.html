@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sign In | Crafthost</title>
+	//= ./include/head.html
+</head>
+
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header__top header__top--white">
+			<div class="container-xl">
+				<div class="login__logo">
+					<img srcset="img/header/logo.png, img/header/logo-2x.png 2x" src="img/header/logo.png" alt="logo"
+						width="135" height="32">
+				</div>
+				<div class="header__remark">Not a Crafthost customer?</div>
+				<a href="singin.html" class="btn btn--lg btn--simply" data-link="signup.html">Sign up</a>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<div class="box container">
+				<form class="pay drawer__form">
+					<div class="sign__title">
+						<img srcset="img/profile/signin/signin.png, img/profile/signin/signin-2x.png 2x" src="img/profile/signin/signin.png">
+						<h2 class="h2">Sign In</h2>
+					</div>
+					<label class="form-field">
+						<input type="text" name="login" class="form-input" placeholder=" " minlength="2" required>
+						<span class="form-placeholder">Login</span>
+					</label>
+					<label class="form-field">
+						<input type="password" name="new-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+						<span class="form-placeholder">New password</span>
+						<button type="button" class="btn password-picker">
+							<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+							<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+						</button>
+					</label>
+					<div class="f-md pt-15">
+						<div class="half pb-1">
+							<div class="catpcha"><img src="img/captcha-1.png" alt="captcha"></div>
+						</div>
+						<div class="half pb-1 ord-0">
+							<button type="submit" class="btn btn--lg btn--success btn--icon">Sign in</button>
+							<div class="v-center pt-1">
+								<label class="checkbox-custom">
+									<input id="stay" name="stay" class="d-none checkbox" type="checkbox" value="-">
+									<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"></use></svg></i>
+								</label>
+								<label class="label-custom" for="stay">Stay logged in</label>
+							</div>
+						</div>
+					</div>
+					<div class="text-center pt-1">
+						<div class="form-remark">Forgot user name or password?</div>
+						<div class="form-remark">Do you have any questions? <a href="help.html" class="link" target="_blank">Help and Support!</a></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	//= ./include/footer.html
+	<script src="js/main.js"></script>
+	<script>
+		const passPickers = document.querySelectorAll('.password-picker');
+		if (passPickers) {
+			[...passPickers].forEach(function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = e.target;
+					const parent = target.closest('.form-field');
+					const pass = parent.querySelector('.form-input');
+					parent.classList.toggle('password-show');
+					if (parent.classList.contains('password-show')) {
+						pass.setAttribute('type', 'text');
+					} else {
+						pass.setAttribute('type', 'password');
+					}
+				});
+			}
+			);
+		};
+	</script>
+</body>
+</html>
