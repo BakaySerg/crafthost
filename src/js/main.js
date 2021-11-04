@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	 menuTrigger?.addEventListener("click", function() {
 		menu.classList.toggle("open");
+		menuTrigger.classList.toggle("menu__trigger--cross");
 	 });
 
 	//all dialogs
