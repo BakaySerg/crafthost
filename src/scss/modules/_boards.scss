@@ -315,7 +315,9 @@
 .message__descr {
 	padding-right: 30px;
 	max-width: 656px;
-	@media (max-width: 600px){padding-right: 0;}
+	@media (max-width: 600px){
+      padding-right: 9px;
+   }
 	& > p +.btn {
 		margin-top: 2em;
 		@media (max-width: 600px){
@@ -403,10 +405,10 @@
 		}
 		@media (max-width: 600px){
 			background-position: 121% calc(50% + 49px);
-			background-size: auto 97%;
+			background-size: auto 75%;
 		}
 		@media (max-width: 380px){
-			background-size: auto 70%;
+			background-size: auto 62%;
 		}
 		.message__descr p {
 			text-shadow: 1px 1px 3px #fff;

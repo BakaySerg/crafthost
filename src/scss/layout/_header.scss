@@ -21,6 +21,9 @@
 			@media (max-width: 1023px){
 				flex-wrap: wrap;
 			}
+			@media (max-width: 500px){
+				padding: 10px 14px;
+			}
 			@media (max-width: 380px){
 				padding: 6px 14px;
 			}
