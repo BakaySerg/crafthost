@@ -170,43 +170,14 @@
 			<form action="#" class="plan__form plan__sidelong">
 				<!-- choise -->
 				<div class="plan__main">
-					<div class="box box--option">
-						<h2 class="message__title message__title--indented">Domains</h2>
-						<div class="divid-up pt-05">
-							<div class="plan__search">
-								<div class="search__form">
-									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
-									<datalist id="choise-in-domain">
-										<option value="website.tech">
-										<option value="interface.io">
-									</datalist>
-									<button class="btn btn--lg btn--success" type="submit">Add</button>
-								</div>
-							</div>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">website</span>.<span class="domain-extension">tech</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">site</span>.<span class="domain-extension">org</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">web</span>.<span class="domain-extension">store</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
+					<div  class="box search__form">
+						<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+						<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+						<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Add</button>
 					</div>
+					<figure class="box__dummy">
+						<img srcset="img/home/message-lg.png, img/home/message-lg-2x.png 2x" src="img/home/message-lg.png" alt="Hosting">
+					</figure>
 				</div>
 
 				<!-- sidebar -->
@@ -214,9 +185,18 @@
 					<h2 class="h1">Your order</h2>
 					<div class="divid-up">
 						<div class="plan__columns plan__columns--optional">
-							<b>Transfer domains</b>
-							<b>Free</b>
-							<span class="fz-14 full-size">3 domains</span>
+							<b>website.tech</b>
+							<b>$0,00</b>
+							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
+						</div>
+						<div class="plan__columns plan__columns--optional">
+							<b>site.org</b>
+							<b>$0,00</b>
+							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
+						</div>
+						<div class="plan__columns plan__columns--optional">
+							<b>web.store</b>
+							<b>$0,00</b>
 							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
 						</div>
 					</div>

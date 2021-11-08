@@ -12,6 +12,9 @@
    @media (max-width: 360px){
       padding: 14px 14px 10px;
    }
+   @media (max-width: 359px){
+      padding: 12px 12px 8px;
+   }
 }
 .sort__title {
    display: flex;
@@ -827,5 +830,14 @@
    }
    @media (max-width: 360px){
       padding-top: 12px;
+   }
+}
+.box__dummy {
+   padding-top: 1.2em;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   @media (max-width: 500px){
+      padding-top: 0;
    }
 }

@@ -13,11 +13,6 @@
 			//= ./include/header.html
 			<div class="header__bottom container">
 				<h1 class="h1">Transfer domain to Crafthost</h1>
-				<div class="header__bureau">
-					<button type="button" class="bureau__link btn btn--lg btn--icon align-right" data-tab-open="transfer-domain-to--tab" data-drawer-trigger aria-controls="transfer-domain-to---modal" aria-expanded="false" aria-label="Open">
-						Change domains
-						<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"></use></svg></button>
-				</div>
 			</div>
 		</header>
 		<!--  board  -->
@@ -26,17 +21,41 @@
 			<form action="#" class="plan__form plan__sidelong">
 				<!-- choise -->
 				<div class="plan__main">
-					<div class="box box--pad">
+					<div class="box box--option">
 						<h2 class="message__title message__title--indented">Domains</h2>
-						<div class="divid-up pt-15">
-							<div class="big-link big-link--short">
-								<svg class="i-link" viewBox="0 0 32 32"><use xlink:href="#i-globe"></use></svg>
-								<span>city.com</span>
+						<div class="divid-up pt-05">
+							<div class="plan__search">
+								<div class="search__form">
+									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
+									<datalist id="choise-in-domain">
+										<option value="website.tech">
+										<option value="interface.io">
+									</datalist>
+									<button class="btn btn--lg btn--success" type="submit">Add</button>
+								</div>
 							</div>
-							<div class="big-link big-link--short">
-								<svg class="i-link" viewBox="0 0 32 32"><use xlink:href="#i-globe"></use></svg>
-								<span>design.io</span>
+						</div>
+						<div class="plan__option">
+							<div class="plan__name plan__name--compact"><span class="domain">website</span>.<span class="domain-extension">tech</span></div>
+							<div class="plan__cost">
+								<div class="cost__new">$0,00</div>
 							</div>
+							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
+						</div>
+						<div class="plan__option">
+							<div class="plan__name plan__name--compact"><span class="domain">site</span>.<span class="domain-extension">org</span></div>
+							<div class="plan__cost">
+								<div class="cost__new">$0,00</div>
+							</div>
+							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
+						</div>
+						<div class="plan__option">
+							<div class="plan__name plan__name--compact"><span class="domain">web</span>.<span class="domain-extension">store</span></div>
+							<div class="plan__cost">
+								<div class="cost__new">$0,00</div>
+							</div>
+							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
 						</div>
 					</div>
 				</div>
@@ -61,29 +80,16 @@
 							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
 							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs" /></svg></button>
 						</div>
-						<button type="submit" class="btn btn--lg btn--icon btn--success"> Buy
+						<button type="button" class="btn btn--lg btn--icon btn--success" data-link="transfer-domain-details.html">Confirm order
 							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
 						</button>
 					</div>
 				</div>
-
 			</form>
 		</div>
 	</div>
 	//= ./include/footer.html
 
-	<!-- popup (transfer-domain-to---modal)-->
-	<div class="drawer" id="transfer-domain-to---modal" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-		<div class="drawer__wrapper">
-			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-			<div class="drawer__fieldset">
-				//= ./pages/settings/modal-transfer-domain-to.html
-			</div>
-		</div>
-	</div>
-
 	<script src="js/main.js"></script>
-	<script defer src="js/drawer.js"></script>
 </body>
 </html>

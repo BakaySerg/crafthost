@@ -38,6 +38,9 @@
    @media (max-width: 380px){
       padding: 16px 17px 17px;
    }
+   @media (max-width: 359px){
+      padding: 16px 15px 16px;
+   }
    .h1 {
       text-align: center;
       padding-bottom: .9em;
@@ -69,6 +72,9 @@
       position: relative;
       padding-right: 15px;
       flex-wrap: wrap;
+      & + & {
+         margin-top: .2em;
+      }
    }
    .full-size {
       color: $text;
@@ -283,6 +289,11 @@
    @media (max-width: 360px){
       font-size: 1.1em;
    }
+   &--compact {
+      @media (max-width: 420px) {
+      	min-width: 50%;
+      }
+   }
 }
 .plan__option--collapse {
    .plan__name {
@@ -294,6 +305,11 @@
    min-width: 169px;
    @media (max-width: 500px){
       min-width: 146px;
+   }
+}
+.plan__name--compact ~.plan__cost {
+   @media (max-width: 500px){
+      min-width: 60px;
    }
 }
 .plan__choise +.plan__cost {
@@ -654,4 +670,22 @@ input[type=range]::-moz-range-thumb {
    width: 20px;
    height: 20px;
 	cursor: pointer;
+}
+.btn--cancel {
+   width: 36px;
+   height: 36px;
+   padding: 6px;
+   margin-top: -2px;
+   margin-bottom: -2px;
+   color: $border;
+   &:hover {
+      color: darken($border, 30%);
+   }
+   @media (max-width: 500px){
+      width: 32px;
+      height: 32px;
+   }
+}
+.plan__option .btn--cancel {
+   margin-left: .2em;
 }
