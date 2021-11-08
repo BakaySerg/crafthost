@@ -25,6 +25,18 @@
 		</div>
 	</div>
 	//= ./include/footer.html
+
+	<!-- popup (feedback)-->
+	<div class="drawer drawer--add" id="feedback-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__add">
+			<div class="drawer__fieldset">
+				//= ./pages/modal-feedback.html
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
 </body>
 </html>

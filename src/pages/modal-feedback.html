@@ -1,0 +1,51 @@
+<div class="drawer__item">
+	<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+	<div class="drawer__body">
+		<div class="drawer__header">
+			<div class="drawer__title">
+				<div class="text-center">
+					<h3>Feedback</h3>
+					<p>A few minutes of your time helps us improve. We genuinely aooreciate your help!</p>
+				</div>
+			</div>
+		</div>
+		<form class="feedback__form">
+			<div class="feedback__question">How likely are you to recommend CraftHost to friends?</div>
+			<fieldset class="feedback__choice">
+				<label class="feedback__switch">
+					<input type="radio" name="mood" value="1">
+					<i class="feedback__smile feedback__smile--1"></i>
+				</label>
+				<label class="feedback__switch">
+					<input type="radio" name="mood" value="2">
+					<i class="feedback__smile feedback__smile--2"></i>
+				</label>
+				<label class="feedback__switch">
+					<input type="radio" name="mood" value="3">
+					<i class="feedback__smile feedback__smile--3"></i>
+				</label>
+				<label class="feedback__switch">
+					<input type="radio" name="mood" value="4">
+					<i class="feedback__smile feedback__smile--4"></i>
+				</label>
+				<label class="feedback__switch">
+					<input type="radio" name="mood" value="5">
+					<i class="feedback__smile feedback__smile--5"></i>
+				</label>
+			</fieldset>
+			<div class="feedback__question">What is the primary reason for the answer you just gave?</div>
+			<textarea name="feedback__message" cols="30" rows="10" class="feedback__message" placeholder="Your message" required></textarea>
+			<div class="text-center pt-15">
+				<button type="submit" class="btn btn--lg btn--icon btn--success">Send
+					<svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+<script>
+	const form = document.querySelector('.feedback__form');
+	form?.addEventListener('change', function (e) {
+		this.classList.add('choiced');
+	});
+</script>
