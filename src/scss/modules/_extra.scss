@@ -95,3 +95,39 @@
       gap: 1.1em;
    }
 }
+.corresp {
+   padding: 1.9em 1.5em 4em;
+   @media (max-width: 600px){
+      padding: 1.7em 1.2em .9em;
+   }
+   &__item {
+      padding: 2.1em .1em 1.4em;
+      &+& {
+         border-top: 1px solid $border;
+      }
+   }
+   &__user {
+      display: flex;
+      align-items: center;
+      gap: 1.1em;
+      padding-bottom: 1.8em;
+      &-ava {
+         max-width: 38px;
+      }
+   }
+   &__name {
+      padding-bottom: .2em;
+      display: flex;
+      align-items: center;
+      gap: .3em;
+      color: $headline;
+   }
+   &__date {
+      font-size: em(14);
+   }
+   &__text {
+      font-size: em(15);
+      color: $headline;
+      p {padding-bottom: .8em;}
+   }
+}

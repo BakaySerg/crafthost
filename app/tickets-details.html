@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Tickets | Crafthost</title>
+	<title>Ticket request | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -172,48 +172,78 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">My tickets to support service</h1>
-				<div class="header__bureau">
-					<a href="#" class="bureau__link active" data-represent>All tickets</a>
-					<a href="#" class="bureau__link" data-represent="opened">Opened</a>
-					<a href="#" class="bureau__link" data-represent="closed">Closed</a>
-					<a href="ticket-create.html" class="btn btn--lg btn--icon btn--success" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false"><svg class="i-plus" viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg>Create a ticket</a>
-				</div>
+				<h1 class="h1">Request</h1>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
-			<div class="container box ticket" data-present="opened">
-				<div class="ticket__descr">
-					<div class="ticket__title">
-						<!-- Attention, the "aria-controls" one opens the popup, and the "data-tab-open" one opens a specific tab in the popup -->
-						<a href="tickets-details.html" class="h3" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false">#99500000000001575741</a>
-						<div class="status" data-status="active">Opened</div>
-						<a href="#" class="btn btn--sm btn--arrow" data-tab-open="open-ticket" data-drawer-trigger aria-controls="existent-ticket" aria-expanded="false"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
+			<ul class="container-lg breadcrumbs">
+				<li><a href="tickets.html">My tickets</a></li>
+				<li><a href="#">Ticket #99500000000001575743</a></li>
+			</ul>
+
+			<div class="plan__form plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+					<div class="box corresp">
+						<h2 class="h1">Transfer Payment</h2>
+						<div class="corresp__item">
+							<div class="corresp__user">
+								<div class="corresp__user-ava">
+									<img src="img/header/user.png" alt="user" width="38" height="38">
+								</div>
+								<div class="corresp__user-data">
+									<div class="corresp__name">John Doe</div>
+									<div class="corresp__date">1 month ago</div>
+								</div>
+							</div>
+							<div class="corresp__text">
+								<p>Hello!</p>
+								<p>Do you accept bank transfer payment? <br>Thank you.</p>
+							</div>
+						</div>
+						<div class="corresp__item">
+							<div class="corresp__user">
+								<div class="corresp__user-ava">
+									<img src="img/header/user2.png" alt="user" width="38" height="38">
+								</div>
+								<div class="corresp__user-data">
+									<div class="corresp__name">
+										<svg class="icon color-success" viewBox="0 0 32 32"><use xlink:href="#i-support"/></svg>
+										Harry Smith
+									</div>
+									<div class="corresp__date">1 month ago</div>
+								</div>
+							</div>
+							<div class="corresp__text">
+								<p>Hello!</p>
+								<p>Yes, we do, but only from organizations. To do this, you need to fill in the contact details of your account with the details of the organization. And then invoicing will be available.</p>
+							</div>
+						</div>
 					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
+				</div>
+				<!-- sidebar -->
+				<div class="plan__sidebar box">
+					<h2 class="h1">Info</h2>
+					<div class="divid-up"></div>
+					<div class="plan__columns plan__columns--info"><b>Initiator</b><div class="plan__mini">John Doe</div></div>
+					<div class="plan__columns plan__columns--info"><b>Created</b><div class="plan__mini">10.10.2021 at 11:55</div></div>
+					<div class="plan__columns plan__columns--info"><b>Last accessed</b><div class="plan__mini">10.10.2021 at 11:55</div></div>
+					<div class="divid-up"></div>
+					<div class="plan__columns plan__columns--info"><b>ID</b><div class="plan__mini">#9951575743</div></div>
+					<div class="plan__columns plan__columns--info"><b>Status</b><b class="color-active">Fulfilled</b></div>
+					<div class="divid-up"></div>
+					<div class="plan__columns plan__columns--info">
+						<b>Timetable</b>
+						<div class="plan__mini">
+							Weekdays: 7:00 - 20:00 (MSC)<br>
+							Sat. 9:00 - 18:00 (MSC)<br>
+							Sunday: 9:00 - 18:00 (MSC)<br>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="container box ticket" data-present="closed">
-				<div class="ticket__descr">
-					<div class="ticket__title">
-						<a href="tickets-details.html" class="h3">#89500000000001575742</a>
-						<div class="status" data-status="danger">Closed</div>
-						<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
-					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
-				</div>
-			</div>
-			<div class="container box ticket" data-present="closed">
-				<div class="ticket__descr">
-					<div class="ticket__title">
-						<a href="tickets-details.html" class="h3">#99500000000001575743</a>
-						<div class="status" data-status="danger">Closed</div>
-						<a href="#" class="btn btn--sm btn--arrow"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></a>
-					</div>
-					<p>Hello. The website user dashboard, how to change interface to english language...</p>
-				</div>
-			</div>
+
 		</div>
 	</div>
 	<!-- footer -->
@@ -231,186 +261,6 @@
 	   </div>
 	</footer>
 
-	<!-- popup (new ticket)-->
-	<div class="drawer" id="new-ticket" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<div id="new-user" class="drawer__item" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Welcome to Crafthost support service</h2>
-								<p>If you have an account, log in so that the new application is displayed in your Personal cabinet.</p>
-							</div>
-						</div>
-						<div class="drawer__content">
-				         <div class="drawer__cta">
-				            <a href="#" class="btn btn--lg btn--outlined" data-trigger-modal="create-ticket-unregistered">Continue as a guest</a>
-				            <a href="#" class="btn btn--lg btn--success btn--icon" data-trigger-modal="create-ticket">Log in</a>
-				         </div>
-				         <p>By submitting a request, I give my consent to the processing of personal data and confirm that I have read <a href="#">Privacy Policy</a> and service rules.</p>
-						</div>
-					</div>
-				</div>
-				<!-- when the user is not registered, we show the popup with additional fields -->
-				<form id="create-ticket-unregistered" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Create a Ticket</h2>
-								<p>Describe the problem as detailed as possible</p>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<label class="form-field">
-								<input type="text" name="name" class="form-input" placeholder=" " required="" minlength="2">
-								<span class="form-placeholder">Name</span>
-							</label>
-							<label class="form-field">
-								<input type="email" name="email" class="form-input" placeholder=" " required="">
-								<span class="form-placeholder">Email</span>
-							</label>
-							<div class="pb-05">Select ticket theme</div>
-							<select class="select" name="ticket__theme">
-								<option value="domain problems">Problems buying a domain</option>
-								<option value="hostin problems">Problems buying a hosting</option>
-							</select>
-							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
-							<input type="file" name="file1" id="file1" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
-							<label class="file__area" for="file1">
-								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
-								<span data-text="Attach">Attach</span>
-							</label>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
-					</div>
-				</form>
-				<form id="create-ticket" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Create a Ticket</h2>
-								<p>Describe the problem as detailed as possible</p>
-							</div>
-						</div>
-						<div class="drawer__content">
-							<div class="pb-05">Select ticket theme</div>
-							<select class="select" name="ticket__theme">
-								<option value="domain problems">Problems buying a domain</option>
-								<option value="hostin problems">Problems buying a hosting</option>
-							</select>
-							<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
-							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
-							<label class="file__area" for="file">
-								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
-								<span data-text="Attach">Attach</span>
-							</label>
-						</div>
-					</div>
-					<div class="drawer__footer">
-						<button type="reset" class="btn btn--lg btn--secondary" data-trigger-modal="new-user">Cancel</button>
-						<button type="submit" class="btn btn--lg btn--success btn--disabled">Send your ticket</button>
-					</div>
-				</form>
-	      </div>
-		</div>
-	</div>
-
-	<!-- popup (Ticket to the Support )-->
-	<div class="drawer" id="existent-ticket" data-drawer-target>
-		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<!-- tab existent-ticket -->
-				<form id="open-ticket" class="drawer__item drawer__form" data-tab="hidden">
-					<div class="drawer__body">
-						<div class="drawer__header drawer__header--noborder">
-							<div class="drawer__title">
-								<h2 class="drawer__headline">Ticket to the Support</h2>
-								<p>What service related to?</p>
-							</div>
-				
-						</div>
-						<div class="drawer__content">
-							<div class="search__form">
-								<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"></use></svg></i>
-								<input type="text" required="" minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Input question...">
-								<button class="btn btn--lg btn--success" type="submit">Search</button>
-							</div>
-							<ul class="faq__list">
-								<li class="faq__list-item"><a href="tickets-form.html">Unrelated to a specific service</a></li>
-								<li class="faq__list-item"><a href="tickets-form.html">Premium DNS</a></li>
-								<li class="faq__list-item"><a href="tickets-form.html">Free DomainSSL certificate</a></li>
-								<li class="faq__list-item"><a href="tickets-form.html">Hosting Host-0 u1414036</a></li>
-							</ul>
-						</div>
-					</div>
-				</form>
-	      </div>
-		</div>
-	</div>
-
-	<script>
-		(function () {
-			const inputs = document.querySelectorAll('[type=file]');
-			[...inputs].forEach(function (input) {
-				input.addEventListener('change', function (e) {
-					let label = e.target.nextElementSibling,
-						labelVal = label.innerHTML,
-						fileName = '';
-					if (this.files && this.files.length > 1)
-						fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
-					else
-						fileName = e.target.value.split('\\').pop();
-					if (fileName)
-						label.querySelector('span').innerHTML = fileName;
-					else
-						label.innerHTML = labelVal;
-				});
-			});
-		}());
-	</script>
-	<script>
-	// hide and show tickets
-	const sortTickets = function () {
-		[].forEach.call(
-			document.querySelectorAll("[data-represent]"),
-			function (el) {
-				el.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = e.target,
-							criterion = target.getAttribute("data-represent"),
-							parent = this.closest(".header__bureau"),
-							siblings = parent.querySelectorAll('[data-represent]');
-					[...siblings].forEach(item => {
-						item.classList.remove('active');
-					})
-					target.classList.toggle('active');
-
-					function hideAndShow(cri) {
-						tickets = document.querySelectorAll('[data-present]');
-						[...tickets].forEach(ticket => {
-							if (cri === "" || cri == ticket.getAttribute("data-present")) {
-								ticket.removeAttribute("hidden");
-							} else {
-							ticket.setAttribute('hidden','');
-							}
-						});
-					};
-					hideAndShow(criterion);
-				});
-			}
-		);
-	};
-	sortTickets();
-
-	</script>
 	<script src="js/main.js"></script>
    <script defer src="js/drawer.js"></script>
 </body>

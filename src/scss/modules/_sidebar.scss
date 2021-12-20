@@ -78,7 +78,7 @@
    }
    .full-size {
       color: $text;
-      padding: 0.5em 0;
+      padding: .5em 0;
    }
    &--price {
       font-size: em(20);
@@ -90,6 +90,14 @@
          font-size: 1.1em;
       }
    }
+   &--info {
+      padding-bottom: 1.1em;
+   }
+}
+.plan__mini {
+   font-size: em(14);
+   color: $text;
+   text-align: right;
 }
 .i-cancel {
    position: absolute;
