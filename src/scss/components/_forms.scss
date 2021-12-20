@@ -80,11 +80,11 @@ select[name=footer__curency] > option {
 		height: calc(14vh + 120px);
 	}
 	@media (max-width: 500px){
-		height: calc(8vh + 150px);
+		height: calc(8vh + 130px);
 		padding: 10px 16px;
 	}
 	@media (max-width: 380px){
-		height: calc(3vh + 140px);
+		height: calc(3vh + 130px);
 	}
 }
 input:not([type=radio]):not([type=checkbox]) {

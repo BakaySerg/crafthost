@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tickets | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Ticket to the Support</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<form class="container box form--narrow">
+				<div class="form__header">
+					<h2 class="message__title">Send Request</h2>
+					<div class="v-center">
+						<svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"></use></svg>
+						<p class="mini-remark">Don't forget to confirm your request. After you send your&nbsp;request, a confirmation email will be sent to&nbsp;your&nbsp;mail. <br>Follow the link from the letter, and your request will be accepted for&nbsp;work.</p>
+					</div>
+				</div>
+				<div class="form__body">
+					<label class="form-field">
+						<input type="email" name="email" class="form-input" placeholder=" " required="">
+						<span class="form-placeholder">Email</span>
+					</label>
+					<div class="pb-05">Select ticket category</div>
+					<select class="select" name="ticket__theme">
+						<option value="domain problems">Problems buying a domain</option>
+						<option value="hostin problems">Problems buying a hosting</option>
+					</select>
+					<label class="form-field">
+						<input type="text" name="theme" class="form-input" placeholder=" " required="">
+						<span class="form-placeholder">Theme</span>
+					</label>
+					<textarea class="textarea" name="ticket-problem" cols="30" rows="10" placeholder="Your problem" required></textarea>
+					<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+					<label class="file__area" for="file">
+						<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"/></svg></i>
+						<span data-text="Attach">Attach</span>
+					</label>
+					<div class="v-center pt-15">
+						<label class="checkbox-custom">
+							<input id="rules" class="d-none checkbox" type="checkbox" name="backup" value="1">
+							<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"></use></svg></i>
+						</label>
+						<label class="mini-remark" for="rules">By submitting a request, I give my consent to the processing of personal data and I confirm that I have read the service rules</label>
+					</div>
+					<div class="form__footer v-center">
+						<a href="javascript:history.back()" class="btn btn--lg btn--secondary">Cancel</a>
+						<button type="submit" class="btn btn--lg btn--success">Send your ticket</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+
+	<script>
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			[...inputs].forEach(function (input) {
+				input.addEventListener('change', function (e) {
+					let label = e.target.nextElementSibling,
+						labelVal = label.innerHTML,
+						fileName = '';
+					if (this.files && this.files.length > 1)
+						fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+					else
+						fileName = e.target.value.split('\\').pop();
+					if (fileName)
+						label.querySelector('span').innerHTML = fileName;
+					else
+						label.innerHTML = labelVal;
+				});
+			});
+		}());
+	</script>
+
+	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
+</body>
+</html>

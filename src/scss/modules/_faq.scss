@@ -96,12 +96,11 @@
          border-top: 1px solid $border;
          padding: 1.2em 10px 1.2em 23px;
          @media (max-width: 500px){
-            padding: 0.9em 9px 0.9em 14px;
+            padding: .9em 9px 0.9em 14px;
          }
          a {
             color: $headline;
             padding: 5px 0;
-            cursor: help;
             &:hover {
                color: $text-active;
             }

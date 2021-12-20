@@ -43,3 +43,55 @@
    }
    .select {margin-bottom: 0;}
 }
+.form--narrow {
+   padding: 2em 1.5em 2.4em;
+   .message__title {
+      margin-left: 1.2em;
+   }
+   @media (max-width: 380px){
+      padding: 1.5em 1em 1.8em;
+   }
+}
+.form__header {
+   padding-bottom: 4em;
+   @media (max-width: 991px){
+      padding-bottom: 2.5em;
+   }
+   @media (max-width: 500px){
+      padding-bottom: 2em;
+   }
+   .i-shield {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      align-self: flex-start;
+      color: $danger;
+      @media (max-width: 500px){
+         width: 20px;
+         height: 20px;
+      }
+   }
+}
+.form__body {
+   max-width: 550px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.mini-remark {
+   font-size: em(14);
+   margin-left: 18px;
+   user-select: none;
+   cursor: pointer;
+   @media (max-width: 500px){
+      margin-left: 14px;
+   }
+}
+.form__footer {
+   display: flex;
+   justify-content: center;
+   gap: 2em;
+   padding-top: 1.8em;
+   @media (max-width: 380px){
+      gap: 1.1em;
+   }
+}
