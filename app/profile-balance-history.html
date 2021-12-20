@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Transfer | Crafthost</title>
+	<title>Balance History | Crafthost</title>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -25,7 +24,6 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 </head>
-
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -174,60 +172,72 @@
 			   </div>
 			</div>
 			<div class="header__bottom container">
-				<h1 class="h1">Transfer domain to Crafthost</h1>
+				<h1 class="h1">Balance History</h1>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
-
-			<form action="#" class="plan__form plan__sidelong">
-				<!-- choise -->
-				<div class="plan__main">
-					<div  class="box search__form">
-						<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-						<input type="text" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
-						<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Add</button>
-					</div>
-					<figure class="box__dummy">
-						<img srcset="img/home/message-lg.png, img/home/message-lg-2x.png 2x" src="img/home/message-lg.png" alt="Hosting">
-					</figure>
+			<ul class="container-lg breadcrumbs">
+				<li><a href="profile-balance.html">Account balance</a></li>
+				<li><a href="#">Balance History</a></li>
+			</ul>
+			<div class="container box setting__history">
+				<div class="table-box">
+					<table class="table table__history">
+						<tr>
+							<th>Type</th>
+							<th>Detail</th>
+							<th>Date</th>
+							<th colspan="2">Amount</th>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-success">Success</b></td>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-alert">Fail</b></td>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-success">Success</b></td>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-success">Success</b></td>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-success">Success</b></td>
+						</tr>
+						<tr>
+							<td>№116074777 from 10.10.2021</td>
+							<td>Dedicated server 50925 for 1 month</td>
+							<td>Paid 19.05.2021 at 09:15:03</td>
+							<td><b class="color-headline">$105,00</b></td>
+							<td><b class="color-success">Success</b></td>
+						</tr>
+					</table>
 				</div>
-
-				<!-- sidebar -->
-				<div class="plan__sidebar box">
-					<h2 class="h1">Your order</h2>
-					<div class="divid-up">
-						<div class="plan__columns plan__columns--optional">
-							<b>website.tech</b>
-							<b>$0,00</b>
-							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
-						</div>
-						<div class="plan__columns plan__columns--optional">
-							<b>site.org</b>
-							<b>$0,00</b>
-							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
-						</div>
-						<div class="plan__columns plan__columns--optional">
-							<b>web.store</b>
-							<b>$0,00</b>
-							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
-						</div>
-					</div>
-					<div class="divid-up">
-						<div class="plan__columns">Subtotal <b>$0,00</b></div>
-						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
-						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
-						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$0,00</b></div>
-						<div class="inline-form">
-							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
-							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs" /></svg></button>
-						</div>
-						<button type="button" class="btn btn--lg btn--icon btn--success" data-link="transfer-domain-details.html">Confirm order
-							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
-						</button>
-					</div>
+				<div class="text-center">
+					<button type="button" class="btn btn--lg btn--simply">Load More</button>
 				</div>
-			</form>
+         </div>
 		</div>
 	</div>
 	<!-- footer -->
@@ -245,6 +255,8 @@
 	   </div>
 	</footer>
 
+
 	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
 </body>
 </html>

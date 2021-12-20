@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Orders | Crafthost</title>
+	//= ./include/head.html
+</head>
+<body>
+	<div class="wrapper">
+		//= ./include/icon-sprite.html
+		<header class="header">
+			//= ./include/header.html
+			<div class="header__bottom container">
+				<h1 class="h1">Orders</h1>
+			</div>
+		</header>
+		<!--  board  -->
+		<div class="board">
+			<ul class="container-lg breadcrumbs">
+				<li><a href="profile-balance.html">Account balance</a></li>
+				<li><a href="#">Orders</a></li>
+			</ul>
+			<div class="container box setting__item setting__item--high">
+				<div class="setting__icon"><svg class="i-card" viewBox="0 0 32 32"><use xlink:href="#i-card-fail"/></svg></div>
+				<div class="setting__descr">
+					<div class="h3">№116074777 from 10.10.2021</div>
+					<div class="setting__muted">Dedicated server 50925 for 1 month</div>
+					<div class="setting__alert">Not paid</div>
+				</div>
+				<div class="setting__cta v-center">
+					<b class="balance__transact">$105,00</b>
+					<button type="button" class="btn btn--lg btn--success">Pay</button>
+				</div>
+         </div>
+			<div class="container box setting__item setting__item--high">
+				<div class="setting__icon"><svg class="i-card" viewBox="0 0 32 32"><use xlink:href="#i-card-check"/></svg></div>
+				<div class="setting__descr">
+					<div class="h3">№116074999 from 10.10.2021</div>
+					<div class="setting__muted">Dedicated server for 1 month</div>
+					<div class="setting__success">Paid 19.05.2021 at 09:15:03</div>
+				</div>
+         </div>
+			<div class="container box setting__item setting__item--high">
+				<div class="setting__icon"><svg class="i-card" viewBox="0 0 32 32"><use xlink:href="#i-card-check"/></svg></div>
+				<div class="setting__descr">
+					<div class="h3">№116074666 from 10.10.2021</div>
+					<div class="setting__muted">Dedicated server for 1 month</div>
+					<div class="setting__success">Paid 19.05.2021 at 09:15:12</div>
+				</div>
+         </div>
+		</div>
+	</div>
+	//= ./include/footer.html
+
+
+	<script src="js/main.js"></script>
+   <script defer src="js/drawer.js"></script>
+</body>
+</html>

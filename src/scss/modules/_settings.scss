@@ -4,6 +4,28 @@
       align-items: center;
       padding: 6px 15px 6px 5px;
       margin-bottom: 20px;
+      &--high {
+      	padding: 16px 24px 12px 6px;
+         flex-wrap: wrap;
+         @media (max-width: 600px){
+            .setting__descr {
+               width: 100%;
+               margin-left: 2.2em;
+               margin-bottom: 0.4em;
+               padding-right: 0;
+            }
+            .setting__cta {
+               width: 100%;
+               margin-left: 2.2em;
+               padding-bottom: 0.3em;
+            }
+         }
+         @media (max-width: 359px){
+            .setting__descr,.setting__cta {
+               margin-left: 1em;
+            }
+         }
+      }
       .btn--arrow {
          color: $icons;
          &:hover {
@@ -12,6 +34,18 @@
       }
       @media (max-width: 500px){
          margin-bottom: 14px;
+      }
+   }
+   &__icon {
+      padding: 14px 10px 0 14px;
+      flex-shrink: 0;
+      align-self: start;
+      @media (max-width: 600px) {
+         width: 100%;
+         padding: 10px 0 0 1.8em;
+      }
+      @media (max-width: 359px){
+         padding-left: .7em;
       }
    }
    &__picture {
@@ -25,7 +59,7 @@
       }
    }
    &__descr {
-      padding: 10px 37px 10px 1px;
+      padding: 12px 37px 12px 1px;
       flex-grow: .9;
       @media (max-width: 380px){
          padding: 5px 26px 5px 0;
@@ -37,11 +71,36 @@
          padding-left: 10px;
       }
    }
+   &__muted {
+      padding-top: .9em;
+      font-size: em(15);
+   }
    &__alert {
       color: $danger;
       text-shadow: 0 0;
       font-size: em(14);
       padding-top: .8em;
+   }
+   &__success {
+      color: $accessible;
+      text-shadow: 0 0;
+      font-size: em(14);
+      padding-top: .8em;
+   }
+   &__history {
+      padding: 1.4em 1.5em 2.2em;
+      .text-center {
+         padding-top: .2em;
+      }
+      @media (max-width: 991px){
+         padding: 1.3em 1.1em 2em;
+      }
+      @media (max-width: 600px){
+         padding: .7em .8em 1.6em;
+      }
+      @media (max-width: 460px){
+         .table-box {margin: 0;}
+      }
    }
    &__balance {
       display: flex;
@@ -169,6 +228,20 @@
       }
       @media (max-width: 380px){
          font-size: em(30);
+      }
+   }
+   &__transact {
+      color: $headline;
+      margin-right: 1em;
+      font-size: em(26);
+      @media (max-width: 991px){
+         font-size: em(22);
+      }
+      @media (max-width: 600px){
+         margin-right: 2em;
+      }
+      @media (max-width: 359px){
+         margin-right: 1em;
       }
    }
 }
@@ -754,4 +827,11 @@
          font-size: em(32);
       }
    }
+}
+.i-card {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   margin: 0 .5em 2px;
+   align-self: start;
 }
