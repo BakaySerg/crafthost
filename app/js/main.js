@@ -308,4 +308,11 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		});
 	};
+
+	// copyright - year
+	const year = document.getElementById("year");
+	if (year) {
+		year.innerHTML = new Date().getFullYear();
+	};
+
 });
