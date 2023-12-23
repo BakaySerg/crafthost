@@ -108,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function(){
 				 tabTarget = document.getElementById(toggle.getAttribute("data-tab-open"));
 
 			if (open) {
+				event.preventDefault();
 				openDrawer(open);
 				if (tabTarget) {
 					tabTarget.setAttribute("data-tab", "active");
 				}
-				event.preventDefault();
 				window.navigator.vibrate(30);
 			}
 			if (close) {

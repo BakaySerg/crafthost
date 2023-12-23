@@ -403,7 +403,7 @@
 	}
 }
 [data-tab]:not([data-tab=active]) {
-   display: none!important;
+   display: none;
 }
 .plan__options[data-tab=active] {
    display: block;

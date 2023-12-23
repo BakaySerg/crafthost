@@ -8,7 +8,6 @@ const   gulp        = require('gulp'),
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
 		fileinclude   = require('gulp-file-include'),
-		// rigger        = require('gulp-rigger'),
 		notify        = require('gulp-notify');
 
 gulp.task('browser-sync', function() {
@@ -22,12 +21,6 @@ gulp.task('browser-sync', function() {
 });
 
 
-// gulp.task('layout', function () {
-//    return gulp.src('src/*.html')
-//    .pipe(rigger())
-//    .pipe(gulp.dest('app/'))
-//    .pipe(browserSync.reload({ stream: true }))
-// });
 gulp.task('layout', function() {
     return gulp.src('src/*.html')
 		.pipe(fileinclude({
@@ -80,7 +73,7 @@ gulp.task('code', function() {
 
 
 gulp.task('watch', function() {
-	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));  // 2nd argument if drive is not SSD - { delay: 350 }
+	gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
 	// gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-separated'));
 	gulp.watch(['src/**/*.js', 'src/js/main.js'], gulp.parallel('scripts'));
 	gulp.watch('src/**/*.html', gulp.parallel('layout'))

@@ -27,309 +27,190 @@
 		<div class="board">
 
 			<form action="#" class="box search__form">
-				<i class="i-search"><svg viewBox="0 0 32 32">
-						<use xlink:href="#i-search" />
-					</svg></i>
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search" /></svg></i>
 				<input type="text" required spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find the necessary addons">
 				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
 			</form>
 
-			<div class="container-lg pb-15">
+			<div class="container-lg pb-15 px-sm-0">
 				<h2 class="h1">Web Security</h2>
 			</div>
-
 			<div class="addons">
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-support" />
-						</svg>
-						<div class="addons__category">Premium Support</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Premium Support</h3>
-						<p>One Time Escalated Tech Priority Support Service-Related Specific Technical&nbsp;Issue</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="premium-tab" data-drawer-trigger aria-controls="premium-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-cloud" />
-						</svg>
-						<div class="addons__category">Managed Hosting</div>
-						<div class="addons__discount">Save up <span class="color-alert">to 25%</span></div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Managed Hosting</h3>
-						<p>Safe and trustworthy, our cloud hosting is the ideal place to host your applications, services, and data</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="managed-tab" data-drawer-trigger aria-controls="managed-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
+				<!-- ssl-certificates -->
+				<div class="addons__card box" data-tab-open="ssl-certificates-tab" data-drawer-trigger aria-controls="ssl-certificates-modal" aria-expanded="false">
+					<img src="img/addons/ssl-certificates.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">SSL Certificates</h3>
-						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site</p>
-					</div>
-					<div class="addons__cta">
-						<a href="addons-ssl-certificates.html" class="btn btn--lg btn--success">Get</a>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Website Protection</h3>
-						<p>[DDoS Protection + WAF] Your comprehensive and simplified security&nbsp;solution</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="protection-tab" data-drawer-trigger aria-controls="protection-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Website Backup Pro</h3>
-						<p>Advanced Daily backups <br>One-click restore
-							<a href="javascript:;" class="help help--icon" data-help="We can never be careful enough and that's why we offer you a possibility to backup data to another data centre than the one where the server is physically located. The backup runs in regular intervals on our dedicated optical lines between data centres.">
-								<svg class="i-question" viewBox="0 0 32 32">
-									<use xlink:href="#i-question"></use>
-								</svg>
-							</a>
+						<p >The fastest and easiest SSL&nbsp;certificates for enabling encryption and removing security warnings for your site<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i>
 						</p>
 					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="backup-tab" data-drawer-trigger aria-controls="backup-modal" aria-expanded="false">Get</button>
-					</div>
 				</div>
+			</div>
 
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Premium Support</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="premium-tab" data-drawer-trigger aria-controls="premium-modal" aria-expanded="false">
+					<img src="img/addons/premium-support.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
-						<h3 class="h3">Website Monitoring</h3>
-						<p>We will immediately contact you regarding your website or server operation incidents via e-mail</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="monitoring-tab" data-drawer-trigger aria-controls="monitoring-modal" aria-expanded="false">Get</button>
+						<h3 class="h3">Premium Support</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
 					</div>
 				</div>
 
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">DDoS Protection</h3>
-						<p>Crafthost DDoS protection quickly mitigates any size attack without getting in the way of legitimate traffic or increasing latency </p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="ddos-tab" data-drawer-trigger aria-controls="ddos-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Website Audit</h3>
-						<p>Is a full analysis of all the <br>factors that affect websites</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="audit-tab" data-drawer-trigger aria-controls="audit-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-lock" />
-						</svg>
-						<div class="addons__category">Web Security</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Website application penetration&nbsp;test</h3>
-						<p>Application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="app-penetration-tab" data-drawer-trigger aria-controls="app-penetration-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-rocket" />
-						</svg>
-						<div class="addons__category">Website Premium Acceleration</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Website Premium Acceleration</h3>
-						<p>Website Fast Speed Cache</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="premium-acceleration-tab" data-drawer-trigger aria-controls="premium-acceleration-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-globe" />
-						</svg>
-						<div class="addons__category">Domains</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Domain Whois Privacy</h3>
-						<p>Data miners often crawl public WHOIS records for your personal information</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="domains-tab" data-drawer-trigger aria-controls="domains-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-globe" />
-						</svg>
-						<div class="addons__category">Domains</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Domain Protection</h3>
-						<p>Text Text Text</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-globe" />
-						</svg>
-						<div class="addons__category">Domains</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Dedicated IP Address</h3>
-						<p>Text Text Text</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-build" />
-						</svg>
-						<div class="addons__category">Enterprise Solutions</div>
-					</div>
+				<div class="addons__card box" data-tab-open="enterprise-tab" data-drawer-trigger aria-controls="enterprise-modal" aria-expanded="false">
+					<img src="img/addons/enterprise-solutions.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">Enterprise Solutions</h3>
-						<p>Text Text Text</p>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
 					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="enterprise-tab" data-drawer-trigger aria-controls="enterprise-modal" aria-expanded="false">Get</button>
+				</div>
+			</div>
+
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Web Acceleration</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">
+					<img src="img/addons/dns.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">AnyCast DNS</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
 					</div>
 				</div>
 
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-message" />
-						</svg>
-						<div class="addons__category">Business E-Mail</div>
-					</div>
+				<div class="addons__card box" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">
+					<img src="img/addons/dedicated-ap-address.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
-						<h3 class="h3">Email Spam Protection</h3>
-						<p>MS Office 365 Mail, G Suite (E-mail only), G Suite (All services), Yandex Mail (Free)</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">Get</button>
+						<h3 class="h3">Dedicated IP Address</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
 					</div>
 				</div>
 
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-doc" />
-						</svg>
-						<div class="addons__category">Custom Order</div>
-					</div>
+				<div class="addons__card box" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">
+					<img src="img/addons/seo.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
-						<h3 class="h3">Custom Order</h3>
-						<p>Text Text Text</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="custom-order-tab" data-drawer-trigger aria-controls="custom-order-modal" aria-expanded="false">Get</button>
-					</div>
-				</div>
-
-				<div class="addons__card box">
-					<div class="addons__header">
-						<svg class="i-addons" viewBox="0 0 32 32">
-							<use xlink:href="#i-info" />
-						</svg>
-						<div class="addons__category">Account Addons</div>
-					</div>
-					<div class="addons__text">
-						<h3 class="h3">Account Addons</h3>
-						<p>Text Text Text</p>
-					</div>
-					<div class="addons__cta">
-						<button type="button" class="btn btn--lg btn--success" data-tab-open="account-addons-tab" data-drawer-trigger aria-controls="account-addons-modal" aria-expanded="false">Get</button>
+						<h3 class="h3">SEO</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
 					</div>
 				</div>
 
 			</div>
+
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Domain Names</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">
+					<img src="img/addons/domain-protection.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Domain Protection</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+
+				<div class="addons__card box" data-tab-open="domains-tab" data-drawer-trigger aria-controls="domains-modal" aria-expanded="false">
+					<img src="img/addons/domain-privacy.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Domain Whois Privacy</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Business Email</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">
+					<img src="img/addons/email-cloud.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Email & Cloud Office</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Professional Services</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="monitoring-tab" data-drawer-trigger aria-controls="monitoring-modal" aria-expanded="false">
+					<img src="img/addons/ssl-installation.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">SSL Installation</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+
+				<div class="addons__card box" data-tab-open="ddos-tab" data-drawer-trigger aria-controls="ddos-modal" aria-expanded="false">
+					<img src="img/addons/software-installation.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Software Installation</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+
+				<div class="addons__card box" data-tab-open="account-addons-tab" data-drawer-trigger aria-controls="account-addons-modal" aria-expanded="false">
+					<img src="img/addons/restore-account.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Restore Account</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+
+				<div class="addons__card box" data-tab-open="app-penetration-tab" data-drawer-trigger aria-controls="app-penetration-modal" aria-expanded="false">
+					<img src="img/addons/migration-request.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Migration Request</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="container-lg pb-15 px-sm-0">
+				<h2 class="h1">Enterprise</h2>
+			</div>
+			<div class="addons">
+				<div class="addons__card box" data-tab-open="managed-tab" data-drawer-trigger aria-controls="managed-modal" aria-expanded="false">
+					<img src="img/addons/managed-enterprise.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Managed Enterprise</h3>
+						<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+				<div class="addons__card box" data-tab-open="audit-tab" data-drawer-trigger aria-controls="audit-modal" aria-expanded="false">
+					<img src="img/addons/website-audit.svg" alt="addons" loading="lazy">
+					<div class="addons__text">
+						<h3 class="h3">Website Audit</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information<i class="help help--icon" data-help="We can never be careful enough you a possibility to backup data to  the server is physically located intervals on our dedicated optical lines between data centres."><svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg></i></p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	@@include('./include/footer.html')
 
+	<!-- ssl-certif-->
+	<div class="drawer" id="ssl-certificates-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/addons/modal-ssl-certificate.html')
+			</div>
+		</div>
+	</div>
 	<!-- Premium support-->
 	<div class="drawer" id="premium-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-premium-support.html')
+				@@include('./pages/addons/modal-premium-support.html')
 			</div>
 		</div>
 	</div>
@@ -339,7 +220,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-managed-hosting.html')
+				@@include('./pages/addons/modal-managed-hosting.html')
 			</div>
 		</div>
 	</div>
@@ -349,7 +230,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-website-protection.html')
+				@@include('./pages/addons/modal-website-protection.html')
 			</div>
 		</div>
 	</div>
@@ -359,7 +240,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-backup-pro.html')
+				@@include('./pages/addons/modal-backup-pro.html')
 			</div>
 		</div>
 	</div>
@@ -369,7 +250,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-website-monitoring.html')
+				@@include('./pages/addons/modal-website-monitoring.html')
 			</div>
 		</div>
 	</div>
@@ -379,7 +260,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-ddos-protection.html')
+				@@include('./pages/addons/modal-ddos-protection.html')
 			</div>
 		</div>
 	</div>
@@ -389,17 +270,17 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-website-audit.html')
+				@@include('./pages/addons/modal-website-audit.html')
 			</div>
 		</div>
 	</div>
-	<!-- website-audit -->
+	<!--  -->
 	<div class="drawer" id="app-penetration-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-app-penetration-test.html')
+				@@include('./pages/addons/modal-app-penetration-test.html')
 			</div>
 		</div>
 	</div>
@@ -409,7 +290,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-premium-acceleration.html')
+				@@include('./pages/addons/modal-premium-acceleration.html')
 			</div>
 		</div>
 	</div>
@@ -419,7 +300,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-domains.html')
+				@@include('./pages/addons/modal-domains.html')
 			</div>
 		</div>
 	</div>
@@ -429,7 +310,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-enterprise-solution.html')
+				@@include('./pages/addons/modal-enterprise-solution.html')
 			</div>
 		</div>
 	</div>
@@ -439,7 +320,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-email-spam-protection.html')
+				@@include('./pages/addons/modal-email-spam-protection.html')
 			</div>
 		</div>
 	</div>
@@ -449,7 +330,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-custom-order.html')
+				@@include('./pages/addons/modal-custom-order.html')
 			</div>
 		</div>
 	</div>
@@ -459,7 +340,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages//addons/modal-account-addons.html')
+				@@include('./pages/addons/modal-account-addons.html')
 			</div>
 		</div>
 	</div>
