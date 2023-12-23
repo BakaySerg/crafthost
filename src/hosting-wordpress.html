@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<title>WordPress hosting plans | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">WordPress hosting plans</h1>
 			</div>
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 
 	<!-- popup (Compare hosting plans (table))-->
@@ -97,7 +97,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-compare-hostings.html
+				@@include('./pages/modal-compare-hostings.html')
 			</div>
 		</div>
 	</div>

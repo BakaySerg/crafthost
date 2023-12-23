@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<title>Online store | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Online store</h1>
             <div class="header__bureau">
@@ -275,7 +275,7 @@
          </div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
    <!-- popup (kinda drawer)-->
 	<div class="drawer" id="store-choise" data-drawer-target>
@@ -284,11 +284,11 @@
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
 				<!-- tab choise policy -->
-				//= ./pages/modal-policy.html
+				@@include('./pages/modal-policy.html')
 				<!-- tab filling out an acc -->
-				//= ./pages/modal-account.html
+				@@include('./pages/modal-account.html')
 				<!-- tab registration -->
-				//= ./pages/modal-registration.html
+				@@include('./pages/modal-registration.html')
 
 	      </div>
 		</div>

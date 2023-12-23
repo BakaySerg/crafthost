@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<title>Account owner | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Account owner</h1>
 				<div class="header__bureau">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup -->
 	<div class="drawer" id="add-profile" data-drawer-target>
@@ -52,7 +52,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-registration.html
+				@@include('./pages/modal-registration.html')
 			</div>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-edit.html
+				@@include('./pages/modal-edit.html')
 			</div>
 		</div>
 	</div>

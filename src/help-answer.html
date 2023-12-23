@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<title>Help | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Support</h1>
 				<div class="header__bureau">
@@ -88,17 +88,17 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 	<!-- popup (new ticket)-->
 	<div class="drawer" id="new-ticket" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-login-side.html
+				@@include('./pages/modal-login-side.html')
 				<!-- when the user is not registered, we show the popup with additional fields -->
-				//= ./pages/modal-create-ticket-unregistered.html
-				//= ./pages/modal-create-ticket.html
+				@@include('./pages/modal-create-ticket-unregistered.html')
+				@@include('./pages/modal-create-ticket.html')
 	      </div>
 		</div>
 	</div>

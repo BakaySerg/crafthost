@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<title>Security settings | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Security settings</h1>
 			</div>
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup (set pin)-->
 	<div class="drawer" id="pin-modal" data-drawer-target>
@@ -70,7 +70,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-pin.html
+				@@include('./pages/modal-pin.html')
 	      </div>
 		</div>
 	</div>
@@ -81,7 +81,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-password.html
+				@@include('./pages/modal-password.html')
 	      </div>
 		</div>
 	</div>
@@ -93,7 +93,7 @@
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
 				<!-- tab -->
-				//= ./pages/modal-two-factor.html
+				@@include('./pages/modal-two-factor.html')
 			</div>
 		</div>
 	</div>
@@ -103,7 +103,7 @@
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 			<div class="drawer__alert">
 				<div class="drawer__fieldset">
-				//= ./pages/modal-delete-account.html
+				@@include('./pages/modal-delete-account.html')
 	      </div>
 		</div>
 	</div>

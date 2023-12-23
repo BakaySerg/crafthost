@@ -1,18 +1,15 @@
 const   gulp        = require('gulp'),
-		// gutil         = require('gulp-util' ),
 		sourcemaps 	  = require('gulp-sourcemaps'),
-		wait 			  = require('gulp-wait'),
+		// wait 			  = require('gulp-wait'),
 		sass          = require('gulp-sass')(require('sass')),
 		browserSync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
+		// concat        = require('gulp-concat'),
+		// uglify        = require('gulp-uglify'),
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
-		// autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require('gulp-notify'),
-		rigger        = require('gulp-rigger');
-		// rsync         = require('gulp-rsync'),
-		// imagemin      = require('gulp-imagemin');
+		fileinclude   = require('gulp-file-include'),
+		// rigger        = require('gulp-rigger'),
+		notify        = require('gulp-notify');
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -25,22 +22,29 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('layout', function () {
-   return gulp.src('src/*.html')
-   // .pipe(plumber())
-   .pipe(rigger())
-   .pipe(gulp.dest('app/'))
-   .pipe(browserSync.reload({ stream: true }))
+// gulp.task('layout', function () {
+//    return gulp.src('src/*.html')
+//    .pipe(rigger())
+//    .pipe(gulp.dest('app/'))
+//    .pipe(browserSync.reload({ stream: true }))
+// });
+gulp.task('layout', function() {
+    return gulp.src('src/*.html')
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(gulp.dest('app/'))
+		.pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('styles', function() {
 	return gulp.src('src/scss/**/*.scss')
 	// return gulp.src('src/scss/*.scss')
-	.pipe(wait(200))
+	// .pipe(wait(200))
 	.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	// .pipe(rename({ suffix: '.min', prefix : '' }))
-	// .pipe(autoprefixer(['last 4 versions']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 }}})) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(sourcemaps.write('./'))

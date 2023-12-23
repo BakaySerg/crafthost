@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Transfer | Crafthost</title>
+	<title>Addons | Crafthost</title>
 	<meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -25,7 +24,6 @@
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 </head>
-
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -175,80 +173,271 @@
    </div>
 </div>
 			<div class="header__bottom container">
-				<h1 class="h1">Transfer domain to Crafthost</h1>
+				<h1 class="h1">Addons</h1>
+				<div class="header__filter">
+					<select class="select" name="ticket__theme">
+						<option value="*">All addons</option>
+						<option value="1">Website Security</option>
+						<option value="2">Domains</option>
+						<option value="3">Account Addons</option>
+					</select>
+				</div>
 			</div>
 		</header>
 		<!--  board  -->
 		<div class="board">
 
-			<form action="#" class="plan__form plan__sidelong">
-				<!-- choise -->
-				<div class="plan__main">
-					<div class="box box--option">
-						<h2 class="message__title message__title--indented">Domains</h2>
-						<div class="divid-up pt-05">
-							<div class="plan__search">
-								<div class="search__form">
-									<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
-									<input type="text" list="choise-in-domain" required minlength="4" spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find your domain name">
-									<datalist id="choise-in-domain">
-										<option value="website.tech">
-										<option value="interface.io">
-									</datalist>
-									<button class="btn btn--lg btn--success" type="submit">Add</button>
-								</div>
-							</div>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">website</span>.<span class="domain-extension">tech</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">site</span>.<span class="domain-extension">org</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
-						<div class="plan__option">
-							<div class="plan__name plan__name--compact"><span class="domain">web</span>.<span class="domain-extension">store</span></div>
-							<div class="plan__cost">
-								<div class="cost__new">$0,00</div>
-							</div>
-							<button type="button" class="btn btn--cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"></use></svg></button>
-						</div>
+			<form action="#" class="box search__form">
+				<i class="i-search"><svg viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
+				<input type="text" required spellcheck="false" pattern="[A-Za-z]{4,}" placeholder="Find the necessary addons">
+				<button id="searchBtn" class="btn btn--lg btn--success" type="submit">Choose</button>
+			</form>
+
+			<div class="addons">
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-support"/></svg>
+						<div class="addons__category">Premium Support</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Premium Support</h3>
+						<p>One Time Escalated Tech Priority Support Service-Related Specific Technical&nbsp;Issue</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="premium-tab" data-drawer-trigger aria-controls="premium-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
 
-				<!-- sidebar -->
-				<div class="plan__sidebar box">
-					<h2 class="h1">Your order</h2>
-					<div class="divid-up">
-						<div class="plan__columns plan__columns--optional">
-							<b>Transfer domains</b>
-							<b>Free</b>
-							<span class="fz-14 full-size">3 domains</span>
-							<button type="button" class="btn i-cancel"><svg viewBox="0 0 32 32"><use xlink:href="#i-close-xs"></use></svg></button>
-						</div>
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-cloud"/></svg>
+						<div class="addons__category">Managed Hosting</div>
+						<div class="addons__discount">Save up <span class="color-alert">to 25%</span></div>
 					</div>
-					<div class="divid-up">
-						<div class="plan__columns">Subtotal <b>$0,00</b></div>
-						<div class="plan__columns color-alert">Discount: <b>- $0,00</b></div>
-						<div class="plan__columns">Estimated Tax: <b>$0,00</b></div>
-						<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$0,00</b></div>
-						<div class="inline-form">
-							<input type="text" required minlength="4" spellcheck="false" placeholder="Enter promocode">
-							<button class="btn btn--xs" type="submit"><svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-close-xs" /></svg></button>
-						</div>
-						<button type="button" class="btn btn--lg btn--icon btn--success" data-link="transfer-domain-details.html">Confirm order
-							<svg class="i-arrow" viewBox="0 0 32 32"> <use xlink:href="#i-arrow" /></svg>
-						</button>
+					<div class="addons__text">
+						<h3 class="h3">Managed Hosting</h3>
+						<p>Safe and trustworthy, our cloud hosting is the ideal place to host your applications, services, and data</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="managed-tab" data-drawer-trigger aria-controls="managed-modal" aria-expanded="false">Get</button>
 					</div>
 				</div>
-			</form>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">SSL Certificates</h3>
+						<p>The fastest and easiest SSL certificates for enabling encryption and removing security warnings for your site</p>
+					</div>
+					<div class="addons__cta">
+						<a href="addons-ssl-certificates.html" class="btn btn--lg btn--success">Get</a>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website Protection</h3>
+						<p>[DDoS Protection + WAF] Your comprehensive and simplified security&nbsp;solution</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="protection-tab" data-drawer-trigger aria-controls="protection-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website Backup Pro</h3>
+						<p>Advanced Daily backups <br>One-click restore
+							<a href="javascript:;" class="help help--icon" data-help="We can never be careful enough and that's why we offer you a possibility to backup data to another data centre than the one where the server is physically located. The backup runs in regular intervals on our dedicated optical lines between data centres.">
+								<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+							</a>
+						</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="backup-tab" data-drawer-trigger aria-controls="backup-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website Monitoring</h3>
+						<p>We will immediately contact you regarding your website or server operation incidents via e-mail</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="monitoring-tab" data-drawer-trigger aria-controls="monitoring-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">DDoS Protection</h3>
+						<p>Crafthost DDoS protection quickly mitigates any size attack without getting in the way of legitimate traffic or increasing latency </p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="ddos-tab" data-drawer-trigger aria-controls="ddos-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website Audit</h3>
+						<p>Is a full analysis of all the <br>factors that affect websites</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="audit-tab" data-drawer-trigger aria-controls="audit-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+						<div class="addons__category">Web Security</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website application penetration&nbsp;test</h3>
+						<p>Application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="app-penetration-tab" data-drawer-trigger aria-controls="app-penetration-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-rocket"/></svg>
+						<div class="addons__category">Website Premium Acceleration</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Website Premium Acceleration</h3>
+						<p>Website Fast Speed Cache</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="premium-acceleration-tab" data-drawer-trigger aria-controls="premium-acceleration-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-globe"/></svg>
+						<div class="addons__category">Domains</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Domain Whois Privacy</h3>
+						<p>Data miners often crawl public WHOIS records for your personal information</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="domains-tab" data-drawer-trigger aria-controls="domains-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-globe"/></svg>
+						<div class="addons__category">Domains</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Domain Protection</h3>
+						<p>Text Text Text</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-globe"/></svg>
+						<div class="addons__category">Domains</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Dedicated IP Address</h3>
+						<p>Text Text Text</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-build"/></svg>
+						<div class="addons__category">Enterprise Solutions</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Enterprise Solutions</h3>
+						<p>Text Text Text</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="enterprise-tab" data-drawer-trigger aria-controls="enterprise-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-message"/></svg>
+						<div class="addons__category">Business E-Mail</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Email Spam Protection</h3>
+						<p>MS Office 365 Mail, G Suite (E-mail only), G Suite (All services), Yandex Mail (Free)</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-doc"/></svg>
+						<div class="addons__category">Custom Order</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Custom Order</h3>
+						<p>Text Text Text</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="custom-order-tab" data-drawer-trigger aria-controls="custom-order-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+				<div class="addons__card box">
+					<div class="addons__header">
+						<svg class="i-addons" viewBox="0 0 32 32"><use xlink:href="#i-info"/></svg>
+						<div class="addons__category">Account Addons</div>
+					</div>
+					<div class="addons__text">
+						<h3 class="h3">Account Addons</h3>
+						<p>Text Text Text</p>
+					</div>
+					<div class="addons__cta">
+						<button type="button" class="btn btn--lg btn--success" data-tab-open="account-addons-tab" data-drawer-trigger aria-controls="account-addons-modal" aria-expanded="false">Get</button>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
 	<!-- footer -->
@@ -266,6 +455,818 @@
    </div>
 </footer>
 
+	<!-- Premium support-->
+	<div class="drawer" id="premium-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="premium-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Premium Support</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Advanced Support</h5>
+					<p>Resolving and fixing technical request within 24&nbsp;hours</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$5</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Premium Support</h5>
+					<p>Resolving and fixing technical request within 12&nbsp;hours</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$10</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Dedicated Support</h5>
+					<p>Resolving and fixing technical request within 6&nbsp;hours</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$20</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Managed Hosting-->
+	<div class="drawer" id="managed-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="managed-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Managed Hosting</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Semi Managed
+						<a href="help.html" class="help help--icon" target="_blank" data-help="Create, customise and achieve online greatness with ease">
+							<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+						</a>
+					</h5>
+					<p>Our administrators will handle any hardware, operating system, or basic configuration issues which may arise with your&nbsp;website.</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$19,99</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Managed
+						<a href="help.html" class="help help--icon" target="_blank" data-help="Create, customise and achieve online greatness with ease">
+							<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+						</a>
+					</h5>
+					<p>Take your hosting management to the next level with our experts Managed support.</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$249,95</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Fully Managed
+						<a href="help.html" class="help help--icon" target="_blank" data-help="Create, customise and achieve online greatness with ease">
+							<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+						</a>
+					</h5>
+					<p>Free stress server, we take care of the technical stuff with a dedicated solution.</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$999,00</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Website-protection-->
+	<div class="drawer" id="protection-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="protection-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline drawer__headline--nogutter">Website Protection</h2>
+				<h3 class="h3">[DDoS Protection + WAF]</h3>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Standard</h5>
+					<ul class="check-list">
+						<li>Firewall prevents hackers</li>
+						<li>SSL certificate included in firewall</li>
+						<li>Protects one website</li>
+						<li>Malware scanning</li>
+						<li>Annual site cleanup and remediation
+							<a href="javascript:;" class="help help--icon" data-help="Standard plans include a 1-time clean-up. Unlimited clean-ups are available with the Advanced and Premium plans.">
+								<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$10,99</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Advanced</h5>
+					<ul class="check-list">
+						<li>Firewall prevents hackers</li>
+						<li>DDoS protection, and Content Deliver Network (CDN) speed boost</li>
+						<li>SSL certificate included in firewall</li>
+						<li>Protects one website</li>
+						<li>Malware scanning</li>
+						<li>Unlimited site cleanups</li>
+						<li>25 GB of secure backup</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$19,90</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Premium</h5>
+					<ul class="check-list">
+						<li>Firewall prevents hackers</li>
+						<li>DDoS protection, and Content Deliver Network (CDN) speed boost</li>
+						<li>SSL certificate included in firewall</li>
+						<li>Protects one website</li>
+						<li>Malware scanning</li>
+						<li>Unlimited site cleanups</li>
+						<li>Prioritized cleanup and repair</li>
+						<li>200 GB of secure backup</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$39,00</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Backup-pro-->
+	<div class="drawer" id="backup-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="backup-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Website Backup Pro</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">1 Website protected</h5>
+					<p>Automatic backup to a secure cloud Protection from hacks & ransomware</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$5</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">2 Websites protected</h5>
+					<p>Safeguard against system failure One-click site restoration</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$4</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">3 Websites protected</h5>
+					<p>Keep backup copies close by Full, flexible&nbsp;control</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$5</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Website Monitoring-->
+	<div class="drawer" id="monitoring-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="monitoring-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Website Monitoring</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<p>We will immediately contact you regarding your website or server operation incidents via e-mail. We monitor all system parameters needed for server operation like specific port response time, storage space, processor load, or available free memory. Solving the incidents is just on you, except hardware failure which is in our hands.</p>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$10</b> / hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- DDoS Protection -->
+	<div class="drawer" id="ddos-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="ddos-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">DDoS Protection</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Pro</h5>
+					<ul class="check-list">
+						<li>For websites in need of hacker and malicious bot protection, as well as performance improvements</li>
+						<li>Bad bot protection</li>
+						<li>Access control</li>
+						<li>Web application firewall</li>
+						<li>PCI DSS compliance</li>
+						<li>Backdoor shell protection</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$20</b> /hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Business</h5>
+					<ul class="check-list">
+						<li>For businesses looking for more advanced security solutions, including SSL support and application layer DDoS protection</li>
+						<li>Application layer DDoS protection</li>
+						<li>Custom cache headers</li>
+						<li>Non-SNI SSL support</li>
+						<li>Custom/EV certificates</li>
+						<li>Dynamic content caching</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$40</b> /hour</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Enterprise [Custom form]</h5>
+					<p>For organizations that cannot afford downtime. Includes complete DDoS protection, high availability and 99.999% SLA.</p>
+					<ul class="check-list">
+						<li>Network layer DDoS protection</li>
+						<li>DDoS protection for DNS servers</li>
+						<li>Protection of class C subnets</li>
+						<li>Application load balancing</li>
+						<li>Server health monitoring</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<button type="button" class="btn btn--lg btn--success">Request quote</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- website-audit -->
+	<div class="drawer" id="audit-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="audit-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Website Audit</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<p>Is a full analysis of all the factors that affect websites. This standard method gives a complete insight into any website, overall traffic and individual pages. Website audit is completed solely for marketing and security purposes. The goal is to detect weak points that affect web performance and security.</p>
+				</div>
+				<div class="order__cta">
+					<button type="button" class="btn btn--lg btn--success">Request quote</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- website-audit -->
+	<div class="drawer" id="app-penetration-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="app-penetration-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Website application penetration test</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<p>A web application penetration test is a type of ethical hacking engagement designed to assess the architecture, design and configuration of web applications. Assessments are conducted to identify cyber security risks that could lead to unauthorized access and/or data exposure.</p>
+				</div>
+				<div class="order__cta">
+					<button type="button" class="btn btn--lg btn--success">Request quote</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- premium-acceleration -->
+	<div class="drawer" id="premium-acceleration-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="premium-acceleration-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Website Premium Acceleration</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Personal</h5>
+					<ul class="check-list">
+						<li>Alias record</li>
+						<li>Anycast DNS</li>
+						<li>Multi-layered DDoS defense</li>
+						<li>Secondary DNS</li>
+						<li>Unlimited queries</li>
+						<li>Unlimited records per zone</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$12.50</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Pro</h5>
+					<ul class="check-list">
+						<li>Unlimited users</li>
+						<li>Reverse DNS</li>
+						<li>Regional records</li>
+						<li>POOL records</li>
+						<li>Enhanced support</li>
+						<li>99% SLA</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$22.50</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="order__card">
+				<div class="order__text">
+					<h5 class="h5">Business</h5>
+					<ul class="check-list">
+						<li>Regional records</li>
+						<li>POOL records</li>
+						<li>Concierge</li>
+						<li>Vanity nameservers</li>
+						<li>Priority support</li>
+						<li>100% SLA</li>
+					</ul>
+				</div>
+				<div class="order__cta">
+					<div class="card__price"><b>$30.00</b> /month</div>
+					<button type="button" class="btn btn--lg btn--success">Order now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Domains -->
+	<div class="drawer" id="domains-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="domains-tab" class="drawer__item" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Domains</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+
+			<div class="order__roll">
+				<div class="order__roll-header">
+					<h5 class="h5">Domain Whois Privacy</h5>
+					<p class="color-alert">Enable Privacy Protection for just $20 a year per domain.</p>
+					<p>Data miners often crawl public WHOIS records for your personal information. Then they sell it to marketing firms and advertising agencies, leading to spam and junk mail.</p>
+					<p>With privacy protection enabled, your personal details are protected with anonymous data like this.</p>
+				</div>
+				<div class="privacy__item">
+					<div class="privacy__title privacy__title--danger">
+						Without Domain Privacy
+					</div>
+					<div class="privacy__box">
+						<div class="privacy__address">
+							<b>website.org</b>
+							<span>John Smith</span>
+							<span>Victory Street, 113</span>
+							<span>12345, New York</span>
+							<span>USA</span>
+						</div>
+						<div class="privacy__card">
+							<div class="privacy__status privacy__status--warn">
+								<svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
+								<div>Unsecured:</div>
+							</div>
+							<p>Information about you is exposed</p>
+						</div>
+					</div>
+				</div>
+				<div class="privacy__item">
+					<div class="privacy__title privacy__title--success">
+						With Domain Privacy
+					</div>
+					<div class="privacy__box">
+						<div class="privacy__address">
+							<b>website.org</b>
+							<span>John Smith</span>
+							<span>Victory Street, 113</span>
+							<span>12345, New York</span>
+							<span>USA</span>
+						</div>
+						<div class="privacy__card">
+							<div class="privacy__status privacy__status--success">
+								<svg class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
+								<div>Secure:</div>
+							</div>
+							<p>Your personal data is protected</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="v-center">
+				<label class="checkbox-custom">
+					<input id="protect" class="d-none checkbox" type="checkbox" name="backup" value="1">
+					<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"></use></svg></i>
+				</label>
+				<label class="label-custom" for="protect">We strongly recommend taking this service. Untick this box if you do not want to protect your information in the WHOIS database</label>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Close</button>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Enterprise-solution -->
+	<div class="drawer" id="enterprise-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="enterprise-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Enterprise Solutions</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="order__card">
+				<div class="order__text">
+					<ul class="check-list">
+						<li>Private Cloud</li>
+						<li>Load Balancer</li>
+						<li>CDNs</li>
+						<li>Solution Builder</li>
+					</ul>
+				</div>
+			</div>
+			<b class="pb-1">Form</b>
+			<label class="form-field">
+				<input type="email" name="email" class="form-input" placeholder=" " required>
+				<span class="form-placeholder">Your Email</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="dom-name" class="form-input" placeholder=" " required minlength="2">
+				<span class="form-placeholder">Domain Name</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="site-name" class="form-input" placeholder=" " minlength="2">
+				<span class="form-placeholder">Your sites username</span>
+			</label>
+			<label class="form-field">
+				<input type="password" name="psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+				<span class="form-placeholder">Your sites password</span>
+			</label>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Get a Quote</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+	<!-- Email-spam-protection -->
+	<div class="drawer" id="email-spam-protection-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="email-spam-protection-tab" class="drawer__item" data-tab="hidden">
+   <div class="drawer__body">
+      <div class="drawer__header drawer__header--noborder">
+         <div class="drawer__title">
+            <h2 class="drawer__headline">Email Spam Protection</h2>
+         </div>
+      </div>
+      <div class="drawer__content">
+
+         <div class="order__card order__card--inline">
+            <div class="order__text">
+               <h5 class="h5">For 1 Website</h5>
+            </div>
+            <div class="order__cta">
+               <div class="card__price"><b>$2</b> /month</div>
+               <button type="button" class="btn btn--lg btn--success">Order now</button>
+            </div>
+         </div>
+         <!-- 2 -->
+         <div class="order__card order__card--inline">
+            <div class="order__text">
+               <h5 class="h5">For 2 Websites</h5>
+            </div>
+            <div class="order__cta">
+               <div class="card__price"><b>$4</b> /month</div>
+               <button type="button" class="btn btn--lg btn--success">Order now</button>
+            </div>
+         </div>
+         <!-- 3 -->
+         <div class="order__card order__card--inline">
+            <div class="order__text">
+               <h5 class="h5">For 3+ Websites</h5>
+            </div>
+            <div class="order__cta">
+               <div class="card__price"><b>$5</b> /month</div>
+               <button type="button" class="btn btn--lg btn--success">Order now</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+			</div>
+		</div>
+	</div>
+	<!-- Custom-order -->
+	<div class="drawer" id="custom-order-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="custom-order-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Custom Order</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="order__card">
+				<div class="order__text">
+					<ul class="check-list">
+						<li>SSL installation</li>
+						<li>Software Installation</li>
+						<li>Account Restore</li>
+						<li>Migration Request</li>
+					</ul>
+				</div>
+			</div>
+			<b class="pb-1">Upgrade Your Web Hosting</b>
+			<label class="form-field">
+				<input type="email" name="c-email" class="form-input" placeholder=" " required>
+				<span class="form-placeholder">Your Email</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="c-dom-name" class="form-input" placeholder=" " required minlength="2">
+				<span class="form-placeholder">Domain Name</span>
+			</label>
+			<label class="form-field">
+				<input type="text" name="c-site-name" class="form-input" placeholder=" " minlength="2">
+				<span class="form-placeholder">Your sites username</span>
+			</label>
+			<label class="form-field">
+				<input type="password" name="c-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+				<span class="form-placeholder">Your sites password</span>
+			</label>
+			<div class="pb-05">What is your current plan?</div>
+			<select class="select" name="curr">
+				<option value="0">Select</option>
+				<option value="1">Option 2</option>
+			</select>
+			<div class="pb-05">What is the new plan you want to be upgraded to?</div>
+			<select class="select" name="upgrate">
+				<option value="0">Select</option>
+				<option value="1">Option 2</option>
+			</select>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success btn--disabled">Get a Quote</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+	<!-- Account-addons -->
+	<div class="drawer" id="account-addons-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<div id="account-addons-tab" class="drawer__item" data-tab="hidden">
+   <div class="drawer__body">
+      <div class="drawer__header">
+         <div class="drawer__title">
+            <h2 class="drawer__headline">Email Spam Protection</h2>
+         </div>
+      </div>
+      <div class="drawer__content">
+         <div class="accordion">
+            <div class="accordion__item expanded">
+               <div class="accordion__title" data-collapse>
+                  <h4 class="h4">General Account Functions</h4>
+                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+               </div>
+               <div class="accordion__hidden">
+                  <div class="sked">
+                     <a href="#" class="sked__link">Upgrade Account</a><span>Free, Upgrade your hosting package</span>
+                     <a href="#" class="sked__link">Downgrade Account</a><span>$10, Downgrade your hosting package</span>
+                     <a href="#" class="sked__link">Update Billing Information</a><span>Login to Billing</span>
+                     <a href="#" class="sked__link">Register / Transfer Domains</a><span>Register or transfer a domain's registration us </span>
+                     <a href="#" class="sked__link">Domain Name Transfer</a><span>Transfer registration of your domain to us </span>
+                     <a href="#" class="sked__link">Build A Website Quote</a><span>Contact us for a web-design quote</span>
+                     <a href="#" class="sked__link">Restore Account</a><span>$25, Restore your account from one of our backups</span>
+                     <a href="#" class="sked__link">Terminate Account</a><span>Cancel your account</span>
+                  </div>
+               </div>
+            </div>
+            <div class="accordion__item">
+               <div class="accordion__title" data-collapse>
+                  <h4 class="h4">Shared Account Addons</h4>
+                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+               </div>
+               <div class="accordion__hidden">
+               </div>
+            </div>
+
+            <div class="accordion__item">
+               <div class="accordion__title" data-collapse>
+                  <h4 class="h4">Reseller Account Addons</h4>
+                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+               </div>
+               <div class="accordion__hidden">
+
+               </div>
+            </div>
+
+            <div class="accordion__item">
+               <div class="accordion__title" data-collapse>
+                  <h4 class="h4">VPS Account Addons</h4>
+                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+               </div>
+               <div class="accordion__hidden">
+               </div>
+            </div>
+
+            <div class="accordion__item">
+               <div class="accordion__title" data-collapse>
+                  <h4 class="h4">Dedicated Server Addons</h4>
+                  <button class="btn btn--sm"><svg class="i-collapse" viewBox="0 0 32 32"><use xlink:href="#i-plus" /></svg></button>
+               </div>
+               <div class="accordion__hidden">
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <div class="drawer__footer">
+      <button class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Close</button>
+   </div>
+</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
 </body>
 </html>

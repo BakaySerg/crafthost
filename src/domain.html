@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<title>Domains | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Domains</h1>
 				<div class="header__bureau">
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup (transfer-domain-to another account)-->
 	<div class="drawer" id="transfer-domain-to-another-modal" data-drawer-target>
@@ -54,7 +54,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/domains/modal-transfer-domain-to-another-account.html
+				@@include('./pages/domains/modal-transfer-domain-to-another-account.html')
 			</div>
 		</div>
 	</div>
@@ -64,7 +64,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/domains/modal-transfer-site-to-another-account.html
+				@@include('./pages/domains/modal-transfer-site-to-another-account.html')
 			</div>
 		</div>
 	</div>

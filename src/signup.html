@@ -3,12 +3,12 @@
 
 <head>
 	<title>Sign Up | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header__top header__top--white">
 			<div class="container-xl">
 				<div class="login__logo">
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/imask"></script>
 	<script>

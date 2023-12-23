@@ -1,6 +1,6 @@
 .addons {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 	grid-gap: 20px;
 	width: 100%;
 	max-width: 1120px;
@@ -175,7 +175,7 @@
       align-self: flex-end;
       .card__price {
          text-align: left;
-         max-width: 136px;
+         max-width: 148px;
          b {font-size: 1.8em;}
       }
       @media (max-width: 359px) {

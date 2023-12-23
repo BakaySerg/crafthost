@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<title>Managed Hosting | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Managed Hosting</h1>
 			</div>
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup (Compare levels of management (table))-->
 	<div class="drawer drawer--lg" id="managed-levels" data-drawer-target>
@@ -88,7 +88,7 @@
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
 				<!-- tab -->
-				//= ./pages/modal-compare-levels.html
+				@@include('./pages/modal-compare-levels.html')
 	      </div>
 		</div>
 	</div>

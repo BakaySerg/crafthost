@@ -3,14 +3,14 @@
 
 <head>
 	<title>Domain settings | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Domain settings</h1>
 			</div>
@@ -126,7 +126,7 @@
 			</div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup (Contact Information)-->
 	<div class="drawer" id="contact-info-modal" data-drawer-target>
@@ -134,7 +134,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/settings/modal-contact-info.html
+				@@include('./pages/settings/modal-contact-info.html')
 			</div>
 		</div>
 	</div>
@@ -144,7 +144,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/settings/modal-transfer-domain-to.html
+				@@include('./pages/settings/modal-transfer-domain-to.html')
 			</div>
 		</div>
 	</div>
@@ -154,7 +154,7 @@
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				//= ./pages/settings/modal-transfer-domain-from.html
+				@@include('./pages/settings/modal-transfer-domain-from.html')
 			</div>
 		</div>
 	</div>
@@ -164,7 +164,7 @@
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__alert">
 			<div class="drawer__fieldset">
-				//= ./pages/modal-delete-domain.html
+				@@include('./pages/modal-delete-domain.html')
 			</div>
 		</div>
 	</div>

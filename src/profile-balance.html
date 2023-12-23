@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<title>Account balance | Crafthost</title>
-	//= ./include/head.html
+	@@include('./include/head.html')
 </head>
 <body>
 	<div class="wrapper">
-		//= ./include/icon-sprite.html
+		@@include('./include/icon-sprite.html')
 		<header class="header">
-			//= ./include/header.html
+			@@include('./include/header.html')
 			<div class="header__bottom container">
 				<h1 class="h1">Account balance</h1>
 				<div class="header__bureau">
@@ -46,7 +46,7 @@
          </div>
 		</div>
 	</div>
-	//= ./include/footer.html
+	@@include('./include/footer.html')
 
 	<!-- popup -->
 	<div class="drawer" id="top-up" data-drawer-target>
@@ -54,7 +54,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-top-up-balance.html
+				@@include('./pages/modal-top-up-balance.html')
 	      </div>
 		</div>
 	</div>
@@ -65,7 +65,7 @@
 			<div class="drawer__wrapper">
 				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 				<div class="drawer__fieldset">
-				//= ./pages/modal-promocode.html
+				@@include('./pages/modal-promocode.html')
 	      </div>
 		</div>
 	</div>
