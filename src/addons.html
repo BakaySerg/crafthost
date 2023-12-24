@@ -72,7 +72,7 @@
 				<h2 class="h1">Web Acceleration</h2>
 			</div>
 			<div class="addons">
-				<div class="addons__card box" data-tab-open="addons-tab" data-drawer-trigger aria-controls="addons-modal" aria-expanded="false">
+				<div class="addons__card box" data-tab-open="anycast-dns-tab" data-drawer-trigger aria-controls="anycast-dns-modal" aria-expanded="false">
 					<img src="img/addons/dns.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">AnyCast DNS</h3>
@@ -110,7 +110,7 @@
 					</div>
 				</div>
 
-				<div class="addons__card box" data-tab-open="domains-tab" data-drawer-trigger aria-controls="domains-modal" aria-expanded="false">
+				<div class="addons__card box" data-tab-open="domain-whois-privacy-tab" data-drawer-trigger aria-controls="domain-whois-privacy-modal" aria-expanded="false">
 					<img src="img/addons/domain-privacy.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">Domain Whois Privacy</h3>
@@ -123,7 +123,7 @@
 				<h2 class="h1">Business Email</h2>
 			</div>
 			<div class="addons">
-				<div class="addons__card box" data-tab-open="email-spam-protection-tab" data-drawer-trigger aria-controls="email-spam-protection-modal" aria-expanded="false">
+				<div class="addons__card box" data-tab-open="email-cloud-office-tab" data-drawer-trigger aria-controls="email-cloud-office-modal" aria-expanded="false">
 					<img src="img/addons/email-cloud.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">Email & Cloud Office</h3>
@@ -174,7 +174,7 @@
 				<h2 class="h1">Enterprise</h2>
 			</div>
 			<div class="addons">
-				<div class="addons__card box" data-tab-open="managed-tab" data-drawer-trigger aria-controls="managed-modal" aria-expanded="false">
+				<div class="addons__card box" data-tab-open="managed-enterprise-tab" data-drawer-trigger aria-controls="managed-enterprise-modal" aria-expanded="false">
 					<img src="img/addons/managed-enterprise.svg" alt="addons" loading="lazy">
 					<div class="addons__text">
 						<h3 class="h3">Managed Enterprise</h3>
@@ -214,13 +214,43 @@
 			</div>
 		</div>
 	</div>
-	<!-- Managed Hosting-->
-	<div class="drawer" id="managed-modal" data-drawer-target>
+	<!-- anycast-dns-->
+	<div class="drawer" id="anycast-dns-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
 		<div class="drawer__wrapper">
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
-				@@include('./pages/addons/modal-managed-hosting.html')
+				@@include('./pages/addons/modal-anycast-dns.html')
+			</div>
+		</div>
+	</div>
+	<!-- modal-domain-whois-privacy-->
+	<div class="drawer" id="domain-whois-privacy-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/addons/modal-domain-whois-privacy.html')
+			</div>
+		</div>
+	</div>
+	<!-- email-cloud-office-->
+	<div class="drawer" id="email-cloud-office-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/addons/modal-email-cloud-office.html')
+			</div>
+		</div>
+	</div>
+	<!-- managed-enterprise-->
+	<div class="drawer" id="managed-enterprise-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/addons/modal-managed-enterprise.html')
 			</div>
 		</div>
 	</div>
