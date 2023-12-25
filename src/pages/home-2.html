@@ -1,0 +1,65 @@
+<div class="board__home board--lg">
+	<form class="sort" action="#">
+		<div class="sort__title">
+			<h2 class="h1">Domains</h2>
+			<div class="sort__action">
+				<div class="sort__older">
+					<a href="#" class="submenu__trigger link">Sort new ones first</a>
+					<ul class="dialog dialog--under" aria-label="submenu">
+						<li><a class="dialog__link" href="#">Sort new ones firts</a></li>
+						<li><a class="dialog__link" href="#">Sort by expiring</a></li>
+					</ul>
+				</div>
+				<div class="sort__grid">
+					<button class="btn active" type="button" aria-label="Sort"><svg viewBox="0 0 32 32"><use xlink:href="#i-layout-lines"/></svg></button>
+					<button class="btn grid-trigger" type="button" aria-label="Sort"><svg viewBox="0 0 32 32"><use xlink:href="#i-layout-grid"/></svg></button>
+				</div>
+			</div>
+		</div>
+		<div class="sort__box">
+			<div class="sort__item">
+				<div class="sort__info">
+					<a href="#" class="sort__name">first-domain.com</a>
+					<div class="sort__descr">Configuration is not completed</div>
+				</div>
+				<div class="status" data-status="active">Active</div>
+				<div class="sort__buttons">
+					<button type="button" class="btn btn--lg btn--simply">Options</button>
+					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+				</div>
+			</div>
+			<div class="sort__item">
+				<div class="sort__info">
+					<a href="#" class="sort__name">domain.com</a>
+					<div class="sort__descr">Configuration is not completed</div>
+				</div>
+				<div class="status" data-status="warning">Expiring soon</div>
+				<div class="sort__buttons">
+					<button type="button" class="btn btn--lg btn--success">Renew</button>
+					<button type="button" class="btn btn--lg btn--simply">Options</button>
+					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+				</div>
+			</div>
+			<div class="sort__item">
+				<div class="sort__info">
+					<a href="#" class="sort__name">domain.com</a>
+					<div class="sort__descr">Configuration is not completed</div>
+				</div>
+				<div class="status" data-status="danger">Expired</div>
+				<div class="sort__buttons">
+					<button type="button" class="btn btn--lg btn--success">Renew</button>
+					<button type="button" class="btn btn--lg btn--simply">Options</button>
+					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="board__message board__message--sm" role="alert" style="--bg1x: url(../img/home/message-sm.png); --bg2x:url(../img/home/message-sm-2x.png);">
+	<div class="message__descr">
+		<h2 class="message__title">Renew your domains in a couple of clicks</h2>
+		<p>Using the fast domain name renewal feature</p>
+	</div>
+	<button class="btn btn--close" aria-label="Close"><svg viewBox="0 0 32 32"><use xlink:href="#i-close"/></svg></button>
+</div>
