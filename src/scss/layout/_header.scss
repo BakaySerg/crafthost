@@ -792,6 +792,10 @@
 	transition: .3s;
 	padding: .4em;
 	user-select: none;
+	cursor: pointer;
+	background: none;
+	border: none;
+	font: inherit;
 	&:hover, &.active {
 		color: $active;
 	}

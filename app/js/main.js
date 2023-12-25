@@ -257,6 +257,21 @@ document.addEventListener('DOMContentLoaded', function(){
 	};
 	accordionOpen();
 
+	const expandersHandler = function () {
+		[].forEach.call(
+			document.querySelectorAll("[data-expander]"),
+			function (el) {
+				el.addEventListener("click", function (e) {
+					e.preventDefault();
+					let currentItem = this.closest(".expander");
+					currentItem.classList.toggle("is-expanded");
+				});
+			}
+		);
+	};
+
+	expandersHandler();
+
 	/**
 		custom placeholder
 	**/

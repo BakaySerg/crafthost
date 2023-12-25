@@ -1,59 +1,118 @@
 <div class="board__home board--lg">
-	<form class="sort" action="#">
-		<div class="sort__title">
-			<h2 class="h1">Domains</h2>
-			<div class="sort__action">
-				<div class="sort__older">
-					<a href="#" class="submenu__trigger link">Sort new ones first</a>
-					<ul class="dialog dialog--under" aria-label="submenu">
-						<li><a class="dialog__link" href="#">Sort new ones firts</a></li>
-						<li><a class="dialog__link" href="#">Sort by expiring</a></li>
-					</ul>
-				</div>
-				<div class="sort__grid">
-					<button class="btn active" type="button" aria-label="Sort"><svg viewBox="0 0 32 32"><use xlink:href="#i-layout-lines"/></svg></button>
-					<button class="btn grid-trigger" type="button" aria-label="Sort"><svg viewBox="0 0 32 32"><use xlink:href="#i-layout-grid"/></svg></button>
-				</div>
+	<div class="sort__title expander is-expanded">
+		<h2 class="h1" data-expander>Domains</h2>
+		<div class="sort__action">
+			<button type="button" class="link">Manage All</button>
+		</div>
+	</div>
+	<div class="sort__box">
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">first-domain.com</a>
+				<div class="sort__descr">Configuration is not completed</div>
+			</div>
+			<div class="status" data-status="active">Active</div>
+			<div class="sort__buttons">
+				<button type="button" class="btn btn--lg btn--simply">Options</button>
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
 			</div>
 		</div>
-		<div class="sort__box">
-			<div class="sort__item">
-				<div class="sort__info">
-					<a href="#" class="sort__name">first-domain.com</a>
-					<div class="sort__descr">Configuration is not completed</div>
-				</div>
-				<div class="status" data-status="active">Active</div>
-				<div class="sort__buttons">
-					<button type="button" class="btn btn--lg btn--simply">Options</button>
-					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
-				</div>
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">domain.com</a>
+				<div class="sort__descr">Configuration is not completed</div>
 			</div>
-			<div class="sort__item">
-				<div class="sort__info">
-					<a href="#" class="sort__name">domain.com</a>
-					<div class="sort__descr">Configuration is not completed</div>
-				</div>
-				<div class="status" data-status="warning">Expiring soon</div>
-				<div class="sort__buttons">
-					<button type="button" class="btn btn--lg btn--success">Renew</button>
-					<button type="button" class="btn btn--lg btn--simply">Options</button>
-					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
-				</div>
-			</div>
-			<div class="sort__item">
-				<div class="sort__info">
-					<a href="#" class="sort__name">domain.com</a>
-					<div class="sort__descr">Configuration is not completed</div>
-				</div>
-				<div class="status" data-status="danger">Expired</div>
-				<div class="sort__buttons">
-					<button type="button" class="btn btn--lg btn--success">Renew</button>
-					<button type="button" class="btn btn--lg btn--simply">Options</button>
-					<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
-				</div>
+			<div class="status" data-status="warning">Expiring soon</div>
+			<div class="sort__buttons">
+				<button type="button" class="btn btn--lg btn--success">Renew</button>
+				<button type="button" class="btn btn--lg btn--simply">Options</button>
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
 			</div>
 		</div>
-	</form>
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">domain.com</a>
+				<div class="sort__descr">Configuration is not completed</div>
+			</div>
+			<div class="status" data-status="danger">Expired</div>
+			<div class="sort__buttons">
+				<button type="button" class="btn btn--lg btn--success">Renew</button>
+				<button type="button" class="btn btn--lg btn--simply">Options</button>
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="board__home board--lg">
+	<div class="sort__title expander is-expanded">
+		<h2 class="h1" data-expander>Web Hosting</h2>
+		<div class="sort__action">
+			<button type="button" class="link">Manage All</button>
+		</div>
+	</div>
+	<div class="sort__box">
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">Economy Web Hosting</a>
+				<div class="sort__descr">crafthost.com</div>
+			</div>
+			<div class="status" data-status="active">Active</div>
+			<div class="sort__buttons">
+				<button type="button" class="btn btn--lg btn--simply">Options</button>
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+			</div>
+		</div>
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">Economy Web Hosting</a>
+				<div class="sort__descr">crafthost.com</div>
+			</div>
+			<div class="status" data-status="active">Active</div>
+			<div class="sort__buttons">
+				<button type="button" class="btn btn--lg btn--simply">Options</button>
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Manage</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="board__home board--lg">
+	<div class="sort__title expander is-expanded">
+		<h2 class="h1" data-expander>Addons</h2>
+		<div class="sort__action">
+			<button type="button" class="link">Manage All</button>
+		</div>
+	</div>
+	<div class="sort__box">
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">Shared Hosting</a>
+				<div class="sort__descr">33 free credits</div>
+			</div>
+			<div class="sort__buttons">
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Redeem</button>
+			</div>
+		</div>
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">Starter</a>
+				<div class="sort__descr">33 free credits</div>
+			</div>
+			<div class="sort__buttons">
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Redeem</button>
+			</div>
+		</div>
+		<div class="sort__item">
+			<div class="sort__info">
+				<a href="#" class="sort__name">Email</a>
+				<div class="sort__descr">18 free credits</div>
+			</div>
+			<div class="sort__buttons">
+				<button data-link="settings-domain.html" type="button" class="btn btn--lg btn--secondary">Redeem</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="board__message board__message--sm" role="alert" style="--bg1x: url(../img/home/message-sm.png); --bg2x:url(../img/home/message-sm-2x.png);">
