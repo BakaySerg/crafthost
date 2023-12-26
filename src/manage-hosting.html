@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Online store | Crafthost</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<header class="header">
+			@@include('./include/header.html')
+			<div class="header__bottom container">
+				<h1 class="h1">Manage Hosting</h1>
+			</div>
+		</header>
+
+		<div class="preloader">
+			<div class="preloader__circle">
+				<svg width="68" height="68" viewBox="0 0 68 68" fill="none" class="progress__circle">
+					<circle cx="34" cy="34" r="23" stroke-width="7" stroke="#d7d7d7" />
+					<circle class="progress__value" cx="34" cy="34" r="23" stroke-width="7" stroke="#5FB456" stroke-linecap="round" stroke-dasharray="40 180" stroke-dashoffset="0"></circle>
+				</svg>
+			</div>
+			<div class="preloader__title">Configuring Server</div>
+			<p class="preloader__text">Sit tight, we’re provisioning your server, which can take up to 10 minutes. We’ll email you when it’s complete.</p>
+		</div>
+	</div>
+	@@include('./include/footer.html')
+	<script src="js/main.js"></script>
+</body>
+</html>

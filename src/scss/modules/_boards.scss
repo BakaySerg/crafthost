@@ -142,6 +142,10 @@
          border-radius: 3px;
          margin-bottom: 20px;
       }
+		.expander {
+			margin-bottom: 10px;
+			padding: 12px 17px;
+		}
       .sort__box {
          display: grid;
          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -177,7 +181,7 @@
       .sort__buttons {
          display: flex;
          flex-wrap: wrap;
-         justify-content: space-between;
+         justify-content: space-around;
          width: 100%;
          .btn {
             flex-grow: .9;
@@ -195,7 +199,7 @@
       }
    }
    @media (max-width: 1025px){
-      margin-bottom: 25px;
+      margin-bottom: 18px;
    }
    @media (max-width: 500px){
       margin-bottom: 15px;
@@ -286,10 +290,21 @@
       grid-gap: 15px;
    }
 }
+.board--lg .expander + .sort__box {
+   @media (max-width: 380px){
+      grid-gap: 8px;
+   }
+}
 .board--lg .sort__title {
    @media (max-width: 600px){
       padding: 12px 15px;
       margin-bottom: 15px;
+   }
+}
+.board--lg .expander {
+   @media (max-width: 600px){
+      padding: 10px 14px;
+      margin-bottom: 8px;
    }
 }
 .message__title {

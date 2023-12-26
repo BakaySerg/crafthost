@@ -629,6 +629,7 @@
 		transform: rotate(45deg);
 		.circle {
 			opacity: 0;
+			transform: scale(.1);
 		}
 		.i-cross {
 			opacity: 1;
