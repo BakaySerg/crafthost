@@ -22,6 +22,50 @@
 				<!-- choise -->
 				<div class="plan__main">
 
+					<div class="box plan__options">
+						<div class="plan__title plan__title--vertical">
+							<h2 class="h1">VPS Server</h2>
+							<div class="plan__details">
+								<span>Xeon E3-1230v3</span>|<span>DDR3 8 GB</span>|<span>2 × 1 ТБ SATA</span>|<span>IPMI</span>
+							</div>
+						</div>
+
+						<div class="plan__option">
+							<!-- <div class="plan__term">5 years</div> -->
+
+							<!-- custom select (with input-hidden) -->
+							<div class="select-cstm">
+								<div class="select-cstm__header">
+									<span class="select-cstm__current"><b>Plan 1:</b> 3 months</span>
+								</div>
+								<input type="hidden" name="plan" value="0">
+								<div class="select-cstm__body">
+									<div class="select-cstm__item" data-value="1"><b>Plan 1:</b> 3 months</div>
+									<div class="select-cstm__item" data-value="2"><b>Plan 2:</b> 6 month</div>
+									<div class="select-cstm__item" data-value="3"><b>Plan 3:</b> 12 month</div>
+								</div>
+							</div>
+							<div class="plan__cost ml-a">
+								<div class="cost__new">$50,00</div>
+							</div>
+						</div>
+						<div class="plan__option">
+							<div class="cost__new">Location</div>
+							<div class="radio-group">
+								<label class="radio-label">
+									<input class="radio-input" type="radio" name="location" value="1" checked>
+									<i class="radio-custom"></i>
+									<span>USA</span>
+								</label>
+								<label class="radio-label">
+									<input class="radio-input" type="radio" name="location" value="2">
+									<i class="radio-custom"></i>
+									<span>Europe</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
 					<div class="box box--option">
 						<h2 class="message__title message__title--indented mb-0">Imagery</h2>
 						<div class="plan__tabs tabs pb-1">
@@ -37,98 +81,95 @@
 								<div class="plan__option divid-up">
 									<div class="plan__term">Cent OC
 										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
-											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+											<svg class="i-question" viewBox="0 0 32 32">
+												<use xlink:href="#i-question"></use>
+											</svg>
 										</a>
 									</div>
+
 									<div class="plan__choise plan__choise--right">
-										<select name="os-choise-1">
-											<option value="1">Cent OS 7</option>
-											<option value="2">Cent OS 11</option>
-											<option value="3">Cent OS 7</option>
-										</select>
+										<!-- custom select (with input-hidden) -->
+										<div class="select-cstm">
+											<div class="select-cstm__header">
+												<span class="select-cstm__current">Cent OS 7</span>
+											</div>
+											<input type="hidden" name="Cent" value="0">
+											<div class="select-cstm__body">
+												<div class="select-cstm__item" data-value="1">Cent OS 7</div>
+												<div class="select-cstm__item" data-value="2">Cent OS 11</div>
+												<div class="select-cstm__item" data-value="3">Cent OS 7</div>
+											</div>
+										</div>
 									</div>
+
 									<label class="checkbox-custom">
 										<input class="d-none checkbox" type="radio" name="os" value="2">
-										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32">
+												<use xlink:href="#i-check" />
+											</svg></i>
 									</label>
 								</div>
 								<div class="plan__option">
 									<div class="plan__term">Ubuntu
 										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
-											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+											<svg class="i-question" viewBox="0 0 32 32">
+												<use xlink:href="#i-question"></use>
+											</svg>
 										</a>
 									</div>
 									<div class="plan__choise plan__choise--right">
-										<select name="os-choise-2">
-											<option value="1">Ubuntu 20.04 LTS</option>
-											<option value="2">Ubuntu 20.04 LTS</option>
-											<option value="3">Ubuntu 20.04 LTS</option>
-										</select>
+										<!-- custom select (with input-hidden) -->
+										<div class="select-cstm">
+											<div class="select-cstm__header">
+												<span class="select-cstm__current">Ubuntu 20.04 LTS</span>
+											</div>
+											<input type="hidden" name="Ubuntu" value="0">
+											<div class="select-cstm__body">
+												<div class="select-cstm__item" data-value="1">Ubuntu 20.04 LTS</div>
+												<div class="select-cstm__item" data-value="2">Ubuntu 20.04 LTS</div>
+												<div class="select-cstm__item" data-value="3">Ubuntu 20.04 LTS</div>
+											</div>
+										</div>
 									</div>
 									<label class="checkbox-custom">
-										<input class="d-none checkbox" type="radio" name="os" value="1">
-										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+										<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32">
+												<use xlink:href="#i-check" />
+											</svg></i>
 									</label>
 								</div>
 								<div class="plan__option">
 									<div class="plan__term">Debian
 										<a href="javascript:;" class="help help--icon" data-help="Some kind of explanatory text on how to proceed with all these things">
-											<svg class="i-question" viewBox="0 0 32 32"><use xlink:href="#i-question"></use></svg>
+											<svg class="i-question" viewBox="0 0 32 32">
+												<use xlink:href="#i-question"></use>
+											</svg>
 										</a>
 									</div>
 									<div class="plan__choise plan__choise--right">
-										<select name="os-choise-3">
-											<option value="1">Debian 10</option>
-											<option value="2">Debian 10</option>
-											<option value="3">Debian 10</option>
-										</select>
+										<!-- custom select (with input-hidden) -->
+										<div class="select-cstm">
+											<div class="select-cstm__header">
+												<span class="select-cstm__current">Debian 10</span>
+											</div>
+											<input type="hidden" name="Debian" value="0">
+											<div class="select-cstm__body">
+												<div class="select-cstm__item" data-value="1">Debian 10</div>
+												<div class="select-cstm__item" data-value="2">Debian 12</div>
+											</div>
+										</div>
 									</div>
 									<label class="checkbox-custom">
-										<input class="d-none checkbox" type="radio" name="os" value="1">
-										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
+										<input class="d-none checkbox" type="checkbox" name="plan" value="1">
+										<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32">
+												<use xlink:href="#i-check" />
+											</svg></i>
 									</label>
 								</div>
 							</div>
 							<div id="second" data-tab="hidden">
 								<div class="pt-1 pb-1 plan__option divid-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam distinctio veniam vero facilis dignissimos, unde debitis corporis. Tenetur aspernatur delectus! Earum neque ratione consequuntur, quos hic, quasi corporis voluptate distinctio amet provident. Cum praesentium quae facere quibusdam harum nostrum, ipsum perferendis impedit explicabo aliquid, quaerat maxime ullam optio error libero, aperiam et tempore. Repudiandae impedit dolore animi, error id veniam voluptatum cupiditate, porro sit voluptates quisquam ducimus blanditiis, iusto nihil atque consequatur. Nobis sed ipsa numquam saepe. Accusamus molestias ducimus facilis quae praesentium quidem labore dolorem repudiandae expedita amet aut, obcaecati, animi incidunt, maxime soluta doloribus minima veniam. A accusamus voluptates doloremque numquam ducimus sed excepturi eius officia ex?</div>
 							</div>
-						</div>
-					</div>
-
-					<div class="box box--option">
-						<h2 class="message__title message__title--indented">Plans</h2>
-						<div class="plan__option">
-							<div class="plan__term">Plan 1</div>
-							<div class="plan__cost">
-								<div class="cost__new">$2,00</div>
-							</div>
-							<div class="plan__month">(1 month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="2">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">Plan 2</div>
-							<div class="plan__cost">
-								<div class="cost__new">$4,00</div>
-							</div>
-							<div class="plan__month">(2 month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
-							</label>
-						</div>
-						<div class="plan__option">
-							<div class="plan__term">Plan 3</div>
-							<div class="plan__cost">
-								<div class="cost__new">$6,00</div>
-							</div>
-							<div class="plan__month">(3 month)</div>
-							<label class="checkbox-custom">
-								<input class="d-none checkbox" type="radio" name="plan" value="1">
-								<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check" /></svg></i>
-							</label>
 						</div>
 					</div>
 
