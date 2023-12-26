@@ -1,13 +1,12 @@
 {
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "Start pack for Front-end develop",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
-  "author": "Bakay_S",
-  "license": "ISC",
+  "browserList": [
+	"not ie <= 11",
+	"ios >= 12"
+  ],
   "devDependencies": {
     "browser-sync": "latest",
     "gulp": "^4.0.2",
