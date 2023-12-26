@@ -115,7 +115,7 @@
 .plan__main {
    grid-area: content;
    & > div {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
       @media (max-width: 1025px){
          margin-bottom: 25px;
       }
@@ -144,7 +144,12 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 32px 0;
+   padding: 26px 0;
+	&--vertical {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
    .h3 {
       white-space: nowrap;
       margin-right: 0.8em;
@@ -222,7 +227,7 @@
    flex-grow: .5;
    max-width: 234px;
    @media (max-width: 500px){
-      width: calc(100% - 40px);
+      // width: calc(100% - 40px);
       padding-bottom: .4em;
       text-decoration: underline;
       text-decoration-color: $border;
@@ -245,7 +250,7 @@
    }
    @media (max-width: 500px){
       justify-content: space-between;
-      min-width: 56%;
+      min-width: 28%;
       & + .checkbox-custom {margin-left: 5px;}
    }
 }
@@ -359,7 +364,8 @@
    }
 }
 .plan__choise--right {
-   text-align: right;
+   display: flex;
+	justify-content: flex-end;
    min-width: 46%;
    flex-grow: 0.2;
    select {

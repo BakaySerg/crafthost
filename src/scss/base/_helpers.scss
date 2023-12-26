@@ -21,6 +21,15 @@
 .mt-1 {
 	margin-top: 1em;
 }
+.ml-a {
+	margin-left: auto;
+	&:not(:last-child){
+		margin-right: 1.2em;
+		@media (max-width: 600px){
+			margin-right: 0.6em;
+		}
+	}
+}
 .pb-1 {
 	padding-bottom: 1em;
 	display: block;
