@@ -620,6 +620,9 @@
 		}
       @media (max-width: 1100px) {
          padding-top: 10px;
+			&--kyc{
+				padding-bottom: 0;
+			}
       }
       @media (max-width: 500px){
          padding: 6px 0 20px;
@@ -642,6 +645,10 @@
    &__picture {
       flex-shrink: 0;
       min-width: 200px;
+		pointer-events: none;
+		& + div {
+			pointer-events: none;
+		}
       img {
          object-fit: contain;
       }
@@ -653,9 +660,17 @@
 	&__item--kyc &__picture {
 		max-width: 150px;
 		min-width: auto;
+		@media (max-width: 1100px){
+			max-width: 124px;
+		}
 	}
    &__text {
-      .h3 {padding-bottom: .6em;}
+      .h3 {
+			padding-bottom: .6em;
+			@media (max-width: 1100px){
+				padding-bottom: 0.4em;
+			}
+		}
       .h4 {padding-bottom: .8em;}
       p {
          font-size: em(14);
@@ -679,19 +694,41 @@
 		gap: 14px;
 		border-radius: 5px;
 		border: 2px dashed  $border;
-		background: #F1F1F1;
+		background-color: #F1F1F1;
 		box-shadow: -1px 1px 10px 0px rgba(30, 23, 104, 0.04);
 		padding: 30px;
 		width: 100%;
+		transition: .3s;
+		user-select: none;
+		&--active {
+			border-color: $active;
+			background-color: #fff;
+		}
+		&--loaded {
+			.file__area {
+				border-color: $accessible;
+				color: $accessible;
+				& [class|="i"] {
+					color: $accessible;
+				}
+			}
+		}
 		.upload__cta {
 			margin-top: 0;
-		}
-		@media (min-width: 1024px){
-			min-height: calc(100vh - 550px);
 		}
 		p {
 			font-size: em(14);
 			margin-bottom: 9px;
+		}
+		@media (min-width: 1101px){
+			min-height: calc(100vh - 550px);
+		}
+		@media (max-width: 1100px){
+			padding: 18px 20px 24px;
+		}
+		@media (max-width: 991px){
+			gap: 7px;
+			padding: 10px 14px 22px;
 		}
 	}
    .text-center {

@@ -35,7 +35,7 @@
 							<p>Formats: JPG, PNG, PDF</p>
 						</div>
 						<div class="upload__cta">
-							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<input type="file" name="file" id="file" data-multiple-caption="{count} files" accept="image/jpeg,image/png,image/jpg">
 							<label class="file__area" for="file">
 								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link" /></svg></i>
 								<span data-text="Upload image">Upload image</span>
@@ -58,67 +58,120 @@
 							<p>Formats: JPG, PNG, PDF</p>
 						</div>
 						<div class="upload__cta">
-							<input type="file" name="file2" id="file2" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<input type="file" name="file2" id="file2" data-multiple-caption="{count} files" accept="image/jpeg,image/png,image/jpg">
 							<label class="file__area" for="file2">
 								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link" /></svg></i>
 								<span data-text="Upload image">Upload image</span>
 							</label>
 						</div>
-
 					</div>
 				</div>
 				<div class="text-center">
 					<button type="submit" class="btn btn--lg btn--success btn--icon">Submit</button>
+					<button data-temp="error" type="button" class="btn btn--lg btn--danger btn--icon" data-drawer-trigger aria-controls="error-modal" aria-expanded="false" aria-label="Alert">Error</button>
+					<button data-temp="success" type="button" class="btn btn--lg btn--success btn--icon" data-drawer-trigger aria-controls="success-modal" aria-expanded="false" aria-label="Alert">Success</button>
 				</div>
-
 			</form>
-
-			<!-- <div class="info__status" data-user-verify="no">
-				<svg data-verify="no" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
-				<svg data-verify="yes" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
-				<h2 data-verify="no" class="info__status-title">Your account is not verified</h2>
-				<h2 data-verify="yes" class="info__status-title">Your Account Verified</h2>
-				<p data-verify="yes">Your account provide all the requirements</p>
-			</div> -->
-
 		</main>
 	</div>
 
+	<!-- success modal-->
+	<div class="drawer drawer--alert" id="success-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				@@include('./pages/modal-success-loading.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- error modal-->
+	<div class="drawer drawer--alert" id="error-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				@@include('./pages/modal-error-loading.html')
+			</div>
+		</div>
+	</div>
+
+	<script src="js/drawer.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-		// files select
+
+		var loaded = false;
+
+		// drag and drop Dropzones
 		(function () {
+			const droprzones = document.querySelectorAll('.upload__dropzone');
+			[...droprzones].forEach(function (zone) {
+				zone.addEventListener('ondrag ondragenter', function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+				});
+
+				zone.ondragover = function (e) {
+					e.preventDefault();
+					zone.classList.add('upload__dropzone--active');
+				};
+
+				zone.ondragleave = function (e) {
+					e.preventDefault();
+					zone.classList.remove('upload__dropzone--active');
+				};
+
+				zone.ondrop = function (e) {
+					e.preventDefault();
+					let label = zone.querySelector('.file__area');
+						fileName = '',
+						droppedFiles = null,
+						fileInput = zone.querySelector('input[type=file]');
+
+						droppedFiles = e.dataTransfer.files;
+						fileName = droppedFiles[0]['name'];
+						label.querySelector('span').innerHTML = fileName.split('\\').pop();
+
+					zone.classList.remove('upload__dropzone--active');
+					zone.classList.add('upload__dropzone--loaded');
+					loaded = true;
+				};
+			});
+
+
+			//change file inputs
 			const inputs = document.querySelectorAll('[type=file]');
 			[...inputs].forEach( function (input) {
 				input.addEventListener('change', function (e) {
 					let label = e.target.nextElementSibling,
 						 labelVal = label.innerHTML,
 						 fileName = '';
-					if (this.files && this.files.length > 1)
+					if (this.files && this.files.length > 1){
 						fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
-					else
+					}
+					else {
 						fileName = e.target.value.split('\\').pop();
-					if (fileName)
+					}
+					if (fileName) {
 						label.querySelector('span').innerHTML = fileName;
-					else
-						label.innerHTML = labelVal;
+						label.closest('.upload__dropzone').classList.add('upload__dropzone--loaded');
+						loaded = true;
+					}
+					else label.innerHTML = labelVal;
 				});
 			});
 		}());
 
-		// send files & chacge verify status
+		// temp solution (trigger show message)
 		const formFactor = document.getElementById('verify-form');
 		formFactor?.addEventListener('submit', function (e) {
 			e.preventDefault();
-			const inputs = document.querySelectorAll('[type=file]'),
-					status = document.querySelector('[data-user-verify]');
-			[...inputs].forEach((inp) => {
-				if (inp.value.length) {
-					status.setAttribute('data-user-verify', 'yes');
-				e.target.reset();
-				e.target.remove();
-				}
-			});
+			const successBtn = document.querySelector('[data-temp=success]');
+			const errorBtn = document.querySelector('[data-temp=error]');
+			if (loaded) {
+				successBtn.click();
+			} else {
+				errorBtn.click();
+			}
 		});
 	</script>
 </body>

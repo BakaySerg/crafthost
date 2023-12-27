@@ -20,7 +20,7 @@
    z-index: 99;
    opacity: 0;
    transition: opacity .3s;
-   background-color: rgba($dialog,.25);
+   background-color: rgba($dialog,.6);
    user-select: none;
 }
 .drawer__wrapper {
@@ -63,7 +63,7 @@
    z-index: 999;
    .drawer__fieldset{
       width: 100%;
-      max-width: 600px;
+      max-width: 580px;
       transition: all .4s cubic-bezier(.77,0,.175,1);
       opacity: 0;
       transform: scale3d(.8,.8, 1);
@@ -139,6 +139,9 @@
    margin-left: 1rem;
    opacity: .6;
    z-index: 1;
+	&:has(~ .drawer__body--message) {
+		top: 24px;
+	}
    &:hover {opacity: 1;}
    @media (max-width: 500px){
       background-size: 22px;
@@ -153,6 +156,24 @@
 }
 .drawer__body {
    padding: calc(4.3vh + .7em) calc(1.6vw + 3.8em) calc(3vh + .6em);
+	&--message {
+		background-image: url("../img/login/bg-4.png");
+		background-repeat: no-repeat;
+		background-size: 98% auto;
+		background-position: -43px 102%;
+		min-height: 230px;
+		.i-shield {
+			margin: 0 auto 13px;
+			display: block;
+			color: $accessible;
+			&--warn {
+				color: $danger;
+			}
+		}
+		@media (max-width: 600px){
+			min-height: auto;
+		}
+	}
    @media (max-height: 649px){
       padding: calc(3.5vh + .6em) calc(1.6vw + 3.8em) calc(3vh + .5em);
    }
@@ -324,6 +345,15 @@
 }
 .drawer.is-visible .drawer__overlay {
    opacity: 1;
+}
+.drawer__title {
+	&--message {
+		text-align: center;
+		.h1 {
+			padding-bottom: .4em;
+			padding-right: 0;
+		}
+	}
 }
 .drawer__footer {
    position: sticky;
