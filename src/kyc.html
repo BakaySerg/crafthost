@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>KYC | Crafthost</title>
+	@@include('./include/head.html')
+</head>
+
+<body class="kyc__body">
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<header class="header__top">
+			<div class="container-xl">
+				<div class="kyc__logo">
+					<img srcset="img/header/logo.png, img/header/logo-2x.png 2x" src="img/login/logo-inverted.png" alt="logo" width="135" height="32">
+				</div>
+				<a href="signin.html" class="btn btn--lg btn--outlined">Log in</a>
+			</div>
+		</header>
+		<main class="kyc__main container">
+			<h1 class="h1">KYC</h1>
+
+			<form id="verify-form" class="kyc__grid">
+				<div class="upload__item upload__item--kyc">
+					<div class="upload__text">
+						<div class="upload__step">STEP 1</div>
+						<h3 class="h3">Upload government ID</h3>
+						<p>Take a picture of or scan your ID or passport.<br>Make sure the next is cleanly visible</p>
+					</div>
+					<div class="upload__dropzone">
+						<figure class="upload__picture">
+							<img srcset="img/profile/info/info-1.png, img/profile/info/info-1-2x.png 2x" src="img/profile/info/info-1.png" alt="user">
+						</figure>
+						<div>
+							<h4 class="h4">Drag file here to upload</h4>
+							<p>Formats: JPG, PNG, PDF</p>
+						</div>
+						<div class="upload__cta">
+							<input type="file" name="file" id="file" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<label class="file__area" for="file">
+								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link" /></svg></i>
+								<span data-text="Upload image">Upload image</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="upload__item upload__item--kyc">
+					<div class="upload__text">
+						<div class="upload__step">STEP 2</div>
+						<h3 class="h3">Upload selfie with ID</h3>
+						<p>Take a picture or yourself holding your ID or passport.<br>The ID or passport should be the same that you are using for ID verification</p>
+					</div>
+					<div class="upload__dropzone">
+						<figure class="upload__picture">
+							<img srcset="img/profile/info/info-2.png, img/profile/info/info-2-2x.png 2x" src="img/profile/info/info-2.png" alt="app">
+						</figure>
+						<div>
+							<h4 class="h4">Drag file here to upload</h4>
+							<p>Formats: JPG, PNG, PDF</p>
+						</div>
+						<div class="upload__cta">
+							<input type="file" name="file2" id="file2" data-multiple-caption="{count} files" multiple="" accept="image/jpeg,image/png,image/jpg">
+							<label class="file__area" for="file2">
+								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link" /></svg></i>
+								<span data-text="Upload image">Upload image</span>
+							</label>
+						</div>
+
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn--lg btn--success btn--icon">Submit</button>
+				</div>
+
+			</form>
+
+			<!-- <div class="info__status" data-user-verify="no">
+				<svg data-verify="no" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-warn"/></svg>
+				<svg data-verify="yes" class="i-shield" viewBox="0 0 32 32"><use xlink:href="#i-shield-check"/></svg>
+				<h2 data-verify="no" class="info__status-title">Your account is not verified</h2>
+				<h2 data-verify="yes" class="info__status-title">Your Account Verified</h2>
+				<p data-verify="yes">Your account provide all the requirements</p>
+			</div> -->
+
+		</main>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script>
+		// files select
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			[...inputs].forEach( function (input) {
+				input.addEventListener('change', function (e) {
+					let label = e.target.nextElementSibling,
+						 labelVal = label.innerHTML,
+						 fileName = '';
+					if (this.files && this.files.length > 1)
+						fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+					else
+						fileName = e.target.value.split('\\').pop();
+					if (fileName)
+						label.querySelector('span').innerHTML = fileName;
+					else
+						label.innerHTML = labelVal;
+				});
+			});
+		}());
+
+		// send files & chacge verify status
+		const formFactor = document.getElementById('verify-form');
+		formFactor?.addEventListener('submit', function (e) {
+			e.preventDefault();
+			const inputs = document.querySelectorAll('[type=file]'),
+					status = document.querySelector('[data-user-verify]');
+			[...inputs].forEach((inp) => {
+				if (inp.value.length) {
+					status.setAttribute('data-user-verify', 'yes');
+				e.target.reset();
+				e.target.remove();
+				}
+			});
+		});
+	</script>
+</body>
+</html>
