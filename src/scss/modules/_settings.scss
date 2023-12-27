@@ -439,6 +439,7 @@
 .btn--copy {
    position: relative;
    overflow: visible;
+	color: $accessible;
    &:after {
       content: attr(data-text);
       position: absolute;
@@ -460,6 +461,9 @@
       opacity: 1;
       transform: translateY(0);
    }
+}
+.btn--mini {
+	color: $headline;
 }
 .info {
    padding: 5px 24px 0;

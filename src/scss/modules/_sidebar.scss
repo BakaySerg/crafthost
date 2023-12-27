@@ -65,8 +65,7 @@
    flex-wrap: wrap;
    align-items: baseline;
    width: 100%;
-   padding-bottom: 11px;
-   text-shadow: 0 0;
+   padding-bottom: .8em;
    color: $headline;
    &--optional {
       position: relative;
@@ -394,6 +393,31 @@
       max-width: 46px;
       text-align: center;
    }
+}
+.plan__tariff {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2em 1.4em;
+	gap: 1em;
+	border: 1px solid $border;
+	margin-bottom: 2.1em;
+	.card__price {
+		margin: 0;
+		padding: 0;
+		flex-shrink: 0;
+		width: fit-content;
+	}
+	&-name {
+		font-size: em(14);
+		margin-bottom: .6em;
+		@media (max-width: 500px){
+			margin-bottom: 0.3em;
+		}
+	}
+	@media (max-width: 500px){
+		align-items: flex-end;
+	}
 }
 .plan__addons {
    padding: 27px 24px 6px;

@@ -73,6 +73,9 @@ body {
 	color: $headline;
 	font-weight: bold;
 	font-size: em(26);
+	@media (max-width: 600px){
+		font-size: em(22);
+	}
 }
 .h3 {
 	font-size: em(20);
@@ -119,3 +122,4 @@ body {
 
 @import "modules/login";
 @import "modules/kyc";
+@import "modules/vps";

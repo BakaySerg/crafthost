@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cloud hosting plans | Crafthost</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<header class="header">
+			@@include('./include/header.html')
+			<div class="header__bottom container">
+				<div class="header__links">
+					<a href="help.html" class="link">Server Details</a>
+					<a href="tickets.html" class="link">Monitoring</a>
+					<a href="tickets.html" class="link active">Upgrade Server</a>
+				</div>
+				<div class="header__bureau">
+					<a href="#" class="btn btn--lg btn--icon btn--success left" data-tab-open="new-user" data-drawer-trigger aria-controls="new-ticket" aria-expanded="false">Launch WHM/cPanel</a>
+				</div>
+			</div>
+		</header>
+
+		<!--  board  -->
+		<div class="board">
+			<div class="vps__header container">
+				<div>
+					<h1 class="h1">Crafthost Server</h1>
+					<div class="vps__state">
+						<div class="status status--sm" data-status="active">Active</div>
+						<span class="divider">|</span>
+						<div class="vps__address">
+							<div>
+								<span>99.303.42.112</span>
+								<input class="copy-key" type="text" value="99.303.42.112">
+							</div>
+							<button type="button" class="btn btn--xs btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+						</div>
+						<span class="divider">|</span>
+						<span>Europe</span>
+					</div>
+				</div>
+				<div class="sort__older">
+					<a href="#" class="submenu__trigger link">Server Actions</a>
+					<ul class="dialog dialog--under" aria-label="submenu">
+						<li><a class="dialog__link" href="#">Stop Server</a></li>
+						<li><a class="dialog__link" href="#">Restart Server</a></li>
+						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
+						<li><a class="dialog__link" href="#">Delete Server</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container text-center pb-15">
+				<h2 class="h2">–&ensp;Upgrade your VPS Server</h2>
+			</div>
+
+
+			<div class="card__box card__box--4 container">
+				<div class="card card--inverted card--glass">
+					<div class="card__feature">
+						<h3 class="h4">1 vCPU / 2 GB RAM</h3>
+						<div class="card__price card__price--dark"><b>$10,99</b> / mo</div>
+					</div>
+					<div class="card__descr">
+						<div class="cart__ribbon cart__ribbon--active">Current</div>
+						<ul class="card__list card__list--sm">
+							<li>1 vCPU</li>
+							<li>2 GB RAM</li>
+							<li>40 GB SSD Storage</li>
+							<li>1 additional IP available</li>
+						</ul>
+					</div>
+					<div class="card__bottom">
+						<button class="btn btn--lg btn--icon btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Upgrade <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="card card--inverted">
+					<div class="card__feature">
+						<h3 class="h4">1 vCPU / 4 GB RAM</h3>
+						<div class="card__price card__price--dark"><b>$15,99</b> / mo</div>
+					</div>
+					<div class="card__descr">
+						<ul class="card__list card__list--sm">
+							<li>1 vCPU</li>
+							<li>4 GB RAM</li>
+							<li>40 GB SSD Storage</li>
+							<li>1 additional IP available</li>
+						</ul>
+					</div>
+					<div class="card__bottom">
+						<button class="btn btn--lg btn--icon btn--success" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Upgrade <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="card card--inverted">
+					<div class="card__feature">
+						<h3 class="h4">2 vCPU / 4 GB RAM</h3>
+						<div class="card__price card__price--dark"><b>$20,99</b> / mo</div>
+					</div>
+					<div class="card__descr">
+						<ul class="card__list card__list--sm">
+							<li>2 vCPU</li>
+							<li>2 GB RAM</li>
+							<li>100 GB SSD Storage</li>
+							<li>2 additional IP available</li>
+						</ul>
+					</div>
+					<div class="card__bottom">
+						<button class="btn btn--lg btn--icon btn--success" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Upgrade <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+				<div class="card card--inverted">
+					<div class="card__feature">
+						<h3 class="h4">1 vCPU / 8 GB RAM</h3>
+						<div class="card__price card__price--dark"><b>$10,99</b> / mo</div>
+					</div>
+					<div class="card__descr">
+						<ul class="card__list card__list--sm">
+							<li>3 vCPU</li>
+							<li>8 GB RAM</li>
+							<li>100 GB SSD Storage</li>
+							<li>2 additional IP available</li>
+						</ul>
+					</div>
+					<div class="card__bottom">
+						<button class="btn btn--lg btn--icon btn--success" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Upgrade <svg class="i-arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg></button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	@@include('./include/footer.html')
+
+
+	<!-- popup (Compare hosting plans (table))-->
+	<div class="drawer" id="update-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				@@include('./pages/modal-update-server.html')
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script defer src="js/drawer.js"></script>
+	<script>
+		// copy key to clipboard
+		function copyText(el) {
+			let x = el.value;
+			if (el.setSelectionRange) {
+				el.select();
+				el.setSelectionRange(0, 9999);
+				document.execCommand("copy");
+				el.blur();
+			};
+			if (navigator.clipboard) { navigator.clipboard.writeText(x); };
+		};
+
+		const copyBtn = document.querySelector(".btn--copy");
+		copyBtn?.addEventListener('click', function (e) {
+			e.preventDefault();
+			const key = this.previousElementSibling.querySelector('input');
+			copyText(key);
+			this.classList.add('copied');
+			setTimeout(function () { e.target.classList.remove('copied'); }, 1100);
+		});
+	</script>
+</body>
+</html>

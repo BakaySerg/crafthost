@@ -43,6 +43,11 @@
 			max-width: 100%;
 		}
 	}
+	&--xs {
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+	}
 	&--lg {
 		font-size: 1em;
 		letter-spacing: .03em;
@@ -51,7 +56,7 @@
 		border-radius: 3px;
 		font-weight: normal;
 		line-height: 1.19;
-		@media (max-width: 640px){
+		@media (max-width: 1100px){
 			min-width: 132px;
 			padding: 12px 12px 10px;
 		}
@@ -68,6 +73,9 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		@media (max-width: 1100px){
+			min-width: 170px;
+		}
 		@media (max-width: 380px){
 			min-width: 148px;
 		}

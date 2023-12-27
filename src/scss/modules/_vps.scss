@@ -1,0 +1,42 @@
+.vps {
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2em;
+		@media (max-width: 600px){
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+		@media (max-width: 500px){
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: flex-start;
+			.sort__older {
+				margin: 0.4em 0 0 -0.34em;
+			}
+		}
+	}
+	&__state {
+		font-size: em(14);
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		padding-top: 1em;
+		.status--sm {
+			font-size: 1em;
+		}
+		.divider {
+			margin-top: -2px;
+		}
+		@media (max-width: 500px){
+			padding-top: 0.7em;
+		}
+	}
+	&__address {
+		display: flex;
+		align-items: center;
+		gap: 0.3em;
+		margin-right: -0.3em;
+	}
+}
