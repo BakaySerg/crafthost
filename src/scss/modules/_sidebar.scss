@@ -13,6 +13,13 @@
    @media (min-width: 991px){
       grid-gap: 20px;
    }
+	@media (max-width: 889px){
+		&:has(.plan__table) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
 }
 .plan__sidebar {
    padding: 26px 26px 28px;
@@ -45,6 +52,11 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		margin-bottom: 20px;
+		position: relative;
+		top: 0;
+		@media (max-width: 1100px){
+			margin-bottom: 0;
+		}
 	}
    .h1 {
       text-align: center;
@@ -66,9 +78,59 @@
 		}
 	}
 }
-.plan__details {
+.plan__table {
 	grid-column: 1 / -1;
-	padding: 1px 24px 0;
+	padding: 1px 24px 4px;
+	overflow: hidden;
+	&-headrow {
+		display: grid;
+		grid-template-columns: 1.03fr 1.2fr 1.1fr 90px;
+		position: relative;
+		font-size: 13px;
+		position: relative;
+		z-index: 1;
+		padding: 6px 0 6px 2px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -30px;
+			right: -30px;
+			background-color: $bg;
+			z-index: -1;
+		}
+		@media (max-width: 500px){
+			display: none;
+		}
+	}
+	&-row {
+		display: grid;
+		grid-template-columns: 1.02fr 1.2fr 1.1fr 90px;
+		gap: 2.2em;
+		padding: 19px 2px;
+		&:not(:last-child) {
+			border-bottom: 1px solid $border;
+		}
+		.primary {
+			font-weight: normal;
+			color: $accessible;
+			font-size: em(14);
+			display: inline-block;
+			margin-left: .5em;
+			letter-spacing: .02em;
+		}
+		& > div:last-child {
+			text-align: right;
+		}
+		@media (max-width: 500px){
+			grid-template-columns: 1fr 1fr;
+			gap: 0.2em 12px;
+			&>:nth-child(2) {
+				text-align: right;
+			}
+		}
+	}
 }
 .plan__columns {
    display: flex;
@@ -124,7 +186,7 @@
 }
 .plan__main {
    grid-area: content;
-	&:not(:has( ~ .plan__details)) {
+	&:not(:has( ~ .plan__table)) {
 		& > div {
 			margin-bottom: 24px;
 			@media (max-width: 1025px){
@@ -337,6 +399,13 @@
       	min-width: 50%;
       }
    }
+}
+.plan__pair {
+	@media (max-width: 500px){
+		max-width: 174px;
+		word-break: break-all;
+		margin-right: 20px;
+	}
 }
 .plan__pair >:first-child {
 	display: block;
