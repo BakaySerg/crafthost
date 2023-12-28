@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		function checkLabel() {
 			let fieldParent = this.parentElement;
-			if (this.value.length !== 0) {
+			if (this.value.length) {
 				fieldParent.classList.add("filled");
 			} else {
 				fieldParent.classList.remove("filled");

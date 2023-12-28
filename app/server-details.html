@@ -212,7 +212,7 @@
 						<li><a class="dialog__link" href="#">Stop Server</a></li>
 						<li><a class="dialog__link" href="#">Restart Server</a></li>
 						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
-						<li><a class="dialog__link" href="#">Delete Server</a></li>
+						<li><a class="dialog__link" href="#" data-drawer-trigger aria-controls="delete-modal" aria-expanded="false" aria-label="Alert">Delete Server</a></li>
 					</ul>
 				</div>
 			</div>
@@ -229,7 +229,7 @@
 								<span>Server Name</span>
 								<div class="h4">Crafthost</div>
 							</div>
-							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-server-name-tab" data-drawer-trigger aria-controls="update-server-name-modal" aria-expanded="false">Edit</button>
 						</div>
 						<div class="plan__option">
 							<div class="plan__pair">
@@ -267,7 +267,7 @@
 							<span>Login Credentials</span>
 							<div class="h4">admin</div>
 						</div>
-						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="login-tab" data-drawer-trigger aria-controls="login-modal" aria-expanded="false">Manage</button>
 					</div>
 					<div class="plan__option">
 						<div class="plan__pair">
@@ -349,40 +349,101 @@
 </footer>
 
 
-	<!-- drawer-->
-	<div class="drawer" id="update-modal" data-drawer-target>
+	<!-- update server name-->
+	<div class="drawer" id="update-server-name-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				<div id="update-tab" class="drawer__item drawer__form" data-tab="hidden">
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="update-server-name-tab" class="drawer__item drawer__form" data-tab="hidden">
 	<div class="drawer__body">
 		<div class="drawer__header drawer__header--noborder">
 			<div class="drawer__title">
-				<h2 class="drawer__headline">Update Your Server</h2>
+				<h2 class="drawer__headline">Login Credentials</h2>
 			</div>
 		</div>
-		<div class="drawer__content">
-			<div class="plan__tariff">
-				<div>
-					<div class="plan__tariff-name">Hosting Plan</div>
-					<h3 class="h4">1 vCPU / 4 GB RAM</h3>
-				</div>
-				<div class="card__price card__price--dark"><b>$15,99</b> / mo</div>
-			</div>
-			<div>
-				<div class="plan__columns">Subtotal <b>$15,99</b></div>
-				<!-- <div class="plan__columns color-alert">Discount: <b>- $30,00</b></div> -->
-				<div class="plan__columns">Estimated Tax: <b>$1,00</b></div>
-			</div>
-			<div class="divid-up mt-1 pt-1">
-				<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$16,99</b></div>
-			</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field filled">
+				<input type="text" name="old-psw" class="form-input" placeholder=" " value="Chrafthost" required >
+				<span class="form-placeholder">Server Name *</span>
+			</label>
 		</div>
 	</div>
 	<div class="drawer__footer">
 		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
-		<button type="submit" class="btn btn--lg btn--success">Buy</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (change password)-->
+	<div class="drawer" id="login-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="login-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Login Credentials</h2>
+				<p>Manage credentials for <b>admin</b></p>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field filled">
+				<input type="text" name="old-psw" class="form-input" placeholder=" " value="admin" required >
+				<span class="form-placeholder">Username</span>
+			</label>
+			<div class="align-right forgot"><a class="link link--underline" href="#">Generate Password</a></div>
+			<label class="form-field">
+				<input type="password" name="new-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required >
+				<span class="form-placeholder">Password</span>
+				<button type="button" class="btn password-picker">
+					<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+					<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+				</button>
+			</label>
+			<label class="form-field">
+				<input type="password" name="confirm-psw" class="form-input" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
+				<span class="form-placeholder">Confirm password</span>
+				<button type="button" class="btn password-picker">
+					<svg class="i-eye" viewBox="0 0 32 32"><use xlink:href="#i-eye"/></svg>
+					<svg class="i-eye-cross" viewBox="0 0 32 32"><use xlink:href="#i-eye-cross"/></svg>
+				</button>
+			</label>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- delete server-->
+	<div class="drawer drawer--alert" id="delete-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				<div class="drawer__item">
+	<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--alert">
+			<div class="drawer__title">
+				<h2 class="h1">Delete Server</h2>
+				<p>Are you sure you want to delete the server?</p>
+				<p class="drawer__caution">*This action connot be undone</p>
+				<div class="drawer__cta">
+					<button type="button" class="btn btn--lg btn--outlined" data-drawer-close>Cancel</button>
+					<button type="button" class="btn btn--lg btn--danger">Delete</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 			</div>

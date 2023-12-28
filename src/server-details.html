@@ -47,7 +47,7 @@
 						<li><a class="dialog__link" href="#">Stop Server</a></li>
 						<li><a class="dialog__link" href="#">Restart Server</a></li>
 						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
-						<li><a class="dialog__link" href="#">Delete Server</a></li>
+						<li><a class="dialog__link" href="#" data-drawer-trigger aria-controls="delete-modal" aria-expanded="false" aria-label="Alert">Delete Server</a></li>
 					</ul>
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 								<span>Server Name</span>
 								<div class="h4">Crafthost</div>
 							</div>
-							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-server-name-tab" data-drawer-trigger aria-controls="update-server-name-modal" aria-expanded="false">Edit</button>
 						</div>
 						<div class="plan__option">
 							<div class="plan__pair">
@@ -102,7 +102,7 @@
 							<span>Login Credentials</span>
 							<div class="h4">admin</div>
 						</div>
-						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="login-tab" data-drawer-trigger aria-controls="login-modal" aria-expanded="false">Manage</button>
 					</div>
 					<div class="plan__option">
 						<div class="plan__pair">
@@ -171,13 +171,34 @@
 	@@include('./include/footer.html')
 
 
-	<!-- drawer-->
-	<div class="drawer" id="update-modal" data-drawer-target>
+	<!-- update server name-->
+	<div class="drawer" id="update-server-name-modal" data-drawer-target>
 		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-			<div class="drawer__wrapper">
-				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
-				<div class="drawer__fieldset">
-				@@include('./pages/modal-update-server.html')
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-update-server-name.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- popup (change password)-->
+	<div class="drawer" id="login-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-password.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- delete server-->
+	<div class="drawer drawer--alert" id="delete-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__alert">
+			<div class="drawer__fieldset">
+				@@include('./pages/modal-delete-server.html')
 			</div>
 		</div>
 	</div>

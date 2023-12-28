@@ -334,6 +334,11 @@
    flex-grow: 1;
    flex-shrink: 0;
    color: $headline;
+	&--narrow {
+		@media (min-width: 600px){
+			padding: 0 28px;
+		}
+	}
    .search__form {
       background-color: $bg2;
       border-radius: 3px;
