@@ -13,7 +13,6 @@
 			<div class="header__bottom container">
 				<div class="header__links">
 					<a href="server-details.html" class="link active">Server Details</a>
-					<a href="#" class="link">Monitoring</a>
 					<a href="vps-upgrade.html" class="link">Upgrade Server</a>
 				</div>
 				<div class="header__bureau">
@@ -46,7 +45,8 @@
 					<ul class="dialog dialog--under" aria-label="submenu">
 						<li><a class="dialog__link" href="#">Stop Server</a></li>
 						<li><a class="dialog__link" href="#">Restart Server</a></li>
-						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="reset-password-tab" data-drawer-trigger aria-controls="reset-password-modal" aria-expanded="false">Reset Password</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="reinstall-server-tab" data-drawer-trigger aria-controls="reinstall-server-modal" aria-expanded="false">Reinstall Server</a></li>
 						<li><a class="dialog__link" href="#" data-drawer-trigger aria-controls="delete-modal" aria-expanded="false" aria-label="Alert">Delete Server</a></li>
 					</ul>
 				</div>
@@ -71,7 +71,7 @@
 								<span>Hostname</span>
 								<div class="h4">112.34.224.45.host.secureserver.net</div>
 							</div>
-							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="change-hostname-tab" data-drawer-trigger aria-controls="change-hostname-modal" aria-expanded="false">Edit</button>
 						</div>
 						<div class="plan__option">
 							<div class="plan__pair">
@@ -125,7 +125,7 @@
 							<span>Admin Access</span>
 							<div class="h4">disabled</div>
 						</div>
-						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="admin-access-tab" data-drawer-trigger aria-controls="admin-access-modal" aria-expanded="false">Manage</button>
 					</div>
 				</div>
 
@@ -142,25 +142,25 @@
 						<div>IPv4s - 1of 2 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>-</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv6 - 1of 3 used</div>
 						<div class="h4">99.303.42.112 <span class="primary">Primary</span></div>
 						<div>crafthost.com</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv4s - 1of 2 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>-</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv6 - 1of 3 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>crafthost.com</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 				</div>
 			</form>
@@ -178,6 +178,61 @@
 			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
 			<div class="drawer__fieldset">
 				@@include('./pages/servers/modal-update-server-name.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- reset-password-->
+	<div class="drawer" id="reset-password-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-reset-password.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- change-hostname-->
+	<div class="drawer" id="change-hostname-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-change-hostname.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- reinstall-server-->
+	<div class="drawer" id="reinstall-server-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-reinstall-server.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- admin access-->
+	<div class="drawer" id="admin-access-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-admin-access.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- request-ip-->
+	<div class="drawer" id="request-ip-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				@@include('./pages/servers/modal-request-ip.html')
 			</div>
 		</div>
 	</div>

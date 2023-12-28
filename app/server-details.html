@@ -178,7 +178,6 @@
 			<div class="header__bottom container">
 				<div class="header__links">
 					<a href="server-details.html" class="link active">Server Details</a>
-					<a href="#" class="link">Monitoring</a>
 					<a href="vps-upgrade.html" class="link">Upgrade Server</a>
 				</div>
 				<div class="header__bureau">
@@ -211,7 +210,8 @@
 					<ul class="dialog dialog--under" aria-label="submenu">
 						<li><a class="dialog__link" href="#">Stop Server</a></li>
 						<li><a class="dialog__link" href="#">Restart Server</a></li>
-						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="reset-password-tab" data-drawer-trigger aria-controls="reset-password-modal" aria-expanded="false">Reset Password</a></li>
+						<li><a class="dialog__link" href="#" data-tab-open="reinstall-server-tab" data-drawer-trigger aria-controls="reinstall-server-modal" aria-expanded="false">Reinstall Server</a></li>
 						<li><a class="dialog__link" href="#" data-drawer-trigger aria-controls="delete-modal" aria-expanded="false" aria-label="Alert">Delete Server</a></li>
 					</ul>
 				</div>
@@ -236,7 +236,7 @@
 								<span>Hostname</span>
 								<div class="h4">112.34.224.45.host.secureserver.net</div>
 							</div>
-							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="change-hostname-tab" data-drawer-trigger aria-controls="change-hostname-modal" aria-expanded="false">Edit</button>
 						</div>
 						<div class="plan__option">
 							<div class="plan__pair">
@@ -290,7 +290,7 @@
 							<span>Admin Access</span>
 							<div class="h4">disabled</div>
 						</div>
-						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="admin-access-tab" data-drawer-trigger aria-controls="admin-access-modal" aria-expanded="false">Manage</button>
 					</div>
 				</div>
 
@@ -307,25 +307,25 @@
 						<div>IPv4s - 1of 2 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>-</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv6 - 1of 3 used</div>
 						<div class="h4">99.303.42.112 <span class="primary">Primary</span></div>
 						<div>crafthost.com</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv4s - 1of 2 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>-</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 					<div class="plan__table-row">
 						<div>IPv6 - 1of 3 used</div>
 						<div class="h4">99.303.42.112</div>
 						<div>crafthost.com</div>
-						<div><a href="#" class="link link--underline">Request</a></div>
+						<div><a href="#" class="link link--underline" data-tab-open="request-ip-tab" data-drawer-trigger aria-controls="request-ip-modal" aria-expanded="false">Request</a></div>
 					</div>
 				</div>
 			</form>
@@ -359,7 +359,7 @@
 	<div class="drawer__body">
 		<div class="drawer__header drawer__header--noborder">
 			<div class="drawer__title">
-				<h2 class="drawer__headline">Login Credentials</h2>
+				<h2 class="drawer__headline">Update Server Name</h2>
 			</div>
 		</div>
 		<div class="drawer__content drawer__content--narrow">
@@ -367,6 +367,205 @@
 				<input type="text" name="old-psw" class="form-input" placeholder=" " value="Chrafthost" required >
 				<span class="form-placeholder">Server Name *</span>
 			</label>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- reset-password-->
+	<div class="drawer" id="reset-password-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="reset-password-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Reset Your Password</h2>
+				<p>Please enter your email address. You will receive a link to create a new password via email.</p>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field">
+				<input type="email" name="old-psw" class="form-input" placeholder=" " required >
+				<span class="form-placeholder">Email</span>
+			</label>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- change-hostname-->
+	<div class="drawer" id="change-hostname-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="change-hostname-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Change Hostname</h2>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field filled">
+				<input type="text" name="old-psw" class="form-input" placeholder=" " value="112.34.224.45.host.secureserver.net" required >
+				<span class="form-placeholder">Hostname *</span>
+			</label>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- reinstall-server-->
+	<div class="drawer" id="reinstall-server-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="reinstall-server-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Reinstall Your Server</h2>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field filled">
+				<input type="text" name="old-psw" class="form-input" placeholder=" " value="Chrafthost" required>
+				<span class="form-placeholder">Server Name *</span>
+			</label>
+		</div>
+		<div class="drawer__checkfield">
+			<h3 class="h4">Operating System</h3>
+			<div class="drawer__checkline">
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c1" name="c1" value="1" checked>
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c1">CentOS 7</label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c2" name="c2" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c2">Ubuntu 16</label>
+				</div>
+			</div>
+		</div>
+		<div class="drawer__checkfield">
+			<h3 class="h4">Data Center</h3>
+			<div class="drawer__checkline">
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c3" name="c3" value="1" checked>
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c3">USA <span class="primary">Current</span></label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c4" name="c4" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c4">Asia</label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c5" name="c5" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c5">Europe</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- admin access-->
+	<div class="drawer" id="admin-access-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="admin-access-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Admin Access</h2>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<div class="v-center g-1">
+				<label class="checkbox-custom">
+					<input class="d-none checkbox" type="checkbox" id="a" name="a" value="1">
+					<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+				</label>
+				<label for="a">Enable Admin Access</label>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- request-ip-->
+	<div class="drawer" id="request-ip-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+		<div class="drawer__wrapper">
+			<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+			<div class="drawer__fieldset">
+				<form id="request-ip-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Request IP Address</h2>
+				<p class="pb-1">Request additional IP addresses to separate server management functions from website content. Using additional IP addresses for SEO purposes is not considered a valid use and any invalid use can result in the removal of the address from your server.</p>
+				<p>Email relay services are only available on the server’s primary IP address and cannot be configured for your additional IP addresses.</p>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<div class="v-center g-1">
+				<label class="checkbox-custom">
+					<input class="d-none checkbox" type="checkbox" id="b" name="b" value="1">
+					<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+				</label>
+				<label for="b">Yes, I agree</label>
+			</div>
 		</div>
 	</div>
 	<div class="drawer__footer">

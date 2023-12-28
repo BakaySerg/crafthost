@@ -159,6 +159,12 @@ input:not([type=radio]):not([type=checkbox]) {
 	[type=checkbox],[type=radio] {
 		display: none;
 	}
+	& + label {
+		user-select: none;
+		cursor: pointer;
+		padding-top: 5px;
+		padding-bottom: 3px;
+	}
 	&__icon {
 		border: 1px solid $icons;
 		border-radius: 3px;
@@ -601,7 +607,7 @@ input::-webkit-calendar-picker-indicator {
 .forgot {
 	white-space: nowrap;
 	padding-top: .1em;
-	margin-bottom: 1.8em;
+	margin-bottom: 1.4em;
 	font-size: 14px;
 	a {
 		padding-right: 0;

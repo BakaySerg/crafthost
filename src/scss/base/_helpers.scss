@@ -146,6 +146,9 @@
 	display: flex;
 	align-items: center;
 }
+.g-1 {
+	gap: 1.1em;
+}
 .is-action {
 	display: inline-block;
 	color: $active;

@@ -112,14 +112,6 @@
 		&:not(:last-child) {
 			border-bottom: 1px solid $border;
 		}
-		.primary {
-			font-weight: normal;
-			color: $accessible;
-			font-size: em(14);
-			display: inline-block;
-			margin-left: .5em;
-			letter-spacing: .02em;
-		}
 		& > div:last-child {
 			text-align: right;
 		}
@@ -131,6 +123,14 @@
 			}
 		}
 	}
+}
+.primary {
+	font-weight: normal;
+	color: $accessible;
+	font-size: em(14);
+	display: inline-block;
+	margin-left: .4em;
+	letter-spacing: .02em;
 }
 .plan__columns {
    display: flex;

@@ -117,23 +117,23 @@ document.addEventListener('DOMContentLoaded', function(){
 			if (close) {
 				closeDrawer(close);
 				let activeTabs = document.querySelectorAll('.drawer__fieldset [data-tab=active]');
-				let fields = document.querySelectorAll('.drawer__form .filled');
+				// let fields = document.querySelectorAll('.drawer__form .filled');
 				[...activeTabs].forEach((all) => {
 					all.setAttribute("data-tab", "hidden");
 				});
-				if (fields) {
-					[...fields].forEach((all) => {
-						all.classList.remove("filled");
-					});
-				}
-				let forms = document.querySelectorAll(".drawer__form");
-				if (forms) {
-					[...forms].forEach((form) => {
-						form.reset();
-						let btn = form.querySelector('.drawer__footer [type=submit]');
-						btn?.classList.add('btn--disabled');
-					});
-				}
+				// if (fields) {
+				// 	[...fields].forEach((all) => {
+				// 		all.classList.remove("filled");
+				// 	});
+				// }
+				// let forms = document.querySelectorAll(".drawer__form");
+				// if (forms) {
+				// 	[...forms].forEach((form) => {
+				// 		form.reset();
+				// 		let btn = form.querySelector('.drawer__footer [type=submit]');
+				// 		btn?.classList.add('btn--disabled');
+				// 	});
+				// }
 			}
 		};
 

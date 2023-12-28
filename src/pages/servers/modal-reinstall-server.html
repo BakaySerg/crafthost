@@ -1,0 +1,64 @@
+<form id="reinstall-server-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Reinstall Your Server</h2>
+			</div>
+		</div>
+		<div class="drawer__content drawer__content--narrow">
+			<label class="form-field filled">
+				<input type="text" name="old-psw" class="form-input" placeholder=" " value="Chrafthost" required>
+				<span class="form-placeholder">Server Name *</span>
+			</label>
+		</div>
+		<div class="drawer__checkfield">
+			<h3 class="h4">Operating System</h3>
+			<div class="drawer__checkline">
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c1" name="c1" value="1" checked>
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c1">CentOS 7</label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c2" name="c2" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c2">Ubuntu 16</label>
+				</div>
+			</div>
+		</div>
+		<div class="drawer__checkfield">
+			<h3 class="h4">Data Center</h3>
+			<div class="drawer__checkline">
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c3" name="c3" value="1" checked>
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c3">USA <span class="primary">Current</span></label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c4" name="c4" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c4">Asia</label>
+				</div>
+				<div class="v-center g-1">
+					<label class="checkbox-custom">
+						<input class="d-none checkbox" type="checkbox" id="c5" name="c5" value="1">
+						<i class="checkbox-custom__icon"><svg viewBox="0 0 32 32"><use xlink:href="#i-check"/></svg></i>
+					</label>
+					<label for="c5">Europe</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Save</button>
+	</div>
+</form>
