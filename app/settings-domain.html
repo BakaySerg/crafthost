@@ -125,7 +125,10 @@
             <div class="dialog dialog--under dialog--notifications" aria-label="submenu">
                <ul class="dialog__notify-list">
                   <li><a class="dialog__notify" href="vps-upgrade.html" data-important>Upgrade your VPS Server</a></li>
-                  <li><a class="dialog__notify" href="notifications.html">Powerful web hosting plans to meet every need</a></li>
+                  <li><a class="dialog__notify" href="server-details.html" data-important>please look at the Server Details page</a></li>
+                  <li><a class="dialog__notify" href="manage-hosting.html" data-important>please look at the Preloader page</a></li>
+                  <li><a class="dialog__notify" href="kyc.html" data-important>please look at the KYC page</a></li>
+                  <li><a class="dialog__notify" href="hosting-dedicated-item.html" data-important>please look at the Dedicated Server page</a></li>
                </ul>
                <!-- if the list ⇑ is completely empty (including no tags), then we show this -->
                <div class="dialog__dummy">no new messages...</div>
@@ -465,8 +468,9 @@
 	<div class="drawer__body">
 		<div class="drawer__header drawer__header--alert">
 			<div class="drawer__title">
-				<h2 class="h1">Are you sure?</h2>
-				<p>Do you really want delete these&nbsp;domain?<br>This process connot be undone.</p>
+				<h2 class="h1">Delete Domain</h2>
+				<p>Are you sure you want delete these&nbsp;domain?</p>
+				<p class="drawer__caution">*This action connot be undone</p>
 				<div class="drawer__cta">
 					<button type="button" class="btn btn--lg btn--outlined" data-drawer-close>Cancel</button>
 					<button type="button" class="btn btn--lg btn--danger">Delete</button>

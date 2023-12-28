@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Balance History | Crafthost</title>
+	<title>Cloud hosting plans | Crafthost</title>
 	<meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
@@ -24,6 +24,7 @@
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 </head>
+
 <body>
 	<div class="wrapper">
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -175,72 +176,135 @@
    </div>
 </div>
 			<div class="header__bottom container">
-				<h1 class="h1">Balance History</h1>
+				<div class="header__links">
+					<a href="server-details.html" class="link active">Server Details</a>
+					<a href="#" class="link">Monitoring</a>
+					<a href="vps-upgrade.html" class="link">Upgrade Server</a>
+				</div>
+				<div class="header__bureau">
+					<a href="#" class="btn btn--lg btn--icon btn--success left" aria-expanded="false">Launch WHM/cPanel</a>
+				</div>
 			</div>
 		</header>
+
 		<!--  board  -->
 		<div class="board">
-			<ul class="container-lg breadcrumbs">
-				<li><a href="profile-balance.html">Account balance</a></li>
-				<li><a href="#">Balance History</a></li>
-			</ul>
-			<div class="container box setting__history">
-				<div class="table-box">
-					<table class="table table__history">
-						<tr>
-							<th>Type</th>
-							<th>Detail</th>
-							<th>Date</th>
-							<th colspan="2">Amount</th>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-success">Success</b></td>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-alert">Fail</b></td>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-success">Success</b></td>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-success">Success</b></td>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-success">Success</b></td>
-						</tr>
-						<tr>
-							<td>№116074777 from 10.10.2021</td>
-							<td>Dedicated server 50925 for 1 month</td>
-							<td>Paid 19.05.2021 at 09:15:03</td>
-							<td><b class="color-headline">$105,00</b></td>
-							<td><b class="color-success">Success</b></td>
-						</tr>
-					</table>
+			<div class="vps__header container">
+				<div>
+					<h1 class="h1">Crafthost Server</h1>
+					<div class="vps__state">
+						<div class="status status--sm" data-status="active">Active</div>
+						<span class="divider">|</span>
+						<div class="vps__address">
+							<div>
+								<span>99.303.42.112</span>
+								<input class="copy-key" type="text" value="99.303.42.112">
+							</div>
+							<button type="button" class="btn btn--xs btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+						</div>
+						<span class="divider">|</span>
+						<span>Europe</span>
+					</div>
 				</div>
-				<div class="text-center">
-					<button type="button" class="btn btn--lg btn--simply">Load More</button>
+				<div class="sort__older">
+					<a href="#" class="submenu__trigger link">Server Actions</a>
+					<ul class="dialog dialog--under" aria-label="submenu">
+						<li><a class="dialog__link" href="#">Stop Server</a></li>
+						<li><a class="dialog__link" href="#">Restart Server</a></li>
+						<li><a class="dialog__link" href="#">Reinstall Server</a></li>
+						<li><a class="dialog__link" href="#">Delete Server</a></li>
+					</ul>
 				</div>
-         </div>
+			</div>
+
+			<form class="plan__sidelong">
+				<!-- choise -->
+				<div class="plan__main">
+					<div class="box plan__options">
+						<div class="plan__title">
+							<h2 class="plan__headline">Server</h2>
+						</div>
+						<div class="plan__option">
+							<div class="plan__pair">
+								<span>Server Name</span>
+								<div class="h4">Crafthost</div>
+							</div>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+						</div>
+						<div class="plan__option">
+							<div class="plan__pair">
+								<span>Hostname</span>
+								<div class="h4">112.34.224.45.host.secureserver.net</div>
+							</div>
+							<button type="button" class="btn btn--lg btn--simply" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Edit</button>
+						</div>
+						<div class="plan__option">
+							<div class="plan__pair">
+								<span>IP Address</span>
+								<div class="h4">99.303.42.112</div>
+								<input class="copy-key" type="text" value="99.303.42.112">
+							</div>
+							<button type="button" class="btn btn--sm btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+						</div>
+						<div class="plan__option">
+							<div class="plan__pair">
+								<span>SMTP Relay Server</span>
+								<div class="h4">n2smtout.europe.net</div>
+								<input class="copy-key" type="text" value="n2smtout.europe.net">
+							</div>
+							<button type="button" class="btn btn--sm btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+						</div>
+
+					</div>
+
+
+				</div>
+
+				<!-- sidebar -->
+				<div class="plan__sidebar plan__sidebar--config box">
+					<div class="plan__title">
+						<h2 class="plan__headline">Access</h2>
+					</div>
+					<div class="plan__option">
+						<div class="plan__pair">
+							<span>Login Credentials</span>
+							<div class="h4">admin</div>
+						</div>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+					</div>
+					<div class="plan__option">
+						<div class="plan__pair">
+							<span>cPanel Access</span>
+							<div class="h4">https://99.303.42.112</div>
+							<input class="copy-key" type="text" value="https://99.303.42.112">
+						</div>
+						<button type="button" class="btn btn--sm btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+					</div>
+					<div class="plan__option">
+						<div class="plan__pair">
+							<span>WHM Sccess</span>
+							<div class="h4">https://99.303.42.112</div>
+							<input class="copy-key" type="text" value="https://99.303.42.112">
+						</div>
+						<button type="button" class="btn btn--sm btn--mini btn--copy" data-text="copied"><svg viewBox="0 0 32 32"><use xlink:href="#i-copy"/></svg></button>
+					</div>
+					<div class="plan__option">
+						<div class="plan__pair">
+							<span>Admin Access</span>
+							<div class="h4">disabled</div>
+						</div>
+						<button type="button" class="btn btn--lg btn--secondary" data-tab-open="update-tab" data-drawer-trigger aria-controls="update-modal" aria-expanded="false">Manage</button>
+					</div>
+				</div>
+
+				<div class="plan__details box">
+					<div class="plan__title">
+						<h2 class="plan__headline">IP Addresses</h2>
+					</div>
+				</div>
+			</form>
+
+
 		</div>
 	</div>
 	<!-- footer -->
@@ -259,7 +323,71 @@
 </footer>
 
 
+	<!-- drawer-->
+	<div class="drawer" id="update-modal" data-drawer-target>
+		<div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+			<div class="drawer__wrapper">
+				<button class="drawer__close btn" data-drawer-close aria-label="Close"></button>
+				<div class="drawer__fieldset">
+				<div id="update-tab" class="drawer__item drawer__form" data-tab="hidden">
+	<div class="drawer__body">
+		<div class="drawer__header drawer__header--noborder">
+			<div class="drawer__title">
+				<h2 class="drawer__headline">Update Your Server</h2>
+			</div>
+		</div>
+		<div class="drawer__content">
+			<div class="plan__tariff">
+				<div>
+					<div class="plan__tariff-name">Hosting Plan</div>
+					<h3 class="h4">1 vCPU / 4 GB RAM</h3>
+				</div>
+				<div class="card__price card__price--dark"><b>$15,99</b> / mo</div>
+			</div>
+			<div>
+				<div class="plan__columns">Subtotal <b>$15,99</b></div>
+				<!-- <div class="plan__columns color-alert">Discount: <b>- $30,00</b></div> -->
+				<div class="plan__columns">Estimated Tax: <b>$1,00</b></div>
+			</div>
+			<div class="divid-up mt-1 pt-1">
+				<div class="plan__columns plan__columns--price"><span>Amount Due:</span> <b>$16,99</b></div>
+			</div>
+		</div>
+	</div>
+	<div class="drawer__footer">
+		<button type="reset" class="btn btn--lg btn--secondary" data-drawer-close aria-label="Close">Cancel</button>
+		<button type="submit" class="btn btn--lg btn--success">Buy</button>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/main.js"></script>
-   <script defer src="js/drawer.js"></script>
+	<script defer src="js/drawer.js"></script>
+	<script>
+		// copy key to clipboard
+		function copyText(el) {
+			let x = el.value;
+			if (el.setSelectionRange) {
+				el.select();
+				el.setSelectionRange(0, 9999);
+				document.execCommand("copy");
+				el.blur();
+			};
+			if (navigator.clipboard) { navigator.clipboard.writeText(x); };
+		};
+
+		const copyBtn = document.querySelectorAll(".btn--copy");
+			[].forEach.call(copyBtn, function (btn) {
+				btn.addEventListener("click", function (e) {
+				e.preventDefault();
+				const key = this.previousElementSibling.querySelector('input');
+				copyText(key);
+				this.classList.add('copied');
+				setTimeout(function () { e.target.classList.remove('copied'); }, 1100);
+			});
+		})
+	</script>
 </body>
 </html>

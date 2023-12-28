@@ -41,6 +41,11 @@
    @media (max-width: 359px){
       padding: 16px 15px 16px;
    }
+	&--config {
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-bottom: 20px;
+	}
    .h1 {
       text-align: center;
       padding-bottom: .9em;
@@ -55,9 +60,15 @@
          padding: 17px 3px 2px;
       }
    }
-   .btn--lg {
-      width: 100%;
-   }
+	&:not(.plan__sidebar--config){
+		.btn--lg {
+			width: 100%;
+		}
+	}
+}
+.plan__details {
+	grid-column: 1 / -1;
+	padding: 1px 24px 0;
 }
 .plan__columns {
    display: flex;
@@ -113,15 +124,17 @@
 }
 .plan__main {
    grid-area: content;
-   & > div {
-      margin-bottom: 24px;
-      @media (max-width: 1025px){
-         margin-bottom: 25px;
-      }
-      @media (max-width: 500px){
-         margin-bottom: 20px;
-      }
-   }
+	&:not(:has( ~ .plan__details)) {
+		& > div {
+			margin-bottom: 24px;
+			@media (max-width: 1025px){
+				margin-bottom: 25px;
+			}
+			@media (max-width: 500px){
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 .plan__options {
    padding: 1px 24px 0;
@@ -143,7 +156,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 26px 0;
+   padding: 27px 0 26px;
 	&--vertical {
 		flex-direction: column;
 		align-items: flex-start;
@@ -184,6 +197,9 @@
    align-items: center;
    padding: 26px 2px;
    width: 100%;
+	&:has(.plan__pair) {
+		padding: 20px 2px;
+	}
    &--unavailable{
       padding-top: 18px;
       padding-bottom: 18px;
@@ -282,6 +298,20 @@
       }
    }
 }
+.plan__headline {
+	display: inline-flex;
+	align-items: center;
+	color: $headline;
+	font-size: em(26);
+	&::before {
+		content: "–";
+		display: inline-block;
+		margin-right: .5em;
+	}
+	@media (max-width: 500px){
+		font-size: em(20);
+	}
+}
 .plan__name {
    color: $headline;
    font-weight: bold;
@@ -308,6 +338,11 @@
       }
    }
 }
+.plan__pair >:first-child {
+	display: block;
+	margin-bottom: 3px;
+}
+
 .plan__option--collapse {
    .plan__name {
       color: $active;
